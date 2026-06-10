@@ -1,0 +1,81 @@
+[06:33:39.656 +  0.016s] =====================================================
+[06:33:39.656 +  0.016s]   dbg_step_00 — env + bit + uio + permission sanity
+[06:33:39.656 +  0.016s] =====================================================
+[06:33:39.656 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_00_env_check.py']
+[06:33:39.656 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:33:39.656 +  0.016s] [BANNER] uid:  0
+[06:33:39.657 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:33:39.657 +  0.016s] ==============
+[06:33:39.657 +  0.016s]   uid + sudo
+[06:33:39.657 +  0.017s] ==============
+[06:33:39.657 +  0.017s] uid=0, euid=0
+[06:33:39.657 +  0.017s] ===================
+[06:33:39.657 +  0.017s]   uio enumeration
+[06:33:39.657 +  0.017s] ===================
+[06:33:39.657 +  0.017s]   /dev/uio0    name='axi-pmon'
+[06:33:39.658 +  0.018s]   /dev/uio1    name='axi-pmon'
+[06:33:39.658 +  0.018s]   /dev/uio2    name='axi-pmon'
+[06:33:39.658 +  0.018s]   /dev/uio3    name='axi-pmon'
+[06:33:39.658 +  0.018s]   /dev/uio4    name='pccx-npu'
+[06:33:39.659 +  0.019s] =================
+[06:33:39.659 +  0.019s]   bitstream md5
+[06:33:39.659 +  0.019s] =================
+[06:33:39.712 +  0.072s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:33:39.712 +  0.072s] ================
+[06:33:39.712 +  0.072s]   CMA dma_heap
+[06:33:39.712 +  0.072s] ================
+[06:33:39.713 +  0.072s] [CMA] /dev/dma_heap/reserved present
+[06:33:39.713 +  0.072s] ===========================
+[06:33:39.713 +  0.073s]   dmesg tail safety check
+[06:33:39.713 +  0.073s] ===========================
+[06:33:39.713 +  0.073s] ==========================
+[06:33:39.713 +  0.073s]   dmesg safety pre-check
+[06:33:39.713 +  0.073s] ==========================
+[06:33:39.735 +  0.095s] [dmesg] [Fri May 29 03:00:56 2026] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[06:33:39.736 +  0.095s] [dmesg] [Fri May 29 03:01:01 2026] audit: type=1400 audit(1779984549.951:51): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=1303 comm="cups-browsed" capability=23  capname="sys_nice"
+[06:33:39.736 +  0.095s] [dmesg] [Fri May 29 03:01:14 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:01:14 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:01:14 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:01:22 2026] rfkill: input handler disabled
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:01:40 2026] loop19: detected capacity change from 0 to 8
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:01:57 2026] loop19: detected capacity change from 0 to 1120
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:03 2026] audit: type=1400 audit(1780023723.920:52): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/26869/usr/lib/snapd/snap-confine" pid=2317 comm="apparmor_parser"
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:05 2026] audit: type=1400 audit(1780023725.928:53): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snapd-desktop-integration.hook.configure" pid=2320 comm="apparmor_parser"
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:08 2026] audit: type=1400 audit(1780023729.291:54): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.snapd-desktop-integration" pid=2319 comm="apparmor_parser"
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:08 2026] audit: type=1400 audit(1780023729.811:55): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snapd-desktop-integration.snapd-desktop-integration" pid=2322 comm="apparmor_parser"
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:13 2026] audit: type=1400 audit(1780023734.823:56): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="/snap/snapd/26869/usr/lib/snapd/snap-confine" pid=2350 comm="apparmor_parser"
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:15 2026] audit: type=1400 audit(1780023736.815:57): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snapd-desktop-integration.hook.configure" pid=2353 comm="apparmor_parser"
+[06:33:39.736 +  0.096s] [dmesg] [Fri May 29 03:02:19 2026] audit: type=1400 audit(1780023740.414:58): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap-update-ns.snapd-desktop-integration" pid=2352 comm="apparmor_parser"
+[06:33:39.737 +  0.096s] [dmesg] [Fri May 29 03:02:20 2026] audit: type=1400 audit(1780023741.010:59): apparmor="STATUS" operation="profile_replace" profile="unconfined" name="snap.snapd-desktop-integration.snapd-desktop-integration" pid=2354 comm="apparmor_parser"
+[06:33:39.737 +  0.096s] [dmesg] [Fri May 29 03:02:20 2026] audit: type=1400 audit(1780023741.322:60): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.component-monitor" pid=2359 comm="apparmor_parser"
+[06:33:39.737 +  0.096s] [dmesg] [Fri May 29 03:02:21 2026] audit: type=1400 audit(1780023741.886:61): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.connect-plug-kernel-gpu-2404" pid=2361 comm="apparmor_parser"
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 03:02:21 2026] audit: type=1400 audit(1780023742.202:62): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.disconnect-plug-kernel-gpu-2404" pid=2362 comm="apparmor_parser"
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 03:02:22 2026] audit: type=1400 audit(1780023742.954:63): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.install" pid=2363 comm="apparmor_parser"
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 03:02:22 2026] audit: type=1400 audit(1780023743.066:64): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap.mesa-2404.hook.post-refresh" pid=2364 comm="apparmor_parser"
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 03:02:22 2026] audit: type=1400 audit(1780023743.086:65): apparmor="STATUS" operation="profile_replace" info="same as current profile, skipping" profile="unconfined" name="snap-update-ns.mesa-2404" pid=2372 comm="apparmor_parser"
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:18 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:18 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:18 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:21 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:21 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:21 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.737 +  0.097s] [dmesg] [Fri May 29 06:25:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.738 +  0.097s] [dmesg] [Fri May 29 06:25:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.738 +  0.097s] [dmesg] [Fri May 29 06:25:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.738 +  0.097s] [dmesg] [Fri May 29 06:25:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.738 +  0.097s] [dmesg] [Fri May 29 06:25:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.738 +  0.098s] [dmesg] [Fri May 29 06:25:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.738 +  0.098s] [dmesg] [Fri May 29 06:25:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.738 +  0.098s] [dmesg] [Fri May 29 06:25:46 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[06:33:39.738 +  0.098s] [dmesg] [Fri May 29 06:25:46 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[06:33:39.738 +  0.098s] [dmesg] [Fri May 29 06:25:46 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[06:33:39.739 +  0.098s] [SAFETY] dmesg looks clean (no AXI bus error / SError in tail).
+[06:33:39.739 +  0.098s] ===============
+[06:33:39.739 +  0.099s]   env summary
+[06:33:39.739 +  0.099s] ===============
+[06:33:39.739 +  0.099s] BITSTREAM_PATH = /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+[06:33:39.739 +  0.099s] deployed md5   = e97b1bbcb6ecff4a4c4e11d4d0f2af40
+[06:33:39.739 +  0.099s] uio4 name      = 'pccx-npu'
+[06:33:39.739 +  0.099s] [STEP00] PASS — environment ready for downstream dbg_step_*.py

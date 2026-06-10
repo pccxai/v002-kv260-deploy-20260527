@@ -1,0 +1,91 @@
+#-----------------------------------------------------------
+# Vivado Lab Edition v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 21:19:43 MST 2025
+# 
+# 
+# Start of session at: Sun May 31 18:46:52 2026
+# Process ID         : 3571386
+# Current directory  : /home/hwkim/Desktop/pccxai-private/v002-kv260-deploy-20260527
+# Command line       : vivado_lab -mode batch -source debug/vivado_ila_capture.tcl
+# Log file           : /home/hwkim/Desktop/pccxai-private/v002-kv260-deploy-20260527/vivado_lab.log
+# Journal file       : /home/hwkim/Desktop/pccxai-private/v002-kv260-deploy-20260527/vivado_lab.jou
+# Running On         : hwkim-Swift-SF314-42
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 5 4500U with Radeon Graphics
+# CPU Frequency      : 3500.911 MHz
+# CPU Physical cores : 6
+# CPU Logical cores  : 6
+# Host memory        : 13459 MB
+# Swap memory        : 32767 MB
+# Total Virtual      : 46227 MB
+# Available Virtual  : 29844 MB
+#-----------------------------------------------------------
+source debug/vivado_ila_capture.tcl
+# set t0 [clock seconds]
+# open_hw_manager
+# catch {connect_hw_server}
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2025.2
+  **** Build date : Oct 28 2025 at 16:07:00
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2025.2.0
+  ****** Build date   : Nov 14 2025-08:16:52
+    **** Build number : 2025.2.1763075812
+      ** Copyright 2017-2022 Xilinx, Inc. All Rights Reserved.
+      ** Copyright 2022-2026 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/XFL1HNAFH1NIA
+# current_hw_device [get_hw_devices xck26_0]
+# set dev [current_hw_device]
+# set_property PROBES.FILE /home/hwkim/v9.ltx $dev
+# set_property FULL_PROBES.FILE /home/hwkim/v9.ltx $dev
+# refresh_hw_device $dev
+INFO: [Labtools 27-2302] Device xck26 (JTAG device index = 0) is programmed with a design that has 2 ILA core(s).
+# set ila [get_hw_ilas -of_objects $dev hw_ila_1]
+# set arv [get_hw_probes {pccx_v002_system_i/system_ila_0/inst/net_slot_0_axi_arvalid} -of_objects $ila]
+# set_property TRIGGER_COMPARE_VALUE eq1'bR $arv
+# set_property CONTROL.TRIGGER_POSITION 64 $ila
+# run_hw_ila $ila
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-May-31 18:47:00
+# after 1000
+# puts "ARMED at [expr {[clock seconds]-$t0}]s; firing stimulus over SSH..."
+ARMED at 6s; firing stimulus over SSH...
+# exec ssh -o ConnectTimeout=8 -o StrictHostKeyChecking=no ubuntu@192.168.219.108 \
+#     {cd /home/ubuntu/pccx-gemma-deploy && sudo python3 debug/dbg_step_03_cmdsts_single_acp.py} \
+#     >& /tmp/stim_local.log &
+# set ta [clock seconds]
+# set ok [expr {![catch {wait_on_hw_ila -timeout 1 $ila} e]}]
+# puts "WAIT returned after [expr {[clock seconds]-$ta}]s ok=$ok note=\"$e\""
+WAIT returned after 2s ok=1 note=""
+# if {$ok} {
+#     puts "TRIGGERED=YES"
+#     set d [upload_hw_ila_data $ila]
+#     catch {write_hw_ila_data -force -csv_file /tmp/cap_fmap_acp.csv $d}
+#     catch {write_hw_ila_data -force /tmp/cap_fmap_acp.ila $d}
+#     puts "WROTE /tmp/cap_fmap_acp.csv + .ila"
+# } else {
+#     puts "TRIGGERED=NO  => arvalid never rose in window = Part D row 1 (mover internal stall) candidate"
+# }
+TRIGGERED=YES
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-May-31 18:47:03
+WROTE /tmp/cap_fmap_acp.csv + .ila
+# catch {close_hw_target}
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Xilinx/XFL1HNAFH1NIA
+# catch {disconnect_hw_server}
+# puts "CAPTURE_DONE"
+CAPTURE_DONE
+INFO: [Common 17-206] Exiting vivado_lab at Sun May 31 18:47:03 2026...

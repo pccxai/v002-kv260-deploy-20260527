@@ -1,0 +1,22 @@
+WARN knowledge base path not set; using built-in v002 pre-deploy rules only
+WARN no timing/resource metrics supplied; knowledge rules loaded but not evaluated
+-- pre_deploy_check.py --
+bit       : /home/hwkim/v002-rtl/hw/build/pccx_v002_system_wrapper.bit
+dtbo      : hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo
+bitbin    : hw/build/pccx_v002_system_wrapper.bit.bin
+shell.json: hw/build/deploy/pccx_npu_bd/shell.json
+allowed-parts: ('xck26-sfvc784-2LV-c',)
+
+PASS bitstream present: /home/hwkim/v002-rtl/hw/build/pccx_v002_system_wrapper.bit  size=7797836 B
+PASS bitstream MD5: bc8518f7d3445f8cd9e17a73230d01f9
+PASS bitstream design = pccx_v002_system_wrapper
+PASS bitstream part   = xck26-sfvc784-2LV-c
+PASS bitstream date   = 2026/06/03 16:27:11
+PASS bitstream payload= 7797692 bytes (header consumed 144 B)
+PASS dtbo present: hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo  size=857 B  magic OK
+PASS bit.bin present: hw/build/pccx_v002_system_wrapper.bit.bin  size=7797692 B
+PASS bit.bin matches bootgen LE-swapped payload of .bit (canonical FPGA Manager format)
+PASS shell.json valid: {'shell_type': 'XRT_FLAT', 'num_slots': '1'}
+PASS env present: ['PCCX_KV260_HOST', 'PCCX_KV260_USER'] (values redacted)
+
+PASS pre-deploy check PASSED for pccx_v002_system_wrapper.bit

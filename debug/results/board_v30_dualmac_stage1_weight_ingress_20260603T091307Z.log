@@ -1,0 +1,115 @@
+[09:13:10.447 +  0.006s] =============================================================
+[09:13:10.448 +  0.007s]   stage1_weight_ingress_smoke — HP0/HP1 INT4 weight ingress
+[09:13:10.448 +  0.007s] =============================================================
+[09:13:10.448 +  0.007s] [BANNER] argv: ['stage1_weight_ingress_smoke.py']
+[09:13:10.448 +  0.007s] [BANNER] cwd:  /tmp/pccx-v30-debug
+[09:13:10.448 +  0.007s] [BANNER] uid:  0
+[09:13:10.448 +  0.007s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[09:13:10.448 +  0.007s] ==========================
+[09:13:10.448 +  0.007s]   dmesg safety pre-check
+[09:13:10.448 +  0.007s] ==========================
+[09:13:10.470 +  0.029s] [dmesg] [Wed Jun  3 07:20:34 2026] macb ff0e0000.ethernet eth0: PHY [ff0e0000.ethernet-ffffffff:01] driver [TI DP83867] (irq=POLL)
+[09:13:10.470 +  0.029s] [dmesg] [Wed Jun  3 07:20:34 2026] macb ff0e0000.ethernet eth0: configuring for phy/rgmii-id link mode
+[09:13:10.470 +  0.029s] [dmesg] [Wed Jun  3 07:20:34 2026] pps pps0: new PPS source ptp0
+[09:13:10.470 +  0.029s] [dmesg] [Wed Jun  3 07:20:34 2026] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+[09:13:10.471 +  0.029s] [dmesg] [Wed Jun  3 07:20:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:20:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:20:39 2026] macb ff0e0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:20:39 2026] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:20:39 2026] kauditd_printk_skb: 38 callbacks suppressed
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:20:39 2026] audit: type=1400 audit(1780470656.965:50): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=1220 comm="cupsd" capability=12  capname="net_admin"
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:20:40 2026] audit: type=1400 audit(1780470658.761:51): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=1287 comm="cups-browsed" capability=23  capname="sys_nice"
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:21:00 2026] rfkill: input handler disabled
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:21:27 2026] loop20: detected capacity change from 0 to 8
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:36:33 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:36:33 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:36:33 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:37:32 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:37:32 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:37:32 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:37:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.471 +  0.030s] [dmesg] [Wed Jun  3 07:37:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.472 +  0.030s] [dmesg] [Wed Jun  3 07:37:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:38:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:38:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:38:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:38:26 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:38:26 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:38:26 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:39:38 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:39:38 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 07:39:38 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:11:16 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:11:16 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:11:16 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:12:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:12:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:12:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.472 +  0.031s] [dmesg] [Wed Jun  3 09:12:48 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[09:13:10.473 +  0.031s] [dmesg] [Wed Jun  3 09:12:48 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[09:13:10.473 +  0.032s] [dmesg] [Wed Jun  3 09:12:48 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[09:13:10.473 +  0.032s] [SAFETY] dmesg looks clean (no AXI bus error / SError in tail).
+[09:13:10.473 +  0.032s] =============================
+[09:13:10.473 +  0.032s]   xmutil reload pccx_npu_bd
+[09:13:10.473 +  0.032s] =============================
+[09:13:10.528 +  0.087s] [BIT] bitstream md5 = 2e1f77c51882aeaddde9c6074f00f4e0 (== expected v30 dualmac 20260603T082506Z)
+[09:13:10.528 +  0.087s] [XMUTIL] running: xmutil unloadapp
+[09:13:10.916 +  0.475s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[09:13:10.917 +  0.475s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[09:13:11.440 +  0.999s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[09:13:12.943 +  2.502s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[09:13:12.997 +  2.556s] [BIT] bitstream md5 = 2e1f77c51882aeaddde9c6074f00f4e0 (== expected v30 dualmac 20260603T082506Z)
+[09:13:12.997 +  2.556s] ========================
+[09:13:12.997 +  2.556s]   payload construction
+[09:13:12.998 +  2.556s] ========================
+[09:13:13.008 +  2.567s] beats=64 bytes_per_lane_stream=1024
+[09:13:13.008 +  2.567s] upper beat0 lanes=[-8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, -8, -7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+[09:13:13.008 +  2.567s] lower beat0 lanes=[7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8, 7, 6, 5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5, -6, -7, -8]
+[09:13:13.008 +  2.567s] upper beat0 little-endian hex=98badcfe1032547698badcfe10325476
+[09:13:13.008 +  2.567s] lower beat0 little-endian hex=67452301efcdab8967452301efcdab89
+[09:13:13.008 +  2.567s] ==================
+[09:13:13.008 +  2.567s]   CMA allocation
+[09:13:13.008 +  2.567s] ==================
+[09:13:13.009 +  2.568s] [CMA] CMA OK: va=0xffff81541000 phys=0x0375b0000 size=0x1000 fd=4
+[09:13:13.010 +  2.569s] [CMA] CMA OK: va=0xffff81515000 phys=0x0375b1000 size=0x1000 fd=6
+[09:13:13.010 +  2.569s] upper phys=0x0375b0000 lower phys=0x0375b1000
+[09:13:13.012 +  2.571s] [DUMP] --- cmdsts snapshot: before HP0/HP1 paired issue ---
+[09:13:13.012 +  2.571s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.012 +  2.571s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.012 +  2.571s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.013 +  2.571s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.013 +  2.572s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.013 +  2.572s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.013 +  2.572s] ========================
+[09:13:13.013 +  2.572s]   paired HP0/HP1 issue
+[09:13:13.013 +  2.572s] ========================
+[09:13:13.013 +  2.572s] issued hp0 token=0x0 hp1 token=0x1
+[09:13:13.013 +  2.572s] [HP0] 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[09:13:13.013 +  2.572s] [HP1] 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[09:13:13.014 +  2.573s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[09:13:13.014 +  2.573s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[09:13:13.014 +  2.573s] [POP] STS_POP[0] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[09:13:13.014 +  2.573s] [POP] STS_POP[1] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[09:13:13.014 +  2.573s] [HP0] hp0 status payloads checked=3
+[09:13:13.014 +  2.573s] [HP1] hp1 status payloads checked=3
+[09:13:13.014 +  2.573s] [DUMP] --- cmdsts snapshot: after HP0/HP1 paired issue ---
+[09:13:13.014 +  2.573s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.014 +  2.573s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.015 +  2.574s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.015 +  2.574s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.015 +  2.574s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.015 +  2.574s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:13:13.015 +  2.574s] ==================
+[09:13:13.015 +  2.574s]   cleanup reload
+[09:13:13.015 +  2.574s] ==================
+[09:13:13.015 +  2.574s] =============================
+[09:13:13.015 +  2.574s]   xmutil reload pccx_npu_bd
+[09:13:13.016 +  2.574s] =============================
+[09:13:13.070 +  2.629s] [BIT] bitstream md5 = 2e1f77c51882aeaddde9c6074f00f4e0 (== expected v30 dualmac 20260603T082506Z)
+[09:13:13.070 +  2.629s] [XMUTIL] running: xmutil unloadapp
+[09:13:13.420 +  2.979s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[09:13:13.420 +  2.979s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[09:13:13.942 +  3.501s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[09:13:15.445 +  5.004s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[09:13:15.499 +  5.058s] [BIT] bitstream md5 = 2e1f77c51882aeaddde9c6074f00f4e0 (== expected v30 dualmac 20260603T082506Z)
+[09:13:15.499 +  5.058s] [RESULT] RESULT: PASS_WEIGHT_INGRESS

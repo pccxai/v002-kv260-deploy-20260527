@@ -1,0 +1,120 @@
+[02:53:03.615 +  0.016s] =======================================================================
+[02:53:03.616 +  0.016s]   board_v28_repeated_stage0_reset_diag — fresh/no-reload/fresh Stage0
+[02:53:03.616 +  0.016s] =======================================================================
+[02:53:03.616 +  0.016s] [BANNER] argv: ['debug/board_v28_repeated_stage0_reset_diag.py']
+[02:53:03.616 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:53:03.616 +  0.016s] [BANNER] uid:  0
+[02:53:03.616 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:53:03.616 +  0.017s] [SETUP] result_dir=/home/ubuntu/pccx-gemma-deploy/debug/results/board_v28_repeated_stage0_20260603T025303Z
+[02:53:03.617 +  0.017s] =====================================
+[02:53:03.617 +  0.017s]   phase A: fresh reload then Stage0
+[02:53:03.617 +  0.017s] =====================================
+[02:53:03.617 +  0.017s] =============================
+[02:53:03.617 +  0.017s]   xmutil reload pccx_npu_bd
+[02:53:03.617 +  0.017s] =============================
+[02:53:03.671 +  0.071s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:53:03.671 +  0.071s] [XMUTIL] running: xmutil unloadapp
+[02:53:04.029 +  0.430s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[02:53:04.029 +  0.430s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[02:53:04.552 +  0.953s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[02:53:06.055 +  2.455s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[02:53:06.110 +  2.510s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:53:06.110 +  2.510s] [RUN] running Stage0: phase_a_fresh_reload_stage0
+[02:53:08.995 +  5.395s] [phase_a_fresh_reload_stage0] 
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0] [Step 3] MEMCPY HOST -> L2 (shape_ptr_addr=0)
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]   word=0x2802000000000000
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]   acp_fmap tag=0x0
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]     t=0ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]     t=125ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]     t=250ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]     t=500ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.995 +  5.396s] [phase_a_fresh_reload_stage0]     t=975ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0]   acp_fmap mover status: 0x80
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0] 
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0] [Step 4] MEMCPY L2 -> HOST (shape_ptr_addr=1)
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0]   word=0x2400000100000002
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0]   acp_result tag=0x1
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0]     t=0ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0]     t=125ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.996 +  5.396s] [phase_a_fresh_reload_stage0]     t=250ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0]     t=500ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0]     t=975ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0]   acp_result mover status: 0x81
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0] 
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0]   A: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0]   B: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+[02:53:08.996 +  5.397s] [phase_a_fresh_reload_stage0] RESULT: PASS
+[02:53:08.996 +  5.397s] [RUN] phase_a_fresh_reload_stage0 rc=0 log=/home/ubuntu/pccx-gemma-deploy/debug/results/board_v28_repeated_stage0_20260603T025303Z/phase_a_fresh_reload_stage0.log
+[02:53:08.997 +  5.397s] ============================================
+[02:53:08.997 +  5.397s]   phase B: immediate Stage0 without reload
+[02:53:08.997 +  5.397s] ============================================
+[02:53:08.997 +  5.397s] [RUN] running Stage0: phase_b_no_reload_stage0
+[02:53:11.886 +  8.286s] [phase_b_no_reload_stage0] 
+[02:53:11.886 +  8.286s] [phase_b_no_reload_stage0] [Step 3] MEMCPY HOST -> L2 (shape_ptr_addr=0)
+[02:53:11.886 +  8.286s] [phase_b_no_reload_stage0]   word=0x2802000000000000
+[02:53:11.886 +  8.286s] [phase_b_no_reload_stage0]   acp_fmap tag=0x0
+[02:53:11.886 +  8.286s] [phase_b_no_reload_stage0]     t=0ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.886 +  8.286s] [phase_b_no_reload_stage0]     t=125ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]     t=250ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]     t=500ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]     t=975ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]   acp_fmap mover status: 0x80
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0] 
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0] [Step 4] MEMCPY L2 -> HOST (shape_ptr_addr=1)
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]   word=0x2400000100000002
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]   acp_result tag=0x1
+[02:53:11.886 +  8.287s] [phase_b_no_reload_stage0]     t=0ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]     t=125ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]     t=250ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]     t=500ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]     t=975ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]   acp_result mover status: 0x81
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0] 
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]   A: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0]   B: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+[02:53:11.887 +  8.287s] [phase_b_no_reload_stage0] RESULT: PASS
+[02:53:11.887 +  8.288s] [RUN] phase_b_no_reload_stage0 rc=0 log=/home/ubuntu/pccx-gemma-deploy/debug/results/board_v28_repeated_stage0_20260603T025303Z/phase_b_no_reload_stage0.log
+[02:53:11.887 +  8.288s] =====================================
+[02:53:11.887 +  8.288s]   phase C: reload again then Stage0
+[02:53:11.887 +  8.288s] =====================================
+[02:53:11.887 +  8.288s] =============================
+[02:53:11.887 +  8.288s]   xmutil reload pccx_npu_bd
+[02:53:11.887 +  8.288s] =============================
+[02:53:11.942 +  8.343s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:53:11.942 +  8.343s] [XMUTIL] running: xmutil unloadapp
+[02:53:12.316 +  8.717s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[02:53:12.316 +  8.717s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[02:53:12.841 +  9.241s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[02:53:14.343 + 10.744s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[02:53:14.398 + 10.798s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:53:14.398 + 10.799s] [RUN] running Stage0: phase_c_fresh_reload_stage0
+[02:53:17.284 + 13.685s] [phase_c_fresh_reload_stage0] 
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0] [Step 3] MEMCPY HOST -> L2 (shape_ptr_addr=0)
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]   word=0x2802000000000000
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]   acp_fmap tag=0x0
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]     t=0ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]     t=125ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]     t=250ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]     t=500ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.685s] [phase_c_fresh_reload_stage0]     t=975ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]   acp_fmap mover status: 0x80
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0] 
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0] [Step 4] MEMCPY L2 -> HOST (shape_ptr_addr=1)
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]   word=0x2400000100000002
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]   acp_result tag=0x1
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]     t=0ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]     t=125ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]     t=250ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.285 + 13.686s] [phase_c_fresh_reload_stage0]     t=500ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.286 + 13.686s] [phase_c_fresh_reload_stage0]     t=975ms NPU: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[02:53:17.286 + 13.686s] [phase_c_fresh_reload_stage0]   acp_result mover status: 0x81
+[02:53:17.286 + 13.686s] [phase_c_fresh_reload_stage0] 
+[02:53:17.286 + 13.686s] [phase_c_fresh_reload_stage0]   A: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+[02:53:17.286 + 13.686s] [phase_c_fresh_reload_stage0]   B: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+[02:53:17.286 + 13.686s] [phase_c_fresh_reload_stage0] RESULT: PASS
+[02:53:17.286 + 13.686s] [RUN] phase_c_fresh_reload_stage0 rc=0 log=/home/ubuntu/pccx-gemma-deploy/debug/results/board_v28_repeated_stage0_20260603T025303Z/phase_c_fresh_reload_stage0.log
+[02:53:17.286 + 13.687s] [SUMMARY] summary=/home/ubuntu/pccx-gemma-deploy/debug/results/board_v28_repeated_stage0_20260603T025303Z/SUMMARY.csv
+[02:53:17.286 + 13.687s] ===========
+[02:53:17.286 + 13.687s]   verdict
+[02:53:17.287 + 13.687s] ===========
+[02:53:17.287 + 13.687s] [VERDICT] PASS: Stage0 repeated cleanly in this run

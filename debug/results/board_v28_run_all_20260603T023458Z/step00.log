@@ -1,0 +1,82 @@
+[02:34:58.493 +  0.016s] =====================================================
+[02:34:58.493 +  0.016s]   dbg_step_00 — env + bit + uio + permission sanity
+[02:34:58.493 +  0.016s] =====================================================
+[02:34:58.493 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_00_env_check.py']
+[02:34:58.493 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:34:58.493 +  0.016s] [BANNER] uid:  0
+[02:34:58.493 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:34:58.493 +  0.016s] ==============
+[02:34:58.493 +  0.016s]   uid + sudo
+[02:34:58.494 +  0.016s] ==============
+[02:34:58.494 +  0.016s] uid=0, euid=0
+[02:34:58.494 +  0.017s] ===================
+[02:34:58.494 +  0.017s]   uio enumeration
+[02:34:58.494 +  0.017s] ===================
+[02:34:58.494 +  0.017s]   /dev/uio0    name='axi-pmon'
+[02:34:58.494 +  0.017s]   /dev/uio1    name='axi-pmon'
+[02:34:58.495 +  0.018s]   /dev/uio2    name='axi-pmon'
+[02:34:58.495 +  0.018s]   /dev/uio3    name='axi-pmon'
+[02:34:58.495 +  0.018s]   /dev/uio4    name='pccx-npu'
+[02:34:58.495 +  0.018s] =================
+[02:34:58.496 +  0.018s]   bitstream md5
+[02:34:58.496 +  0.018s] =================
+[02:34:58.553 +  0.076s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:34:58.553 +  0.076s] [WARN] !! md5 differs from expected (e97b1bbcb6ecff4a4c4e11d4d0f2af40) — log it but continue
+[02:34:58.553 +  0.076s] ================
+[02:34:58.553 +  0.076s]   CMA dma_heap
+[02:34:58.553 +  0.076s] ================
+[02:34:58.554 +  0.076s] [CMA] /dev/dma_heap/reserved present
+[02:34:58.554 +  0.076s] ===========================
+[02:34:58.554 +  0.077s]   dmesg tail safety check
+[02:34:58.554 +  0.077s] ===========================
+[02:34:58.554 +  0.077s] ==========================
+[02:34:58.554 +  0.077s]   dmesg safety pre-check
+[02:34:58.554 +  0.077s] ==========================
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:08 2026] loop17: detected capacity change from 0 to 87312
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:08 2026] loop18: detected capacity change from 0 to 1120
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:08 2026] loop19: detected capacity change from 0 to 832
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:09 2026] mali: module is from the staging directory, the quality is unknown, you have been warned.
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:09 2026] tpm_tis_spi spi2.0: 2.0 TPM (device-id 0x1B, rev-id 22)
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:09 2026] tpm tpm0: A TPM error (256) occurred attempting the self test
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:09 2026] tpm tpm0: starting up the TPM manually
+[02:34:58.575 +  0.098s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.112:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=824 comm="apparmor_parser"
+[02:34:58.576 +  0.098s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.116:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=825 comm="apparmor_parser"
+[02:34:58.576 +  0.098s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.116:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=825 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.152:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=828 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.152:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=828 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.152:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=828 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.164:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tcpdump" pid=829 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.176:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=826 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.176:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=826 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:14 2026] audit: type=1400 audit(1773420472.176:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=826 comm="apparmor_parser"
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:30 2026] macb ff0e0000.ethernet eth0: PHY [ff0e0000.ethernet-ffffffff:01] driver [TI DP83867] (irq=POLL)
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:30 2026] macb ff0e0000.ethernet eth0: configuring for phy/rgmii-id link mode
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:30 2026] pps pps0: new PPS source ptp0
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:30 2026] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[02:34:58.576 +  0.099s] [dmesg] [Wed Jun  3 01:29:34 2026] macb ff0e0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[02:34:58.577 +  0.099s] [dmesg] [Wed Jun  3 01:29:34 2026] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[02:34:58.577 +  0.099s] [dmesg] [Wed Jun  3 01:29:34 2026] kauditd_printk_skb: 38 callbacks suppressed
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 01:29:34 2026] audit: type=1400 audit(1780414604.103:50): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=1219 comm="cupsd" capability=12  capname="net_admin"
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 01:29:36 2026] audit: type=1400 audit(1780414605.971:51): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=1287 comm="cups-browsed" capability=23  capname="sys_nice"
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 01:29:47 2026] audit: type=1400 audit(1780450188.522:52): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=1447 comm="cups-browsed" capability=23  capname="sys_nice"
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 01:29:56 2026] rfkill: input handler disabled
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 01:30:22 2026] loop20: detected capacity change from 0 to 8
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:31:00 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:31:00 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:31:00 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:32:02 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:32:02 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:32:02 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:32:27 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:32:27 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[02:34:58.577 +  0.100s] [dmesg] [Wed Jun  3 02:32:27 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[02:34:58.578 +  0.101s] [SAFETY] dmesg looks clean (no AXI bus error / SError in tail).
+[02:34:58.578 +  0.101s] ===============
+[02:34:58.578 +  0.101s]   env summary
+[02:34:58.578 +  0.101s] ===============
+[02:34:58.578 +  0.101s] BITSTREAM_PATH = /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+[02:34:58.578 +  0.101s] deployed md5   = 903527a5c3ad7b3de928768286c21b69
+[02:34:58.578 +  0.101s] uio4 name      = 'pccx-npu'
+[02:34:58.578 +  0.101s] [STEP00] PASS — environment ready for downstream dbg_step_*.py

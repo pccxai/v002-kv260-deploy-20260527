@@ -1,0 +1,91 @@
+[06:33:53.775 +  0.016s] ===========================================================================
+[06:33:53.775 +  0.016s]   dbg_step_04 — cmdsts_acp_fmap BURST-9 push — silicon partial-OK pattern
+[06:33:53.775 +  0.016s] ===========================================================================
+[06:33:53.775 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_04_cmdsts_burst9.py']
+[06:33:53.775 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:33:53.775 +  0.016s] [BANNER] uid:  0
+[06:33:53.775 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:33:53.828 +  0.070s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:33:53.835 +  0.077s] [UIO] opening NPU UIO at /dev/uio4
+[06:33:53.836 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[06:33:53.836 +  0.077s] ===============================
+[06:33:53.836 +  0.077s]   pre snapshot — all channels
+[06:33:53.836 +  0.077s] ===============================
+[06:33:53.836 +  0.077s] [DUMP] --- cmdsts snapshot: pre-burst ---
+[06:33:53.836 +  0.077s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.836 +  0.077s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.836 +  0.078s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.836 +  0.078s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.837 +  0.078s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.837 +  0.078s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.837 +  0.078s] =============
+[06:33:53.837 +  0.078s]   CMA SADDR
+[06:33:53.837 +  0.078s] =============
+[06:33:53.838 +  0.079s] [CMA] CMA OK: va=0xffffb7f1b000 phys=0x0375b0000 size=0x1000 fd=6
+[06:33:53.838 +  0.079s] [ADDR] SADDR = 0x375b0000
+[06:33:53.838 +  0.079s] ====================================
+[06:33:53.838 +  0.079s]   rapid push x9 (no sleep between)
+[06:33:53.838 +  0.079s] ====================================
+[06:33:53.838 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[06:33:53.838 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[06:33:53.838 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=1
+[06:33:53.838 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x01
+[06:33:53.838 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=2
+[06:33:53.838 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x02
+[06:33:53.838 +  0.080s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=3
+[06:33:53.839 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x03
+[06:33:53.839 +  0.080s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=4
+[06:33:53.839 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x04
+[06:33:53.839 +  0.080s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=5
+[06:33:53.839 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x05
+[06:33:53.839 +  0.080s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=6
+[06:33:53.839 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x06
+[06:33:53.839 +  0.080s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=7
+[06:33:53.839 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x07
+[06:33:53.839 +  0.081s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=8
+[06:33:53.839 +  0.081s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x08
+[06:33:53.840 +  0.081s] [BURST] all 9 pushes returned in 1.61ms
+[06:33:53.840 +  0.081s] ======================
+[06:33:53.840 +  0.081s]   immediate snapshot
+[06:33:53.840 +  0.081s] ======================
+[06:33:53.840 +  0.081s] [POST] immediate: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:53.840 +  0.081s] [POST]   err_sticky=0x0 (0x1 expected if 9th push hit FULL FIFO)
+[06:33:53.840 +  0.081s] ====================================================
+[06:33:53.840 +  0.081s]   drain — poll every 0.25s for 4.0s, track STS_LVL
+[06:33:53.840 +  0.081s] ====================================================
+[06:33:53.840 +  0.081s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:54.091 +  0.332s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:54.341 +  0.582s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:54.592 +  0.833s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:54.842 +  1.084s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:55.093 +  1.334s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:55.344 +  1.585s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:55.594 +  1.835s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:55.845 +  2.086s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:56.096 +  2.337s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:56.346 +  2.587s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:56.597 +  2.838s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:56.847 +  3.088s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.098 +  3.339s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.348 +  3.590s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.599 +  3.840s] [DRAIN]   flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.850 +  4.091s] ==============================================================
+[06:33:57.850 +  4.091s]   pop all statuses we can see (read STS_POP until sts_empty)
+[06:33:57.850 +  4.091s] ==============================================================
+[06:33:57.850 +  4.091s] [POP] popped 0 status word(s)
+[06:33:57.850 +  4.091s] =================
+[06:33:57.850 +  4.091s]   post snapshot
+[06:33:57.850 +  4.091s] =================
+[06:33:57.850 +  4.091s] [DUMP] --- cmdsts snapshot: post-drain ---
+[06:33:57.850 +  4.091s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.850 +  4.091s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.850 +  4.092s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.851 +  4.092s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.851 +  4.092s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.851 +  4.092s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:33:57.851 +  4.092s] ===========
+[06:33:57.851 +  4.092s]   verdict
+[06:33:57.851 +  4.092s] ===========
+[06:33:57.851 +  4.092s] [STEP04] pushed=9 peak_sts_lvl=0 popped=0 final_cmd_lvl=0
+[06:33:57.851 +  4.092s] [STEP04] BURST-9 → STS_LVL=0 on v8.  The 'burst partial-OK' pattern was tied to the post-v4 IP-regen silicon state, not to v8 (this run had a fresh reload before step 04 — see step04.reload.log).  Under v8 the ACP DataMover stalls on burst too — single is not a special case.
+[run_all] step04 rc=0

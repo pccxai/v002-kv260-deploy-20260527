@@ -1,0 +1,15 @@
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+operating
+186ddc523d88b0433eaa869e348b8ff7  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+e598f3187ed46f4b36690ea13c2bc47999e3bc712cff486d2ed16822a6891874  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+crw------- 1 root root 237, 0 Mar 13 16:47 /dev/uio0
+crw------- 1 root root 237, 1 Mar 13 16:47 /dev/uio1
+crw------- 1 root root 237, 2 Mar 13 16:47 /dev/uio2
+crw------- 1 root root 237, 3 Mar 13 16:47 /dev/uio3
+crw------- 1 root root 237, 4 Jun  3 16:29 /dev/uio4
+/sys/class/uio/uio0/name=
+/sys/class/uio/uio1/name=
+/sys/class/uio/uio2/name=
+/sys/class/uio/uio3/name=
+/sys/class/uio/uio4/name=

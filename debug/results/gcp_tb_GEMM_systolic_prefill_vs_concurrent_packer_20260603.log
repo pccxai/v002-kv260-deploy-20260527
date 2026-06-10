@@ -1,0 +1,84 @@
+=== tb_GEMM_systolic_prefill_vs_concurrent — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_fmap_staggered_dispatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+ERROR: [VRFC 10-2989] 'dtype_pkg' is not declared [/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv:44]
+ERROR: [VRFC 10-8530] module 'gemm_result_normalizer' is ignored due to previous errors [/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv:27]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMM_dsp_unit_default
+Compiling module work.GEMM_dsp_unit(BREAK_CASCADE=1)
+Compiling module work.GEMM_dsp_unit_last_ROW
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,BCASCREG=0,CR...
+Compiling module work.GEMM_accumulator
+Compiling module work.GEMM_systolic_array_default
+Compiling module work.GEMM_systolic_top
+Compiling module work.tb_GEMM_systolic_prefill_vs_conc...
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_systolic_prefill_vs_concurrent_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 12:35:05 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_systolic_prefill_vs_concurrent_sim/xsim_script.tcl
+# xsim {tb_GEMM_systolic_prefill_vs_concurrent_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_systolic_prefill_vs_concurrent start ===
+prefill_only raw_valid_samples=32
+concurrent raw_valid_samples=32
+PASS [prefill_only_produces_raw_valid]
+PASS [concurrent_produces_raw_valid]
+
+=== Summary ===
+PASS: 2 / 2
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 5136 ns : File "/home/hwkim/stage1-tb-work/tb_unit/tb_GEMM_systolic_prefill_vs_concurrent/tb_GEMM_systolic_prefill_vs_concurrent.sv" Line 197
+exit
+INFO: xsimkernel Simulation Memory Usage: 485204 KB (Peak: 543256 KB), Simulation CPU Usage: 1950 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 12:35:11 2026...
+
+=== tb_GEMM_systolic_prefill_vs_concurrent RESULT: PASS ===

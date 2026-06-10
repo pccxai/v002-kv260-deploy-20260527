@@ -1,0 +1,9 @@
+RESULT_DIR=debug/results/board_v28_post_step13_stage0_20260603T025401Z
+=== RELOAD BEFORE STEP13 ===
+=== STEP13 FULL ===
+step13_rc=0
+=== STAGE0 AFTER STEP13 WITHOUT RELOAD ===
+stage0_after_step13_no_reload_rc=1
+=== RECOVERY RELOAD ===
+=== STAGE0 AFTER RECOVERY RELOAD ===
+stage0_after_recovery_reload_rc=0

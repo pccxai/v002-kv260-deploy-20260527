@@ -1,0 +1,72 @@
+
+=== HOST->L2 size=16B elems=8 pa=0x0375b0000 ===
+ after memset stat=0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  t=   0ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  25ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  50ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 125ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 250ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 500ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1000ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1975ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT size=16 idle_seen=False dm=OKAY 0x80 last=stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== HOST->L2 size=256B elems=128 pa=0x0375b0000 ===
+ after memset stat=0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  t=   0ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  25ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  50ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 125ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 250ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 500ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1000ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1975ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT size=256 idle_seen=False dm=OKAY 0x80 last=stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== HOST->L2 size=512B elems=256 pa=0x0375b0000 ===
+ after memset stat=0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  t=   0ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  25ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  50ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 125ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 250ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 500ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1000ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1975ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT size=512 idle_seen=False dm=OKAY 0x80 last=stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== HOST->L2 size=1024B elems=512 pa=0x0375b0000 ===
+ after memset stat=0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  t=   0ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  25ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  50ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 125ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 250ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 500ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1000ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1975ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT size=1024 idle_seen=False dm=OKAY 0x80 last=stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== HOST->L2 size=2048B elems=1024 pa=0x0375b0000 ===
+ after memset stat=0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  t=   0ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  25ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  50ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 125ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 250ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 500ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1000ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1975ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT size=2048 idle_seen=False dm=OKAY 0x80 last=stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== HOST->L2 size=4096B elems=2048 pa=0x0375b0000 ===
+ after memset stat=0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  t=   0ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  25ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=  50ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 125ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 250ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t= 500ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1000ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  t=1975ms stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT size=4096 idle_seen=False dm=OKAY 0x80 last=stat=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0

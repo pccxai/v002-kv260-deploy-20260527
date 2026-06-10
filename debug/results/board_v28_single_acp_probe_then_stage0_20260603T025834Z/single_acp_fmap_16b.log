@@ -1,0 +1,22 @@
+[02:58:36.974 +  0.028s] ===================================================================
+[02:58:36.974 +  0.028s]   single_acp_fmap_16b — consumerless acp_fmap probe before stage0
+[02:58:36.974 +  0.028s] ===================================================================
+[02:58:36.975 +  0.028s] [BANNER] argv: ['-']
+[02:58:36.975 +  0.028s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:58:36.975 +  0.028s] [BANNER] uid:  0
+[02:58:36.975 +  0.028s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:58:36.975 +  0.029s] ======================================================
+[02:58:36.975 +  0.029s]   single: acp_fmap btt=16 legacy_xu0_xc0 eof=1 drr=0
+[02:58:36.975 +  0.029s] ======================================================
+[02:58:36.982 +  0.036s] [UIO] opening NPU UIO at /dev/uio4
+[02:58:36.982 +  0.036s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[02:58:36.983 +  0.037s] [CMA] CMA OK: va=0xffff8370b000 phys=0x0375b0000 size=0x1000 fd=6
+[02:58:36.984 +  0.037s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:58:36.984 +  0.038s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=2 xuser=0x0 xcache=0x0
+[02:58:36.984 +  0.038s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0002
+[02:58:36.984 +  0.038s] [POP] STS_POP[0] = 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[02:58:36.984 +  0.038s] [POP] STS_POP[1] = 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[02:58:36.984 +  0.038s] [POP] STS_POP[2] = 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[02:58:36.985 +  0.038s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:58:36.985 +  0.038s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+single_probe_outcome=OKAY all_okay=True payloads=3

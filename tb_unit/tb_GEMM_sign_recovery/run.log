@@ -1,0 +1,134 @@
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Fri May 29 06:18:39 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_sign_recovery_sim/xsim_script.tcl
+# xsim {tb_GEMM_sign_recovery_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_sign_recovery start ===
+=== Directed cases ===
+PASS [zero]: P=000000000000 → lower=0 upper=0
+PASS [lower_p1]: P=000000000001 → lower=1 upper=0
+PASS [upper_p1]: P=000000200000 → lower=0 upper=1
+PASS [lower_n1_borrow]: P=0000009fffff → lower=-1 upper=5
+PASS [lower_maxpos]: P=0000000fffff → lower=1048575 upper=0
+PASS [lower_minneg]: P=000000100000 → lower=-1048576 upper=1
+PASS [upper_maxpos]: P=0001fffe0000 → lower=-131072 upper=4096
+PASS [both_neg_borrow]: P=0001fffbfffe → lower=-262146 upper=4096
+PASS [all_ones]: P=00003fffffff → lower=-1 upper=512
+=== Random 100 vectors ===
+PASS [rand_0]: P=000012153524 → lower=-707292 upper=145
+PASS [rand_1]: P=00000484d609 → lower=316937 upper=36
+PASS [rand_2]: P=000006b97b0d → lower=-427251 upper=54
+PASS [rand_3]: P=000032c28465 → lower=164965 upper=406
+PASS [rand_4]: P=000000f3e301 → lower=-793855 upper=8
+PASS [rand_5]: P=00003b23f176 → lower=258422 upper=473
+PASS [rand_6]: P=000036d457ed → lower=-763923 upper=439
+PASS [rand_7]: P=00003cfde9f9 → lower=-136711 upper=488
+PASS [rand_8]: P=000022f784c5 → lower=-555835 upper=280
+PASS [rand_9]: P=000032aff7e5 → lower=1046501 upper=405
+PASS [rand_10]: P=00000932d612 → lower=-862702 upper=74
+PASS [rand_11]: P=0000393069f2 → lower=-1021454 upper=458
+PASS [rand_12]: P=000034007ae8 → lower=31464 upper=416
+PASS [rand_13]: P=00002e58495c → lower=-505508 upper=371
+PASS [rand_14]: P=000016ab582d → lower=743469 upper=181
+PASS [rand_15]: P=000031ef6263 → lower=1008227 upper=399
+PASS [rand_16]: P=0000003b2280 → lower=-318848 upper=2
+PASS [rand_17]: P=0000157845aa → lower=-506454 upper=172
+PASS [rand_18]: P=00000b203e96 → lower=16022 upper=89
+PASS [rand_19]: P=000006bc380d → lower=-247795 upper=54
+PASS [rand_20]: P=0000359fdd6b → lower=-8853 upper=429
+PASS [rand_21]: P=000001174a02 → lower=-570878 upper=9
+PASS [rand_22]: P=00000effe91d → lower=-5859 upper=120
+PASS [rand_23]: P=000011844923 → lower=280867 upper=140
+PASS [rand_24]: P=000025730aca → lower=-849206 upper=300
+PASS [rand_25]: P=00003968bdf2 → lower=572914 upper=459
+PASS [rand_26]: P=000020c4b341 → lower=308033 upper=262
+PASS [rand_27]: P=00003c20f378 → lower=62328 upper=481
+PASS [rand_28]: P=000035c50deb → lower=331243 upper=430
+PASS [rand_29]: P=0000234bf9c6 → lower=784838 upper=282
+PASS [rand_30]: P=00001e7502bc → lower=-720196 upper=244
+PASS [rand_31]: P=000005d79a0b → lower=-550389 upper=47
+PASS [rand_32]: P=000002f24185 → lower=-900731 upper=24
+PASS [rand_33]: P=00001dcc603b → lower=811067 upper=238
+PASS [rand_34]: P=00003f23327e → lower=209534 upper=505
+PASS [rand_35]: P=000038d99bf1 → lower=-418831 upper=455
+PASS [rand_36]: P=000031230762 → lower=198498 upper=393
+PASS [rand_37]: P=00000fa1559f → lower=87455 upper=125
+PASS [rand_38]: P=00003c6da9f8 → lower=895480 upper=483
+PASS [rand_39]: P=00000fc4569f → lower=284319 upper=126
+PASS [rand_40]: P=00002dcbc05b → lower=770139 upper=366
+PASS [rand_41]: P=000024ae3249 → lower=930377 upper=293
+PASS [rand_42]: P=00002bfec0d7 → lower=-81705 upper=352
+PASS [rand_43]: P=00000b212f96 → lower=77718 upper=89
+PASS [rand_44]: P=0000212ccec2 → lower=839362 upper=265
+PASS [rand_45]: P=00003b825a77 → lower=154231 upper=476
+PASS [rand_46]: P=0000090cdb12 → lower=842514 upper=72
+PASS [rand_47]: P=000036e5816d → lower=360813 upper=439
+PASS [rand_48]: P=00000fd28f1f → lower=-880865 upper=127
+PASS [rand_49]: P=000002d92f85 → lower=-446587 upper=23
+PASS [rand_50]: P=00002dda595b → lower=-370341 upper=367
+PASS [rand_51]: P=00001ff2ae3f → lower=-872897 upper=256
+PASS [rand_52]: P=00002c156358 → lower=-695464 upper=353
+PASS [rand_53]: P=0000071a0c8e → lower=-390002 upper=57
+PASS [rand_54]: P=00003d3599fa → lower=-681478 upper=490
+PASS [rand_55]: P=000039961773 → lower=-649357 upper=461
+PASS [rand_56]: P=00001799a82f → lower=-415697 upper=189
+PASS [rand_57]: P=00002fd8565f → lower=-502177 upper=383
+PASS [rand_58]: P=00003bf8fdf7 → lower=-459273 upper=480
+PASS [rand_59]: P=000033091ae6 → lower=596710 upper=408
+PASS [rand_60]: P=000014cfc129 → lower=1032489 upper=166
+PASS [rand_61]: P=00002d536cda → lower=-824102 upper=363
+PASS [rand_62]: P=00001a8ae2b5 → lower=713397 upper=212
+PASS [rand_63]: P=00003cf11979 → lower=-976519 upper=488
+PASS [rand_64]: P=000028740cd0 → lower=-783152 upper=324
+PASS [rand_65]: P=000015f6adab → lower=-610901 upper=176
+PASS [rand_66]: P=00002e5daddc → lower=-152100 upper=371
+PASS [rand_67]: P=00003edf72fd → lower=-36099 upper=503
+PASS [rand_68]: P=00002b0eed56 → lower=978262 upper=344
+PASS [rand_69]: P=000033d97667 → lower=-428441 upper=415
+PASS [rand_70]: P=00001b6fb9b6 → lower=1030582 upper=219
+PASS [rand_71]: P=00003cd18779 → lower=-948359 upper=487
+PASS [rand_72]: P=00000a74bf94 → lower=-737388 upper=84
+PASS [rand_73]: P=0000023f2c04 → lower=-54268 upper=18
+PASS [rand_74]: P=00002dcb69db → lower=747995 upper=366
+PASS [rand_75]: P=00002cb0b7d9 → lower=-1001511 upper=358
+PASS [rand_76]: P=00003b45e276 → lower=385654 upper=474
+PASS [rand_77]: P=00001b172db6 → lower=-578122 upper=217
+PASS [rand_78]: P=000023071a46 → lower=465478 upper=280
+PASS [rand_79]: P=00003bd261f7 → lower=-892425 upper=479
+PASS [rand_80]: P=00001a6ebab4 → lower=965300 upper=211
+PASS [rand_81]: P=0000147cd928 → lower=-206552 upper=164
+PASS [rand_82]: P=000023c530c7 → lower=340167 upper=286
+PASS [rand_83]: P=00000477e408 → lower=-531448 upper=36
+PASS [rand_84]: P=00003ea7a6fd → lower=501501 upper=501
+PASS [rand_85]: P=00000e37901c → lower=-552932 upper=114
+PASS [rand_86]: P=00002d3408da → lower=-784166 upper=362
+PASS [rand_87]: P=0000334ea766 → lower=960358 upper=410
+PASS [rand_88]: P=000039f50473 → lower=-719757 upper=464
+PASS [rand_89]: P=00002f3ab35e → lower=-347298 upper=378
+PASS [rand_90]: P=00002a8e05d5 → lower=918997 upper=340
+PASS [rand_91]: P=00001cf000b9 → lower=-1048391 upper=232
+PASS [rand_92]: P=00000b273796 → lower=472982 upper=89
+PASS [rand_93]: P=000013259f26 → lower=368422 upper=153
+PASS [rand_94]: P=00003e99837d → lower=-425091 upper=501
+PASS [rand_95]: P=000003615786 → lower=87942 upper=27
+PASS [rand_96]: P=00003f5a9b7e → lower=-353410 upper=507
+PASS [rand_97]: P=000027c3b6cf → lower=243407 upper=318
+PASS [rand_98]: P=00003d28e4fa → lower=582906 upper=489
+PASS [rand_99]: P=00000b940917 → lower=-784105 upper=93
+
+=== Summary ===
+PASS: 109 / 109
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 110 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_sign_recovery/tb_GEMM_sign_recovery.sv" Line 163
+exit
+INFO: xsimkernel Simulation Memory Usage: 289388 KB (Peak: 334108 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Fri May 29 06:18:44 2026...

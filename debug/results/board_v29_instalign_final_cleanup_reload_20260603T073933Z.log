@@ -1,0 +1,4 @@
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+06fcc0d825ee8ffdb782d098131cf6b7  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+pccx-npu

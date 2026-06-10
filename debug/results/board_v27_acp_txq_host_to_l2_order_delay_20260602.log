@@ -1,0 +1,63 @@
+
+=== delay_before_dm=0.0s btt=16 pa=0x0375b0000 ===
+ after memset 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  preDM t=0ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  postDM t=0ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=25ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=50ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=125ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=250ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=500ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1000ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1975ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT delay=0.0 idle=False dm=OKAY 0x80 last=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== delay_before_dm=0.05s btt=16 pa=0x0375b0000 ===
+ after memset 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  preDM t=0ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=25ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  postDM t=0ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=25ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=50ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=125ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=250ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=500ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1000ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1975ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT delay=0.05 idle=False dm=OKAY 0x80 last=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== delay_before_dm=0.2s btt=16 pa=0x0375b0000 ===
+ after memset 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  preDM t=0ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=25ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=50ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=75ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=175ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  postDM t=0ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=25ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=50ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=125ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=250ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=500ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1000ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1975ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT delay=0.2 idle=False dm=OKAY 0x80 last=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+
+=== delay_before_dm=1.0s btt=16 pa=0x0375b0000 ===
+ after memset 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000 acp_busy=0 acp_cmd_valid=0 acp_full=0
+  preDM t=0ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=25ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=50ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=75ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=175ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=375ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  preDM t=775ms 0x0000000011008001 busy=1 done=0 top=0x2000 mem=0x1100 acp_busy=1 acp_cmd_valid=0 acp_full=1
+  postDM t=0ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=25ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=50ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=125ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=250ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=500ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1000ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+  postDM t=1975ms 0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0
+ RESULT delay=1.0 idle=False dm=OKAY 0x80 last=0x0000000001008001 busy=1 done=0 top=0x2000 mem=0x0100 acp_busy=1 acp_cmd_valid=0 acp_full=0

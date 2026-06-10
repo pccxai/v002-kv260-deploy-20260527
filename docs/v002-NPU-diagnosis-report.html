@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>PCCX v002 NPU 진단 보고서 — 2026-05-27</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --bg: #0a0d12;
+    --bg-card: #11161e;
+    --bg-sub: #161c26;
+    --text: #e7ebf2;
+    --text-dim: #98a0ad;
+    --text-mute: #5b6573;
+    --accent: #7ab7ff;
+    --accent-soft: #325074;
+    --ok: #4ade80;
+    --warn: #fbbf24;
+    --err: #f87171;
+    --code: #a7d4ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Helvetica Neue", "Segoe UI", "Pretendard", sans-serif; line-height: 1.65; -webkit-font-smoothing: antialiased; }
+  .wrap { max-width: 980px; margin: 0 auto; padding: 60px 28px 120px; }
+  header { margin-bottom: 56px; }
+  h1 { font-size: 34px; font-weight: 600; letter-spacing: -0.4px; margin: 0 0 12px; }
+  .sub { color: var(--text-dim); font-size: 16px; }
+  .tag { display: inline-block; padding: 3px 10px; border-radius: 4px; font-size: 12px; font-weight: 500; letter-spacing: 0.3px; background: var(--bg-sub); color: var(--text-dim); margin-right: 6px; vertical-align: middle; }
+  .tag.ok { background: rgba(74,222,128,0.12); color: var(--ok); }
+  .tag.warn { background: rgba(251,191,36,0.12); color: var(--warn); }
+  .tag.err { background: rgba(248,113,113,0.14); color: var(--err); }
+  section { margin-bottom: 56px; }
+  h2 { font-size: 22px; font-weight: 600; margin: 0 0 18px; letter-spacing: -0.2px; }
+  h3 { font-size: 17px; font-weight: 600; margin: 32px 0 12px; letter-spacing: -0.1px; color: var(--text); }
+  p { margin: 12px 0; color: var(--text); }
+  code, .mono { font-family: "SF Mono", "JetBrains Mono", "Menlo", "Consolas", monospace; font-size: 13.5px; color: var(--code); }
+  pre { background: var(--bg-card); padding: 18px 22px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.55; color: var(--code); }
+  table { width: 100%; border-collapse: collapse; margin: 16px 0 24px; font-size: 14.5px; }
+  th, td { padding: 12px 16px; text-align: left; vertical-align: top; }
+  th { font-weight: 600; color: var(--text-dim); font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px; padding-bottom: 8px; }
+  td { background: var(--bg-card); }
+  tr:nth-child(even) td { background: var(--bg-sub); }
+  td:first-child { border-top-left-radius: 6px; border-bottom-left-radius: 6px; }
+  td:last-child { border-top-right-radius: 6px; border-bottom-right-radius: 6px; }
+  .ok-mark { color: var(--ok); font-weight: 600; }
+  .err-mark { color: var(--err); font-weight: 600; }
+  .warn-mark { color: var(--warn); font-weight: 600; }
+  ul, ol { padding-left: 24px; color: var(--text); }
+  li { margin: 8px 0; }
+  .callout { padding: 20px 24px; background: var(--bg-card); border-radius: 8px; margin: 20px 0; }
+  .callout.warn { background: rgba(251,191,36,0.06); }
+  .callout.ok { background: rgba(74,222,128,0.06); }
+  .callout.err { background: rgba(248,113,113,0.06); }
+  .callout h3 { margin-top: 0; }
+  .small { font-size: 13px; color: var(--text-dim); }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  hr { border: none; height: 1px; background: var(--bg-sub); margin: 56px 0; }
+  footer { color: var(--text-mute); font-size: 13px; margin-top: 60px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>PCCX v002 NPU 진단 보고서</h1>
+  <p class="sub">
+    <span class="tag">2026-05-27</span>
+    <span class="tag ok">KV260 silicon</span>
+    <span class="tag warn">forward 미완</span>
+    <span class="tag">7a6a6179 bit</span>
+  </p>
+  <p class="sub">KV260 PCCX v002 NPU 위에서 Gemma 추론 토큰을 만들기 위한 진단 결과. 무엇이 작동하고, 무엇이 막혀 있는지, 정확히 어떤 RTL 패치가 필요한지 정리.</p>
+</header>
+
+<section>
+  <h2>한 줄 요약</h2>
+  <div class="callout warn">
+    <p style="margin:0; font-size: 16px;">
+      <strong>NPU frontend (ISA decoder + AXIL slave + BUSY 진입)는 살아 있다.</strong>
+      그러나 <strong>backend (CVO dispatcher completion → mmio_npu_stat)</strong>가 deployed bit에 미반영이라
+      DONE 신호가 raise되지 않아 forward pass가 완료되지 않는다.
+      OPEN 상태 PR <code>#86</code>이 정확한 root cause.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2>검증한 것 (silicon 위에서)</h2>
+  <table>
+    <tr><th>항목</th><th>결과</th><th>세부</th></tr>
+    <tr><td><code>/dev/uio4</code> = <code>pccx-npu</code></td><td class="ok-mark">PASS</td><td>UIO mmap 64 KiB window</td></tr>
+    <tr><td>AXIL write32/write64</td><td class="ok-mark">PASS</td><td><code>ADDR_INST</code> 0x000 + <code>ADDR_KICK</code> 0x008</td></tr>
+    <tr><td>ISA decode (4 opcode)</td><td class="ok-mark">PASS</td><td>RESET_KV_CACHE / LOAD_WEIGHT / LOAD_PROMPT / NEXT_TOKEN 모두 BUSY 진입</td></tr>
+    <tr><td>Frontend FSM BUSY 전이</td><td class="ok-mark">PASS</td><td>KICK 직후 status = <code>0x1</code> (BUSY)</td></tr>
+    <tr><td>DONE bit raise</td><td class="err-mark">FAIL</td><td>12초 polling, DONE 안 떨어짐</td></tr>
+    <tr><td>UIO interrupt (DONE pulse)</td><td class="err-mark">FAIL</td><td><code>/sys/class/uio/uio4/event = 0</code> (한 번도 raise 안 됨)</td></tr>
+    <tr><td>AXIL_STAT_OUT FIFO refresh</td><td class="err-mark">FAIL</td><td>모든 offset이 <code>0x1</code> 반복 (head 값 그대로)</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>정확한 원인 — 미반영 RTL 패치 3건</h2>
+  <p>현재 deployed bitstream <code>7a6a6179</code>가 만들어진 시점에 다음 3개 PR이 모두 OPEN. 이 패치가 들어가야 forward backend 완성.</p>
+
+  <table>
+    <tr><th>PR</th><th>제목</th><th>역할</th></tr>
+    <tr>
+      <td><span class="tag err">#86 OPEN</span></td>
+      <td><code>feat(stat): connect engine completion to mmio_npu_stat</code></td>
+      <td>
+        CVO dispatcher completion pulse를 <code>mem_dispatcher</code> → <code>NPU_top</code> status aggregation으로 wire.
+        <strong>mmio_npu_stat</strong>이 <code>npu_controller_top</code> / <code>ctrl_npu_frontend</code>로 feed 되어
+        <code>AXIL_STAT_OUT</code>이 DONE bit을 return 가능하게 만드는 핵심 patch.<br>
+        파일: <code>mem_dispatcher.sv</code>, <code>npu_controller_top.sv</code>, <code>NPU_top.sv</code>, TB <code>tb_npu_top_e2e_minimal.sv</code> (+1024 lines).<br>
+        <span class="small">→ 이 patch가 빠져있어 DONE이 raise 안 됨. 가장 우선 머지 필요.</span>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="tag err">#90 OPEN</span></td>
+      <td><code>feat(npu_top): connect result packer ready/valid and STORE writeback</code></td>
+      <td>
+        <code>FROM_gemm_result_packer</code>가 ready stall 동안 packed data를 안정적으로 hold.
+        <code>Global_Scheduler</code> → <code>NPU_top</code> → <code>mem_dispatcher</code> STORE uop valid path 추가.
+        GEMM 결과 4 × 128-bit beat를 L2에 writeback 하고 STORE done pulse를 <code>mmio_npu_stat</code>으로 raise.<br>
+        <span class="small">→ GEMM 결과 데이터 path. #86와 함께 묶여야 의미 있음.</span>
+      </td>
+    </tr>
+    <tr>
+      <td><span class="tag warn">#134 OPEN</span></td>
+      <td><code>Candidate: pipeline L2 URAM dout SRL path (post-impl WNS recovery)</code></td>
+      <td>
+        <code>mem_L2_cache_fmap</code> Port B <code>READ_LATENCY_B</code> 7 → 6 + local 128-bit out register 추가.
+        외부 latency 7 cycle 유지. PR #79 이후 post-impl WNS recovery용.<br>
+        <span class="small">→ timing closure 후보. 합성에서 hold/setup 안 잡히면 적용.</span>
+      </td>
+    </tr>
+  </table>
+</section>
+
+<section>
+  <h2>로컬 bit 비교 (3종)</h2>
+  <table>
+    <tr><th>위치</th><th>SHA</th><th>Build</th><th>silicon 결과</th></tr>
+    <tr>
+      <td>KV260 현재 active <strong>(라이브)</strong></td>
+      <td class="mono">7a6a6179</td>
+      <td>—</td>
+      <td>frontend OK, backend ✗ (이 보고서 기준)</td>
+    </tr>
+    <tr>
+      <td><code>pccx-FPGA-NPU-LLM-kv260-v002-final</code></td>
+      <td class="mono">fb3293a3</td>
+      <td>2026-05-09</td>
+      <td>(시도 안 함, 더 옛날 build)</td>
+    </tr>
+    <tr>
+      <td><code>worktrees/kv260-l2-uram-srl-candidate</code></td>
+      <td class="mono">59558c5f</td>
+      <td>2026-05-14</td>
+      <td>frontend FSM <em>다른 path</em> (2초 후 BUSY), backend는 여전히 ✗</td>
+    </tr>
+  </table>
+  <p>→ <strong>3개 bit 모두 PR #86 미적용</strong>. worktrees 14일자가 가장 최신이지만 backend 완성 아님 = 그 사이 RTL diff는 frontend path만 건드림.</p>
+</section>
+
+<section>
+  <h2>핵심 raw 증거</h2>
+  <pre>opened: /dev/uio4
+pre-status: 0x0000000000000000          ← idle 상태
+sending RESET_KV_CACHE: 0x0100000000000000
+  t=1s  status=0x0000000000000001 BUSY=True DONE=False
+  t=2s  status=0x0000000000000001 BUSY=True DONE=False
+  ... (12초까지 동일) ...
+  t=12s status=0x0000000000000001 BUSY=True DONE=False
+
+uio4/event = 0                          ← interrupt count 0 (DONE pulse 한 번도 raise X)
+다른 opcode 시도:
+  LOAD_WEIGHT  (0x02): 같은 결과 (BUSY 영구)
+  LOAD_PROMPT  (0x03): 같은 결과
+  NEXT_TOKEN   (0x04): 같은 결과</pre>
+  <p class="small">→ AXIL_STAT_OUT FIFO head가 BUSY 값 하나만 가지고 있고 더 이상 push되지 않음 = backend completion pulse를 status FIFO로 wire 안 함 = PR #86 미적용 증거.</p>
+</section>
+
+<section>
+  <h2>다음 step (사용자 합의)</h2>
+  <ol>
+    <li><strong>KV260 라이브 복원 완료</strong> <span class="tag ok">DONE</span>
+      <br><span class="small">현재 bit <code>7a6a6179</code> + 옛 dtbo로 복원. <code>/dev/uio4</code> 정상.</span>
+    </li>
+    <li><strong>GCP Vivado 합성 path</strong> <span class="tag warn">사용자 액션 필요</span>
+      <br><span class="small">사용자가 <code>! gcloud auth login</code> 실행 후 다음 자동 진행 가능:
+        <ul>
+          <li>pccx-vivado VM (STOPPED) start</li>
+          <li>PR #86 + #90 머지된 branch checkout (또는 cherry-pick)</li>
+          <li>RTL synth → impl → bitstream</li>
+          <li>새 bit + dtbo KV260 deploy</li>
+          <li>RESET_KV_CACHE 재시도 → DONE 확인</li>
+          <li>LOAD_WEIGHT → LOAD_PROMPT → NEXT_TOKEN 시퀀스로 토큰 시연</li>
+        </ul>
+      </span>
+    </li>
+    <li><strong>책 narrative milestone</strong> (이미 silicon 위에서 입증된 부분):
+      <ul>
+        <li>PCCX v002 ISA encoder <code>isa.py</code> (4 opcode, 64-bit packed) ← repo 정본</li>
+        <li>UIO driver <code>NpuMmio</code> ← <code>/dev/uio4</code> mmap, AXIL write/read</li>
+        <li>frontend FSM live on KV260 silicon ← BUSY 진입 검증</li>
+        <li>backend RTL 완성도 → 다음 bitstream에서 입증</li>
+      </ul>
+    </li>
+  </ol>
+</section>
+
+<section>
+  <h2>작업 환경 (변경 X)</h2>
+  <div class="grid2">
+    <div class="callout">
+      <h3>작업 폴더</h3>
+      <p class="mono small" style="word-break:break-all;">/home/hwkim/Desktop/pccxai-private/v002-kv260-deploy-20260527/</p>
+      <p class="small">사용자 명시 "절대 잃지마" — 영구 frozen</p>
+    </div>
+    <div class="callout">
+      <h3>소스 원본</h3>
+      <p class="mono small" style="word-break:break-all;">main.py: ~/Desktop/github/hkimw/llm-bottleneck-lab/x64/gemma3N_E4B/<br>RTL: pccxai/pccx-FPGA-NPU-LLM-kv260 → third_party/pccx-v002 (submodule)</p>
+    </div>
+    <div class="callout">
+      <h3>KV260</h3>
+      <p class="mono small">ubuntu@192.168.219.108<br>active app: <code>pccx_npu_bd</code> slot 0<br>bit sha: <code>7a6a6179</code> (라이브 복원됨)</p>
+    </div>
+    <div class="callout">
+      <h3>GCP Vivado</h3>
+      <p class="mono small">pccx-vivado VM<br>STOPPED 상태 (평소 절약)<br>start하려면 사용자 <code>gcloud auth login</code> 필요</p>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<footer>
+  <p>PCCX™ v002 NPU diagnostic. 생성: 2026-05-27 by Claude (Opus 4.7 1M context) under hwkim 직접 지시.<br>
+  silicon test target: KV260 (ZU5EV), bitstream <code>7a6a6179</code>, AXI-Lite @ <code>0xA000_0000</code> 64KB window.</p>
+</footer>
+
+</div>
+</body>
+</html>

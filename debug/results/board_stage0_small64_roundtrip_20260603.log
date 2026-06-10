@@ -1,0 +1,13 @@
+[12:23:32.191 +  0.006s] =============================
+[12:23:32.191 +  0.006s]   xmutil reload pccx_npu_bd
+[12:23:32.191 +  0.006s] =============================
+[12:23:32.246 +  0.062s] [BIT] bitstream md5 = 89e3c4e238c30cf02db537fd232dc5d3 (== expected v31 stage1_gemm 20260603T103103Z)
+[12:23:32.247 +  0.062s] [XMUTIL] running: xmutil unloadapp
+[12:23:32.633 +  0.448s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:23:32.633 +  0.448s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:23:33.155 +  0.970s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:23:34.157 +  1.972s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:23:34.212 +  2.027s] [BIT] bitstream md5 = 89e3c4e238c30cf02db537fd232dc5d3 (== expected v31 stage1_gemm 20260603T103103Z)
+reload True
+[12:23:34.212 +  2.028s] [CMA] CMA OK: va=0xffff8920d000 phys=0x0375b0000 size=0x1000 fd=4
+[12:23:34.213 +  2.028s] [CMA] CMA OK: va=0xffff891e1000 phys=0x0375b1000 size=0x1000 fd=6

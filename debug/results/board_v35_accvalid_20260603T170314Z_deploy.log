@@ -1,0 +1,36 @@
+=== board v35_accvalid_20260603T170314Z deploy 2026-06-03T17:47:41Z ===
+before:
+186ddc523d88b0433eaa869e348b8ff7  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+-rw-r--r-- 1 root root 7797692 Jun  3 16:29 /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+-rw-r--r-- 1 root root     857 Jun  3 16:29 /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.dtbo
+-rw-r--r-- 1 root root      55 Jun  3 16:29 /lib/firmware/xilinx/pccx_npu_bd/shell.json
+unloadapp
+remove from slot 0 returns: 0 (Ok)
+after install:
+e7777bf95556a249e045b8a4ec3c4876  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+5963669e646ca78901dbdfd3b4f4bb60  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.dtbo
+83e1fe120378370e3b23212e4691c81e  /lib/firmware/xilinx/pccx_npu_bd/shell.json
+loadapp
+pccx_npu_bd: loaded to slot 0
+fpga state:
+operating
+uio:
+crw------- 1 root root 237, 0 Mar 13 16:47 /dev/uio0
+crw------- 1 root root 237, 1 Mar 13 16:47 /dev/uio1
+crw------- 1 root root 237, 2 Mar 13 16:47 /dev/uio2
+crw------- 1 root root 237, 3 Mar 13 16:47 /dev/uio3
+crw------- 1 root root 237, 4 Jun  3 17:47 /dev/uio4
+pccx-npu
+Traceback (most recent call last):
+  File "<stdin>", line 4, in <module>
+  File "/home/ubuntu/pccx-gemma-deploy/pccx_npu/uio.py", line 73, in __enter__
+    self._fd = os.open(self.path, os.O_RDWR | os.O_SYNC)
+PermissionError: [Errno 13] Permission denied: '/dev/uio4'
+=== deploy sudo status supplement 2026-06-03T17:48:07Z ===
+e7777bf95556a249e045b8a4ec3c4876  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+5963669e646ca78901dbdfd3b4f4bb60  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.dtbo
+83e1fe120378370e3b23212e4691c81e  /lib/firmware/xilinx/pccx_npu_bd/shell.json
+operating
+pccx-npu
+fresh status: 0x0000000000008000
+DEPLOY_RC=0

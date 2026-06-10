@@ -1,0 +1,52 @@
+=== tb_mem_dispatcher_gemm_store_readback — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv" into library work
+INFO: [VRFC 10-311] analyzing module shape_const_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_u_operation_queue
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_CVO_stream_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/stage1-tb-work/tb_unit/tb_mem_dispatcher_gemm_store_readback/tb_mem_dispatcher_gemm_store_readback.sv" into library work
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-311] analyzing module tb_mem_dispatcher_gemm_store_readback
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /tools/Xilinx/2025.2/Vivado/bin/unwrapped/lnx64.o/xelab --debug typical -L unisims_ver -L unimacro_ver -L secureip tb_mem_dispatcher_gemm_store_readback glbl -s tb_mem_dispatcher_gemm_store_readback_sim 
+Multi-threading is on. Using 14 slave threads.
+WARNING: [XSIM 43-3431] One or more environment variables have been detected which affect the operation of the C compiler. These are typically not set in standard installations and are not tested by AMD, however they may be appropriate for your system, so the flow will attempt to continue.  If errors occur, try running xelab with the "-mt off -v 1" switches to see more information from the C compiler. The following environment variables have been detected:
+    LIBRARY_PATH
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <xpm_fifo_async> not found while processing module instance <u_acp_rx_fifo> [/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv:198]
+WARNING: [VRFC 10-2832] instantiating unknown module xpm_fifo_async [/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv:272]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+--- xsim ---
+ERROR: Please check the snapshot name which is created during 'xelab',the current snapshot name "xsim.dir/tb_mem_dispatcher_gemm_store_readback_sim/xsimk" does not exist 
+
+=== tb_mem_dispatcher_gemm_store_readback RESULT: FAIL ===

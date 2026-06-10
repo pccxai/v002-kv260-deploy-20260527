@@ -1,0 +1,37 @@
+=== Stage 0 v4 — MEMCPY with shape preload ===
+  pa_a=0x0375b0000, pa_b=0x0375b1000
+  pre-status: 0x0000000000008000 busy=0 done=0 top=0x2000 mem=0x0000
+  WARN: pre-status not fresh 0x0 — assume KV260 NPU was reloaded?
+
+[Step 1] MEMSET fmap_shape[0] = (2048, 1, 1)
+  word=0x3000800000100010
+  status: 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000
+
+[Step 2] MEMSET fmap_shape[1] = (2048, 1, 1)
+  word=0x3010800000100010
+  status: 0x00000000000889d2 busy=0 done=1 top=0x2274 mem=0x0008
+
+[Step 3] MEMCPY HOST -> L2 (shape_ptr_addr=0)
+  word=0x2802000000000000
+  acp_fmap tag=0x0
+    t=0ms NPU: 0x00000000000889d1 busy=1 done=0 top=0x2274 mem=0x0008
+    t=125ms NPU: 0x00000000000889d1 busy=1 done=0 top=0x2274 mem=0x0008
+    t=250ms NPU: 0x00000000000889d1 busy=1 done=0 top=0x2274 mem=0x0008
+    t=500ms NPU: 0x00000000000889d1 busy=1 done=0 top=0x2274 mem=0x0008
+    t=975ms NPU: 0x00000000000889d1 busy=1 done=0 top=0x2274 mem=0x0008
+  acp_fmap mover status: 0x80
+
+[Step 4] MEMCPY L2 -> HOST (shape_ptr_addr=1)
+  word=0x2400000100000002
+  acp_result tag=0x1
+    t=0ms NPU: 0x000000000008c9d1 busy=1 done=0 top=0x3274 mem=0x0008
+    t=125ms NPU: 0x000000000008c9d1 busy=1 done=0 top=0x3274 mem=0x0008
+    t=250ms NPU: 0x000000000008c9d1 busy=1 done=0 top=0x3274 mem=0x0008
+    t=500ms NPU: 0x000000000008c9d1 busy=1 done=0 top=0x3274 mem=0x0008
+    t=975ms NPU: 0x000000000008c9d1 busy=1 done=0 top=0x3274 mem=0x0008
+  acp_result mover status: 0x81
+
+  A: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+  B: 504343582d53544147452d302d56342d4d454d4350592d574954482d53484150
+RESULT: PASS
+STAGE0_RC=0

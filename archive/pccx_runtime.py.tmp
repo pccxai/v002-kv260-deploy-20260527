@@ -1,0 +1,2 @@
+# CPU fallback 제거 — NPU only path (사용자 명시)
+# 추후 NPU ACP RTL fix 후 정상 dispatch 동작

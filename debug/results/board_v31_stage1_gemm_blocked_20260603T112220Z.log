@@ -1,0 +1,4 @@
+7dc1d6004aff1159cfd44ca987156561fbda0c850fc919575cf814a969d27db2  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+89e3c4e238c30cf02db537fd232dc5d3  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+=== Stage 1 — GEMM 32x32x32 silicon test ===
+BLOCKED: Stage 1 GEMM silicon smoke needs HP0/HP1 INT4 weight packing before it is a valid GEMM test. Do not use acp_fmap for weight preload.

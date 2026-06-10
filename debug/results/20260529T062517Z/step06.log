@@ -1,0 +1,51 @@
+[06:25:49.024 +  0.017s] ============================================================================
+[06:25:49.024 +  0.017s]   dbg_step_06 — CCI-400 snoop toggle → re-test ACP single (branch decider)
+[06:25:49.024 +  0.017s] ============================================================================
+[06:25:49.024 +  0.017s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_06_snoop_then_single.py']
+[06:25:49.024 +  0.017s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:25:49.025 +  0.017s] [BANNER] uid:  0
+[06:25:49.025 +  0.017s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:25:49.078 +  0.071s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:25:49.079 +  0.071s] ==================================================
+[06:25:49.079 +  0.071s]   STAGE A: baseline ACP single (expected: STUCK)
+[06:25:49.079 +  0.071s] ==================================================
+[06:25:49.079 +  0.072s] =========================================
+[06:25:49.079 +  0.072s]   --- ACP single baseline: baseline ---
+[06:25:49.079 +  0.072s] =========================================
+[06:25:49.086 +  0.078s] [UIO] opening NPU UIO at /dev/uio4
+[06:25:49.086 +  0.079s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[06:25:49.086 +  0.079s] pre  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:49.087 +  0.080s] [CMA] CMA OK: va=0xffffacdde000 phys=0x0375b0000 size=0x1000 fd=6
+[06:25:49.087 +  0.080s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[06:25:49.087 +  0.080s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[06:25:49.087 +  0.080s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:52.093 +  3.086s] [POLL] !!! poll TIMED OUT after 3.0s — sts_lvl stayed 0
+[06:25:52.093 +  3.086s] [baseline] post acp_fmap sts_lvl=0 saw_status=False
+[06:25:52.094 +  3.086s] ===========================================
+[06:25:52.094 +  3.087s]   classify /dev/mem CCI-400 write attempt
+[06:25:52.094 +  3.087s] ===========================================
+[06:25:52.094 +  3.087s] [SNOOP] spawning: python3 /home/ubuntu/pccx-gemma-deploy/debug/acp_snoop_enable.py
+[06:25:54.466 +  5.459s] [SNOOP] child returncode = -7 (signal 7)
+[06:25:54.466 +  5.459s] ===================================
+[06:25:54.466 +  5.459s]   STAGE B: post-toggle ACP single
+[06:25:54.466 +  5.459s] ===================================
+[06:25:54.767 +  5.760s] ============================================
+[06:25:54.767 +  5.760s]   --- ACP single baseline: post-toggle ---
+[06:25:54.767 +  5.760s] ============================================
+[06:25:54.768 +  5.761s] [UIO] opening NPU UIO at /dev/uio4
+[06:25:54.769 +  5.761s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=5
+[06:25:54.769 +  5.762s] pre  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:54.769 +  5.762s] [CMA] CMA OK: va=0xffffacdde000 phys=0x0375b1000 size=0x1000 fd=9
+[06:25:54.770 +  5.762s] [PUSH] push cmd →   acp_fmap: addr=0x375b1000 btt=256 drr=0 eof=1 tag=0
+[06:25:54.770 +  5.762s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b1000 CMD_EXT=0x00
+[06:25:54.770 +  5.763s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:57.775 +  8.768s] [POLL] !!! poll TIMED OUT after 3.0s — sts_lvl stayed 0
+[06:25:57.775 +  8.768s] [post-toggle] post acp_fmap sts_lvl=0 saw_status=False
+[06:25:57.775 +  8.768s] ===================
+[06:25:57.775 +  8.768s]   BRANCH DECISION
+[06:25:57.776 +  8.768s] ===================
+[06:25:57.776 +  8.768s] [STEP06] baseline saw_status=False → final_sts_lvl=0
+[06:25:57.776 +  8.768s] [STEP06] snoop attempt classification = BUSERROR
+[06:25:57.776 +  8.769s] [STEP06] post-toggle saw_status=False → final_sts_lvl=0
+[06:25:57.776 +  8.769s] [STEP06] → CCI-400 register space is Secure-World protected from EL0.  Fix path: PATCH ATF (xilinx-arm-trusted-firmware) so snoop is enabled in cci_enable_snoop_dvm_reqs(), or use baremetal.
+[run_all] step06 rc=0

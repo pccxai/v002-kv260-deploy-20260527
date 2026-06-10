@@ -1,0 +1,29 @@
+wrote hw/build/pccx_v002_system_wrapper.bit.bin bytes=7797692 header=144 payload=7797692
+ac9eabf11502840db8de7f6cb7f67124777eb83e13dc53d45516badfd90f0c3e  hw/build/pccx_v002_system_wrapper.bit
+8da8b7a2b58497d8adfdfd6998274d78ea50763397a083281eb6459d9ede871d  hw/build/pccx_v002_system_wrapper.bit.bin
+2f2259e2409afa4ac50a7e6a1fa71004cb8d4fd6ba5de956d541d9a37971a46c  hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo
+a13dbd0a508de4656c3ba22aa9f8a41494a5082bcd585589fc366a56cc5ba1c1  hw/build/deploy/pccx_npu_bd/shell.json
+3d76dd644bb23455f5a45903c29934cc  hw/build/pccx_v002_system_wrapper.bit
+06fcc0d825ee8ffdb782d098131cf6b7  hw/build/pccx_v002_system_wrapper.bit.bin
+WARN knowledge base path not set; using built-in v002 pre-deploy rules only
+WARN knowledge rule warning: [v002-timing-whs-threshold] whs_ns=0.01 < 0.5: WHS is below 0.5 ns; add runtime watch and temperature review before deploy.
+-- pre_deploy_check.py --
+bit       : /home/hwkim/v002-rtl/hw/build/pccx_v002_system_wrapper.bit
+dtbo      : hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo
+bitbin    : hw/build/pccx_v002_system_wrapper.bit.bin
+shell.json: hw/build/deploy/pccx_npu_bd/shell.json
+allowed-parts: ('xck26-sfvc784-2LV-c',)
+
+PASS bitstream present: /home/hwkim/v002-rtl/hw/build/pccx_v002_system_wrapper.bit  size=7797836 B
+PASS bitstream MD5: 3d76dd644bb23455f5a45903c29934cc
+PASS bitstream design = pccx_v002_system_wrapper
+PASS bitstream part   = xck26-sfvc784-2LV-c
+PASS bitstream date   = 2026/06/03 07:30:50
+PASS bitstream payload= 7797692 bytes (header consumed 144 B)
+PASS dtbo present: hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo  size=857 B  magic OK
+PASS bit.bin present: hw/build/pccx_v002_system_wrapper.bit.bin  size=7797692 B
+PASS bit.bin matches bootgen LE-swapped payload of .bit (canonical FPGA Manager format)
+PASS shell.json valid: {'shell_type': 'XRT_FLAT', 'num_slots': '1'}
+
+PASS pre-deploy check PASSED for pccx_v002_system_wrapper.bit
+RC=0

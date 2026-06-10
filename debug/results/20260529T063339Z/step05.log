@@ -1,0 +1,64 @@
+[06:34:00.644 +  0.016s] ==============================================================
+[06:34:00.645 +  0.016s]   dbg_step_05 — HP0 vs ACP_FMAP single-transfer differential
+[06:34:00.645 +  0.016s] ==============================================================
+[06:34:00.645 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_05_hp_vs_acp_diff.py']
+[06:34:00.645 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:34:00.645 +  0.016s] [BANNER] uid:  0
+[06:34:00.645 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:34:00.698 +  0.070s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:34:00.705 +  0.076s] [UIO] opening NPU UIO at /dev/uio4
+[06:34:00.705 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[06:34:00.705 +  0.077s] =======================================
+[06:34:00.705 +  0.077s]   baseline snapshot of all 6 channels
+[06:34:00.705 +  0.077s] =======================================
+[06:34:00.706 +  0.077s] [DUMP] --- cmdsts snapshot: baseline ---
+[06:34:00.706 +  0.077s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.706 +  0.077s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.706 +  0.077s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.706 +  0.078s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.706 +  0.078s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.706 +  0.078s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.707 +  0.079s] [CMA] CMA OK: va=0xffff9333a000 phys=0x0375b0000 size=0x1000 fd=6
+[06:34:00.707 +  0.079s] [ADDR] shared SADDR = 0x375b0000
+[06:34:00.707 +  0.079s] =======================
+[06:34:00.707 +  0.079s]   --- probing hp0 ---
+[06:34:00.707 +  0.079s] =======================
+[06:34:00.707 +  0.079s] pre  hp0: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:00.708 +  0.079s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[06:34:00.708 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[06:34:00.708 +  0.079s] imm  hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[06:34:00.708 +  0.079s] [POLL]        hp0 @0xA000_1000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[06:34:00.708 +  0.079s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:00.908 +  0.280s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:01.109 +  0.480s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:01.309 +  0.681s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:01.510 +  0.881s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:01.710 +  1.082s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:01.911 +  1.283s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:02.112 +  1.483s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:02.312 +  1.683s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:02.512 +  1.884s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:02.713 +  2.084s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:02.913 +  2.285s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:03.114 +  2.486s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:34:03.315 +  2.686s] post hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[06:34:03.315 +  2.686s] [POP]   STS_POP[0] = 0x00000080 tag=0x0 OKAY=0 err=INTERR bytes=0 eof=0
+[06:34:03.315 +  2.686s] [POP]   STS_POP[1] = 0x00000080 tag=0x0 OKAY=0 err=INTERR bytes=0 eof=0
+[06:34:03.315 +  2.687s] [POP]   STS_POP[2] = 0x00000080 tag=0x0 OKAY=0 err=INTERR bytes=0 eof=0
+[06:34:03.816 +  3.187s] ============================
+[06:34:03.816 +  3.187s]   --- probing acp_fmap ---
+[06:34:03.816 +  3.187s] ============================
+[06:34:03.816 +  3.188s] pre  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:03.816 +  3.188s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[06:34:03.816 +  3.188s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[06:34:03.816 +  3.188s] imm  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:03.817 +  3.188s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:06.421 +  5.793s] [POLL] !!! poll TIMED OUT after 2.5s — sts_lvl stayed 0
+[06:34:06.421 +  5.793s] post acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:34:06.421 +  5.793s] ========================
+[06:34:06.421 +  5.793s]   differential verdict
+[06:34:06.422 +  5.793s] ========================
+[06:34:06.422 +  5.793s] [STEP05] hp0      : saw_status=True all_okay=False  payloads=3
+[06:34:06.422 +  5.793s] [STEP05] acp_fmap : saw_status=False all_okay=False  payloads=0
+[06:34:06.422 +  5.793s] [STEP05] PATTERN: HP0 returned status but with ERROR (SLVERR/DECERR/INTERR). The DataMover IP itself is responding, but the AXI master leg failed — likely wrong phys addr or weight DataMover is configured for a slot the test SADDR doesn't satisfy.  Need to use a real weight slot or revise SADDR before conclusions.
+[run_all] step05 rc=0

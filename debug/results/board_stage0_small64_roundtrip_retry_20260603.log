@@ -1,0 +1,22 @@
+[12:24:03.164 +  0.006s] =============================
+[12:24:03.164 +  0.006s]   xmutil reload pccx_npu_bd
+[12:24:03.164 +  0.006s] =============================
+[12:24:03.218 +  0.060s] [BIT] bitstream md5 = 89e3c4e238c30cf02db537fd232dc5d3 (== expected v31 stage1_gemm 20260603T103103Z)
+[12:24:03.218 +  0.060s] [XMUTIL] running: xmutil unloadapp
+[12:24:03.584 +  0.426s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:24:03.584 +  0.426s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:24:04.105 +  0.947s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:24:05.107 +  1.949s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:24:05.161 +  2.002s] [BIT] bitstream md5 = 89e3c4e238c30cf02db537fd232dc5d3 (== expected v31 stage1_gemm 20260603T103103Z)
+reload True
+[12:24:05.161 +  2.003s] [CMA] CMA OK: va=0xffff8929e000 phys=0x0375b0000 size=0x1000 fd=4
+[12:24:05.162 +  2.004s] [CMA] CMA OK: va=0xffff89272000 phys=0x0375b1000 size=0x1000 fd=6
+pa 0x375b0000 0x375b1000
+shape 0x8002
+fmap 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:24:05.215 +  2.056s] [POP] STS_POP[0] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:24:05.215 +  2.056s] [POP] STS_POP[1] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+result 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+A 5043435836342d5354414745302d524f554e44545249502d000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021222324252627
+B 5043435836342d5354414745302d524f554e44545249502d000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f2021222324252627
+PASS True

@@ -1,0 +1,113 @@
+[02:36:03.078 +  0.016s] =========================================================================
+[02:36:03.078 +  0.016s]   dbg_step_08 — DM stall isolation test (other channels + NPU frontend)
+[02:36:03.078 +  0.016s] =========================================================================
+[02:36:03.078 +  0.016s] [BANNER] argv: ['debug/dbg_step_08_dm_stall_isolation_test.py']
+[02:36:03.078 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:36:03.078 +  0.016s] [BANNER] uid:  0
+[02:36:03.078 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:36:03.132 +  0.070s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:36:03.139 +  0.077s] [UIO] opening NPU UIO at /dev/uio4
+[02:36:03.139 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[02:36:03.139 +  0.078s] =====================
+[02:36:03.140 +  0.078s]   baseline snapshot
+[02:36:03.140 +  0.078s] =====================
+[02:36:03.140 +  0.078s] [BASE]   acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:36:03.140 +  0.078s] [BASE]   hp0: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:36:03.140 +  0.078s] [BASE]   NPU STAT_OUT pre: 0x0000000000008000 (busy=0 done=0 upper=0x0000 mem=0x8000)
+[02:36:03.140 +  0.078s] ==================================
+[02:36:03.140 +  0.078s]   allocate CMA for stall channel
+[02:36:03.140 +  0.078s] ==================================
+[02:36:03.141 +  0.079s] [CMA] CMA OK: va=0xffffa5a0b000 phys=0x0375b0000 size=0x1000 fd=6
+[02:36:03.141 +  0.079s] [ISO] Stall channel SADDR = 0x375b0000
+[02:36:03.141 +  0.079s] ==================================
+[02:36:03.141 +  0.079s]   push stall command to acp_fmap
+[02:36:03.141 +  0.079s] ==================================
+[02:36:03.141 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[02:36:03.141 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[02:36:03.192 +  0.130s] ========================
+[02:36:03.192 +  0.130s]   isolation test phase
+[02:36:03.192 +  0.130s] ========================
+[02:36:03.192 +  0.130s] [ISO] Immediately testing other parts of the system while stall is active...
+[02:36:03.192 +  0.130s] [ISO] Attempting NPU command (during stall)...
+[02:36:03.192 +  0.130s] [ISO]   NPU command write succeeded (no MMIO hang)
+[02:36:03.192 +  0.130s] [ISO] Testing parallel transfer on hp0...
+[02:36:03.193 +  0.131s] [CMA] CMA OK: va=0xffffa59cf000 phys=0x0375b1000 size=0x1000 fd=8
+[02:36:03.193 +  0.131s] [PUSH] push cmd →        hp0: addr=0x375b1000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[02:36:03.193 +  0.131s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b1000 CMD_EXT=0xff00
+[02:36:03.193 +  0.131s] [POLL]        hp0 @0xA000_1000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:36:03.193 +  0.131s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.243 +  0.181s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.293 +  0.231s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.344 +  0.282s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.394 +  0.332s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.444 +  0.382s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.495 +  0.433s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.545 +  0.483s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.595 +  0.533s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.645 +  0.583s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.695 +  0.634s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.746 +  0.684s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.796 +  0.734s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.846 +  0.784s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.896 +  0.834s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.947 +  0.885s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:03.997 +  0.935s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.047 +  0.985s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.097 +  1.035s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.148 +  1.086s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.198 +  1.136s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.248 +  1.186s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.298 +  1.236s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.348 +  1.287s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.399 +  1.337s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.449 +  1.387s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.499 +  1.437s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.549 +  1.487s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.600 +  1.538s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.650 +  1.588s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.700 +  1.638s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.750 +  1.688s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.801 +  1.739s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.851 +  1.789s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.901 +  1.839s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:04.951 +  1.889s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.001 +  1.939s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.052 +  1.990s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.102 +  2.040s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.152 +  2.090s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.202 +  2.140s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.253 +  2.191s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.303 +  2.241s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.353 +  2.291s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.403 +  2.342s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.454 +  2.392s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.504 +  2.442s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.554 +  2.492s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.605 +  2.543s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.655 +  2.593s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.705 +  2.643s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.756 +  2.694s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.806 +  2.744s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.856 +  2.794s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.906 +  2.844s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:05.957 +  2.895s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:06.007 +  2.945s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:06.057 +  2.995s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:06.107 +  3.045s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:06.158 +  3.096s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:06.208 +  3.146s] ===========================
+[02:36:06.208 +  3.146s]   post-isolation snapshot
+[02:36:06.208 +  3.146s] ===========================
+[02:36:06.208 +  3.146s] [POST]   acp_fmap: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:36:06.208 +  3.146s] [POST]   hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:36:06.208 +  3.146s] [POST]   NPU STAT_OUT post: 0x0000000000008002 (busy=0 done=0 upper=0x0000 mem=0x8002)
+[02:36:06.208 +  3.146s] ===========
+[02:36:06.208 +  3.146s]   verdict
+[02:36:06.208 +  3.146s] ===========
+[02:36:06.209 +  3.147s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:36:06.209 +  3.147s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:36:06.459 +  3.397s] [VERDICT] acp_fmap stall channel status: unexpectedly recovered
+[02:36:06.459 +  3.397s] [VERDICT] hp0 (other channel) got status: True
+[02:36:06.459 +  3.397s] [VERDICT] NPU frontend command accepted during stall: True
+[02:36:06.459 +  3.397s] [VERDICT] NPU produced any status during window: True
+[02:36:06.459 +  3.397s] [VERDICT] >>> Stall appears ISOLATED to the acp_fmap status path.

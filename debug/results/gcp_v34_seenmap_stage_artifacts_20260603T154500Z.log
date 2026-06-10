@@ -1,0 +1,18 @@
+drc_v34_seenmap_20260603T154500Z_post_impl.rpt: OK
+pccx_npu_bd_v34_seenmap_20260603T154500Z.bit.bin: OK
+pccx_npu_bd_v34_seenmap_20260603T154500Z.dtbo: OK
+pccx_npu_bd_v34_seenmap_20260603T154500Z.shell.json: OK
+pccx_v34_seenmap_20260603T154500Z.bit: OK
+status_v34_seenmap_20260603T154500Z.txt: OK
+timing_summary_v34_seenmap_20260603T154500Z_post_impl.rpt: OK
+utilization_v34_seenmap_20260603T154500Z_post_impl.rpt: OK
+total 16M
+-rw-rw-r-- 1 hwkim hwkim  913 Jun  3 16:29 SHA256SUMS
+-rw-rw-r-- 1 hwkim hwkim 377K Jun  3 16:29 drc_v34_seenmap_20260603T154500Z_post_impl.rpt
+-rw-rw-r-- 1 hwkim hwkim 7.5M Jun  3 16:29 pccx_npu_bd_v34_seenmap_20260603T154500Z.bit.bin
+-rw-rw-r-- 1 hwkim hwkim  857 Jun  3 16:29 pccx_npu_bd_v34_seenmap_20260603T154500Z.dtbo
+-rw-rw-r-- 1 hwkim hwkim   55 Jun  3 16:29 pccx_npu_bd_v34_seenmap_20260603T154500Z.shell.json
+-rw-rw-r-- 1 hwkim hwkim 7.5M Jun  3 16:29 pccx_v34_seenmap_20260603T154500Z.bit
+-rw-rw-r-- 1 hwkim hwkim  491 Jun  3 16:29 status_v34_seenmap_20260603T154500Z.txt
+-rw-rw-r-- 1 hwkim hwkim 521K Jun  3 16:29 timing_summary_v34_seenmap_20260603T154500Z_post_impl.rpt
+-rw-rw-r-- 1 hwkim hwkim 134K Jun  3 16:29 utilization_v34_seenmap_20260603T154500Z_post_impl.rpt

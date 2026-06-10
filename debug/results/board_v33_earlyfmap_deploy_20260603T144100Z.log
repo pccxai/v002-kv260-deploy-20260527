@@ -1,0 +1,53 @@
+host=kria date=2026-06-03T15:25:36+00:00
+source=/tmp/pccx_v33_earlyfmap_20260603T144100Z app=/lib/firmware/xilinx/pccx_npu_bd
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+fpga_state=operating
+7a3695606a89cb2800ed30e114160a3c  /tmp/pccx_v33_earlyfmap_20260603T144100Z/pccx_npu_bd.bit.bin
+7a3695606a89cb2800ed30e114160a3c  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+37f2a728dfb2c7f752dae45e08751305b478c9437e16d1e64cf5242a3485164c  /tmp/pccx_v33_earlyfmap_20260603T144100Z/pccx_npu_bd.bit.bin
+37f2a728dfb2c7f752dae45e08751305b478c9437e16d1e64cf5242a3485164c  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+crw------- 1 root root 237, 0 Mar 13 16:47 /dev/uio0
+crw------- 1 root root 237, 1 Mar 13 16:47 /dev/uio1
+crw------- 1 root root 237, 2 Mar 13 16:47 /dev/uio2
+crw------- 1 root root 237, 3 Mar 13 16:47 /dev/uio3
+crw------- 1 root root 237, 4 Jun  3 15:25 /dev/uio4
+total 228676
+-rw-r--r-- 1 root root 7797692 Jun  3 15:25 pccx_npu_bd.bit.bin
+-rw-r--r-- 1 root root 7807932 May 28 01:57 pccx_npu_bd.bit.bin.bak-20260528-015749
+-rw-r--r-- 1 root root 7807932 May 28 05:30 pccx_npu_bd.bit.bin.bak-20260528-053056
+-rw-r--r-- 1 root root 7807932 May 28 06:27 pccx_npu_bd.bit.bin.bak-20260528-062709
+-rw-r--r-- 1 root root 7807932 May 31 11:17 pccx_npu_bd.bit.bin.bak-20260531-111701
+-rw-r--r-- 1 root root 7807932 May 31 12:14 pccx_npu_bd.bit.bin.bak-20260531-121445
+-rw-r--r-- 1 root root 7797692 May 31 13:34 pccx_npu_bd.bit.bin.bak-20260531-133416
+-rw-r--r-- 1 root root 7797692 Jun  3 09:11 pccx_npu_bd.bit.bin.bak-20260603T091106Z
+-rw-r--r-- 1 root root 7797692 Jun  2 14:29 pccx_npu_bd.bit.bin.bak-before-v27-acp-txq-20260602T142932Z
+-rw-r--r-- 1 root root 7807932 Jun  3 04:28 pccx_npu_bd.bit.bin.bak-before-v28-reverify-20260603T042812Z
+-rw-r--r-- 1 root root 7797692 Jun  3 02:30 pccx_npu_bd.bit.bin.bak-before-v28-tbclean-20260603T023057+0000
+-rw-r--r-- 1 root root 7797692 Jun  3 07:36 pccx_npu_bd.bit.bin.bak-before-v29-instalign-20260603T073627Z
+-rw-r--r-- 1 root root 7797692 Jun  3 11:19 pccx_npu_bd.bit.bin.bak-before-v31-20260603T111950Z
+-rw-r--r-- 1 root root 7797692 Jun  3 14:25 pccx_npu_bd.bit.bin.bak-before-v32-debugmap-20260603T142730Z
+-rw-r--r-- 1 root root 7797692 Jun  3 15:25 pccx_npu_bd.bit.bin.bak-before-v33-earlyfmap-20260603T144100Z
+-rw-r--r-- 1 root root 7807932 May 28 10:02 pccx_npu_bd.bit.bin.bak-pre-hp-20260528-100252
+-rw-r--r-- 1 root root 7797692 May 28 11:46 pccx_npu_bd.bit.bin.bak-pre-regen-20260528-114623
+-rw-r--r-- 1 root root 7797692 May 28 14:38 pccx_npu_bd.bit.bin.bak-pre-v7-20260528-143837
+-rw-r--r-- 1 root root 7797692 May 28 15:36 pccx_npu_bd.bit.bin.bak-pre-v8-20260528-153659
+-rw-r--r-- 1 root root 7797692 Jun  2 11:35 pccx_npu_bd.bit.bin.bak-stale-v25-before-fresh-v25-20260602T113510Z
+-rw-r--r-- 1 root root 7807932 May 31 02:10 pccx_npu_bd.bit.bin.bak-v10-20260531-111015
+-rw-r--r-- 1 root root 7807932 May 31 03:13 pccx_npu_bd.bit.bin.bak-v11-20260531-121319
+-rw-r--r-- 1 root root 7807932 May 31 04:19 pccx_npu_bd.bit.bin.bak-v12-20260531-041954
+-rw-r--r-- 1 root root 7807932 May 31 09:07 pccx_npu_bd.bit.bin.bak-v13-before-v16-20260531-180709
+-rw-r--r-- 1 root root 7797692 May 31 14:58 pccx_npu_bd.bit.bin.bak-v21-before-v22-axprot-20260531-235852
+-rw-r--r-- 1 root root 7807932 Jun  2 07:48 pccx_npu_bd.bit.bin.bak-v24-before-20260602T074802Z
+-rw-r--r-- 1 root root 7797692 Jun  2 11:31 pccx_npu_bd.bit.bin.bak-v24-before-v25-20260602T113120Z
+-rw-r--r-- 1 root root 7797692 Jun  2 12:45 pccx_npu_bd.bit.bin.bak-v25-before-v26-fwft-20260602T124516Z
+-rw-r--r-- 1 root root 7797692 May 29 13:56 pccx_npu_bd.bit.bin.bak-v8-20260529-225621
+-rw-r--r-- 1 root root 7807932 May 31 00:51 pccx_npu_bd.bit.bin.bak-v9-20260531-095154
+-rw-r--r-- 1 root root     857 Jun  3 15:25 pccx_npu_bd.dtbo
+-rw-r--r-- 1 root root     857 Jun  3 09:11 pccx_npu_bd.dtbo.bak-20260603T091106Z
+-rw-r--r-- 1 root root     857 Jun  3 14:25 pccx_npu_bd.dtbo.bak-before-v32-debugmap-20260603T142730Z
+-rw-r--r-- 1 root root     857 Jun  3 15:25 pccx_npu_bd.dtbo.bak-before-v33-earlyfmap-20260603T144100Z
+-rw-r--r-- 1 root root      55 Jun  3 15:25 shell.json
+-rw-r--r-- 1 root root      55 Jun  3 09:11 shell.json.bak-20260603T091106Z
+-rw-r--r-- 1 root root      55 Jun  3 14:25 shell.json.bak-before-v32-debugmap-20260603T142730Z
+-rw-r--r-- 1 root root      55 Jun  3 15:25 shell.json.bak-before-v33-earlyfmap-20260603T144100Z

@@ -1,0 +1,1403 @@
+[12:46:07.758 +  0.059s] ===================================================
+[12:46:07.758 +  0.060s]   dbg_step_13 — DataMover command attribute sweep
+[12:46:07.758 +  0.060s] ===================================================
+[12:46:07.759 +  0.060s] [BANNER] argv: ['debug/dbg_step_13_cmd_attr_sweep.py', '--poll-s', '0.7']
+[12:46:07.759 +  0.060s] [BANNER] cwd:  /home/ubuntu/v002-kv260-deploy-debug-v24
+[12:46:07.759 +  0.060s] [BANNER] uid:  0
+[12:46:07.759 +  0.060s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[12:46:07.820 +  0.121s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:07.821 +  0.122s] [CONFIG] cases=56 reload_each=True poll_s=0.7
+[12:46:07.821 +  0.122s] ===================================================
+[12:46:07.821 +  0.122s]   attr-btt: hp0 btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:46:07.821 +  0.122s] ===================================================
+[12:46:07.821 +  0.122s] =============================
+[12:46:07.821 +  0.123s]   xmutil reload pccx_npu_bd
+[12:46:07.821 +  0.123s] =============================
+[12:46:07.894 +  0.195s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:07.894 +  0.195s] [XMUTIL] running: xmutil unloadapp
+[12:46:08.334 +  0.636s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:08.334 +  0.636s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:08.881 +  1.183s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:10.383 +  2.685s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:10.437 +  2.739s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:10.443 +  2.744s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:10.443 +  2.745s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:10.444 +  2.745s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:10.445 +  2.746s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:10.445 +  2.746s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=0 xuser=0x0 xcache=0x0
+[12:46:10.445 +  2.746s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0000
+[12:46:10.445 +  2.746s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:10.445 +  2.746s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:10.445 +  2.747s] [POP] STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:10.445 +  2.747s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:10.445 +  2.747s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:10.446 +  2.747s] ====================================================
+[12:46:10.446 +  2.747s]   attr-btt: hp0 btt=256 legacy_xu0_xc0 eof=1 drr=0
+[12:46:10.446 +  2.747s] ====================================================
+[12:46:10.446 +  2.747s] =============================
+[12:46:10.446 +  2.747s]   xmutil reload pccx_npu_bd
+[12:46:10.446 +  2.747s] =============================
+[12:46:10.499 +  2.801s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:10.500 +  2.801s] [XMUTIL] running: xmutil unloadapp
+[12:46:10.862 +  3.163s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:10.862 +  3.163s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:11.385 +  3.686s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:12.887 +  5.188s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:12.942 +  5.243s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:12.943 +  5.245s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:12.943 +  5.245s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:12.944 +  5.245s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:12.945 +  5.246s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:12.945 +  5.246s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0x0 xcache=0x0
+[12:46:12.945 +  5.246s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x0000
+[12:46:12.945 +  5.246s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:12.945 +  5.246s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:12.945 +  5.247s] [POP] STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:12.945 +  5.247s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:12.945 +  5.247s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:12.946 +  5.247s] =====================================================
+[12:46:12.946 +  5.247s]   attr-btt: hp0 btt=4096 legacy_xu0_xc0 eof=1 drr=0
+[12:46:12.946 +  5.247s] =====================================================
+[12:46:12.946 +  5.247s] =============================
+[12:46:12.946 +  5.247s]   xmutil reload pccx_npu_bd
+[12:46:12.946 +  5.247s] =============================
+[12:46:13.001 +  5.302s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:13.001 +  5.302s] [XMUTIL] running: xmutil unloadapp
+[12:46:13.386 +  5.688s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:13.387 +  5.688s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:13.912 +  6.213s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:15.414 +  7.716s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:15.468 +  7.769s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:15.469 +  7.771s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:15.470 +  7.771s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:15.470 +  7.772s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:15.471 +  7.772s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:15.471 +  7.772s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=0 xuser=0x0 xcache=0x0
+[12:46:15.471 +  7.772s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x0000
+[12:46:15.471 +  7.773s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:15.471 +  7.773s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:15.472 +  7.773s] [POP] STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:46:15.472 +  7.773s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:15.472 +  7.773s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:15.472 +  7.773s] ============================================
+[12:46:15.472 +  7.773s]   attr-btt: hp0 btt=16 xu0_xc2 eof=1 drr=0
+[12:46:15.472 +  7.774s] ============================================
+[12:46:15.472 +  7.774s] =============================
+[12:46:15.472 +  7.774s]   xmutil reload pccx_npu_bd
+[12:46:15.472 +  7.774s] =============================
+[12:46:15.527 +  7.828s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:15.527 +  7.828s] [XMUTIL] running: xmutil unloadapp
+[12:46:15.907 +  8.208s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:15.907 +  8.208s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:16.432 +  8.733s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:17.934 + 10.236s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:17.988 + 10.289s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:17.989 + 10.291s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:17.989 + 10.291s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:17.990 + 10.291s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:17.991 + 10.292s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:17.991 + 10.292s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=10 xuser=0x0 xcache=0x2
+[12:46:17.991 + 10.292s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x020a
+[12:46:17.991 + 10.292s] [POP] STS_POP[0] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:17.991 + 10.292s] [POP] STS_POP[1] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:17.991 + 10.293s] [POP] STS_POP[2] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:17.991 + 10.293s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:17.991 + 10.293s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:17.992 + 10.293s] =============================================
+[12:46:17.992 + 10.293s]   attr-btt: hp0 btt=256 xu0_xc2 eof=1 drr=0
+[12:46:17.992 + 10.293s] =============================================
+[12:46:17.992 + 10.293s] =============================
+[12:46:17.992 + 10.293s]   xmutil reload pccx_npu_bd
+[12:46:17.992 + 10.293s] =============================
+[12:46:18.046 + 10.348s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:18.047 + 10.348s] [XMUTIL] running: xmutil unloadapp
+[12:46:18.407 + 10.708s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:18.407 + 10.708s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:18.930 + 11.232s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:20.432 + 12.734s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:20.487 + 12.788s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:20.488 + 12.790s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:20.489 + 12.790s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:20.489 + 12.791s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:20.490 + 12.791s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:20.490 + 12.791s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=10 xuser=0x0 xcache=0x2
+[12:46:20.490 + 12.791s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x020a
+[12:46:20.490 + 12.792s] [POP] STS_POP[0] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:20.490 + 12.792s] [POP] STS_POP[1] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:20.491 + 12.792s] [POP] STS_POP[2] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:20.491 + 12.792s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:20.491 + 12.792s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:20.491 + 12.792s] ==============================================
+[12:46:20.491 + 12.792s]   attr-btt: hp0 btt=4096 xu0_xc2 eof=1 drr=0
+[12:46:20.491 + 12.793s] ==============================================
+[12:46:20.491 + 12.793s] =============================
+[12:46:20.491 + 12.793s]   xmutil reload pccx_npu_bd
+[12:46:20.491 + 12.793s] =============================
+[12:46:20.546 + 12.847s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:20.546 + 12.848s] [XMUTIL] running: xmutil unloadapp
+[12:46:20.933 + 13.234s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:20.933 + 13.234s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:21.462 + 13.764s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:22.964 + 15.266s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:23.019 + 15.321s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:23.021 + 15.322s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:23.021 + 15.322s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:23.021 + 15.323s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:23.022 + 15.323s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:23.022 + 15.323s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=10 xuser=0x0 xcache=0x2
+[12:46:23.022 + 15.323s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x020a
+[12:46:23.022 + 15.324s] [POP] STS_POP[0] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:23.022 + 15.324s] [POP] STS_POP[1] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:23.023 + 15.324s] [POP] STS_POP[2] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:46:23.023 + 15.324s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:23.023 + 15.324s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:23.023 + 15.324s] ============================================
+[12:46:23.023 + 15.324s]   attr-btt: hp0 btt=16 xu0_xc3 eof=1 drr=0
+[12:46:23.023 + 15.325s] ============================================
+[12:46:23.023 + 15.325s] =============================
+[12:46:23.023 + 15.325s]   xmutil reload pccx_npu_bd
+[12:46:23.023 + 15.325s] =============================
+[12:46:23.078 + 15.379s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:23.078 + 15.379s] [XMUTIL] running: xmutil unloadapp
+[12:46:23.439 + 15.740s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:23.439 + 15.740s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:23.962 + 16.263s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:25.464 + 17.765s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:25.518 + 17.819s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:25.519 + 17.820s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:25.519 + 17.821s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:25.520 + 17.821s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:25.520 + 17.822s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:25.521 + 17.822s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=15 xuser=0x0 xcache=0x3
+[12:46:25.521 + 17.822s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x030f
+[12:46:25.521 + 17.822s] [POP] STS_POP[0] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:25.521 + 17.822s] [POP] STS_POP[1] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:25.521 + 17.822s] [POP] STS_POP[2] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:25.521 + 17.823s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:25.521 + 17.823s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:25.522 + 17.823s] =============================================
+[12:46:25.522 + 17.823s]   attr-btt: hp0 btt=256 xu0_xc3 eof=1 drr=0
+[12:46:25.522 + 17.823s] =============================================
+[12:46:25.522 + 17.823s] =============================
+[12:46:25.522 + 17.823s]   xmutil reload pccx_npu_bd
+[12:46:25.522 + 17.823s] =============================
+[12:46:25.576 + 17.877s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:25.576 + 17.877s] [XMUTIL] running: xmutil unloadapp
+[12:46:25.934 + 18.235s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:25.934 + 18.235s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:26.455 + 18.756s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:27.957 + 20.259s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:28.012 + 20.313s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:28.013 + 20.315s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:28.014 + 20.315s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:28.014 + 20.315s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:28.015 + 20.316s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:28.015 + 20.316s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=15 xuser=0x0 xcache=0x3
+[12:46:28.015 + 20.316s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x030f
+[12:46:28.015 + 20.316s] [POP] STS_POP[0] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:28.015 + 20.317s] [POP] STS_POP[1] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:28.015 + 20.317s] [POP] STS_POP[2] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:28.016 + 20.317s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:28.016 + 20.317s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:28.016 + 20.317s] ==============================================
+[12:46:28.016 + 20.317s]   attr-btt: hp0 btt=4096 xu0_xc3 eof=1 drr=0
+[12:46:28.016 + 20.317s] ==============================================
+[12:46:28.016 + 20.318s] =============================
+[12:46:28.016 + 20.318s]   xmutil reload pccx_npu_bd
+[12:46:28.016 + 20.318s] =============================
+[12:46:28.071 + 20.372s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:28.071 + 20.372s] [XMUTIL] running: xmutil unloadapp
+[12:46:28.438 + 20.739s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:28.438 + 20.740s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:28.961 + 21.263s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:30.463 + 22.765s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:30.518 + 22.819s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:30.520 + 22.821s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:30.520 + 22.821s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:30.520 + 22.822s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:30.521 + 22.822s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:30.521 + 22.822s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=15 xuser=0x0 xcache=0x3
+[12:46:30.521 + 22.822s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x030f
+[12:46:30.521 + 22.823s] [POP] STS_POP[0] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:30.521 + 22.823s] [POP] STS_POP[1] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:30.522 + 22.823s] [POP] STS_POP[2] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:46:30.522 + 22.823s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:30.522 + 22.823s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:30.522 + 22.823s] ============================================
+[12:46:30.522 + 22.823s]   attr-btt: hp0 btt=16 xu0_xcf eof=1 drr=0
+[12:46:30.522 + 22.823s] ============================================
+[12:46:30.522 + 22.824s] =============================
+[12:46:30.522 + 22.824s]   xmutil reload pccx_npu_bd
+[12:46:30.522 + 22.824s] =============================
+[12:46:30.577 + 22.878s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:30.577 + 22.878s] [XMUTIL] running: xmutil unloadapp
+[12:46:30.949 + 23.251s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:30.949 + 23.251s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:31.472 + 23.773s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:32.974 + 25.276s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:33.029 + 25.330s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:33.030 + 25.332s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:33.031 + 25.332s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:33.031 + 25.332s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:33.032 + 25.333s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:33.032 + 25.333s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=11 xuser=0x0 xcache=0xf
+[12:46:33.032 + 25.333s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0f0b
+[12:46:33.032 + 25.333s] [POP] STS_POP[0] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:33.032 + 25.334s] [POP] STS_POP[1] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:33.032 + 25.334s] [POP] STS_POP[2] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:33.032 + 25.334s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:33.033 + 25.334s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:33.033 + 25.334s] =============================================
+[12:46:33.033 + 25.334s]   attr-btt: hp0 btt=256 xu0_xcf eof=1 drr=0
+[12:46:33.033 + 25.334s] =============================================
+[12:46:33.033 + 25.334s] =============================
+[12:46:33.033 + 25.334s]   xmutil reload pccx_npu_bd
+[12:46:33.033 + 25.334s] =============================
+[12:46:33.087 + 25.389s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:33.088 + 25.389s] [XMUTIL] running: xmutil unloadapp
+[12:46:33.446 + 25.748s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:33.447 + 25.748s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:33.970 + 26.271s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:35.472 + 27.774s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:35.526 + 27.827s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:35.527 + 27.829s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:35.527 + 27.829s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:35.528 + 27.829s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:35.529 + 27.830s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:35.529 + 27.830s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=11 xuser=0x0 xcache=0xf
+[12:46:35.529 + 27.830s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x0f0b
+[12:46:35.529 + 27.830s] [POP] STS_POP[0] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:35.529 + 27.831s] [POP] STS_POP[1] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:35.529 + 27.831s] [POP] STS_POP[2] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:35.529 + 27.831s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:35.530 + 27.831s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:35.530 + 27.831s] ==============================================
+[12:46:35.530 + 27.831s]   attr-btt: hp0 btt=4096 xu0_xcf eof=1 drr=0
+[12:46:35.530 + 27.831s] ==============================================
+[12:46:35.530 + 27.831s] =============================
+[12:46:35.530 + 27.831s]   xmutil reload pccx_npu_bd
+[12:46:35.530 + 27.831s] =============================
+[12:46:35.584 + 27.885s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:35.584 + 27.885s] [XMUTIL] running: xmutil unloadapp
+[12:46:35.949 + 28.250s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:35.949 + 28.250s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:36.470 + 28.772s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:37.973 + 30.274s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:38.026 + 30.328s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:38.028 + 30.329s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:38.028 + 30.329s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:38.029 + 30.330s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:38.029 + 30.331s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:38.029 + 30.331s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=11 xuser=0x0 xcache=0xf
+[12:46:38.029 + 30.331s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x0f0b
+[12:46:38.030 + 30.331s] [POP] STS_POP[0] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:38.030 + 30.331s] [POP] STS_POP[1] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:38.030 + 30.331s] [POP] STS_POP[2] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:46:38.030 + 30.331s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:38.030 + 30.331s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:38.030 + 30.332s] ============================================
+[12:46:38.030 + 30.332s]   attr-btt: hp0 btt=16 xu2_xcb eof=1 drr=0
+[12:46:38.030 + 30.332s] ============================================
+[12:46:38.031 + 30.332s] =============================
+[12:46:38.031 + 30.332s]   xmutil reload pccx_npu_bd
+[12:46:38.031 + 30.332s] =============================
+[12:46:38.085 + 30.387s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:38.085 + 30.387s] [XMUTIL] running: xmutil unloadapp
+[12:46:38.450 + 30.752s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:38.451 + 30.752s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:38.972 + 31.273s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:40.474 + 32.776s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:40.529 + 32.830s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:40.530 + 32.832s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:40.530 + 32.832s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:40.531 + 32.832s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:40.532 + 32.833s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:40.532 + 32.833s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=13 xuser=0x2 xcache=0xb
+[12:46:40.532 + 32.833s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x2b0d
+[12:46:40.532 + 32.833s] [POP] STS_POP[0] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:40.532 + 32.833s] [POP] STS_POP[1] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:40.532 + 32.834s] [POP] STS_POP[2] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:40.532 + 32.834s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:40.532 + 32.834s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:40.533 + 32.834s] =============================================
+[12:46:40.533 + 32.834s]   attr-btt: hp0 btt=256 xu2_xcb eof=1 drr=0
+[12:46:40.533 + 32.834s] =============================================
+[12:46:40.533 + 32.834s] =============================
+[12:46:40.533 + 32.834s]   xmutil reload pccx_npu_bd
+[12:46:40.533 + 32.834s] =============================
+[12:46:40.586 + 32.888s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:40.587 + 32.888s] [XMUTIL] running: xmutil unloadapp
+[12:46:40.958 + 33.259s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:40.958 + 33.259s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:41.481 + 33.782s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:42.983 + 35.284s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:43.037 + 35.338s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:43.038 + 35.339s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:43.038 + 35.340s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:43.039 + 35.340s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:43.039 + 35.341s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:43.040 + 35.341s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=13 xuser=0x2 xcache=0xb
+[12:46:43.040 + 35.341s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x2b0d
+[12:46:43.040 + 35.341s] [POP] STS_POP[0] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:43.040 + 35.341s] [POP] STS_POP[1] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:43.040 + 35.341s] [POP] STS_POP[2] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:43.040 + 35.342s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:43.040 + 35.342s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:43.041 + 35.342s] ==============================================
+[12:46:43.041 + 35.342s]   attr-btt: hp0 btt=4096 xu2_xcb eof=1 drr=0
+[12:46:43.041 + 35.342s] ==============================================
+[12:46:43.041 + 35.342s] =============================
+[12:46:43.041 + 35.342s]   xmutil reload pccx_npu_bd
+[12:46:43.041 + 35.342s] =============================
+[12:46:43.094 + 35.396s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:43.095 + 35.396s] [XMUTIL] running: xmutil unloadapp
+[12:46:43.466 + 35.767s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:43.466 + 35.767s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:43.991 + 36.292s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:45.493 + 37.794s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:45.547 + 37.849s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:45.549 + 37.850s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:45.549 + 37.850s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:45.550 + 37.851s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:45.550 + 37.852s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:45.550 + 37.852s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=13 xuser=0x2 xcache=0xb
+[12:46:45.550 + 37.852s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x2b0d
+[12:46:45.551 + 37.852s] [POP] STS_POP[0] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:45.551 + 37.852s] [POP] STS_POP[1] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:45.551 + 37.852s] [POP] STS_POP[2] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:46:45.551 + 37.852s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:45.551 + 37.853s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:45.551 + 37.853s] ====================================================
+[12:46:45.551 + 37.853s]   attr-btt: hp0 btt=16 default_xuf_xcf eof=1 drr=0
+[12:46:45.552 + 37.853s] ====================================================
+[12:46:45.552 + 37.853s] =============================
+[12:46:45.552 + 37.853s]   xmutil reload pccx_npu_bd
+[12:46:45.552 + 37.853s] =============================
+[12:46:45.606 + 37.908s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:45.606 + 37.908s] [XMUTIL] running: xmutil unloadapp
+[12:46:45.973 + 38.274s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:45.973 + 38.275s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:46.498 + 38.799s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:48.000 + 40.301s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:48.054 + 40.355s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:48.055 + 40.356s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:48.055 + 40.357s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:48.056 + 40.357s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:48.056 + 40.358s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:48.057 + 40.358s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=8 xuser=0xf xcache=0xf
+[12:46:48.057 + 40.358s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff08
+[12:46:48.057 + 40.358s] [POP] STS_POP[0] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:48.057 + 40.358s] [POP] STS_POP[1] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:48.057 + 40.358s] [POP] STS_POP[2] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:48.057 + 40.359s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:48.057 + 40.359s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:48.057 + 40.359s] =====================================================
+[12:46:48.058 + 40.359s]   attr-btt: hp0 btt=256 default_xuf_xcf eof=1 drr=0
+[12:46:48.058 + 40.359s] =====================================================
+[12:46:48.058 + 40.359s] =============================
+[12:46:48.058 + 40.359s]   xmutil reload pccx_npu_bd
+[12:46:48.058 + 40.359s] =============================
+[12:46:48.113 + 40.414s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:48.113 + 40.414s] [XMUTIL] running: xmutil unloadapp
+[12:46:48.474 + 40.776s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:48.475 + 40.776s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:48.998 + 41.299s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:50.500 + 42.801s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:50.554 + 42.855s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:50.555 + 42.856s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:50.555 + 42.857s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:50.556 + 42.857s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:50.556 + 42.858s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:50.556 + 42.858s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=8 xuser=0xf xcache=0xf
+[12:46:50.557 + 42.858s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff08
+[12:46:50.557 + 42.858s] [POP] STS_POP[0] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:50.557 + 42.858s] [POP] STS_POP[1] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:50.557 + 42.858s] [POP] STS_POP[2] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:50.557 + 42.859s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:50.557 + 42.859s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:50.557 + 42.859s] ======================================================
+[12:46:50.558 + 42.859s]   attr-btt: hp0 btt=4096 default_xuf_xcf eof=1 drr=0
+[12:46:50.558 + 42.859s] ======================================================
+[12:46:50.558 + 42.859s] =============================
+[12:46:50.558 + 42.859s]   xmutil reload pccx_npu_bd
+[12:46:50.558 + 42.859s] =============================
+[12:46:50.612 + 42.914s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:50.612 + 42.914s] [XMUTIL] running: xmutil unloadapp
+[12:46:50.985 + 43.287s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:50.986 + 43.287s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:51.508 + 43.809s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:53.010 + 45.312s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:53.065 + 45.366s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:53.066 + 45.368s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:53.066 + 45.368s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:53.067 + 45.368s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:53.068 + 45.369s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:53.068 + 45.369s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=8 xuser=0xf xcache=0xf
+[12:46:53.068 + 45.369s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0xff08
+[12:46:53.068 + 45.369s] [POP] STS_POP[0] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:53.068 + 45.370s] [POP] STS_POP[1] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:53.068 + 45.370s] [POP] STS_POP[2] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:46:53.069 + 45.370s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:53.069 + 45.370s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:53.069 + 45.370s] ========================================================
+[12:46:53.069 + 45.370s]   attr-btt: acp_fmap btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:46:53.069 + 45.370s] ========================================================
+[12:46:53.069 + 45.370s] =============================
+[12:46:53.069 + 45.370s]   xmutil reload pccx_npu_bd
+[12:46:53.069 + 45.370s] =============================
+[12:46:53.123 + 45.424s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:53.123 + 45.424s] [XMUTIL] running: xmutil unloadapp
+[12:46:53.491 + 45.792s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:53.491 + 45.792s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:54.014 + 46.315s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:55.516 + 47.817s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:55.571 + 47.872s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:55.572 + 47.873s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:55.572 + 47.874s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:55.573 + 47.874s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:55.573 + 47.875s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:55.573 + 47.875s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=4 xuser=0x0 xcache=0x0
+[12:46:55.574 + 47.875s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0004
+[12:46:55.574 + 47.875s] [POP] STS_POP[0] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:46:55.574 + 47.875s] [POP] STS_POP[1] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:46:55.574 + 47.875s] [POP] STS_POP[2] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:46:55.574 + 47.876s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:55.574 + 47.876s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:55.575 + 47.876s] =========================================================
+[12:46:55.575 + 47.876s]   attr-btt: acp_fmap btt=256 legacy_xu0_xc0 eof=1 drr=0
+[12:46:55.575 + 47.876s] =========================================================
+[12:46:55.575 + 47.876s] =============================
+[12:46:55.575 + 47.876s]   xmutil reload pccx_npu_bd
+[12:46:55.575 + 47.876s] =============================
+[12:46:55.629 + 47.931s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:55.629 + 47.931s] [XMUTIL] running: xmutil unloadapp
+[12:46:55.996 + 48.298s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:55.997 + 48.298s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:56.520 + 48.822s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:46:58.022 + 50.324s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:46:58.076 + 50.377s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:58.077 + 50.379s] [UIO] opening NPU UIO at /dev/uio4
+[12:46:58.078 + 50.379s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:46:58.078 + 50.380s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:46:58.079 + 50.380s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:58.079 + 50.380s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=4 xuser=0x0 xcache=0x0
+[12:46:58.079 + 50.380s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x0004
+[12:46:58.079 + 50.381s] [POP] STS_POP[0] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:46:58.079 + 50.381s] [POP] STS_POP[1] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:46:58.079 + 50.381s] [POP] STS_POP[2] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:46:58.080 + 50.381s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:46:58.080 + 50.381s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:46:58.080 + 50.381s] ==========================================================
+[12:46:58.080 + 50.381s]   attr-btt: acp_fmap btt=4096 legacy_xu0_xc0 eof=1 drr=0
+[12:46:58.080 + 50.381s] ==========================================================
+[12:46:58.080 + 50.382s] =============================
+[12:46:58.080 + 50.382s]   xmutil reload pccx_npu_bd
+[12:46:58.080 + 50.382s] =============================
+[12:46:58.135 + 50.436s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:46:58.135 + 50.437s] [XMUTIL] running: xmutil unloadapp
+[12:46:58.494 + 50.795s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:46:58.494 + 50.795s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:46:59.017 + 51.318s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:00.519 + 52.821s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:00.574 + 52.875s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:00.575 + 52.877s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:00.576 + 52.877s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:00.576 + 52.877s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:00.577 + 52.878s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:00.577 + 52.878s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=4 xuser=0x0 xcache=0x0
+[12:47:00.577 + 52.878s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x0004
+[12:47:01.281 + 53.583s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:01.281 + 53.583s] [CASE] RESULT outcome=TIMEOUT seen_status=False payloads=0 all_okay=False
+[12:47:01.282 + 53.583s] =================================================
+[12:47:01.282 + 53.583s]   attr-btt: acp_fmap btt=16 xu0_xc2 eof=1 drr=0
+[12:47:01.282 + 53.583s] =================================================
+[12:47:01.282 + 53.583s] =============================
+[12:47:01.282 + 53.583s]   xmutil reload pccx_npu_bd
+[12:47:01.282 + 53.583s] =============================
+[12:47:01.336 + 53.637s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:01.336 + 53.637s] [XMUTIL] running: xmutil unloadapp
+[12:47:01.704 + 54.005s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:01.704 + 54.006s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:02.227 + 54.528s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:03.729 + 56.030s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:03.784 + 56.085s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:03.785 + 56.086s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:03.785 + 56.087s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:03.786 + 56.087s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:03.786 + 56.088s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:03.787 + 56.088s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=14 xuser=0x0 xcache=0x2
+[12:47:03.787 + 56.088s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x020e
+[12:47:03.787 + 56.088s] [POP] STS_POP[0] = 0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:47:03.787 + 56.088s] [POP] STS_POP[1] = 0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:47:03.787 + 56.088s] [POP] STS_POP[2] = 0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:47:03.787 + 56.089s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:03.787 + 56.089s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:03.788 + 56.089s] ==================================================
+[12:47:03.788 + 56.089s]   attr-btt: acp_fmap btt=256 xu0_xc2 eof=1 drr=0
+[12:47:03.788 + 56.089s] ==================================================
+[12:47:03.788 + 56.089s] =============================
+[12:47:03.788 + 56.089s]   xmutil reload pccx_npu_bd
+[12:47:03.788 + 56.089s] =============================
+[12:47:03.842 + 56.144s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:03.843 + 56.144s] [XMUTIL] running: xmutil unloadapp
+[12:47:04.198 + 56.500s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:04.199 + 56.500s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:04.721 + 57.023s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:06.223 + 58.525s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:06.278 + 58.580s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:06.280 + 58.581s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:06.280 + 58.581s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:06.280 + 58.582s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:06.281 + 58.582s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:06.281 + 58.582s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=14 xuser=0x0 xcache=0x2
+[12:47:06.281 + 58.582s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x020e
+[12:47:06.281 + 58.583s] [POP] STS_POP[0] = 0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:47:06.281 + 58.583s] [POP] STS_POP[1] = 0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:47:06.281 + 58.583s] [POP] STS_POP[2] = 0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:47:06.282 + 58.583s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:06.282 + 58.583s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:06.282 + 58.583s] ===================================================
+[12:47:06.282 + 58.583s]   attr-btt: acp_fmap btt=4096 xu0_xc2 eof=1 drr=0
+[12:47:06.282 + 58.583s] ===================================================
+[12:47:06.282 + 58.583s] =============================
+[12:47:06.282 + 58.584s]   xmutil reload pccx_npu_bd
+[12:47:06.282 + 58.584s] =============================
+[12:47:06.337 + 58.638s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:06.337 + 58.638s] [XMUTIL] running: xmutil unloadapp
+[12:47:06.696 + 58.997s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:06.696 + 58.997s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:07.219 + 59.521s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:08.721 + 61.023s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:08.775 + 61.077s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:08.777 + 61.078s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:08.777 + 61.078s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:08.777 + 61.079s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:08.778 + 61.079s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:08.778 + 61.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=14 xuser=0x0 xcache=0x2
+[12:47:08.778 + 61.079s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x020e
+[12:47:09.482 + 61.784s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:09.483 + 61.784s] [CASE] RESULT outcome=TIMEOUT seen_status=False payloads=0 all_okay=False
+[12:47:09.483 + 61.784s] =================================================
+[12:47:09.483 + 61.784s]   attr-btt: acp_fmap btt=16 xu0_xc3 eof=1 drr=0
+[12:47:09.483 + 61.784s] =================================================
+[12:47:09.483 + 61.784s] =============================
+[12:47:09.483 + 61.785s]   xmutil reload pccx_npu_bd
+[12:47:09.483 + 61.785s] =============================
+[12:47:09.538 + 61.839s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:09.538 + 61.839s] [XMUTIL] running: xmutil unloadapp
+[12:47:09.906 + 62.207s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:09.906 + 62.207s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:10.430 + 62.731s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:11.932 + 64.233s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:11.987 + 64.288s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:11.988 + 64.290s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:11.988 + 64.290s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:11.989 + 64.290s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:11.989 + 64.291s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:11.990 + 64.291s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=3 xuser=0x0 xcache=0x3
+[12:47:11.990 + 64.291s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0303
+[12:47:11.990 + 64.291s] [POP] STS_POP[0] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:11.990 + 64.291s] [POP] STS_POP[1] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:11.990 + 64.292s] [POP] STS_POP[2] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:11.990 + 64.292s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:11.990 + 64.292s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:11.991 + 64.292s] ==================================================
+[12:47:11.991 + 64.292s]   attr-btt: acp_fmap btt=256 xu0_xc3 eof=1 drr=0
+[12:47:11.991 + 64.292s] ==================================================
+[12:47:11.991 + 64.292s] =============================
+[12:47:11.991 + 64.292s]   xmutil reload pccx_npu_bd
+[12:47:11.991 + 64.292s] =============================
+[12:47:12.045 + 64.347s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:12.046 + 64.347s] [XMUTIL] running: xmutil unloadapp
+[12:47:12.417 + 64.719s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:12.417 + 64.719s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:12.942 + 65.244s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:14.445 + 66.746s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:14.499 + 66.801s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:14.501 + 66.802s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:14.501 + 66.802s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:14.502 + 66.803s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:14.502 + 66.804s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:14.502 + 66.804s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=3 xuser=0x0 xcache=0x3
+[12:47:14.502 + 66.804s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x0303
+[12:47:14.503 + 66.804s] [POP] STS_POP[0] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:14.503 + 66.804s] [POP] STS_POP[1] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:14.503 + 66.804s] [POP] STS_POP[2] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:14.503 + 66.804s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:14.503 + 66.804s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:14.503 + 66.805s] ===================================================
+[12:47:14.503 + 66.805s]   attr-btt: acp_fmap btt=4096 xu0_xc3 eof=1 drr=0
+[12:47:14.503 + 66.805s] ===================================================
+[12:47:14.503 + 66.805s] =============================
+[12:47:14.504 + 66.805s]   xmutil reload pccx_npu_bd
+[12:47:14.504 + 66.805s] =============================
+[12:47:14.557 + 66.859s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:14.557 + 66.859s] [XMUTIL] running: xmutil unloadapp
+[12:47:14.931 + 67.232s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:14.931 + 67.232s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:15.457 + 67.759s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:16.960 + 69.261s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:17.014 + 69.316s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:17.016 + 69.317s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:17.016 + 69.317s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:17.017 + 69.318s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:17.017 + 69.319s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:17.017 + 69.319s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=3 xuser=0x0 xcache=0x3
+[12:47:17.017 + 69.319s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x0303
+[12:47:17.722 + 70.023s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:17.722 + 70.024s] [CASE] RESULT outcome=TIMEOUT seen_status=False payloads=0 all_okay=False
+[12:47:17.723 + 70.024s] =================================================
+[12:47:17.723 + 70.024s]   attr-btt: acp_fmap btt=16 xu0_xcf eof=1 drr=0
+[12:47:17.723 + 70.024s] =================================================
+[12:47:17.723 + 70.024s] =============================
+[12:47:17.723 + 70.024s]   xmutil reload pccx_npu_bd
+[12:47:17.723 + 70.024s] =============================
+[12:47:17.778 + 70.079s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:17.778 + 70.079s] [XMUTIL] running: xmutil unloadapp
+[12:47:18.147 + 70.448s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:18.147 + 70.448s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:18.670 + 70.972s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:20.172 + 72.474s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:20.226 + 72.528s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:20.228 + 72.529s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:20.228 + 72.529s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:20.229 + 72.530s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:20.229 + 72.530s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:20.229 + 72.531s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=15 xuser=0x0 xcache=0xf
+[12:47:20.229 + 72.531s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0f0f
+[12:47:20.229 + 72.531s] [POP] STS_POP[0] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:47:20.230 + 72.531s] [POP] STS_POP[1] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:47:20.230 + 72.531s] [POP] STS_POP[2] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:47:20.230 + 72.531s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:20.230 + 72.531s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:20.230 + 72.532s] ==================================================
+[12:47:20.230 + 72.532s]   attr-btt: acp_fmap btt=256 xu0_xcf eof=1 drr=0
+[12:47:20.230 + 72.532s] ==================================================
+[12:47:20.230 + 72.532s] =============================
+[12:47:20.230 + 72.532s]   xmutil reload pccx_npu_bd
+[12:47:20.231 + 72.532s] =============================
+[12:47:20.284 + 72.585s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:20.284 + 72.586s] [XMUTIL] running: xmutil unloadapp
+[12:47:20.646 + 72.947s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:20.646 + 72.947s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:21.169 + 73.471s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:22.671 + 74.973s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:22.725 + 75.027s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:22.727 + 75.028s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:22.727 + 75.028s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:22.727 + 75.029s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:22.728 + 75.029s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:22.728 + 75.030s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=15 xuser=0x0 xcache=0xf
+[12:47:22.728 + 75.030s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x0f0f
+[12:47:22.728 + 75.030s] [POP] STS_POP[0] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:47:22.729 + 75.030s] [POP] STS_POP[1] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:47:22.729 + 75.030s] [POP] STS_POP[2] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:47:22.729 + 75.030s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:22.729 + 75.030s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:22.729 + 75.031s] ===================================================
+[12:47:22.729 + 75.031s]   attr-btt: acp_fmap btt=4096 xu0_xcf eof=1 drr=0
+[12:47:22.729 + 75.031s] ===================================================
+[12:47:22.729 + 75.031s] =============================
+[12:47:22.729 + 75.031s]   xmutil reload pccx_npu_bd
+[12:47:22.729 + 75.031s] =============================
+[12:47:22.783 + 75.085s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:22.783 + 75.085s] [XMUTIL] running: xmutil unloadapp
+[12:47:23.167 + 75.469s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:23.167 + 75.469s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:23.716 + 76.018s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:25.219 + 77.520s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:25.272 + 77.574s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:25.274 + 77.575s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:25.274 + 77.575s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:25.274 + 77.576s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:25.275 + 77.576s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:25.275 + 77.576s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=15 xuser=0x0 xcache=0xf
+[12:47:25.275 + 77.576s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x0f0f
+[12:47:25.979 + 78.281s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:25.980 + 78.281s] [CASE] RESULT outcome=TIMEOUT seen_status=False payloads=0 all_okay=False
+[12:47:25.980 + 78.281s] =================================================
+[12:47:25.980 + 78.281s]   attr-btt: acp_fmap btt=16 xu2_xcb eof=1 drr=0
+[12:47:25.980 + 78.281s] =================================================
+[12:47:25.980 + 78.281s] =============================
+[12:47:25.980 + 78.281s]   xmutil reload pccx_npu_bd
+[12:47:25.980 + 78.282s] =============================
+[12:47:26.035 + 78.336s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:26.035 + 78.336s] [XMUTIL] running: xmutil unloadapp
+[12:47:26.395 + 78.696s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:26.395 + 78.696s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:26.918 + 79.220s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:28.420 + 80.722s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:28.475 + 80.777s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:28.476 + 80.778s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:28.477 + 80.778s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:28.477 + 80.779s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:28.478 + 80.779s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:28.478 + 80.779s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=1 xuser=0x2 xcache=0xb
+[12:47:28.478 + 80.779s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x2b01
+[12:47:28.478 + 80.780s] [POP] STS_POP[0] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:47:28.478 + 80.780s] [POP] STS_POP[1] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:47:28.479 + 80.780s] [POP] STS_POP[2] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:47:28.479 + 80.780s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:28.479 + 80.780s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:28.479 + 80.780s] ==================================================
+[12:47:28.479 + 80.780s]   attr-btt: acp_fmap btt=256 xu2_xcb eof=1 drr=0
+[12:47:28.479 + 80.781s] ==================================================
+[12:47:28.479 + 80.781s] =============================
+[12:47:28.479 + 80.781s]   xmutil reload pccx_npu_bd
+[12:47:28.479 + 80.781s] =============================
+[12:47:28.534 + 80.835s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:28.534 + 80.835s] [XMUTIL] running: xmutil unloadapp
+[12:47:28.898 + 81.200s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:28.898 + 81.200s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:29.422 + 81.724s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:30.925 + 83.226s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:30.979 + 83.281s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:30.981 + 83.282s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:30.981 + 83.282s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:30.982 + 83.283s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:30.982 + 83.284s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:30.982 + 83.284s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=1 xuser=0x2 xcache=0xb
+[12:47:30.982 + 83.284s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x2b01
+[12:47:30.983 + 83.284s] [POP] STS_POP[0] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:47:30.983 + 83.284s] [POP] STS_POP[1] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:47:30.983 + 83.284s] [POP] STS_POP[2] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:47:30.983 + 83.284s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:30.983 + 83.284s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:30.983 + 83.285s] ===================================================
+[12:47:30.983 + 83.285s]   attr-btt: acp_fmap btt=4096 xu2_xcb eof=1 drr=0
+[12:47:30.983 + 83.285s] ===================================================
+[12:47:30.983 + 83.285s] =============================
+[12:47:30.984 + 83.285s]   xmutil reload pccx_npu_bd
+[12:47:30.984 + 83.285s] =============================
+[12:47:31.038 + 83.340s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:31.039 + 83.340s] [XMUTIL] running: xmutil unloadapp
+[12:47:31.414 + 83.715s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:31.414 + 83.715s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:31.936 + 84.237s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:33.438 + 85.739s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:33.492 + 85.793s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:33.493 + 85.794s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:33.493 + 85.795s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:33.494 + 85.795s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:33.494 + 85.796s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:33.494 + 85.796s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=1 xuser=0x2 xcache=0xb
+[12:47:33.494 + 85.796s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0x2b01
+[12:47:34.199 + 86.500s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:34.199 + 86.500s] [CASE] RESULT outcome=TIMEOUT seen_status=False payloads=0 all_okay=False
+[12:47:34.199 + 86.501s] =========================================================
+[12:47:34.199 + 86.501s]   attr-btt: acp_fmap btt=16 default_xuf_xcf eof=1 drr=0
+[12:47:34.199 + 86.501s] =========================================================
+[12:47:34.200 + 86.501s] =============================
+[12:47:34.200 + 86.501s]   xmutil reload pccx_npu_bd
+[12:47:34.200 + 86.501s] =============================
+[12:47:34.253 + 86.555s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:34.253 + 86.555s] [XMUTIL] running: xmutil unloadapp
+[12:47:34.622 + 86.924s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:34.622 + 86.924s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:35.145 + 87.447s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:36.647 + 88.949s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:36.701 + 89.002s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:36.702 + 89.004s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:36.703 + 89.004s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:36.703 + 89.005s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:36.704 + 89.005s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:36.704 + 89.005s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=12 xuser=0xf xcache=0xf
+[12:47:36.704 + 89.005s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff0c
+[12:47:36.704 + 89.006s] [POP] STS_POP[0] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:36.704 + 89.006s] [POP] STS_POP[1] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:36.704 + 89.006s] [POP] STS_POP[2] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:36.705 + 89.006s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:36.705 + 89.006s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:36.705 + 89.006s] ==========================================================
+[12:47:36.705 + 89.006s]   attr-btt: acp_fmap btt=256 default_xuf_xcf eof=1 drr=0
+[12:47:36.705 + 89.006s] ==========================================================
+[12:47:36.705 + 89.006s] =============================
+[12:47:36.705 + 89.006s]   xmutil reload pccx_npu_bd
+[12:47:36.705 + 89.007s] =============================
+[12:47:36.760 + 89.061s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:36.760 + 89.061s] [XMUTIL] running: xmutil unloadapp
+[12:47:37.118 + 89.419s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:37.118 + 89.419s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:37.644 + 89.945s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:39.146 + 91.448s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:39.201 + 91.502s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:39.202 + 91.503s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:39.202 + 91.504s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:39.203 + 91.504s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:39.203 + 91.505s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:39.204 + 91.505s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=12 xuser=0xf xcache=0xf
+[12:47:39.204 + 91.505s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff0c
+[12:47:39.204 + 91.505s] [POP] STS_POP[0] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:39.204 + 91.505s] [POP] STS_POP[1] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:39.204 + 91.505s] [POP] STS_POP[2] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:39.204 + 91.506s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:39.204 + 91.506s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:39.205 + 91.506s] ===========================================================
+[12:47:39.205 + 91.506s]   attr-btt: acp_fmap btt=4096 default_xuf_xcf eof=1 drr=0
+[12:47:39.205 + 91.506s] ===========================================================
+[12:47:39.205 + 91.506s] =============================
+[12:47:39.205 + 91.506s]   xmutil reload pccx_npu_bd
+[12:47:39.205 + 91.506s] =============================
+[12:47:39.259 + 91.561s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:39.260 + 91.561s] [XMUTIL] running: xmutil unloadapp
+[12:47:39.619 + 91.920s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:39.619 + 91.921s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:40.141 + 92.442s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:41.643 + 93.944s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:41.696 + 93.998s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:41.698 + 93.999s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:41.698 + 93.999s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:41.699 + 94.000s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:41.699 + 94.000s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:41.699 + 94.001s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=4096 drr=0 eof=1 tag=12 xuser=0xf xcache=0xf
+[12:47:41.699 + 94.001s] [PUSH]   CMD_LO=0x40801000 CMD_HI=0x375b0000 CMD_EXT=0xff0c
+[12:47:42.404 + 94.705s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:42.404 + 94.705s] [CASE] RESULT outcome=TIMEOUT seen_status=False payloads=0 all_okay=False
+[12:47:42.404 + 94.706s] =====================================================
+[12:47:42.404 + 94.706s]   hp-channel: hp0 btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:47:42.404 + 94.706s] =====================================================
+[12:47:42.405 + 94.706s] =============================
+[12:47:42.405 + 94.706s]   xmutil reload pccx_npu_bd
+[12:47:42.405 + 94.706s] =============================
+[12:47:42.459 + 94.761s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:42.460 + 94.761s] [XMUTIL] running: xmutil unloadapp
+[12:47:42.822 + 95.123s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:42.822 + 95.124s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:43.346 + 95.647s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:44.847 + 97.148s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:44.900 + 97.202s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:44.902 + 97.203s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:44.902 + 97.203s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:44.903 + 97.204s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:44.903 + 97.205s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:44.903 + 97.205s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=2 xuser=0x0 xcache=0x0
+[12:47:44.903 + 97.205s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0002
+[12:47:44.904 + 97.205s] [POP] STS_POP[0] = 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[12:47:44.904 + 97.205s] [POP] STS_POP[1] = 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[12:47:44.904 + 97.205s] [POP] STS_POP[2] = 0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[12:47:44.904 + 97.205s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:44.904 + 97.205s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:44.904 + 97.206s] ======================================================
+[12:47:44.904 + 97.206s]   hp-channel: hp0 btt=16 default_xuf_xcf eof=1 drr=0
+[12:47:44.904 + 97.206s] ======================================================
+[12:47:44.904 + 97.206s] =============================
+[12:47:44.904 + 97.206s]   xmutil reload pccx_npu_bd
+[12:47:44.905 + 97.206s] =============================
+[12:47:44.958 + 97.260s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:44.959 + 97.260s] [XMUTIL] running: xmutil unloadapp
+[12:47:45.318 + 97.619s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:45.318 + 97.619s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:45.839 + 98.141s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:47.341 + 99.643s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:47.396 + 99.697s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:47.397 + 99.699s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:47.398 + 99.699s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:47.398 + 99.700s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:47.399 + 99.700s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:47.399 + 99.700s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=10 xuser=0xf xcache=0xf
+[12:47:47.399 + 99.700s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff0a
+[12:47:47.399 + 99.701s] [POP] STS_POP[0] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:47:47.399 + 99.701s] [POP] STS_POP[1] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:47:47.399 + 99.701s] [POP] STS_POP[2] = 0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:47:47.400 + 99.701s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:47.400 + 99.701s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:47.400 + 99.701s] =====================================================
+[12:47:47.400 + 99.701s]   hp-channel: hp1 btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:47:47.400 + 99.701s] =====================================================
+[12:47:47.400 + 99.701s] =============================
+[12:47:47.400 + 99.702s]   xmutil reload pccx_npu_bd
+[12:47:47.400 + 99.702s] =============================
+[12:47:47.455 + 99.756s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:47.455 + 99.756s] [XMUTIL] running: xmutil unloadapp
+[12:47:47.815 +100.116s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:47.815 +100.116s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:48.337 +100.638s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:49.839 +102.141s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:49.894 +102.195s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:49.895 +102.197s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:49.896 +102.197s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:49.896 +102.198s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:49.897 +102.198s] [CASE] pre         hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:49.897 +102.198s] [PUSH] push cmd →        hp1: addr=0x375b0000 btt=16 drr=0 eof=1 tag=3 xuser=0x0 xcache=0x0
+[12:47:49.897 +102.198s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0003
+[12:47:49.897 +102.198s] [POP] STS_POP[0] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:49.897 +102.199s] [POP] STS_POP[1] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:49.897 +102.199s] [POP] STS_POP[2] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:47:49.898 +102.199s] [CASE] post        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:49.898 +102.199s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:49.898 +102.199s] ======================================================
+[12:47:49.898 +102.199s]   hp-channel: hp1 btt=16 default_xuf_xcf eof=1 drr=0
+[12:47:49.898 +102.199s] ======================================================
+[12:47:49.898 +102.199s] =============================
+[12:47:49.898 +102.199s]   xmutil reload pccx_npu_bd
+[12:47:49.898 +102.199s] =============================
+[12:47:49.953 +102.254s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:49.953 +102.254s] [XMUTIL] running: xmutil unloadapp
+[12:47:50.312 +102.613s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:50.312 +102.613s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:50.835 +103.136s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:52.337 +104.638s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:52.392 +104.693s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:52.393 +104.694s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:52.393 +104.695s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:52.394 +104.695s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:52.394 +104.696s] [CASE] pre         hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:52.394 +104.696s] [PUSH] push cmd →        hp1: addr=0x375b0000 btt=16 drr=0 eof=1 tag=11 xuser=0xf xcache=0xf
+[12:47:52.395 +104.696s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff0b
+[12:47:52.395 +104.696s] [POP] STS_POP[0] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:47:52.395 +104.696s] [POP] STS_POP[1] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:47:52.395 +104.696s] [POP] STS_POP[2] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:47:52.395 +104.697s] [CASE] post        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:52.395 +104.697s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:52.395 +104.697s] =====================================================
+[12:47:52.395 +104.697s]   hp-channel: hp2 btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:47:52.396 +104.697s] =====================================================
+[12:47:52.396 +104.697s] =============================
+[12:47:52.396 +104.697s]   xmutil reload pccx_npu_bd
+[12:47:52.396 +104.697s] =============================
+[12:47:52.450 +104.752s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:52.450 +104.752s] [XMUTIL] running: xmutil unloadapp
+[12:47:52.818 +105.120s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:52.818 +105.120s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:53.341 +105.642s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:54.843 +107.144s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:54.897 +107.198s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:54.898 +107.200s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:54.898 +107.200s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:54.899 +107.200s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:54.900 +107.201s] [CASE] pre         hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:54.900 +107.201s] [PUSH] push cmd →        hp2: addr=0x375b0000 btt=16 drr=0 eof=1 tag=4 xuser=0x0 xcache=0x0
+[12:47:54.900 +107.201s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0004
+[12:47:54.900 +107.201s] [POP] STS_POP[0] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:47:54.900 +107.201s] [POP] STS_POP[1] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:47:54.900 +107.202s] [POP] STS_POP[2] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:47:54.900 +107.202s] [CASE] post        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:54.900 +107.202s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:54.901 +107.202s] ======================================================
+[12:47:54.901 +107.202s]   hp-channel: hp2 btt=16 default_xuf_xcf eof=1 drr=0
+[12:47:54.901 +107.202s] ======================================================
+[12:47:54.901 +107.202s] =============================
+[12:47:54.901 +107.202s]   xmutil reload pccx_npu_bd
+[12:47:54.901 +107.202s] =============================
+[12:47:54.955 +107.257s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:54.956 +107.257s] [XMUTIL] running: xmutil unloadapp
+[12:47:55.330 +107.631s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:55.330 +107.631s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:55.853 +108.154s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:57.355 +109.656s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:57.410 +109.711s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:57.411 +109.713s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:57.411 +109.713s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:57.412 +109.713s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:57.412 +109.714s] [CASE] pre         hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:57.413 +109.714s] [PUSH] push cmd →        hp2: addr=0x375b0000 btt=16 drr=0 eof=1 tag=12 xuser=0xf xcache=0xf
+[12:47:57.413 +109.714s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff0c
+[12:47:57.413 +109.714s] [POP] STS_POP[0] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:57.413 +109.714s] [POP] STS_POP[1] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:57.413 +109.714s] [POP] STS_POP[2] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:47:57.413 +109.715s] [CASE] post        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:57.413 +109.715s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:57.414 +109.715s] =====================================================
+[12:47:57.414 +109.715s]   hp-channel: hp3 btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:47:57.414 +109.715s] =====================================================
+[12:47:57.414 +109.715s] =============================
+[12:47:57.414 +109.715s]   xmutil reload pccx_npu_bd
+[12:47:57.414 +109.715s] =============================
+[12:47:57.468 +109.770s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:57.468 +109.770s] [XMUTIL] running: xmutil unloadapp
+[12:47:57.818 +110.119s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:47:57.818 +110.119s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:47:58.341 +110.643s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:47:59.843 +112.145s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:47:59.898 +112.200s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:59.900 +112.201s] [UIO] opening NPU UIO at /dev/uio4
+[12:47:59.900 +112.201s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:47:59.900 +112.202s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:47:59.901 +112.202s] [CASE] pre         hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:59.901 +112.202s] [PUSH] push cmd →        hp3: addr=0x375b0000 btt=16 drr=0 eof=1 tag=5 xuser=0x0 xcache=0x0
+[12:47:59.901 +112.202s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0005
+[12:47:59.901 +112.203s] [POP] STS_POP[0] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:47:59.901 +112.203s] [POP] STS_POP[1] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:47:59.901 +112.203s] [POP] STS_POP[2] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:47:59.902 +112.203s] [CASE] post        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:47:59.902 +112.203s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:47:59.902 +112.203s] ======================================================
+[12:47:59.902 +112.203s]   hp-channel: hp3 btt=16 default_xuf_xcf eof=1 drr=0
+[12:47:59.902 +112.203s] ======================================================
+[12:47:59.902 +112.204s] =============================
+[12:47:59.902 +112.204s]   xmutil reload pccx_npu_bd
+[12:47:59.902 +112.204s] =============================
+[12:47:59.957 +112.258s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:47:59.957 +112.258s] [XMUTIL] running: xmutil unloadapp
+[12:48:00.317 +112.619s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:00.318 +112.619s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:00.841 +113.142s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:02.343 +114.644s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:02.398 +114.699s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:02.399 +114.701s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:02.399 +114.701s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:02.400 +114.701s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:02.401 +114.702s] [CASE] pre         hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:02.401 +114.702s] [PUSH] push cmd →        hp3: addr=0x375b0000 btt=16 drr=0 eof=1 tag=13 xuser=0xf xcache=0xf
+[12:48:02.401 +114.702s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff0d
+[12:48:02.401 +114.702s] [POP] STS_POP[0] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:02.401 +114.702s] [POP] STS_POP[1] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:02.401 +114.703s] [POP] STS_POP[2] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:02.401 +114.703s] [CASE] post        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:02.401 +114.703s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:02.402 +114.703s] ===============================================
+[12:48:02.402 +114.703s]   flag: hp0 btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:48:02.402 +114.703s] ===============================================
+[12:48:02.402 +114.703s] =============================
+[12:48:02.402 +114.703s]   xmutil reload pccx_npu_bd
+[12:48:02.402 +114.703s] =============================
+[12:48:02.457 +114.758s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:02.457 +114.758s] [XMUTIL] running: xmutil unloadapp
+[12:48:02.814 +115.115s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:02.814 +115.116s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:03.338 +115.640s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:04.840 +117.142s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:04.895 +117.196s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:04.896 +117.198s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:04.897 +117.198s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:04.897 +117.199s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:04.898 +117.199s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:04.898 +117.199s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=12 xuser=0x0 xcache=0x0
+[12:48:04.898 +117.199s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x000c
+[12:48:04.898 +117.200s] [POP] STS_POP[0] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:04.898 +117.200s] [POP] STS_POP[1] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:04.898 +117.200s] [POP] STS_POP[2] = 0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:04.899 +117.200s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:04.899 +117.200s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:04.899 +117.200s] ===============================================
+[12:48:04.899 +117.200s]   flag: hp0 btt=16 legacy_xu0_xc0 eof=0 drr=0
+[12:48:04.899 +117.200s] ===============================================
+[12:48:04.899 +117.200s] =============================
+[12:48:04.899 +117.200s]   xmutil reload pccx_npu_bd
+[12:48:04.899 +117.201s] =============================
+[12:48:04.953 +117.254s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:04.953 +117.254s] [XMUTIL] running: xmutil unloadapp
+[12:48:05.318 +117.619s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:05.318 +117.619s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:05.846 +118.147s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:07.348 +119.650s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:07.402 +119.703s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:07.403 +119.705s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:07.403 +119.705s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:07.404 +119.705s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:07.404 +119.706s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:07.405 +119.706s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=0 tag=5 xuser=0x0 xcache=0x0
+[12:48:07.405 +119.706s] [PUSH]   CMD_LO=0x00800010 CMD_HI=0x375b0000 CMD_EXT=0x0005
+[12:48:07.405 +119.706s] [POP] STS_POP[0] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:48:07.405 +119.706s] [POP] STS_POP[1] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:48:07.405 +119.706s] [POP] STS_POP[2] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:48:07.405 +119.707s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:07.405 +119.707s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:07.406 +119.707s] ===============================================
+[12:48:07.406 +119.707s]   flag: hp0 btt=16 legacy_xu0_xc0 eof=1 drr=1
+[12:48:07.406 +119.707s] ===============================================
+[12:48:07.406 +119.707s] =============================
+[12:48:07.406 +119.707s]   xmutil reload pccx_npu_bd
+[12:48:07.406 +119.707s] =============================
+[12:48:07.459 +119.761s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:07.459 +119.761s] [XMUTIL] running: xmutil unloadapp
+[12:48:07.822 +120.123s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:07.822 +120.123s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:08.345 +120.646s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:09.847 +122.149s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:09.901 +122.202s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:09.902 +122.204s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:09.902 +122.204s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:09.903 +122.204s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:09.904 +122.205s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:09.904 +122.205s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=1 eof=1 tag=7 xuser=0x0 xcache=0x0
+[12:48:09.904 +122.205s] [PUSH]   CMD_LO=0xc0800010 CMD_HI=0x375b0000 CMD_EXT=0x0007
+[12:48:09.904 +122.205s] [POP] STS_POP[0] = 0x00000087 tag=0x7 OKAY=1 err=- bytes=0 eof=0
+[12:48:09.904 +122.205s] [POP] STS_POP[1] = 0x00000087 tag=0x7 OKAY=1 err=- bytes=0 eof=0
+[12:48:09.904 +122.206s] [POP] STS_POP[2] = 0x00000087 tag=0x7 OKAY=1 err=- bytes=0 eof=0
+[12:48:09.904 +122.206s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:09.904 +122.206s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:09.905 +122.206s] ================================================
+[12:48:09.905 +122.206s]   flag: hp0 btt=16 default_xuf_xcf eof=1 drr=0
+[12:48:09.905 +122.206s] ================================================
+[12:48:09.905 +122.206s] =============================
+[12:48:09.905 +122.206s]   xmutil reload pccx_npu_bd
+[12:48:09.905 +122.206s] =============================
+[12:48:09.960 +122.261s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:09.960 +122.261s] [XMUTIL] running: xmutil unloadapp
+[12:48:10.322 +122.623s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:10.322 +122.623s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:10.855 +123.156s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:12.357 +124.658s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:12.411 +124.713s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:12.413 +124.714s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:12.413 +124.714s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:12.414 +124.715s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:12.414 +124.716s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:12.414 +124.716s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=1 tag=4 xuser=0xf xcache=0xf
+[12:48:12.414 +124.716s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff04
+[12:48:12.415 +124.716s] [POP] STS_POP[0] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:12.415 +124.716s] [POP] STS_POP[1] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:12.415 +124.716s] [POP] STS_POP[2] = 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:12.415 +124.716s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:12.415 +124.716s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:12.415 +124.717s] ================================================
+[12:48:12.415 +124.717s]   flag: hp0 btt=16 default_xuf_xcf eof=0 drr=0
+[12:48:12.415 +124.717s] ================================================
+[12:48:12.415 +124.717s] =============================
+[12:48:12.416 +124.717s]   xmutil reload pccx_npu_bd
+[12:48:12.416 +124.717s] =============================
+[12:48:12.469 +124.771s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:12.469 +124.771s] [XMUTIL] running: xmutil unloadapp
+[12:48:12.826 +125.127s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:12.826 +125.127s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:13.349 +125.650s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:14.851 +127.152s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:14.905 +127.207s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:14.907 +127.208s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:14.907 +127.209s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:14.908 +127.209s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:14.908 +127.210s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:14.908 +127.210s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=0 eof=0 tag=13 xuser=0xf xcache=0xf
+[12:48:14.909 +127.210s] [PUSH]   CMD_LO=0x00800010 CMD_HI=0x375b0000 CMD_EXT=0xff0d
+[12:48:14.909 +127.210s] [POP] STS_POP[0] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:14.909 +127.210s] [POP] STS_POP[1] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:14.909 +127.210s] [POP] STS_POP[2] = 0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:14.909 +127.211s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:14.909 +127.211s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:14.909 +127.211s] ================================================
+[12:48:14.910 +127.211s]   flag: hp0 btt=16 default_xuf_xcf eof=1 drr=1
+[12:48:14.910 +127.211s] ================================================
+[12:48:14.910 +127.211s] =============================
+[12:48:14.910 +127.211s]   xmutil reload pccx_npu_bd
+[12:48:14.910 +127.211s] =============================
+[12:48:14.964 +127.266s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:14.964 +127.266s] [XMUTIL] running: xmutil unloadapp
+[12:48:15.326 +127.627s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:15.326 +127.627s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:15.857 +128.158s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:17.359 +129.660s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:17.412 +129.714s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:17.414 +129.715s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:17.414 +129.715s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:17.415 +129.716s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:17.415 +129.717s] [CASE] pre         hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:17.415 +129.717s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=16 drr=1 eof=1 tag=15 xuser=0xf xcache=0xf
+[12:48:17.415 +129.717s] [PUSH]   CMD_LO=0xc0800010 CMD_HI=0x375b0000 CMD_EXT=0xff0f
+[12:48:17.416 +129.717s] [POP] STS_POP[0] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:17.416 +129.717s] [POP] STS_POP[1] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:17.416 +129.717s] [POP] STS_POP[2] = 0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:17.416 +129.717s] [CASE] post        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:17.416 +129.718s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:17.416 +129.718s] ====================================================
+[12:48:17.416 +129.718s]   flag: acp_fmap btt=16 legacy_xu0_xc0 eof=1 drr=0
+[12:48:17.417 +129.718s] ====================================================
+[12:48:17.417 +129.718s] =============================
+[12:48:17.417 +129.718s]   xmutil reload pccx_npu_bd
+[12:48:17.417 +129.718s] =============================
+[12:48:17.470 +129.772s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:17.471 +129.772s] [XMUTIL] running: xmutil unloadapp
+[12:48:17.842 +130.144s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:17.843 +130.144s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:18.365 +130.666s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:19.867 +132.168s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:19.921 +132.223s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:19.923 +132.224s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:19.923 +132.224s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:19.924 +132.225s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:19.924 +132.226s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:19.924 +132.226s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=0 xuser=0x0 xcache=0x0
+[12:48:19.924 +132.226s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0x0000
+[12:48:19.925 +132.226s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:19.925 +132.226s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:19.925 +132.226s] [POP] STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:19.925 +132.226s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:19.925 +132.226s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:19.925 +132.227s] ====================================================
+[12:48:19.925 +132.227s]   flag: acp_fmap btt=16 legacy_xu0_xc0 eof=0 drr=0
+[12:48:19.925 +132.227s] ====================================================
+[12:48:19.925 +132.227s] =============================
+[12:48:19.925 +132.227s]   xmutil reload pccx_npu_bd
+[12:48:19.926 +132.227s] =============================
+[12:48:19.979 +132.281s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:19.979 +132.281s] [XMUTIL] running: xmutil unloadapp
+[12:48:20.342 +132.643s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:20.342 +132.643s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:20.872 +133.173s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:22.374 +134.675s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:22.429 +134.730s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:22.430 +134.731s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:22.430 +134.732s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:22.431 +134.732s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:22.431 +134.733s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:22.432 +134.733s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=0 tag=9 xuser=0x0 xcache=0x0
+[12:48:22.432 +134.733s] [PUSH]   CMD_LO=0x00800010 CMD_HI=0x375b0000 CMD_EXT=0x0009
+[12:48:22.432 +134.733s] [POP] STS_POP[0] = 0x00000089 tag=0x9 OKAY=1 err=- bytes=0 eof=0
+[12:48:22.432 +134.733s] [POP] STS_POP[1] = 0x00000089 tag=0x9 OKAY=1 err=- bytes=0 eof=0
+[12:48:22.432 +134.733s] [POP] STS_POP[2] = 0x00000089 tag=0x9 OKAY=1 err=- bytes=0 eof=0
+[12:48:22.432 +134.734s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:22.432 +134.734s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:22.433 +134.734s] ====================================================
+[12:48:22.433 +134.734s]   flag: acp_fmap btt=16 legacy_xu0_xc0 eof=1 drr=1
+[12:48:22.433 +134.734s] ====================================================
+[12:48:22.433 +134.734s] =============================
+[12:48:22.433 +134.734s]   xmutil reload pccx_npu_bd
+[12:48:22.433 +134.734s] =============================
+[12:48:22.487 +134.789s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:22.488 +134.789s] [XMUTIL] running: xmutil unloadapp
+[12:48:22.838 +135.139s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:22.838 +135.139s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:23.361 +135.663s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:24.863 +137.165s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:24.918 +137.219s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:24.919 +137.221s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:24.920 +137.221s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:24.920 +137.222s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:24.921 +137.222s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:24.921 +137.222s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=1 eof=1 tag=11 xuser=0x0 xcache=0x0
+[12:48:24.921 +137.222s] [PUSH]   CMD_LO=0xc0800010 CMD_HI=0x375b0000 CMD_EXT=0x000b
+[12:48:24.921 +137.223s] [POP] STS_POP[0] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:24.921 +137.223s] [POP] STS_POP[1] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:24.921 +137.223s] [POP] STS_POP[2] = 0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:24.922 +137.223s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:24.922 +137.223s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:24.922 +137.223s] =====================================================
+[12:48:24.922 +137.223s]   flag: acp_fmap btt=16 default_xuf_xcf eof=1 drr=0
+[12:48:24.922 +137.223s] =====================================================
+[12:48:24.922 +137.223s] =============================
+[12:48:24.922 +137.224s]   xmutil reload pccx_npu_bd
+[12:48:24.922 +137.224s] =============================
+[12:48:24.977 +137.278s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:24.977 +137.279s] [XMUTIL] running: xmutil unloadapp
+[12:48:25.354 +137.656s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:25.354 +137.656s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:25.899 +138.201s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:27.402 +139.703s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:27.456 +139.758s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:27.458 +139.759s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:27.458 +139.759s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:27.459 +139.760s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:27.459 +139.760s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:27.459 +139.761s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=1 tag=8 xuser=0xf xcache=0xf
+[12:48:27.459 +139.761s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff08
+[12:48:27.459 +139.761s] [POP] STS_POP[0] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:27.460 +139.761s] [POP] STS_POP[1] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:27.460 +139.761s] [POP] STS_POP[2] = 0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:27.460 +139.761s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:27.460 +139.761s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:27.460 +139.762s] =====================================================
+[12:48:27.460 +139.762s]   flag: acp_fmap btt=16 default_xuf_xcf eof=0 drr=0
+[12:48:27.460 +139.762s] =====================================================
+[12:48:27.460 +139.762s] =============================
+[12:48:27.460 +139.762s]   xmutil reload pccx_npu_bd
+[12:48:27.461 +139.762s] =============================
+[12:48:27.515 +139.816s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:27.515 +139.817s] [XMUTIL] running: xmutil unloadapp
+[12:48:27.887 +140.188s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:27.887 +140.188s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:28.411 +140.712s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:29.913 +142.214s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:29.967 +142.269s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:29.969 +142.270s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:29.969 +142.270s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:29.970 +142.271s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:29.970 +142.271s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:29.970 +142.272s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=0 eof=0 tag=1 xuser=0xf xcache=0xf
+[12:48:29.970 +142.272s] [PUSH]   CMD_LO=0x00800010 CMD_HI=0x375b0000 CMD_EXT=0xff01
+[12:48:29.970 +142.272s] [POP] STS_POP[0] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:48:29.971 +142.272s] [POP] STS_POP[1] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:48:29.971 +142.272s] [POP] STS_POP[2] = 0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:48:29.971 +142.272s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:29.971 +142.272s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:29.971 +142.273s] =====================================================
+[12:48:29.971 +142.273s]   flag: acp_fmap btt=16 default_xuf_xcf eof=1 drr=1
+[12:48:29.971 +142.273s] =====================================================
+[12:48:29.971 +142.273s] =============================
+[12:48:29.971 +142.273s]   xmutil reload pccx_npu_bd
+[12:48:29.972 +142.273s] =============================
+[12:48:30.026 +142.328s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:30.026 +142.328s] [XMUTIL] running: xmutil unloadapp
+[12:48:30.398 +142.699s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[12:48:30.398 +142.699s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[12:48:30.988 +143.289s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[12:48:32.490 +144.791s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[12:48:32.544 +144.845s] [BIT] bitstream md5 = b5fa1c2acb6b0e18349fa9ee82ad1611 (UNEXPECTED — log it!)
+[12:48:32.545 +144.846s] [UIO] opening NPU UIO at /dev/uio4
+[12:48:32.545 +144.847s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[12:48:32.546 +144.847s] [CMA] CMA OK: va=0xffff8e268000 phys=0x0375b0000 size=0x1000 fd=6
+[12:48:32.546 +144.848s] [CASE] pre    acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:32.547 +144.848s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=16 drr=1 eof=1 tag=3 xuser=0xf xcache=0xf
+[12:48:32.547 +144.848s] [PUSH]   CMD_LO=0xc0800010 CMD_HI=0x375b0000 CMD_EXT=0xff03
+[12:48:32.547 +144.848s] [POP] STS_POP[0] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.547 +144.848s] [POP] STS_POP[1] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.547 +144.848s] [POP] STS_POP[2] = 0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.547 +144.849s] [CASE] post   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:48:32.547 +144.849s] [CASE] RESULT outcome=OKAY seen_status=True payloads=3 all_okay=True
+[12:48:32.548 +144.849s] ===========
+[12:48:32.548 +144.849s]   summary
+[12:48:32.548 +144.849s] ===========
+[12:48:32.548 +144.849s] [SUMMARY] attr-btt/acp_fmap
+[12:48:32.548 +144.849s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.548 +144.850s] [SUMMARY]   legacy_xu0_xc0     btt= 256 eof=1 drr=0 -> OKAY         payloads=0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.548 +144.850s] [SUMMARY]   legacy_xu0_xc0     btt=4096 eof=1 drr=0 -> TIMEOUT      payloads=-
+[12:48:32.548 +144.850s] [SUMMARY]   xu0_xc2            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0,0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0,0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:48:32.549 +144.850s] [SUMMARY]   xu0_xc2            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0,0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0,0x0000008e tag=0xe OKAY=1 err=- bytes=0 eof=0
+[12:48:32.549 +144.850s] [SUMMARY]   xu0_xc2            btt=4096 eof=1 drr=0 -> TIMEOUT      payloads=-
+[12:48:32.549 +144.850s] [SUMMARY]   xu0_xc3            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.549 +144.850s] [SUMMARY]   xu0_xc3            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.549 +144.850s] [SUMMARY]   xu0_xc3            btt=4096 eof=1 drr=0 -> TIMEOUT      payloads=-
+[12:48:32.549 +144.851s] [SUMMARY]   xu0_xcf            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:32.549 +144.851s] [SUMMARY]   xu0_xcf            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:32.549 +144.851s] [SUMMARY]   xu0_xcf            btt=4096 eof=1 drr=0 -> TIMEOUT      payloads=-
+[12:48:32.550 +144.851s] [SUMMARY]   xu2_xcb            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0,0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0,0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.550 +144.851s] [SUMMARY]   xu2_xcb            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0,0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0,0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.550 +144.851s] [SUMMARY]   xu2_xcb            btt=4096 eof=1 drr=0 -> TIMEOUT      payloads=-
+[12:48:32.550 +144.851s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:32.550 +144.851s] [SUMMARY]   default_xuf_xcf    btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:32.550 +144.852s] [SUMMARY]   default_xuf_xcf    btt=4096 eof=1 drr=0 -> TIMEOUT      payloads=-
+[12:48:32.550 +144.852s] [SUMMARY] attr-btt/hp0
+[12:48:32.550 +144.852s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.550 +144.852s] [SUMMARY]   legacy_xu0_xc0     btt= 256 eof=1 drr=0 -> OKAY         payloads=0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.852s] [SUMMARY]   legacy_xu0_xc0     btt=4096 eof=1 drr=0 -> OKAY         payloads=0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.852s] [SUMMARY]   xu0_xc2            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.852s] [SUMMARY]   xu0_xc2            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.852s] [SUMMARY]   xu0_xc2            btt=4096 eof=1 drr=0 -> OKAY         payloads=0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.853s] [SUMMARY]   xu0_xc3            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.853s] [SUMMARY]   xu0_xc3            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:32.551 +144.853s] [SUMMARY]   xu0_xc3            btt=4096 eof=1 drr=0 -> OKAY         payloads=0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.853s] [SUMMARY]   xu0_xcf            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.853s] [SUMMARY]   xu0_xcf            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.853s] [SUMMARY]   xu0_xcf            btt=4096 eof=1 drr=0 -> OKAY         payloads=0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.853s] [SUMMARY]   xu2_xcb            btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.854s] [SUMMARY]   xu2_xcb            btt= 256 eof=1 drr=0 -> OKAY         payloads=0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.854s] [SUMMARY]   xu2_xcb            btt=4096 eof=1 drr=0 -> OKAY         payloads=0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:32.552 +144.854s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.553 +144.854s] [SUMMARY]   default_xuf_xcf    btt= 256 eof=1 drr=0 -> OKAY         payloads=0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.553 +144.854s] [SUMMARY]   default_xuf_xcf    btt=4096 eof=1 drr=0 -> OKAY         payloads=0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.553 +144.854s] [SUMMARY] flag/acp_fmap
+[12:48:32.553 +144.854s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0,0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.553 +144.854s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=0 drr=0 -> OKAY         payloads=0x00000089 tag=0x9 OKAY=1 err=- bytes=0 eof=0,0x00000089 tag=0x9 OKAY=1 err=- bytes=0 eof=0,0x00000089 tag=0x9 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.553 +144.855s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=1 -> OKAY         payloads=0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:32.553 +144.855s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0,0x00000088 tag=0x8 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.855s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=0 drr=0 -> OKAY         payloads=0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0,0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0,0x00000081 tag=0x1 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.855s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=1 -> OKAY         payloads=0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.855s] [SUMMARY] flag/hp0
+[12:48:32.554 +144.855s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.855s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=0 drr=0 -> OKAY         payloads=0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0,0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0,0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.856s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=1 -> OKAY         payloads=0x00000087 tag=0x7 OKAY=1 err=- bytes=0 eof=0,0x00000087 tag=0x7 OKAY=1 err=- bytes=0 eof=0,0x00000087 tag=0x7 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.856s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.554 +144.856s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=0 drr=0 -> OKAY         payloads=0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:32.555 +144.856s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=1 -> OKAY         payloads=0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0,0x0000008f tag=0xf OKAY=1 err=- bytes=0 eof=0
+[12:48:32.555 +144.856s] [SUMMARY] hp-channel/hp0
+[12:48:32.555 +144.856s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0,0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0,0x00000082 tag=0x2 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.555 +144.856s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0,0x0000008a tag=0xa OKAY=1 err=- bytes=0 eof=0
+[12:48:32.555 +144.856s] [SUMMARY] hp-channel/hp1
+[12:48:32.555 +144.857s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0,0x00000083 tag=0x3 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.555 +144.857s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0,0x0000008b tag=0xb OKAY=1 err=- bytes=0 eof=0
+[12:48:32.555 +144.857s] [SUMMARY] hp-channel/hp2
+[12:48:32.555 +144.857s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0,0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.556 +144.857s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0,0x0000008c tag=0xc OKAY=1 err=- bytes=0 eof=0
+[12:48:32.556 +144.857s] [SUMMARY] hp-channel/hp3
+[12:48:32.556 +144.857s] [SUMMARY]   legacy_xu0_xc0     btt=  16 eof=1 drr=0 -> OKAY         payloads=0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0,0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0,0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[12:48:32.556 +144.857s] [SUMMARY]   default_xuf_xcf    btt=  16 eof=1 drr=0 -> OKAY         payloads=0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0,0x0000008d tag=0xd OKAY=1 err=- bytes=0 eof=0
+[12:48:32.556 +144.857s] [SUMMARY] OKAY probes: 50/56

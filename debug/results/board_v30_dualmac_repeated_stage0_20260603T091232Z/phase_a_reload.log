@@ -1,0 +1,10 @@
+[09:12:36.916 +  0.015s] =============================
+[09:12:36.916 +  0.015s]   xmutil reload pccx_npu_bd
+[09:12:36.916 +  0.016s] =============================
+[09:12:36.970 +  0.069s] [BIT] bitstream md5 = 2e1f77c51882aeaddde9c6074f00f4e0 (== expected v30 dualmac 20260603T082506Z)
+[09:12:36.970 +  0.069s] [XMUTIL] running: xmutil unloadapp
+[09:12:37.325 +  0.424s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[09:12:37.325 +  0.424s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[09:12:37.848 +  0.947s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[09:12:39.350 +  2.450s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[09:12:39.404 +  2.503s] [BIT] bitstream md5 = 2e1f77c51882aeaddde9c6074f00f4e0 (== expected v30 dualmac 20260603T082506Z)

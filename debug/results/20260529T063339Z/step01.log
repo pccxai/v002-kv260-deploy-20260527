@@ -1,0 +1,33 @@
+[06:33:42.432 +  0.016s] =======================================================
+[06:33:42.432 +  0.016s]   dbg_step_01 — UIO mmap + AXIL read-only window dump
+[06:33:42.432 +  0.016s] =======================================================
+[06:33:42.432 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_01_axil_window.py']
+[06:33:42.432 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:33:42.432 +  0.016s] [BANNER] uid:  0
+[06:33:42.432 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:33:42.486 +  0.070s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:33:42.486 +  0.070s] =============================
+[06:33:42.486 +  0.070s]   open /dev/uio4 = pccx-npu
+[06:33:42.486 +  0.070s] =============================
+[06:33:42.493 +  0.077s] [UIO] opening NPU UIO at /dev/uio4
+[06:33:42.493 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[06:33:42.493 +  0.077s] ============================================
+[06:33:42.493 +  0.077s]   NPU frontend (0x000 / 0x008) — SOFT READ
+[06:33:42.493 +  0.077s] ============================================
+[06:33:42.493 +  0.077s] (intentionally skipping NPU AXIL_STAT_OUT read — step 02 will do it after MEMSET so status FIFO is guaranteed non-empty)
+[06:33:42.493 +  0.077s] =================================================
+[06:33:42.493 +  0.078s]   6 cmdsts channels — FLAGS / CMD_LVL / STS_LVL
+[06:33:42.493 +  0.078s] =================================================
+[06:33:42.494 +  0.078s]          hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0]  cmd_lvl=0  sts_lvl=0  → CLEAN
+[06:33:42.494 +  0.078s]          hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0]  cmd_lvl=0  sts_lvl=0  → CLEAN
+[06:33:42.494 +  0.078s]          hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0]  cmd_lvl=0  sts_lvl=0  → CLEAN
+[06:33:42.494 +  0.078s]          hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0]  cmd_lvl=0  sts_lvl=0  → CLEAN
+[06:33:42.494 +  0.078s]     acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0]  cmd_lvl=0  sts_lvl=0  → CLEAN
+[06:33:42.494 +  0.078s]   acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0]  cmd_lvl=0  sts_lvl=0  → CLEAN
+[06:33:42.494 +  0.078s] ===================================================
+[06:33:42.494 +  0.078s]   idempotency probe (each FLAGS register read 3x)
+[06:33:42.494 +  0.079s] ===================================================
+[06:33:42.494 +  0.079s] [IDEMP]          hp0 FLAGS samples = ['0x00000005', '0x00000005', '0x00000005']
+[06:33:42.495 +  0.079s] [IDEMP]     acp_fmap FLAGS samples = ['0x00000005', '0x00000005', '0x00000005']
+[06:33:42.495 +  0.079s] [STEP01] PASS — AXIL window readable, every channel responsive
+[run_all] step01 rc=0

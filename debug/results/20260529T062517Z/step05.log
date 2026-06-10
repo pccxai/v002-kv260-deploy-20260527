@@ -1,0 +1,59 @@
+[06:25:39.155 +  0.018s] ==============================================================
+[06:25:39.156 +  0.018s]   dbg_step_05 — HP0 vs ACP_FMAP single-transfer differential
+[06:25:39.156 +  0.018s] ==============================================================
+[06:25:39.156 +  0.018s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_05_hp_vs_acp_diff.py']
+[06:25:39.156 +  0.018s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:25:39.156 +  0.018s] [BANNER] uid:  0
+[06:25:39.156 +  0.019s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:25:39.211 +  0.073s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:25:39.218 +  0.081s] [UIO] opening NPU UIO at /dev/uio4
+[06:25:39.218 +  0.081s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[06:25:39.219 +  0.081s] =======================================
+[06:25:39.219 +  0.081s]   baseline snapshot of all 6 channels
+[06:25:39.219 +  0.081s] =======================================
+[06:25:39.219 +  0.081s] [DUMP] --- cmdsts snapshot: baseline ---
+[06:25:39.219 +  0.082s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.219 +  0.082s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.219 +  0.082s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.219 +  0.082s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.220 +  0.082s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.220 +  0.082s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.220 +  0.083s] [CMA] CMA OK: va=0xffffa533b000 phys=0x0375b0000 size=0x1000 fd=6
+[06:25:39.220 +  0.083s] [ADDR] shared SADDR = 0x375b0000
+[06:25:39.221 +  0.083s] =======================
+[06:25:39.221 +  0.083s]   --- probing hp0 ---
+[06:25:39.221 +  0.083s] =======================
+[06:25:39.221 +  0.083s] pre  hp0: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:39.221 +  0.084s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[06:25:39.221 +  0.084s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[06:25:39.221 +  0.084s] imm  hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[06:25:39.221 +  0.084s] [POLL]        hp0 @0xA000_1000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[06:25:39.221 +  0.084s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:39.422 +  0.285s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:39.623 +  0.485s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:39.823 +  0.686s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:40.024 +  0.887s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:40.224 +  1.087s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:40.425 +  1.288s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:40.626 +  1.488s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:40.826 +  1.689s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:41.027 +  1.890s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:41.228 +  2.090s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:41.428 +  2.291s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:41.629 +  2.492s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[06:25:41.830 +  2.692s] post hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[06:25:42.330 +  3.193s] ============================
+[06:25:42.331 +  3.193s]   --- probing acp_fmap ---
+[06:25:42.331 +  3.193s] ============================
+[06:25:42.331 +  3.194s] pre  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:42.331 +  3.194s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[06:25:42.331 +  3.194s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[06:25:42.331 +  3.194s] imm  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:42.331 +  3.194s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:44.937 +  5.799s] [POLL] !!! poll TIMED OUT after 2.5s — sts_lvl stayed 0
+[06:25:44.937 +  5.800s] post acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:44.937 +  5.800s] ========================
+[06:25:44.937 +  5.800s]   differential verdict
+[06:25:44.937 +  5.800s] ========================
+[06:25:44.937 +  5.800s] [STEP05] PATTERN: HP single OK, ACP single STUCK — strong hint for CCI-400 ACP snoop not enabled.  Step 06 (snoop toggle) is the directly actionable next test.
+[run_all] step05 rc=0

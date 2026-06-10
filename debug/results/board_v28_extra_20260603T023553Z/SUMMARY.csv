@@ -1,0 +1,9 @@
+script,rc
+dbg_step_07_dm_stall_npu_observation.py,0
+dbg_step_08_dm_stall_isolation_test.py,0
+dbg_step_09_npu_activity_during_dm_stall.py,0
+dbg_step_10_real_npu_ops_during_dm_stall.py,0
+dbg_step_11_precise_stall_analysis.py,0
+dbg_step_12_datamover_status_matrix.py,0
+dbg_step_13_cmd_attr_sweep.py,124
+dbg_step_14_acp_result_readout_isolation.py,0

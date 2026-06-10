@@ -1,0 +1,110 @@
+=== tb_GEMM_systolic_prefill_vs_concurrent — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_fmap_staggered_dispatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_systolic_prefill_vs_concurrent/tb_GEMM_systolic_prefill_vs_concurrent.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_systolic_prefill_vs_concurrent
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMM_accumulator
+Compiling module work.GEMM_systolic_array_default
+Compiling module work.GEMM_systolic_top
+Compiling module work.GEMM_sign_recovery(LOWER_W=21)
+Compiling module work.GEMM_dual_mac_recover_default
+Compiling module work.gemm_result_normalizer_default
+Compiling module work.FROM_gemm_result_packer_default
+Compiling module work.tb_GEMM_systolic_prefill_vs_conc...
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_systolic_prefill_vs_concurrent_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 16:50:38 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_systolic_prefill_vs_concurrent_sim/xsim_script.tcl
+# xsim {tb_GEMM_systolic_prefill_vs_concurrent_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_systolic_prefill_vs_concurrent start ===
+DIAG prefill_only_after_weight_prefill r00c00 inst=000 ce=0 op=000010000 wU=1 wL=1 a=00200001 b=00000 p=000000000000 pc=000000000000
+DIAG prefill_only_after_weight_prefill r15c00 inst=000 ce=0 op=000010000 wU=1 wL=1 a=00200001 b=00000 p=000000000000 pc=000000000000
+DIAG prefill_only_after_weight_prefill r16c00 inst=000 ce=0 op=000110000 wU=1 wL=1 a=00200001 b=xxxxx p=000000000000 pc=000000000000 fabric=000000000000
+DIAG prefill_only_after_weight_prefill r31c00 inst=000 ce=0 op=000100000 wU=1 wL=1 a=00200001 b=xxxxx pcin=000000000000 p=000000000000 pcout=000000000000
+DIAG prefill_only_after_compute r00c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00040 p=000008000040 pc=000008000040
+DIAG prefill_only_after_compute r15c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00000 p=000080000400 pc=000080000400
+DIAG prefill_only_after_compute r16c00 inst=001 ce=0 op=000110101 wU=1 wL=1 a=00200001 b=00040 p=000088000440 pc=000088000440 fabric=000088000440
+DIAG prefill_only_after_compute r31c00 inst=001 ce=0 op=000100101 wU=1 wL=1 a=00200001 b=00040 pcin=0000f80007c0 p=0002e8001740 pcout=0002e8001740
+prefill_only raw_valid_samples=32 packed_beats=4 raw_nonzero=0 recovered_nonzero=0 norm_nonzero=0 packed_nonzero=0
+DIAG concurrent_after_compute r00c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00040 p=000008000040 pc=000008000040
+DIAG concurrent_after_compute r15c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00000 p=000080000400 pc=000080000400
+DIAG concurrent_after_compute r16c00 inst=001 ce=0 op=000110101 wU=1 wL=1 a=00200001 b=00040 p=000088000440 pc=000088000440 fabric=000088000440
+DIAG concurrent_after_compute r31c00 inst=001 ce=0 op=000100101 wU=1 wL=1 a=00200001 b=00040 pcin=0000f80007c0 p=0002e8001740 pcout=0002e8001740
+concurrent raw_valid_samples=32 packed_beats=4 raw_nonzero=0 recovered_nonzero=0 norm_nonzero=0 packed_nonzero=0
+PASS [prefill_only_produces_raw_valid]
+FAIL [prefill_only_raw_nonzero]
+FAIL [prefill_only_recovered_nonzero]
+FAIL [prefill_only_norm_nonzero]
+PASS [prefill_only_produces_packed_beats]
+FAIL [prefill_only_packed_nonzero]
+PASS [concurrent_produces_raw_valid]
+FAIL [concurrent_raw_nonzero]
+FAIL [concurrent_recovered_nonzero]
+FAIL [concurrent_norm_nonzero]
+PASS [concurrent_produces_packed_beats]
+FAIL [concurrent_packed_nonzero]
+
+=== Summary ===
+PASS: 4 / 12
+FAIL: 8
+OVERALL: FAIL
+$finish called at time : 5136 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_systolic_prefill_vs_concurrent/tb_GEMM_systolic_prefill_vs_concurrent.sv" Line 353
+exit
+INFO: xsimkernel Simulation Memory Usage: 485640 KB (Peak: 543692 KB), Simulation CPU Usage: 1970 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 16:50:42 2026...
+
+=== tb_GEMM_systolic_prefill_vs_concurrent RESULT: FAIL ===

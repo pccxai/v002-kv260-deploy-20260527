@@ -1,0 +1,96 @@
+[17:58:12.904 +  0.047s] ===============================================================================
+[17:58:12.904 +  0.047s]   stage1_gemm_l2_overwrite_probe — sentinel L2 result overwrite discriminator
+[17:58:12.905 +  0.047s] ===============================================================================
+[17:58:12.905 +  0.047s] [BANNER] argv: ['debug/stage1_gemm_l2_overwrite_probe.py']
+[17:58:12.905 +  0.047s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[17:58:12.905 +  0.047s] [BANNER] uid:  0
+[17:58:12.905 +  0.047s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[17:58:12.905 +  0.047s] ==========================
+[17:58:12.905 +  0.047s]   dmesg safety pre-check
+[17:58:12.905 +  0.047s] ==========================
+[17:58:12.932 +  0.075s] [dmesg] [Wed Jun  3 15:26:56 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:29:48 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:29:48 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:29:48 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:38 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:38 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:38 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:51 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.933 +  0.075s] [dmesg] [Wed Jun  3 16:30:51 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.933 +  0.076s] [dmesg] [Wed Jun  3 16:30:51 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.933 +  0.076s] [dmesg] [Wed Jun  3 16:31:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.933 +  0.076s] [dmesg] [Wed Jun  3 16:31:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.933 +  0.076s] [dmesg] [Wed Jun  3 16:31:30 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.933 +  0.076s] [dmesg] [Wed Jun  3 16:35:25 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 16:35:25 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 16:35:25 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:47:50 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:47:50 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:47:50 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:44 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:44 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:44 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.934 +  0.076s] [dmesg] [Wed Jun  3 17:48:57 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.934 +  0.077s] [dmesg] [Wed Jun  3 17:48:57 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.934 +  0.077s] [dmesg] [Wed Jun  3 17:48:57 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.934 +  0.077s] [dmesg] [Wed Jun  3 17:49:43 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.934 +  0.077s] [dmesg] [Wed Jun  3 17:49:43 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.934 +  0.077s] [dmesg] [Wed Jun  3 17:49:43 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.935 +  0.077s] [dmesg] [Wed Jun  3 17:51:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.935 +  0.077s] [dmesg] [Wed Jun  3 17:51:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.935 +  0.077s] [dmesg] [Wed Jun  3 17:51:24 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.935 +  0.077s] [dmesg] [Wed Jun  3 17:56:04 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[17:58:12.935 +  0.077s] [dmesg] [Wed Jun  3 17:56:04 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[17:58:12.935 +  0.077s] [dmesg] [Wed Jun  3 17:56:04 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[17:58:12.935 +  0.077s] [SAFETY] dmesg looks clean (no AXI bus error / SError in tail).
+[17:58:12.935 +  0.078s] =============================
+[17:58:12.935 +  0.078s]   xmutil reload pccx_npu_bd
+[17:58:12.935 +  0.078s] =============================
+[17:58:12.989 +  0.131s] [BIT] bitstream md5 = e7777bf95556a249e045b8a4ec3c4876 (== expected v35 accvalid 20260603T170314Z)
+[17:58:12.989 +  0.132s] [XMUTIL] running: xmutil unloadapp
+[17:58:13.352 +  0.495s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[17:58:13.352 +  0.495s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[17:58:13.882 +  1.024s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[17:58:15.384 +  2.526s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[17:58:15.438 +  2.580s] [BIT] bitstream md5 = e7777bf95556a249e045b8a4ec3c4876 (== expected v35 accvalid 20260603T170314Z)
+[17:58:15.447 +  2.590s] ==================
+[17:58:15.447 +  2.590s]   CMA allocation
+[17:58:15.447 +  2.590s] ==================
+[17:58:15.448 +  2.590s] [CMA] CMA OK: va=0xffffaa76e000 phys=0x0375b0000 size=0x1000 fd=4
+[17:58:15.448 +  2.591s] [CMA] CMA OK: va=0xffffaa742000 phys=0x0375b1000 size=0x1000 fd=6
+[17:58:15.449 +  2.591s] [CMA] CMA OK: va=0xffffaa741000 phys=0x0375b2000 size=0x1000 fd=8
+[17:58:15.449 +  2.592s] [CMA] CMA OK: va=0xffffaa73d000 phys=0x0375b4000 size=0x4000 fd=10
+[17:58:15.450 +  2.592s] [CMA] CMA OK: va=0xffffaa739000 phys=0x0375b8000 size=0x4000 fd=12
+[17:58:15.450 +  2.592s] fmap_phys=0x0375b0000 sentinel_phys=0x0375b1000
+[17:58:15.450 +  2.592s] result_phys=0x0375b2000 hp0_phys=0x0375b4000 hp1_phys=0x0375b8000
+[17:58:15.452 +  2.594s] [DUMP] --- cmdsts snapshot: before setup ---
+[17:58:15.452 +  2.595s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[17:58:15.452 +  2.595s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[17:58:15.453 +  2.595s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[17:58:15.453 +  2.595s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[17:58:15.453 +  2.595s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[17:58:15.453 +  2.595s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[17:58:15.453 +  2.595s] ===============
+[17:58:15.453 +  2.595s]   shape setup
+[17:58:15.453 +  2.596s] ===============
+[17:58:15.504 +  2.646s] [NPU] after fmap shape: 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000
+[17:58:15.554 +  2.696s] [NPU] after result shape: 0x00000000000889d2 busy=0 done=1 top=0x2274 mem=0x0008
+[17:58:15.554 +  2.696s] ==============================
+[17:58:15.554 +  2.696s]   prefill RESULT_L2 sentinel
+[17:58:15.554 +  2.696s] ==============================
+[17:58:15.554 +  2.697s] [DM] prefill_result_l2 issued token=0x0 length=64
+[17:58:15.554 +  2.697s] [prefill_result_l2] 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[17:58:15.555 +  2.697s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[17:58:15.555 +  2.697s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[17:58:15.555 +  2.697s] [DM] pre_gemm_l2_read issued token=0x4 length=64
+[17:58:15.555 +  2.697s] [pre_gemm_l2_read] 0x00000084 tag=0x4 OKAY=1 err=- bytes=0 eof=0
+[17:58:15.555 +  2.697s] [L2READ] pre_gemm_l2_read raw=a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5a5
+[17:58:15.555 +  2.698s] [L2READ] bf16 words=a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5 a5a5
+[17:58:15.555 +  2.698s] [FAIL] pre-GEMM L2 sentinel readback mismatch
+L2_OVERWRITE_PROBE_RC=4

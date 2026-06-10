@@ -1,0 +1,16 @@
+
+
+****** Bootgen v2025.2
+  **** Build date : Nov 12 2025-13:58:15
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+-rw-rw-r-- 1 hwkim hwkim 7797692 Jun  3 14:22 hw/build/deploy/pccx_npu_bd/pccx_npu_bd.bit.bin
+-rw-rw-r-- 1 hwkim hwkim 7797692 Jun  3 14:22 hw/build/pccx_v002_system_wrapper.bit.bin
+b7277200e13fca6d1bf20a21b44d89fa271ffd764fde7408217cfcd6ee7027c5  hw/build/pccx_v002_system_wrapper.bit
+616ce633f1e5df42ddad05c55d3a68c9ca228801bf8a078ebda76439a8b947a1  hw/build/pccx_v002_system_wrapper.bit.bin
+b7277200e13fca6d1bf20a21b44d89fa271ffd764fde7408217cfcd6ee7027c5  hw/build/deploy/pccx_npu_bd/pccx_npu_bd.bit
+616ce633f1e5df42ddad05c55d3a68c9ca228801bf8a078ebda76439a8b947a1  hw/build/deploy/pccx_npu_bd/pccx_npu_bd.bit.bin

@@ -1,0 +1,71 @@
+=== tb_GEMM_dsp_unit_smoke — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_unit_smoke/tb_GEMM_dsp_unit_smoke.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dsp_unit_smoke
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_dsp_packer
+Compiling module unisims_ver.DSP48E2(BREG=2,CREG=0)
+Compiling module work.GEMM_dsp_unit(IS_TOP_ROW=1)
+Compiling module work.GEMM_dsp_unit_last_ROW(IS_TOP_RO...
+Compiling module work.tb_GEMM_dsp_unit_smoke
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dsp_unit_smoke_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 16:47:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_dsp_unit_smoke_sim/xsim_script.tcl
+# xsim {tb_GEMM_dsp_unit_smoke_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_dsp_unit_smoke start ===
+PASS [reset_o_valid_mid]
+PASS [reset_o_valid_last]
+PASS [mid_weight_shift]
+PASS [last_weight_shift]
+PASS [mid_instruction_pipe]
+PASS [last_instruction_pipe]
+PASS [mid_o_valid_one_cycle]
+PASS [last_o_valid_one_cycle]
+PASS [mid_o_valid_drops]
+PASS [last_o_valid_drops]
+PASS [mid_outputs_known]
+PASS [last_outputs_known]
+FAIL [mid_arithmetic_nonzero]
+FAIL [last_arithmetic_nonzero]
+PASS [clear_o_valid_mid]
+PASS [clear_o_valid_last]
+
+=== Summary ===
+PASS: 14 / 16
+FAIL: 2
+OVERALL: FAIL
+$finish called at time : 606 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_unit_smoke/tb_GEMM_dsp_unit_smoke.sv" Line 196
+exit
+INFO: xsimkernel Simulation Memory Usage: 287880 KB (Peak: 336440 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 16:47:32 2026...
+
+=== tb_GEMM_dsp_unit_smoke RESULT: FAIL ===

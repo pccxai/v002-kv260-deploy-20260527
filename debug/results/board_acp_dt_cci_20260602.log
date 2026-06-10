@@ -1,0 +1,36 @@
+2026-06-02T09:47:09+00:00
+kria
+Linux kria 5.15.0-1027-xilinx-zynqmp #31-Ubuntu SMP Wed Feb 21 04:33:09 UTC 2024 aarch64 aarch64 aarch64 GNU/Linux
+BOOTARGS
+ root=LABEL=writable rootwait earlycon console=ttyPS1,115200 console=tty1 clk_ignore_unused uio_pdrv_genirq.of_id=generic-uio xilinx_tsn_ep.st_pcp=4 cma=1000M 
+
+UIO
+/sys/class/uio/uio0 axi-pmon
+/sys/class/uio/uio1 axi-pmon
+/sys/class/uio/uio2 axi-pmon
+/sys/class/uio/uio3 axi-pmon
+/sys/class/uio/uio4 pccx-npu
+DT_CCI
+status=disabled
+compatible=arm,cci-400 
+DT_PCCX
+node=/sys/firmware/devicetree/base/axi/pccx-npu@a0000000
+compatible=generic-uio 
+status=okay 
+reg= 00000000 000000a0 00000000 00000100
+DMA_COHERENT_SCAN
+KMOD_PROBE
+[ 7271.899366] pccx-cci-smc: init (probe=1) — ATF SiP PM_MMIO path
+[ 7271.899396] pccx-cci-smc: READ  CCI Control       @0xfd6e0000 DENIED  ret=-13
+[ 7271.899421] pccx-cci-smc: READ  CCI Status        @0xfd6e000c DENIED  ret=-13
+[ 7271.899444] pccx-cci-smc: READ  S3 SNOOP_CTRL     @0xfd6e4004 DENIED  ret=-13
+[ 7271.899467] pccx-cci-smc: READ  S4 SNOOP_CTRL     @0xfd6e5004 DENIED  ret=-13
+[ 7271.899489] pccx-cci-smc: READ  S5 SNOOP_CTRL     @0xfd6e6004 DENIED  ret=-13
+[ 7272.300216] pccx-cci-smc: exit
+[ 7883.172567] pccx-cci-smc: init (probe=1) — ATF SiP PM_MMIO path
+[ 7883.172610] pccx-cci-smc: READ  CCI Control       @0xfd6e0000 DENIED  ret=-13
+[ 7883.172635] pccx-cci-smc: READ  CCI Status        @0xfd6e000c DENIED  ret=-13
+[ 7883.172658] pccx-cci-smc: READ  S3 SNOOP_CTRL     @0xfd6e4004 DENIED  ret=-13
+[ 7883.172681] pccx-cci-smc: READ  S4 SNOOP_CTRL     @0xfd6e5004 DENIED  ret=-13
+[ 7883.172703] pccx-cci-smc: READ  S5 SNOOP_CTRL     @0xfd6e6004 DENIED  ret=-13
+[ 7883.431274] pccx-cci-smc: exit

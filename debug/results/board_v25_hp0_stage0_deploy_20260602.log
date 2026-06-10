@@ -1,0 +1,12 @@
+5009c8b3c5089fbc7c368939c4bc50eb31163a96b7ac9dae39d1b43ac525f9ae  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+5009c8b3c5089fbc7c368939c4bc50eb31163a96b7ac9dae39d1b43ac525f9ae  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+crw------- 1 root root 237, 4 Jun  2 11:31 /dev/uio4
+/sys/class/uio/uio0/name axi-pmon
+/sys/class/uio/uio1/name axi-pmon
+/sys/class/uio/uio2/name axi-pmon
+/sys/class/uio/uio3/name axi-pmon
+/sys/class/uio/uio4/name pccx-npu
+-rw-r--r-- 1 root root 7797692 Jun  2 11:31 /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+-rw-r--r-- 1 root root 7797692 Jun  2 11:31 /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin.bak-v24-before-v25-20260602T113120Z

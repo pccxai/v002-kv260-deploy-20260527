@@ -1,0 +1,4 @@
+=== STAGE1 GEMM SILICON GUARD ===
+=== Stage 1 — GEMM 32x32x32 silicon test ===
+BLOCKED: Stage 1 GEMM silicon smoke needs HP0/HP1 INT4 weight packing before it is a valid GEMM test. Do not use acp_fmap for weight preload.
+RC=3

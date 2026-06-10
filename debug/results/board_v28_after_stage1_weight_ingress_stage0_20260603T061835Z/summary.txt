@@ -1,0 +1,2 @@
+stage0_after_weight_ingress_rc=0
+log=debug/results/board_v28_after_stage1_weight_ingress_stage0_20260603T061835Z/stage0_after_weight_ingress.log

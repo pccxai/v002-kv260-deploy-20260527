@@ -1,0 +1,89 @@
+=== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_HP_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=13)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_axis(CLOCKING_MODE="ind...
+Compiling module work.mem_HP_buffer_default
+Compiling module work.GEMM_weight_dispatcher
+Compiling module work.tb_mem_HP_buffer_to_GEMM_weight_...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew_sim
+--- xsim ---
+
+source xsim.dir/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew_sim/xsim_script.tcl
+# xsim {tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew start ===
+PASS [reset leaves pairer invalid]
+PASS [initial pairer ready]
+PASS [upper-first single hp0 input handshake]
+PASS [upper-first pending backpressures hp0 only]
+PASS [upper-first no pair before lower]
+PASS [upper-first single hp1 input handshake]
+PASS [upper-first single pair data]
+PASS [upper-first single pair valid]
+PASS [upper-first ready restored]
+PASS [upper-first no duplicate pair]
+PASS [lower-first single hp1 input handshake]
+PASS [lower-first pending backpressures hp1 only]
+PASS [lower-first no pair before upper]
+PASS [lower-first single hp0 input handshake]
+PASS [lower-first single pair data]
+PASS [lower-first single pair valid]
+PASS [lower-first ready restored]
+PASS [lower-first no duplicate pair]
+PASS [upper-burst skew hp0 input handshake]
+PASS [upper-burst skew hp0 input handshake]
+PASS [upper-burst skew hp0 input handshake]
+PASS [upper-burst leaves hp0 backpressured]
+PASS [upper-burst no pair before lower burst]
+PASS [upper-burst skew hp1 input handshake]
+PASS [upper-burst skew hp1 input handshake]
+PASS [upper-burst skew hp1 input handshake]
+PASS [upper-burst skew pair[0] data]
+PASS [upper-burst skew pair[1] data]
+PASS [upper-burst skew pair[2] data]
+PASS [upper-burst skew observed 3 ordered pairs]
+PASS [upper-burst ready restored]
+PASS [upper-burst no extra pair]
+PASS [lower-burst skew hp1 input handshake]
+PASS [lower-burst skew hp1 input handshake]
+PASS [lower-burst skew hp1 input handshake]
+PASS [lower-burst leaves hp1 backpressured]
+PASS [lower-burst no pair before upper burst]
+PASS [lower-burst skew hp0 input handshake]
+PASS [lower-burst skew hp0 input handshake]
+PASS [lower-burst skew hp0 input handshake]
+PASS [lower-burst skew pair[0] data]
+PASS [lower-burst skew pair[1] data]
+PASS [lower-burst skew pair[2] data]
+PASS [lower-burst skew observed 3 ordered pairs]
+PASS [lower-burst ready restored]
+PASS [lower-burst no extra pair]
+
+PASS: 46 / 46
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 1848500 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew.sv" Line 394
+exit
+INFO: xsimkernel Simulation Memory Usage: 288876 KB (Peak: 337436 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 10:19:53 2026...
+
+=== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew RESULT: PASS ===

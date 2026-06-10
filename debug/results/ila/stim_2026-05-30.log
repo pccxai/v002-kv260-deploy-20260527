@@ -1,0 +1,55 @@
+[08:20:28.875 +  0.020s] =======================================================================
+[08:20:28.875 +  0.020s]   dbg_step_03 — cmdsts_acp_fmap SINGLE CMD_PUSH — canonical ACP stall
+[08:20:28.875 +  0.020s] =======================================================================
+[08:20:28.876 +  0.020s] [BANNER] argv: ['debug/dbg_step_03_cmdsts_single_acp.py']
+[08:20:28.876 +  0.021s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[08:20:28.876 +  0.021s] [BANNER] uid:  0
+[08:20:28.876 +  0.021s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[08:20:28.958 +  0.103s] [BIT] bitstream md5 = 03fd14fba9aff6d864573f2aef41d2e5 (UNEXPECTED — log it!)
+[08:20:28.978 +  0.123s] [UIO] opening NPU UIO at /dev/uio4
+[08:20:28.979 +  0.123s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[08:20:28.979 +  0.124s] ========================================
+[08:20:28.979 +  0.124s]   pre snapshot — all 6 cmdsts channels
+[08:20:28.979 +  0.124s] ========================================
+[08:20:28.979 +  0.124s] [DUMP] --- cmdsts snapshot: pre-push ---
+[08:20:28.979 +  0.124s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.980 +  0.125s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.980 +  0.125s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.980 +  0.125s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.980 +  0.125s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.981 +  0.125s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.981 +  0.126s] ===========================================
+[08:20:28.981 +  0.126s]   allocate CMA buffer for DataMover SADDR
+[08:20:28.981 +  0.126s] ===========================================
+[08:20:28.982 +  0.127s] [CMA] CMA OK: va=0xffff8337a000 phys=0x0375b0000 size=0x1000 fd=6
+[08:20:28.982 +  0.127s] [ADDR] DM SADDR = 0x375b0000
+[08:20:28.982 +  0.127s] ===================================
+[08:20:28.982 +  0.127s]   push 1 cmd onto cmdsts_acp_fmap
+[08:20:28.982 +  0.127s] ===================================
+[08:20:28.982 +  0.127s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0
+[08:20:28.983 +  0.127s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0x00
+[08:20:28.983 +  0.128s] ================================
+[08:20:28.983 +  0.128s]   post-push immediate snapshot
+[08:20:28.983 +  0.128s] ================================
+[08:20:28.983 +  0.128s] [POST]   immediate: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:28.984 +  0.128s] [POST]   → DataMover popped the cmd instantly (cmd_ready=1)
+[08:20:28.984 +  0.129s] ==========================================================
+[08:20:28.984 +  0.129s]   poll cmdsts_acp_fmap for status (every 0.25s for 3.0s)
+[08:20:28.984 +  0.129s] ==========================================================
+[08:20:28.984 +  0.129s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.992 +  3.137s] [POLL] !!! poll TIMED OUT after 3.0s — sts_lvl stayed 0
+[08:20:31.992 +  3.137s] =========================================
+[08:20:31.993 +  3.137s]   post snapshot — all 6 cmdsts channels
+[08:20:31.993 +  3.137s] =========================================
+[08:20:31.993 +  3.137s] [DUMP] --- cmdsts snapshot: post-poll ---
+[08:20:31.993 +  3.138s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.993 +  3.138s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.993 +  3.138s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.993 +  3.138s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.993 +  3.138s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.993 +  3.138s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[08:20:31.993 +  3.138s] ===========
+[08:20:31.994 +  3.138s]   verdict
+[08:20:31.994 +  3.138s] ===========
+[08:20:31.994 +  3.138s] [STEP03] FAIL (= reproduces V002_PROBLEM_EXPLAINED.md Test 1): single SINGLE cmd accepted, STS_LVL stayed 0 for 3.0s
+[08:20:31.994 +  3.139s] [STEP03]        → cause: DataMover internal stuck (AR never accepted on PS port)

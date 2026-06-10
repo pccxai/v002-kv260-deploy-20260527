@@ -1,0 +1,14 @@
+before_xmutil
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+after_xmutil
+crw------- 1 root root 237, 0 Mar 13 16:47 /dev/uio0
+crw------- 1 root root 237, 1 Mar 13 16:47 /dev/uio1
+crw------- 1 root root 237, 2 Mar 13 16:47 /dev/uio2
+crw------- 1 root root 237, 3 Mar 13 16:47 /dev/uio3
+crw------- 1 root root 237, 4 Jun  2 14:30 /dev/uio4
+/sys/class/uio/uio0/name=axi-pmon
+/sys/class/uio/uio1/name=axi-pmon
+/sys/class/uio/uio2/name=axi-pmon
+/sys/class/uio/uio3/name=axi-pmon
+/sys/class/uio/uio4/name=pccx-npu

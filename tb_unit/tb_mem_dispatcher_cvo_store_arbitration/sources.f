@@ -1,0 +1,9 @@
+$RTL_ISA_PKG
+$RTL_PERF_PKG
+$RTL_MEM/Constant_Memory/shape_const_ram.sv
+$RTL_MEM/mem_BUFFER.sv
+$RTL_MEM/mem_L2_cache_fmap.sv
+$RTL_MEM/mem_GLOBAL_cache.sv
+$RTL_MEM/mem_u_operation_queue.sv
+$RTL_MEM/mem_CVO_stream_bridge.sv
+$RTL_MEM/mem_dispatcher.sv

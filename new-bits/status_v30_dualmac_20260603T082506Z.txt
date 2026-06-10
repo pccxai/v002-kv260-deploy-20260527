@@ -1,0 +1,14 @@
+implementation_scope=FULL_TOP_LEVEL
+mode=bitstream
+target_part=xck26-sfvc784-2LV-c
+target_board=xilinx.com:kv260_som:part0:1.4
+bd_script=hw/vivado/system_bd.tcl
+bd_status=PRESENT
+wrapper_status=PRESENT
+filelist_status=PRESENT
+constraints_status=PRESENT
+board_part_status=AVAILABLE
+full_top_level_flow=FULL_TOP_FLOW_IMPL_MET
+bitstream_status=BITSTREAM_REQUESTED
+blocker=none
+required_next_step=Run BD rebuild/synth/impl to validate HP/ACP DataMover topology; descriptors are still PS-issued.

@@ -1,0 +1,51 @@
+[09:53:47.960 +  0.041s] ===================================================
+[09:53:47.960 +  0.041s]   dbg_step_14 — ACP result S2MM readout isolation
+[09:53:47.960 +  0.041s] ===================================================
+[09:53:47.960 +  0.041s] [BANNER] argv: ['debug/dbg_step_14_acp_result_readout_isolation.py', '--short-only', '--poll-s', '1.0']
+[09:53:47.960 +  0.041s] [BANNER] cwd:  /home/ubuntu/v002-kv260-deploy-debug-v24
+[09:53:47.960 +  0.041s] [BANNER] uid:  0
+[09:53:47.960 +  0.041s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[09:53:48.014 +  0.095s] [BIT] bitstream md5 = a3e31f8529d3398a0a94ca5911e8a8e0 (UNEXPECTED — log it!)
+[09:53:48.014 +  0.095s] ======================================
+[09:53:48.014 +  0.095s]   case one_l2_word: shape_x=8 btt=16
+[09:53:48.014 +  0.095s] ======================================
+[09:53:48.014 +  0.095s] =============================
+[09:53:48.014 +  0.095s]   xmutil reload pccx_npu_bd
+[09:53:48.014 +  0.095s] =============================
+[09:53:48.069 +  0.150s] [BIT] bitstream md5 = a3e31f8529d3398a0a94ca5911e8a8e0 (UNEXPECTED — log it!)
+[09:53:48.069 +  0.150s] [XMUTIL] running: xmutil unloadapp
+[09:53:48.426 +  0.507s] [xmutil/unloadapp] remove from slot 0 returns: 0 (Ok)
+[09:53:48.426 +  0.507s] [XMUTIL] running: xmutil loadapp pccx_npu_bd
+[09:53:48.950 +  1.032s] [xmutil/loadapp] pccx_npu_bd: loaded to slot 0
+[09:53:50.453 +  2.534s] [XMUTIL] /sys/class/uio/uio4/name = 'pccx-npu'
+[09:53:50.507 +  2.588s] [BIT] bitstream md5 = a3e31f8529d3398a0a94ca5911e8a8e0 (UNEXPECTED — log it!)
+[09:53:50.513 +  2.594s] [UIO] opening NPU UIO at /dev/uio4
+[09:53:50.513 +  2.594s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[09:53:50.513 +  2.594s] [DUMP] --- cmdsts snapshot: one_l2_word-initial ---
+[09:53:50.513 +  2.595s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.513 +  2.595s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.514 +  2.595s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.514 +  2.595s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.514 +  2.595s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.514 +  2.595s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.515 +  2.596s] [CMA] CMA OK: va=0xffff9e0af000 phys=0x0375b0000 size=0x1000 fd=6
+[09:53:50.515 +  2.596s] [CMA] result buffer phys=0x0375b0000 before=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+[09:53:50.515 +  2.596s] [NPU] MEMSET fmap_shape[0] = (8, 1, 1)
+[09:53:50.565 +  2.646s] [NPU] status after MEMSET: 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000
+[09:53:50.565 +  2.646s] [NPU] MEMCPY L2 -> HOST only; no preceding acp_fmap write
+[09:53:50.565 +  2.647s] [NPU] word=0x2400000100000000
+[09:53:50.565 +  2.647s] [PUSH] push cmd → acp_result: addr=0x375b0000 btt=16 drr=0 eof=1 tag=4 xuser=0xf xcache=0xf
+[09:53:50.565 +  2.647s] [PUSH]   CMD_LO=0x40800010 CMD_HI=0x375b0000 CMD_EXT=0xff04
+[09:53:50.566 +  2.647s] [POLL] NPU 0x0000000003004001 busy=1 done=0 top=0x1000 mem=0x0300
+[09:53:50.566 +  2.647s] [POLL] acp_result @0xA000_6000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=1
+[09:53:50.566 +  2.647s] [POLL] acp_result status FIFO non-empty
+[09:53:50.566 +  2.647s] [POP] STS_POP[0] = 0x00000014 tag=0x4 OKAY=0 err=INTERR bytes=0 eof=0
+[09:53:50.566 +  2.647s] [CMA] result buffer after=cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
+[09:53:50.566 +  2.647s] [DUMP] --- cmdsts snapshot: one_l2_word-final ---
+[09:53:50.566 +  2.648s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.566 +  2.648s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.567 +  2.648s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.567 +  2.648s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.567 +  2.648s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.567 +  2.648s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[09:53:50.567 +  2.648s] [RESULT] RESULT case=one_l2_word status_okay=False payloads=0x00000014 tag=0x4 OKAY=0 err=INTERR bytes=0 eof=0 buffer_changed=False

@@ -1,0 +1,78 @@
+[11:35:21.898 +  0.017s] ==============================================================
+[11:35:21.898 +  0.017s]   dbg_step_05 — HP0 vs ACP_FMAP single-transfer differential
+[11:35:21.898 +  0.017s] ==============================================================
+[11:35:21.898 +  0.017s] [BANNER] argv: ['debug/dbg_step_05_hp_vs_acp_diff.py']
+[11:35:21.898 +  0.017s] [BANNER] cwd:  /home/ubuntu/v002-kv260-deploy-debug-v24
+[11:35:21.898 +  0.017s] [BANNER] uid:  0
+[11:35:21.898 +  0.017s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[11:35:21.952 +  0.071s] [BIT] bitstream md5 = 006ceaf9fe1126302414c5c0569ea32c (UNEXPECTED — log it!)
+[11:35:21.959 +  0.078s] [UIO] opening NPU UIO at /dev/uio4
+[11:35:21.959 +  0.078s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[11:35:21.959 +  0.078s] =======================================
+[11:35:21.960 +  0.079s]   baseline snapshot of all 6 channels
+[11:35:21.960 +  0.079s] =======================================
+[11:35:21.960 +  0.079s] [DUMP] --- cmdsts snapshot: baseline ---
+[11:35:21.960 +  0.079s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.960 +  0.079s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.960 +  0.079s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.960 +  0.079s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.960 +  0.079s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.960 +  0.079s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.961 +  0.080s] [CMA] CMA OK: va=0xffffbee16000 phys=0x0375b0000 size=0x1000 fd=6
+[11:35:21.961 +  0.080s] [ADDR] shared SADDR = 0x375b0000
+[11:35:21.961 +  0.080s] =======================
+[11:35:21.961 +  0.080s]   --- probing hp0 ---
+[11:35:21.961 +  0.080s] =======================
+[11:35:21.962 +  0.081s] pre  hp0: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:21.962 +  0.081s] [PUSH] push cmd →        hp0: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[11:35:21.962 +  0.081s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[11:35:21.962 +  0.081s] imm  hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[11:35:21.962 +  0.081s] [POLL]        hp0 @0xA000_1000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[11:35:21.962 +  0.081s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:22.163 +  0.282s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:22.363 +  0.482s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:22.564 +  0.683s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:22.764 +  0.883s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:22.964 +  1.083s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:23.165 +  1.284s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:23.365 +  1.484s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:23.566 +  1.685s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:23.766 +  1.885s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:23.967 +  2.086s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:24.167 +  2.286s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:24.368 +  2.487s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:24.568 +  2.687s] post hp0: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[11:35:24.569 +  2.688s] [POP]   STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=— bytes=0 eof=0
+[11:35:24.569 +  2.688s] [POP]   STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=— bytes=0 eof=0
+[11:35:24.569 +  2.688s] [POP]   STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=— bytes=0 eof=0
+[11:35:25.070 +  3.189s] ============================
+[11:35:25.070 +  3.189s]   --- probing acp_fmap ---
+[11:35:25.070 +  3.189s] ============================
+[11:35:25.070 +  3.189s] pre  acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[11:35:25.070 +  3.189s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[11:35:25.070 +  3.189s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[11:35:25.070 +  3.189s] imm  acp_fmap: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[11:35:25.071 +  3.190s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[11:35:25.071 +  3.190s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:25.271 +  3.390s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:25.471 +  3.591s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:25.672 +  3.791s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:25.872 +  3.991s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:26.073 +  4.192s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:26.273 +  4.392s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:26.474 +  4.593s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:26.674 +  4.793s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:26.875 +  4.994s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:27.075 +  5.194s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:27.276 +  5.395s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:27.476 +  5.595s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[11:35:27.677 +  5.796s] post acp_fmap: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[11:35:27.677 +  5.796s] [POP]   STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=— bytes=0 eof=0
+[11:35:27.677 +  5.796s] [POP]   STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=— bytes=0 eof=0
+[11:35:27.677 +  5.796s] [POP]   STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=— bytes=0 eof=0
+[11:35:27.677 +  5.796s] ========================
+[11:35:27.677 +  5.796s]   differential verdict
+[11:35:27.677 +  5.796s] ========================
+[11:35:27.677 +  5.796s] [STEP05] hp0      : saw_status=True all_okay=True  payloads=3
+[11:35:27.677 +  5.797s] [STEP05] acp_fmap : saw_status=True all_okay=True  payloads=3
+[11:35:27.678 +  5.797s] [STEP05] UNEXPECTED: BOTH single OKAY — silicon healed or fresh reload skipped.  Re-run from cold to confirm reproducibility.

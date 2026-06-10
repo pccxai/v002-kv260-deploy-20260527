@@ -1,0 +1,2957 @@
+
+================== tb_AXIL_CMD_IN_inst_kick_one_shot ==================
+=== tb_AXIL_CMD_IN_inst_kick_one_shot — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv" into library work
+INFO: [VRFC 10-311] analyzing module QUEUE
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv" into library work
+INFO: [VRFC 10-311] analyzing module AXIL_CMD_IN
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_AXIL_CMD_IN_inst_kick_one_shot/tb_AXIL_CMD_IN_inst_kick_one_shot.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_AXIL_CMD_IN_inst_kick_one_shot
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.algorithms_pkg
+Compiling module work.IF_queue(DATA_WIDTH=64)
+Compiling module work.QUEUE(q=IF_queue(DATA_WIDTH=64)_...
+Compiling module work.AXIL_CMD_IN
+Compiling module work.tb_AXIL_CMD_IN_inst_kick_one_sho...
+Compiling module work.glbl
+Built simulation snapshot tb_AXIL_CMD_IN_inst_kick_one_shot_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:21:36 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_AXIL_CMD_IN_inst_kick_one_shot_sim/xsim_script.tcl
+# xsim {tb_AXIL_CMD_IN_inst_kick_one_shot_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_AXIL_CMD_IN_inst_kick_one_shot start ===
+OUT[0] data=0x2123456789abcdef opcode=0x2
+OUT[1] data=0x8000000000000000 opcode=0x8
+PASS: INST/KICK emits MEMCPY once and KICK once
+OVERALL: PASS
+$finish called at time : 480 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_AXIL_CMD_IN_inst_kick_one_shot/tb_AXIL_CMD_IN_inst_kick_one_shot.sv" Line 129
+exit
+INFO: xsimkernel Simulation Memory Usage: 278628 KB (Peak: 335900 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:21:38 2026...
+
+=== tb_AXIL_CMD_IN_inst_kick_one_shot RESULT: PASS ===
+
+================== tb_CVO_top_result_backpressure_contract ==================
+=== tb_CVO_top_result_backpressure_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_CVO_top_result_backpressure_contract/tb_CVO_top_result_backpressure_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_CVO_top_result_backpressure_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.isa_pkg
+Compiling package work.bf16_math_pkg
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.tb_CVO_top_result_backpressure_c...
+Compiling module work.glbl
+Built simulation snapshot tb_CVO_top_result_backpressure_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:21:45 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_CVO_top_result_backpressure_contract_sim/xsim_script.tcl
+# xsim {tb_CVO_top_result_backpressure_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: result valid observed
+PASS: baseline SQRT result is non-zero
+PASS: result valid is held while result_ready is low
+PASS: result valid observed
+PASS: backpressured result matches baseline
+PASS: 5 / 5 FAIL: 0
+OVERALL: PASS
+$finish called at time : 163850 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_CVO_top_result_backpressure_contract/tb_CVO_top_result_backpressure_contract.sv" Line 78
+exit
+INFO: xsimkernel Simulation Memory Usage: 287676 KB (Peak: 336236 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:21:48 2026...
+
+=== tb_CVO_top_result_backpressure_contract RESULT: PASS ===
+
+================== tb_FROM_gemm_result_packer ==================
+=== tb_FROM_gemm_result_packer — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_FROM_gemm_result_packer/tb_FROM_gemm_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.FROM_gemm_result_packer_default
+Compiling module work.tb_FROM_gemm_result_packer
+Compiling module work.glbl
+Built simulation snapshot tb_FROM_gemm_result_packer_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:21:53 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_FROM_gemm_result_packer_sim/xsim_script.tcl
+# xsim {tb_FROM_gemm_result_packer_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_FROM_gemm_result_packer start ===
+PASS [reset_idle]
+PASS [backpressure_valid_asserts]
+PASS [beat_0]: packed_data=50075006500550045003500250015000
+PASS [beat_1]: packed_data=500f500e500d500c500b500a50095008
+PASS [beat_2]: packed_data=50175016501550145013501250115010
+PASS [beat_3]: packed_data=501f501e501d501c501b501a50195018
+PASS [beat_count_4]
+PASS [final_idle]
+PASS [stale_zero_word_created]
+PASS [clear_flushes_stale_word]
+PASS [capture_disabled_ignores_pre_gemm_valid]
+PASS [beat_0]: packed_data=60076006600560046003600260016000
+PASS [beat_1]: packed_data=600f600e600d600c600b600a60096008
+PASS [beat_2]: packed_data=60176016601560146013601260116010
+PASS [beat_3]: packed_data=601f601e601d601c601b601a60196018
+PASS [post_clear_beat_count_4]
+PASS [post_clear_final_idle]
+
+=== Summary ===
+PASS: 17 / 17
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 756 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_FROM_gemm_result_packer/tb_FROM_gemm_result_packer.sv" Line 199
+exit
+INFO: xsimkernel Simulation Memory Usage: 291444 KB (Peak: 335904 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:21:56 2026...
+
+=== tb_FROM_gemm_result_packer RESULT: PASS ===
+
+================== tb_GEMM_accumulator ==================
+=== tb_GEMM_accumulator — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_accumulator/tb_GEMM_accumulator.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_accumulator
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+WARNING: [VRFC 10-3645] port 'BCOUT' remains unconnected for this instance [/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv:38]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,ALUMODEREG=0,...
+Compiling module work.GEMM_accumulator
+Compiling module work.tb_GEMM_accumulator
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_accumulator_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:22:03 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_accumulator_sim/xsim_script.tcl
+# xsim {tb_GEMM_accumulator_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_accumulator start ===
+PASS [after_reset]: P=0 (h000000000000)
+PASS [single_add_10]: P=10 (h00000000000a)
+PASS [after_1_2_3_4_5]: P=25 (h000000000019)
+PASS [hold_no_valid]: P=25 (h000000000019)
+PASS [after_iclear]: P=0 (h000000000000)
+PASS [neg_neg_sum_n150]: P=-150 (hffffffffff6a)
+PASS [100_minus30_pos70]: P=70 (h000000000046)
+
+=== Summary ===
+PASS: 7 / 7
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 306 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_accumulator/tb_GEMM_accumulator.sv" Line 122
+exit
+INFO: xsimkernel Simulation Memory Usage: 287676 KB (Peak: 336236 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:06 2026...
+
+=== tb_GEMM_accumulator RESULT: PASS ===
+
+================== tb_GEMM_dsp_packer ==================
+=== tb_GEMM_dsp_packer — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_packer/tb_GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_dsp_packer
+Compiling module work.tb_GEMM_dsp_packer
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dsp_packer_sim
+--- xsim ---
+PASS [exh_7_4_80]: w_l=7 w_u=4 a=80 → lower=560 upper=320 (a_packed=00800007 b_ext=00050 p=000028000230)
+PASS [exh_7_4_96]: w_l=7 w_u=4 a=96 → lower=672 upper=384 (a_packed=00800007 b_ext=00060 p=0000300002a0)
+PASS [exh_7_4_112]: w_l=7 w_u=4 a=112 → lower=784 upper=448 (a_packed=00800007 b_ext=00070 p=000038000310)
+PASS [exh_7_5_-128]: w_l=7 w_u=5 a=-128 → lower=-896 upper=-640 (a_packed=00a00007 b_ext=3ff80 p=ffffaffffc80)
+PASS [exh_7_5_-112]: w_l=7 w_u=5 a=-112 → lower=-784 upper=-560 (a_packed=00a00007 b_ext=3ff90 p=ffffb9fffcf0)
+PASS [exh_7_5_-96]: w_l=7 w_u=5 a=-96 → lower=-672 upper=-480 (a_packed=00a00007 b_ext=3ffa0 p=ffffc3fffd60)
+PASS [exh_7_5_-80]: w_l=7 w_u=5 a=-80 → lower=-560 upper=-400 (a_packed=00a00007 b_ext=3ffb0 p=ffffcdfffdd0)
+PASS [exh_7_5_-64]: w_l=7 w_u=5 a=-64 → lower=-448 upper=-320 (a_packed=00a00007 b_ext=3ffc0 p=ffffd7fffe40)
+PASS [exh_7_5_-48]: w_l=7 w_u=5 a=-48 → lower=-336 upper=-240 (a_packed=00a00007 b_ext=3ffd0 p=ffffe1fffeb0)
+PASS [exh_7_5_-32]: w_l=7 w_u=5 a=-32 → lower=-224 upper=-160 (a_packed=00a00007 b_ext=3ffe0 p=ffffebffff20)
+PASS [exh_7_5_-16]: w_l=7 w_u=5 a=-16 → lower=-112 upper=-80 (a_packed=00a00007 b_ext=3fff0 p=fffff5ffff90)
+PASS [exh_7_5_0]: w_l=7 w_u=5 a=0 → lower=0 upper=0 (a_packed=00a00007 b_ext=00000 p=000000000000)
+PASS [exh_7_5_16]: w_l=7 w_u=5 a=16 → lower=112 upper=80 (a_packed=00a00007 b_ext=00010 p=00000a000070)
+PASS [exh_7_5_32]: w_l=7 w_u=5 a=32 → lower=224 upper=160 (a_packed=00a00007 b_ext=00020 p=0000140000e0)
+PASS [exh_7_5_48]: w_l=7 w_u=5 a=48 → lower=336 upper=240 (a_packed=00a00007 b_ext=00030 p=00001e000150)
+PASS [exh_7_5_64]: w_l=7 w_u=5 a=64 → lower=448 upper=320 (a_packed=00a00007 b_ext=00040 p=0000280001c0)
+PASS [exh_7_5_80]: w_l=7 w_u=5 a=80 → lower=560 upper=400 (a_packed=00a00007 b_ext=00050 p=000032000230)
+PASS [exh_7_5_96]: w_l=7 w_u=5 a=96 → lower=672 upper=480 (a_packed=00a00007 b_ext=00060 p=00003c0002a0)
+PASS [exh_7_5_112]: w_l=7 w_u=5 a=112 → lower=784 upper=560 (a_packed=00a00007 b_ext=00070 p=000046000310)
+PASS [exh_7_6_-128]: w_l=7 w_u=6 a=-128 → lower=-896 upper=-768 (a_packed=00c00007 b_ext=3ff80 p=ffff9ffffc80)
+PASS [exh_7_6_-112]: w_l=7 w_u=6 a=-112 → lower=-784 upper=-672 (a_packed=00c00007 b_ext=3ff90 p=ffffabfffcf0)
+PASS [exh_7_6_-96]: w_l=7 w_u=6 a=-96 → lower=-672 upper=-576 (a_packed=00c00007 b_ext=3ffa0 p=ffffb7fffd60)
+PASS [exh_7_6_-80]: w_l=7 w_u=6 a=-80 → lower=-560 upper=-480 (a_packed=00c00007 b_ext=3ffb0 p=ffffc3fffdd0)
+PASS [exh_7_6_-64]: w_l=7 w_u=6 a=-64 → lower=-448 upper=-384 (a_packed=00c00007 b_ext=3ffc0 p=ffffcffffe40)
+PASS [exh_7_6_-48]: w_l=7 w_u=6 a=-48 → lower=-336 upper=-288 (a_packed=00c00007 b_ext=3ffd0 p=ffffdbfffeb0)
+PASS [exh_7_6_-32]: w_l=7 w_u=6 a=-32 → lower=-224 upper=-192 (a_packed=00c00007 b_ext=3ffe0 p=ffffe7ffff20)
+PASS [exh_7_6_-16]: w_l=7 w_u=6 a=-16 → lower=-112 upper=-96 (a_packed=00c00007 b_ext=3fff0 p=fffff3ffff90)
+PASS [exh_7_6_0]: w_l=7 w_u=6 a=0 → lower=0 upper=0 (a_packed=00c00007 b_ext=00000 p=000000000000)
+PASS [exh_7_6_16]: w_l=7 w_u=6 a=16 → lower=112 upper=96 (a_packed=00c00007 b_ext=00010 p=00000c000070)
+PASS [exh_7_6_32]: w_l=7 w_u=6 a=32 → lower=224 upper=192 (a_packed=00c00007 b_ext=00020 p=0000180000e0)
+PASS [exh_7_6_48]: w_l=7 w_u=6 a=48 → lower=336 upper=288 (a_packed=00c00007 b_ext=00030 p=000024000150)
+PASS [exh_7_6_64]: w_l=7 w_u=6 a=64 → lower=448 upper=384 (a_packed=00c00007 b_ext=00040 p=0000300001c0)
+PASS [exh_7_6_80]: w_l=7 w_u=6 a=80 → lower=560 upper=480 (a_packed=00c00007 b_ext=00050 p=00003c000230)
+PASS [exh_7_6_96]: w_l=7 w_u=6 a=96 → lower=672 upper=576 (a_packed=00c00007 b_ext=00060 p=0000480002a0)
+PASS [exh_7_6_112]: w_l=7 w_u=6 a=112 → lower=784 upper=672 (a_packed=00c00007 b_ext=00070 p=000054000310)
+PASS [exh_7_7_-128]: w_l=7 w_u=7 a=-128 → lower=-896 upper=-896 (a_packed=00e00007 b_ext=3ff80 p=ffff8ffffc80)
+PASS [exh_7_7_-112]: w_l=7 w_u=7 a=-112 → lower=-784 upper=-784 (a_packed=00e00007 b_ext=3ff90 p=ffff9dfffcf0)
+PASS [exh_7_7_-96]: w_l=7 w_u=7 a=-96 → lower=-672 upper=-672 (a_packed=00e00007 b_ext=3ffa0 p=ffffabfffd60)
+PASS [exh_7_7_-80]: w_l=7 w_u=7 a=-80 → lower=-560 upper=-560 (a_packed=00e00007 b_ext=3ffb0 p=ffffb9fffdd0)
+PASS [exh_7_7_-64]: w_l=7 w_u=7 a=-64 → lower=-448 upper=-448 (a_packed=00e00007 b_ext=3ffc0 p=ffffc7fffe40)
+PASS [exh_7_7_-48]: w_l=7 w_u=7 a=-48 → lower=-336 upper=-336 (a_packed=00e00007 b_ext=3ffd0 p=ffffd5fffeb0)
+PASS [exh_7_7_-32]: w_l=7 w_u=7 a=-32 → lower=-224 upper=-224 (a_packed=00e00007 b_ext=3ffe0 p=ffffe3ffff20)
+PASS [exh_7_7_-16]: w_l=7 w_u=7 a=-16 → lower=-112 upper=-112 (a_packed=00e00007 b_ext=3fff0 p=fffff1ffff90)
+PASS [exh_7_7_0]: w_l=7 w_u=7 a=0 → lower=0 upper=0 (a_packed=00e00007 b_ext=00000 p=000000000000)
+PASS [exh_7_7_16]: w_l=7 w_u=7 a=16 → lower=112 upper=112 (a_packed=00e00007 b_ext=00010 p=00000e000070)
+PASS [exh_7_7_32]: w_l=7 w_u=7 a=32 → lower=224 upper=224 (a_packed=00e00007 b_ext=00020 p=00001c0000e0)
+PASS [exh_7_7_48]: w_l=7 w_u=7 a=48 → lower=336 upper=336 (a_packed=00e00007 b_ext=00030 p=00002a000150)
+PASS [exh_7_7_64]: w_l=7 w_u=7 a=64 → lower=448 upper=448 (a_packed=00e00007 b_ext=00040 p=0000380001c0)
+PASS [exh_7_7_80]: w_l=7 w_u=7 a=80 → lower=560 upper=560 (a_packed=00e00007 b_ext=00050 p=000046000230)
+PASS [exh_7_7_96]: w_l=7 w_u=7 a=96 → lower=672 upper=672 (a_packed=00e00007 b_ext=00060 p=0000540002a0)
+PASS [exh_7_7_112]: w_l=7 w_u=7 a=112 → lower=784 upper=784 (a_packed=00e00007 b_ext=00070 p=000062000310)
+
+=== Summary ===
+PASS: 4108 / 4108
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 4108 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_packer/tb_GEMM_dsp_packer.sv" Line 133
+exit
+INFO: xsimkernel Simulation Memory Usage: 291164 KB (Peak: 335884 KB), Simulation CPU Usage: 1000 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:13 2026...
+
+=== tb_GEMM_dsp_packer RESULT: PASS ===
+
+================== tb_GEMM_dsp_unit_mac_ce_contract ==================
+=== tb_GEMM_dsp_unit_mac_ce_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_unit_mac_ce_contract/tb_GEMM_dsp_unit_mac_ce_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dsp_unit_mac_ce_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_dsp_packer
+Compiling module unisims_ver.DSP48E2(BREG=2,CREG=0)
+Compiling module work.GEMM_dsp_unit(IS_TOP_ROW=1)
+Compiling module work.GEMM_dsp_unit_last_ROW(IS_TOP_RO...
+Compiling module work.tb_GEMM_dsp_unit_mac_ce_contract
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dsp_unit_mac_ce_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:22:21 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_dsp_unit_mac_ce_contract_sim/xsim_script.tcl
+# xsim {tb_GEMM_dsp_unit_mac_ce_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_dsp_unit_mac_ce_contract start ===
+PASS [reset_mid_ce_low]
+PASS [reset_last_ce_low]
+PASS [mac_inst_latches_mid]
+PASS [mac_inst_latches_last]
+PASS [mac_inst_without_valid_mid_ce_low]
+PASS [mac_inst_without_valid_last_ce_low]
+PASS [valid_mac_mid_ce_high]
+PASS [valid_mac_last_ce_high]
+PASS [valid_drop_mid_ce_low]
+PASS [valid_drop_last_ce_low]
+PASS [flush_mid_ce_high_without_valid]
+PASS [flush_last_ce_high_without_valid]
+
+=== Summary ===
+PASS: 12 / 12
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 136 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_unit_mac_ce_contract/tb_GEMM_dsp_unit_mac_ce_contract.sv" Line 172
+exit
+INFO: xsimkernel Simulation Memory Usage: 287876 KB (Peak: 336436 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:24 2026...
+
+=== tb_GEMM_dsp_unit_mac_ce_contract RESULT: PASS ===
+
+================== tb_GEMM_dsp_unit_smoke ==================
+=== tb_GEMM_dsp_unit_smoke — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_unit_smoke/tb_GEMM_dsp_unit_smoke.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dsp_unit_smoke
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_dsp_packer
+Compiling module unisims_ver.DSP48E2(BREG=2,CREG=0)
+Compiling module work.GEMM_dsp_unit(IS_TOP_ROW=1)
+Compiling module work.GEMM_dsp_unit_last_ROW(IS_TOP_RO...
+Compiling module work.tb_GEMM_dsp_unit_smoke
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dsp_unit_smoke_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:22:32 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_dsp_unit_smoke_sim/xsim_script.tcl
+# xsim {tb_GEMM_dsp_unit_smoke_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_dsp_unit_smoke start ===
+PASS [reset_o_valid_mid]
+PASS [reset_o_valid_last]
+PASS [mid_weight_shift]
+PASS [last_weight_shift]
+PASS [mid_instruction_pipe]
+PASS [last_instruction_pipe]
+PASS [mid_o_valid_one_cycle]
+PASS [last_o_valid_one_cycle]
+PASS [mid_o_valid_drops]
+PASS [last_o_valid_drops]
+PASS [mid_outputs_known]
+PASS [last_outputs_known]
+DIAG mid inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00004 p=000000800004 pc=000000800004 fabric=000000800004
+DIAG last inst=001 ce=0 op=000100101 wU=1 wL=1 a=00200001 b=00004 p=000006800034 pc=000006800034 result=000006800034
+PASS [mid_arithmetic_nonzero]
+PASS [last_arithmetic_nonzero]
+PASS [clear_o_valid_mid]
+PASS [clear_o_valid_last]
+
+=== Summary ===
+PASS: 16 / 16
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 636 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_unit_smoke/tb_GEMM_dsp_unit_smoke.sv" Line 203
+exit
+INFO: xsimkernel Simulation Memory Usage: 287880 KB (Peak: 336440 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:34 2026...
+
+=== tb_GEMM_dsp_unit_smoke RESULT: PASS ===
+
+================== tb_GEMM_dual_mac_recover ==================
+=== tb_GEMM_dual_mac_recover — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dual_mac_recover/tb_GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_sign_recovery(LOWER_W=21)
+Compiling module work.GEMM_dual_mac_recover(LOWER_W=21...
+Compiling module work.tb_GEMM_dual_mac_recover
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dual_mac_recover_sim
+--- xsim ---
+PASS [sweep_7_4_93]: lower_w=7 upper_w=4 act=93 sum=1023 p=00002e80028b
+PASS [sweep_7_4_110]: lower_w=7 upper_w=4 act=110 sum=1210 p=000037000302
+PASS [sweep_7_4_127]: lower_w=7 upper_w=4 act=127 sum=1397 p=00003f800379
+PASS [sweep_7_5_-128]: lower_w=7 upper_w=5 act=-128 sum=-1536 p=ffffaffffc80
+PASS [sweep_7_5_-111]: lower_w=7 upper_w=5 act=-111 sum=-1332 p=ffffba9ffcf7
+PASS [sweep_7_5_-94]: lower_w=7 upper_w=5 act=-94 sum=-1128 p=ffffc53ffd6e
+PASS [sweep_7_5_-77]: lower_w=7 upper_w=5 act=-77 sum=-924 p=ffffcfdffde5
+PASS [sweep_7_5_-60]: lower_w=7 upper_w=5 act=-60 sum=-720 p=ffffda7ffe5c
+PASS [sweep_7_5_-43]: lower_w=7 upper_w=5 act=-43 sum=-516 p=ffffe51ffed3
+PASS [sweep_7_5_-26]: lower_w=7 upper_w=5 act=-26 sum=-312 p=ffffefbfff4a
+PASS [sweep_7_5_-9]: lower_w=7 upper_w=5 act=-9 sum=-108 p=fffffa5fffc1
+PASS [sweep_7_5_8]: lower_w=7 upper_w=5 act=8 sum=96 p=000005000038
+PASS [sweep_7_5_25]: lower_w=7 upper_w=5 act=25 sum=300 p=00000fa000af
+PASS [sweep_7_5_42]: lower_w=7 upper_w=5 act=42 sum=504 p=00001a400126
+PASS [sweep_7_5_59]: lower_w=7 upper_w=5 act=59 sum=708 p=000024e0019d
+PASS [sweep_7_5_76]: lower_w=7 upper_w=5 act=76 sum=912 p=00002f800214
+PASS [sweep_7_5_93]: lower_w=7 upper_w=5 act=93 sum=1116 p=00003a20028b
+PASS [sweep_7_5_110]: lower_w=7 upper_w=5 act=110 sum=1320 p=000044c00302
+PASS [sweep_7_5_127]: lower_w=7 upper_w=5 act=127 sum=1524 p=00004f600379
+PASS [sweep_7_6_-128]: lower_w=7 upper_w=6 act=-128 sum=-1664 p=ffff9ffffc80
+PASS [sweep_7_6_-111]: lower_w=7 upper_w=6 act=-111 sum=-1443 p=ffffacbffcf7
+PASS [sweep_7_6_-94]: lower_w=7 upper_w=6 act=-94 sum=-1222 p=ffffb97ffd6e
+PASS [sweep_7_6_-77]: lower_w=7 upper_w=6 act=-77 sum=-1001 p=ffffc63ffde5
+PASS [sweep_7_6_-60]: lower_w=7 upper_w=6 act=-60 sum=-780 p=ffffd2fffe5c
+PASS [sweep_7_6_-43]: lower_w=7 upper_w=6 act=-43 sum=-559 p=ffffdfbffed3
+PASS [sweep_7_6_-26]: lower_w=7 upper_w=6 act=-26 sum=-338 p=ffffec7fff4a
+PASS [sweep_7_6_-9]: lower_w=7 upper_w=6 act=-9 sum=-117 p=fffff93fffc1
+PASS [sweep_7_6_8]: lower_w=7 upper_w=6 act=8 sum=104 p=000006000038
+PASS [sweep_7_6_25]: lower_w=7 upper_w=6 act=25 sum=325 p=000012c000af
+PASS [sweep_7_6_42]: lower_w=7 upper_w=6 act=42 sum=546 p=00001f800126
+PASS [sweep_7_6_59]: lower_w=7 upper_w=6 act=59 sum=767 p=00002c40019d
+PASS [sweep_7_6_76]: lower_w=7 upper_w=6 act=76 sum=988 p=000039000214
+PASS [sweep_7_6_93]: lower_w=7 upper_w=6 act=93 sum=1209 p=000045c0028b
+PASS [sweep_7_6_110]: lower_w=7 upper_w=6 act=110 sum=1430 p=000052800302
+PASS [sweep_7_6_127]: lower_w=7 upper_w=6 act=127 sum=1651 p=00005f400379
+PASS [sweep_7_7_-128]: lower_w=7 upper_w=7 act=-128 sum=-1792 p=ffff8ffffc80
+PASS [sweep_7_7_-111]: lower_w=7 upper_w=7 act=-111 sum=-1554 p=ffff9edffcf7
+PASS [sweep_7_7_-94]: lower_w=7 upper_w=7 act=-94 sum=-1316 p=ffffadbffd6e
+PASS [sweep_7_7_-77]: lower_w=7 upper_w=7 act=-77 sum=-1078 p=ffffbc9ffde5
+PASS [sweep_7_7_-60]: lower_w=7 upper_w=7 act=-60 sum=-840 p=ffffcb7ffe5c
+PASS [sweep_7_7_-43]: lower_w=7 upper_w=7 act=-43 sum=-602 p=ffffda5ffed3
+PASS [sweep_7_7_-26]: lower_w=7 upper_w=7 act=-26 sum=-364 p=ffffe93fff4a
+PASS [sweep_7_7_-9]: lower_w=7 upper_w=7 act=-9 sum=-126 p=fffff81fffc1
+PASS [sweep_7_7_8]: lower_w=7 upper_w=7 act=8 sum=112 p=000007000038
+PASS [sweep_7_7_25]: lower_w=7 upper_w=7 act=25 sum=350 p=000015e000af
+PASS [sweep_7_7_42]: lower_w=7 upper_w=7 act=42 sum=588 p=000024c00126
+PASS [sweep_7_7_59]: lower_w=7 upper_w=7 act=59 sum=826 p=000033a0019d
+PASS [sweep_7_7_76]: lower_w=7 upper_w=7 act=76 sum=1064 p=000042800214
+PASS [sweep_7_7_93]: lower_w=7 upper_w=7 act=93 sum=1302 p=00005160028b
+PASS [sweep_7_7_110]: lower_w=7 upper_w=7 act=110 sum=1540 p=000060400302
+PASS [sweep_7_7_127]: lower_w=7 upper_w=7 act=127 sum=1778 p=00006f200379
+
+=== Summary ===
+PASS: 4107 / 4107
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 4107 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dual_mac_recover/tb_GEMM_dual_mac_recover.sv" Line 105
+exit
+INFO: xsimkernel Simulation Memory Usage: 291160 KB (Peak: 335880 KB), Simulation CPU Usage: 970 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:42 2026...
+
+=== tb_GEMM_dual_mac_recover RESULT: PASS ===
+
+================== tb_GEMM_fmap_staggered_dispatch ==================
+=== tb_GEMM_fmap_staggered_dispatch — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_fmap_staggered_dispatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_fmap_staggered_dispatch/tb_GEMM_fmap_staggered_dispatch.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_fmap_staggered_dispatch
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_fmap_staggered_dispatch_def...
+Compiling module work.tb_GEMM_fmap_staggered_dispatch
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_fmap_staggered_dispatch_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:22:49 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_fmap_staggered_dispatch_sim/xsim_script.tcl
+# xsim {tb_GEMM_fmap_staggered_dispatch_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_fmap_staggered_dispatch start ===
+  col 0 emit at cycle 4, row_data=0 (expected sentinel=0)
+  col 1 emit at cycle 5, row_data=1 (expected sentinel=1)
+  col 2 emit at cycle 6, row_data=2 (expected sentinel=2)
+  col 3 emit at cycle 7, row_data=3 (expected sentinel=3)
+  col 4 emit at cycle 8, row_data=4 (expected sentinel=4)
+  col 5 emit at cycle 9, row_data=5 (expected sentinel=5)
+  col 6 emit at cycle 10, row_data=6 (expected sentinel=6)
+  col 7 emit at cycle 11, row_data=7 (expected sentinel=7)
+  col 8 emit at cycle 12, row_data=8 (expected sentinel=8)
+  col 9 emit at cycle 13, row_data=9 (expected sentinel=9)
+  col 10 emit at cycle 14, row_data=10 (expected sentinel=10)
+  col 11 emit at cycle 15, row_data=11 (expected sentinel=11)
+  col 12 emit at cycle 16, row_data=12 (expected sentinel=12)
+  col 13 emit at cycle 17, row_data=13 (expected sentinel=13)
+  col 14 emit at cycle 18, row_data=14 (expected sentinel=14)
+  col 15 emit at cycle 19, row_data=15 (expected sentinel=15)
+  col 16 emit at cycle 20, row_data=16 (expected sentinel=16)
+  col 17 emit at cycle 21, row_data=17 (expected sentinel=17)
+  col 18 emit at cycle 22, row_data=18 (expected sentinel=18)
+  col 19 emit at cycle 23, row_data=19 (expected sentinel=19)
+  col 20 emit at cycle 24, row_data=20 (expected sentinel=20)
+  col 21 emit at cycle 25, row_data=21 (expected sentinel=21)
+  col 22 emit at cycle 26, row_data=22 (expected sentinel=22)
+  col 23 emit at cycle 27, row_data=23 (expected sentinel=23)
+  col 24 emit at cycle 28, row_data=24 (expected sentinel=24)
+  col 25 emit at cycle 29, row_data=25 (expected sentinel=25)
+  col 26 emit at cycle 30, row_data=26 (expected sentinel=26)
+  col 27 emit at cycle 31, row_data=27 (expected sentinel=27)
+  col 28 emit at cycle 32, row_data=28 (expected sentinel=28)
+  col 29 emit at cycle 33, row_data=29 (expected sentinel=29)
+  col 30 emit at cycle 34, row_data=30 (expected sentinel=30)
+  col 31 emit at cycle 35, row_data=31 (expected sentinel=31)
+
+=== Stagger pattern check ===
+Stagger check loop done
+
+=== Summary ===
+PASS: 63 / 63
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 645 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_fmap_staggered_dispatch/tb_GEMM_fmap_staggered_dispatch.sv" Line 137
+exit
+INFO: xsimkernel Simulation Memory Usage: 278832 KB (Peak: 336104 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:51 2026...
+
+=== tb_GEMM_fmap_staggered_dispatch RESULT: PASS ===
+
+================== tb_GEMM_inst_fmap_aligner ==================
+=== tb_GEMM_inst_fmap_aligner — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_inst_fmap_aligner
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_inst_fmap_aligner/tb_GEMM_inst_fmap_aligner.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_inst_fmap_aligner
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_inst_fmap_aligner
+Compiling module work.tb_GEMM_inst_fmap_aligner
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_inst_fmap_aligner_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:22:56 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_inst_fmap_aligner_sim/xsim_script.tcl
+# xsim {tb_GEMM_inst_fmap_aligner_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_inst_fmap_aligner start ===
+PASS: pulse 0 inst=101
+PASS: pulse 1 inst=1
+PASS: pulse 2 inst=110
+
+=== Summary ===
+PASS: 25 / 25
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 315 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_inst_fmap_aligner/tb_GEMM_inst_fmap_aligner.sv" Line 207
+exit
+INFO: xsimkernel Simulation Memory Usage: 287328 KB (Peak: 335888 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:22:59 2026...
+
+=== tb_GEMM_inst_fmap_aligner RESULT: PASS ===
+
+================== tb_GEMM_sign_recovery ==================
+=== tb_GEMM_sign_recovery — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_sign_recovery/tb_GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_sign_recovery(LOWER_W=21)
+Compiling module work.tb_GEMM_sign_recovery
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_sign_recovery_sim
+--- xsim ---
+PASS [rand_49]: P=000002d92f85 → lower=-446587 upper=23
+PASS [rand_50]: P=00002dda595b → lower=-370341 upper=367
+PASS [rand_51]: P=00001ff2ae3f → lower=-872897 upper=256
+PASS [rand_52]: P=00002c156358 → lower=-695464 upper=353
+PASS [rand_53]: P=0000071a0c8e → lower=-390002 upper=57
+PASS [rand_54]: P=00003d3599fa → lower=-681478 upper=490
+PASS [rand_55]: P=000039961773 → lower=-649357 upper=461
+PASS [rand_56]: P=00001799a82f → lower=-415697 upper=189
+PASS [rand_57]: P=00002fd8565f → lower=-502177 upper=383
+PASS [rand_58]: P=00003bf8fdf7 → lower=-459273 upper=480
+PASS [rand_59]: P=000033091ae6 → lower=596710 upper=408
+PASS [rand_60]: P=000014cfc129 → lower=1032489 upper=166
+PASS [rand_61]: P=00002d536cda → lower=-824102 upper=363
+PASS [rand_62]: P=00001a8ae2b5 → lower=713397 upper=212
+PASS [rand_63]: P=00003cf11979 → lower=-976519 upper=488
+PASS [rand_64]: P=000028740cd0 → lower=-783152 upper=324
+PASS [rand_65]: P=000015f6adab → lower=-610901 upper=176
+PASS [rand_66]: P=00002e5daddc → lower=-152100 upper=371
+PASS [rand_67]: P=00003edf72fd → lower=-36099 upper=503
+PASS [rand_68]: P=00002b0eed56 → lower=978262 upper=344
+PASS [rand_69]: P=000033d97667 → lower=-428441 upper=415
+PASS [rand_70]: P=00001b6fb9b6 → lower=1030582 upper=219
+PASS [rand_71]: P=00003cd18779 → lower=-948359 upper=487
+PASS [rand_72]: P=00000a74bf94 → lower=-737388 upper=84
+PASS [rand_73]: P=0000023f2c04 → lower=-54268 upper=18
+PASS [rand_74]: P=00002dcb69db → lower=747995 upper=366
+PASS [rand_75]: P=00002cb0b7d9 → lower=-1001511 upper=358
+PASS [rand_76]: P=00003b45e276 → lower=385654 upper=474
+PASS [rand_77]: P=00001b172db6 → lower=-578122 upper=217
+PASS [rand_78]: P=000023071a46 → lower=465478 upper=280
+PASS [rand_79]: P=00003bd261f7 → lower=-892425 upper=479
+PASS [rand_80]: P=00001a6ebab4 → lower=965300 upper=211
+PASS [rand_81]: P=0000147cd928 → lower=-206552 upper=164
+PASS [rand_82]: P=000023c530c7 → lower=340167 upper=286
+PASS [rand_83]: P=00000477e408 → lower=-531448 upper=36
+PASS [rand_84]: P=00003ea7a6fd → lower=501501 upper=501
+PASS [rand_85]: P=00000e37901c → lower=-552932 upper=114
+PASS [rand_86]: P=00002d3408da → lower=-784166 upper=362
+PASS [rand_87]: P=0000334ea766 → lower=960358 upper=410
+PASS [rand_88]: P=000039f50473 → lower=-719757 upper=464
+PASS [rand_89]: P=00002f3ab35e → lower=-347298 upper=378
+PASS [rand_90]: P=00002a8e05d5 → lower=918997 upper=340
+PASS [rand_91]: P=00001cf000b9 → lower=-1048391 upper=232
+PASS [rand_92]: P=00000b273796 → lower=472982 upper=89
+PASS [rand_93]: P=000013259f26 → lower=368422 upper=153
+PASS [rand_94]: P=00003e99837d → lower=-425091 upper=501
+PASS [rand_95]: P=000003615786 → lower=87942 upper=27
+PASS [rand_96]: P=00003f5a9b7e → lower=-353410 upper=507
+PASS [rand_97]: P=000027c3b6cf → lower=243407 upper=318
+PASS [rand_98]: P=00003d28e4fa → lower=582906 upper=489
+PASS [rand_99]: P=00000b940917 → lower=-784105 upper=93
+
+=== Summary ===
+PASS: 109 / 109
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 110 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_sign_recovery/tb_GEMM_sign_recovery.sv" Line 163
+exit
+INFO: xsimkernel Simulation Memory Usage: 291156 KB (Peak: 335876 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:23:06 2026...
+
+=== tb_GEMM_sign_recovery RESULT: PASS ===
+
+================== tb_GEMM_systolic_prefill_vs_concurrent ==================
+=== tb_GEMM_systolic_prefill_vs_concurrent — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_fmap_staggered_dispatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_systolic_prefill_vs_concurrent/tb_GEMM_systolic_prefill_vs_concurrent.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_systolic_prefill_vs_concurrent
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMM_accumulator
+Compiling module work.GEMM_systolic_array_default
+Compiling module work.GEMM_systolic_top
+Compiling module work.GEMM_sign_recovery(LOWER_W=21)
+Compiling module work.GEMM_dual_mac_recover_default
+Compiling module work.gemm_result_normalizer_default
+Compiling module work.FROM_gemm_result_packer_default
+Compiling module work.tb_GEMM_systolic_prefill_vs_conc...
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_systolic_prefill_vs_concurrent_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:23:31 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_systolic_prefill_vs_concurrent_sim/xsim_script.tcl
+# xsim {tb_GEMM_systolic_prefill_vs_concurrent_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_systolic_prefill_vs_concurrent start ===
+DIAG prefill_only_after_weight_prefill r00c00 inst=000 ce=0 op=000010000 wU=1 wL=1 a=00200001 b=00000 p=000000000000 pc=000000000000
+DIAG prefill_only_after_weight_prefill r15c00 inst=000 ce=0 op=000010000 wU=1 wL=1 a=00200001 b=00000 p=000000000000 pc=000000000000
+DIAG prefill_only_after_weight_prefill r16c00 inst=000 ce=0 op=000110000 wU=1 wL=1 a=00200001 b=xxxxx p=000000000000 pc=000000000000 fabric=000000000000
+DIAG prefill_only_after_weight_prefill r31c00 inst=000 ce=0 op=000100000 wU=1 wL=1 a=00200001 b=xxxxx pcin=000000000000 p=000000000000 pcout=000000000000
+DIAG prefill_only_after_compute r00c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00040 p=000008000040 pc=000008000040
+DIAG prefill_only_after_compute r15c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00000 p=000080000400 pc=000080000400
+DIAG prefill_only_after_compute r16c00 inst=001 ce=0 op=000110101 wU=1 wL=1 a=00200001 b=00040 p=000088000440 pc=000088000440 fabric=000088000440
+DIAG prefill_only_after_compute r31c00 inst=001 ce=0 op=000100101 wU=1 wL=1 a=00200001 b=00040 pcin=0000f80007c0 p=0002e8001740 pcout=0002e8001740
+prefill_only raw_valid_samples=127 packed_beats=28 raw_nonzero=1 recovered_nonzero=1 norm_nonzero=1 packed_nonzero=1
+DIAG concurrent_after_compute r00c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00040 p=000008000040 pc=000008000040
+DIAG concurrent_after_compute r15c00 inst=001 ce=0 op=000010101 wU=1 wL=1 a=00200001 b=00000 p=000080000400 pc=000080000400
+DIAG concurrent_after_compute r16c00 inst=001 ce=0 op=000110101 wU=1 wL=1 a=00200001 b=00040 p=000088000440 pc=000088000440 fabric=000088000440
+DIAG concurrent_after_compute r31c00 inst=001 ce=0 op=000100101 wU=1 wL=1 a=00200001 b=00040 pcin=0000f80007c0 p=0002e8001740 pcout=0002e8001740
+concurrent raw_valid_samples=127 packed_beats=32 raw_nonzero=1 recovered_nonzero=1 norm_nonzero=1 packed_nonzero=1
+PASS [prefill_only_produces_raw_valid]
+PASS [prefill_only_raw_nonzero]
+PASS [prefill_only_recovered_nonzero]
+PASS [prefill_only_norm_nonzero]
+PASS [prefill_only_produces_packed_beats]
+PASS [prefill_only_packed_nonzero]
+PASS [concurrent_produces_raw_valid]
+PASS [concurrent_raw_nonzero]
+PASS [concurrent_recovered_nonzero]
+PASS [concurrent_norm_nonzero]
+PASS [concurrent_produces_packed_beats]
+PASS [concurrent_packed_nonzero]
+
+=== Summary ===
+PASS: 12 / 12
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 5136 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_systolic_prefill_vs_concurrent/tb_GEMM_systolic_prefill_vs_concurrent.sv" Line 355
+exit
+INFO: xsimkernel Simulation Memory Usage: 485640 KB (Peak: 543692 KB), Simulation CPU Usage: 2030 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:23:35 2026...
+
+=== tb_GEMM_systolic_prefill_vs_concurrent RESULT: PASS ===
+
+================== tb_GEMM_systolic_weight_valid_contract ==================
+=== tb_GEMM_systolic_weight_valid_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_accumulator
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_unit_last_ROW
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_fmap_staggered_dispatch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_systolic_weight_valid_contract/tb_GEMM_systolic_weight_valid_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_systolic_weight_valid_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMM_dsp_unit_default
+Compiling module work.GEMM_dsp_unit(BREAK_CASCADE=1)
+Compiling module work.GEMM_dsp_unit_last_ROW
+Compiling module unisims_ver.DSP48E2(ACASCREG=0,BCASCREG=0,CR...
+Compiling module work.GEMM_accumulator
+Compiling module work.GEMM_systolic_array_default
+Compiling module work.GEMM_systolic_top
+Compiling module work.tb_GEMM_systolic_weight_valid_co...
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_systolic_weight_valid_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:23:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_systolic_weight_valid_contract_sim/xsim_script.tcl
+# xsim {tb_GEMM_systolic_weight_valid_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_systolic_weight_valid_contract start ===
+PASS [reset_clears_weight_latch]: pe0 weights upper=0 lower=0
+PASS [upper_only_does_not_latch]: pe0 weights upper=0 lower=0
+PASS [initial_upper_pending_ready_contract]: upper_ready=0 lower_ready=1
+PASS [initial_upper_pending_pairs_with_later_lower]: pe0 weights upper=a lower=5
+PASS [paired_one_beat_latches_after_registered_valid]: pe0 weights upper=3 lower=c
+PASS [upper_only_does_not_overwrite]: pe0 weights upper=3 lower=c
+PASS [upper_pending_ready_contract]: upper_ready=0 lower_ready=1
+PASS [upper_pending_pairs_with_later_lower]: pe0 weights upper=e lower=1
+PASS [dispatcher_ready_contract]: upper_ready=1 lower_ready=1
+
+=== Summary ===
+PASS: 9 / 9
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 256 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_systolic_weight_valid_contract/tb_GEMM_systolic_weight_valid_contract.sv" Line 208
+exit
+INFO: xsimkernel Simulation Memory Usage: 485196 KB (Peak: 543248 KB), Simulation CPU Usage: 1610 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:02 2026...
+
+=== tb_GEMM_systolic_weight_valid_contract RESULT: PASS ===
+
+================== tb_GEMM_weight_dispatcher ==================
+=== tb_GEMM_weight_dispatcher — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_weight_dispatcher/tb_GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_weight_dispatcher
+Compiling module work.tb_GEMM_weight_dispatcher
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_weight_dispatcher_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:08 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMM_weight_dispatcher_sim/xsim_script.tcl
+# xsim {tb_GEMM_weight_dispatcher_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_GEMM_weight_dispatcher start ===
+PASS [ready_initial]: both ready=1
+PASS [both_valid_pattern]: valid=1
+PASS [upper_first_does_not_emit]: valid=0
+PASS [upper_pending_backpressures_upper]
+PASS [upper_first_pairs_with_later_lower]: valid=1
+PASS [lower_first_does_not_emit]: valid=0
+PASS [lower_pending_backpressures_lower]
+PASS [lower_first_pairs_with_later_upper]: valid=1
+PASS [both_invalid_holds_last_pair]: valid=0
+
+=== Summary ===
+PASS: 9 / 9
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 126 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_weight_dispatcher/tb_GEMM_weight_dispatcher.sv" Line 218
+exit
+INFO: xsimkernel Simulation Memory Usage: 287348 KB (Peak: 335908 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:10 2026...
+
+=== tb_GEMM_weight_dispatcher RESULT: PASS ===
+
+================== tb_GEMV_accumulate_contract ==================
+=== tb_GEMV_accumulate_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMV_accumulate_contract/tb_GEMV_accumulate_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMV_accumulate_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.dtype_pkg
+Compiling package work.vec_core_pkg
+Compiling module work.GEMV_accumulate_default
+Compiling module work.tb_GEMV_accumulate_contract
+Compiling module work.glbl
+Built simulation snapshot tb_GEMV_accumulate_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:16 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMV_accumulate_contract_sim/xsim_script.tcl
+# xsim {tb_GEMV_accumulate_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: reset holds OUT_acc_valid low = 0
+PASS: idle before init keeps OUT_acc_valid low = 0
+PASS: idle before init keeps OUT_acc_valid low = 0
+PASS: idle before init keeps OUT_acc_valid low = 0
+PASS: idle before init keeps OUT_acc_valid low = 0
+PASS: init cycle does not complete immediately = 0
+PASS: valid input cycle does not assert completion = 0
+PASS: valid input cycle does not assert completion = 0
+PASS: valid input cycle does not assert completion = 0
+PASS: valid input cycle does not assert completion = 0
+PASS: completion pulses once after requested recurrence count drains = 1
+PASS: result vector[0] = 0x1
+PASS: result vector[1] = 0x2
+PASS: result vector[2] = 0x3
+PASS: result vector[3] = 0x4
+PASS: post-completion idle keeps OUT_acc_valid low = 0
+PASS: post-completion idle keeps OUT_acc_valid low = 0
+PASS: post-completion idle keeps OUT_acc_valid low = 0
+PASS: post-completion idle keeps OUT_acc_valid low = 0
+PASS: 19 / 19 FAIL: 0
+OVERALL: PASS
+$finish called at time : 43850 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMV_accumulate_contract/tb_GEMV_accumulate_contract.sv" Line 66
+exit
+INFO: xsimkernel Simulation Memory Usage: 287332 KB (Peak: 335892 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:18 2026...
+
+=== tb_GEMV_accumulate_contract RESULT: PASS ===
+
+================== tb_GEMV_reduction_contract ==================
+=== tb_GEMV_reduction_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMV_reduction_contract/tb_GEMV_reduction_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMV_reduction_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package work.dtype_pkg
+Compiling package work.vec_core_pkg
+Compiling module work.GEMV_reduction(param='{4,1,512,5...
+Compiling module work.tb_GEMV_reduction_contract
+Compiling module work.glbl
+Built simulation snapshot tb_GEMV_reduction_contract_sim
+--- xsim ---
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:24 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMV_reduction_contract_sim/xsim_script.tcl
+# xsim {tb_GEMV_reduction_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: reset holds OUT_reduction_res_valid low = 0
+PASS: reset clears OUT_reduction_result = 0x0
+PASS: idle after reset keeps valid low = 0
+PASS: idle after reset keeps valid low = 0
+PASS: idle after reset keeps valid low = 0
+PASS: idle after reset keeps valid low = 0
+PASS: idle after reset keeps valid low = 0
+PASS: idle after reset keeps valid low = 0
+PASS: inactive valid pulse launch cycle valid low = 0
+PASS: inactive valid pulse inactive lane suppresses valid = 0
+PASS: post-inactive idle keeps valid low = 0
+PASS: post-inactive idle keeps valid low = 0
+PASS: post-inactive idle keeps valid low = 0
+PASS: deterministic pattern0 launch cycle valid low = 0
+PASS: deterministic pattern0 output valid = 1
+PASS: deterministic pattern0 reduction result = 0x14d0
+PASS: pattern0 idle has no duplicate valid = 0
+PASS: pattern0 idle has no duplicate valid = 0
+PASS: pattern0 idle has no duplicate valid = 0
+PASS: pattern0 idle has no duplicate valid = 0
+PASS: pattern0 idle has no duplicate valid = 0
+PASS: pattern0 idle has no duplicate valid = 0
+PASS: deterministic pattern1 after idle gap launch cycle valid low = 0
+PASS: deterministic pattern1 after idle gap output valid = 1
+PASS: deterministic pattern1 after idle gap reduction result = 0xe90
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: pattern1 idle has no duplicate valid = 0
+PASS: signed mixed LUT reduction launch cycle valid low = 0
+PASS: signed mixed LUT reduction output valid = 1
+PASS: signed mixed LUT reduction reduction result = 0x42
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: signed mixed LUT idle has no duplicate valid = 0
+PASS: 44 / 44 FAIL: 0
+OVERALL: PASS
+$finish called at time : 271350 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMV_reduction_contract/tb_GEMV_reduction_contract.sv" Line 75
+exit
+INFO: xsimkernel Simulation Memory Usage: 287372 KB (Peak: 335932 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:26 2026...
+
+=== tb_GEMV_reduction_contract RESULT: PASS ===
+
+================== tb_GEMV_top_contract ==================
+=== tb_GEMV_top_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMV_top_contract/tb_GEMV_top_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMV_top_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling package work.dtype_pkg
+Compiling package work.vec_core_pkg
+Compiling module work.GEMV_generate_lut(param='{4,1,51...
+Compiling module work.GEMV_reduction(param='{4,1,512,5...
+Compiling module work.GEMV_accumulate(param='{4,1,512,...
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.tb_GEMV_top_contract
+Compiling module work.glbl
+Built simulation snapshot tb_GEMV_top_contract_sim
+--- xsim ---
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:35 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_GEMV_top_contract_sim/xsim_script.tcl
+# xsim {tb_GEMV_top_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: reset ready A known = 0
+PASS: reset result valid A = 0
+PASS: idle ready A = 0
+PASS: ready A follows active valid = 1
+PASS: ready B stays low when lane inactive = 0
+PASS: batch0 ready A while active valid = 1
+PASS: batch0 ready B disabled lane = 0
+PASS: batch0 ready A while active valid = 1
+PASS: batch0 ready B disabled lane = 0
+PASS: batch0 ready A while active valid = 1
+PASS: batch0 ready B disabled lane = 0
+PASS: batch0 ready A while active valid = 1
+PASS: batch0 ready B disabled lane = 0
+PASS: batch0 ready A while active valid = 1
+PASS: batch0 ready B disabled lane = 0
+PASS: batch0 ready A while active valid = 1
+PASS: batch0 ready B disabled lane = 0
+PASS: batch0 one result pulse
+PASS: batch1 after fmap valid re-arm ready A while active valid = 1
+PASS: batch1 after fmap valid re-arm ready B disabled lane = 0
+PASS: batch1 after fmap valid re-arm ready A while active valid = 1
+PASS: batch1 after fmap valid re-arm ready B disabled lane = 0
+PASS: batch1 after fmap valid re-arm ready A while active valid = 1
+PASS: batch1 after fmap valid re-arm ready B disabled lane = 0
+PASS: batch1 after fmap valid re-arm ready A while active valid = 1
+PASS: batch1 after fmap valid re-arm ready B disabled lane = 0
+PASS: batch1 after fmap valid re-arm ready A while active valid = 1
+PASS: batch1 after fmap valid re-arm ready B disabled lane = 0
+PASS: batch1 after fmap valid re-arm ready A while active valid = 1
+PASS: batch1 after fmap valid re-arm ready B disabled lane = 0
+PASS: batch1 after fmap valid re-arm one result pulse
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: post batches no duplicate valid = 0
+PASS: 43 / 43 FAIL: 0
+OVERALL: PASS
+$finish called at time : 496350 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMV_top_contract/tb_GEMV_top_contract.sv" Line 116
+exit
+INFO: xsimkernel Simulation Memory Usage: 288072 KB (Peak: 336632 KB), Simulation CPU Usage: 970 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:37 2026...
+
+=== tb_GEMV_top_contract RESULT: PASS ===
+
+================== tb_datamover_cmdsts_axil ==================
+=== tb_datamover_cmdsts_axil — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/hw/vivado/datamover_cmdsts_axil.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/hw/vivado/datamover_cmdsts_axil.sv" into library work
+INFO: [VRFC 10-311] analyzing module datamover_cmdsts_axil
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_datamover_cmdsts_axil/tb_datamover_cmdsts_axil.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_datamover_cmdsts_axil
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.datamover_cmdsts_axil(CMD_WIDTH=...
+Compiling module work.tb_datamover_cmdsts_axil
+Compiling module work.glbl
+Built simulation snapshot tb_datamover_cmdsts_axil_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:43 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_datamover_cmdsts_axil_sim/xsim_script.tcl
+# xsim {tb_datamover_cmdsts_axil_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: reset flags cmd_empty/sts_empty = 0x00000000000000000000000000000005
+PASS: CMD_EXT readback preserves xUSER/xCACHE/tag = 0x0000000000000000000000000000ff0a
+PASS: command AXIS valid = 0x00000000000000000000000000000001
+PASS: 80-bit command word = 0x000000000000ff0a1234567840800040
+PASS: CMD_LVL after one push = 0x00000000000000000000000000000001
+PASS: CMD_LVL after one pop = 0x00000000000000000000000000000000
+PASS: STS_LVL after status push = 0x00000000000000000000000000000001
+PASS: STS_POP returns full status byte = 0x0000000000000000000000000000001a
+PASS: STS_LVL after status pop = 0x00000000000000000000000000000000
+PASS: CMD_LVL full = 0x00000000000000000000000000000004
+PASS: command overflow sets cmd_full and err_sticky[0]
+PASS: ERR_W1C clears sticky flags = 0x00000000000000000000000000000000
+PASS: status full deasserts ready without sticky overflow
+PASS: status FIFO ordered pop = 0x00000000000000000000000000000010
+PASS: status FIFO ordered pop = 0x00000000000000000000000000000011
+PASS: status FIFO ordered pop = 0x00000000000000000000000000000012
+PASS: status FIFO ordered pop = 0x00000000000000000000000000000013
+PASS: empty status pop sets err_sticky[2]
+PASS: command stays valid under backpressure = 0x00000000000000000000000000000001
+PASS: command data stable under backpressure = 0x000000000000cd003000000040800020
+PASS: command FIFO pop order under ready gaps = 0x000000000000cd003000000040800020
+PASS: command FIFO pop order under ready gaps = 0x000000000000cd013000000140800021
+PASS: command FIFO pop order under ready gaps = 0x000000000000cd023000000240800022
+PASS: command FIFO pop order under ready gaps = 0x000000000000cd033000000340800023
+PASS: CMD_LVL after gapped ready pops = 0x00000000000000000000000000000000
+PASS: status pop opens one slot = 0x00000000000000000000000000000040
+PASS: status FIFO preserves old entries before pending accepted = 0x00000000000000000000000000000041
+PASS: status FIFO preserves old entries before pending accepted = 0x00000000000000000000000000000042
+PASS: status FIFO preserves old entries before pending accepted = 0x00000000000000000000000000000043
+PASS: pending status accepted after backpressure releases = 0x0000000000000000000000000000007e
+OVERALL: PASS
+$finish called at time : 3 us : File "/home/hwkim/v002-rtl/tb_unit/tb_datamover_cmdsts_axil/tb_datamover_cmdsts_axil.sv" Line 325
+exit
+INFO: xsimkernel Simulation Memory Usage: 287400 KB (Peak: 335960 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:45 2026...
+
+=== tb_datamover_cmdsts_axil RESULT: PASS ===
+
+================== tb_datamover_cmdsts_axil_fuzz ==================
+=== tb_datamover_cmdsts_axil_fuzz — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/hw/vivado/datamover_cmdsts_axil.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/hw/vivado/datamover_cmdsts_axil.sv" into library work
+INFO: [VRFC 10-311] analyzing module datamover_cmdsts_axil
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_datamover_cmdsts_axil_fuzz/tb_datamover_cmdsts_axil_fuzz.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_datamover_cmdsts_axil_fuzz
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.datamover_cmdsts_axil(CMD_WIDTH=...
+Compiling module work.tb_datamover_cmdsts_axil_fuzz
+Compiling module work.glbl
+Built simulation snapshot tb_datamover_cmdsts_axil_fuzz_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:51 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_datamover_cmdsts_axil_fuzz_sim/xsim_script.tcl
+# xsim {tb_datamover_cmdsts_axil_fuzz_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+PASS: datamover_cmdsts_axil long-run command/status fuzz
+OVERALL: PASS
+$finish called at time : 25380 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_datamover_cmdsts_axil_fuzz/tb_datamover_cmdsts_axil_fuzz.sv" Line 397
+exit
+INFO: xsimkernel Simulation Memory Usage: 287408 KB (Peak: 335968 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:24:53 2026...
+
+=== tb_datamover_cmdsts_axil_fuzz RESULT: PASS ===
+
+================== tb_gemm_result_normalizer ==================
+=== tb_gemm_result_normalizer — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_gemm_result_normalizer/tb_gemm_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.gemm_result_normalizer_default
+Compiling module work.tb_gemm_result_normalizer
+Compiling module work.glbl
+Built simulation snapshot tb_gemm_result_normalizer_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:24:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_gemm_result_normalizer_sim/xsim_script.tcl
+# xsim {tb_gemm_result_normalizer_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_gemm_result_normalizer start ===
+PASS [reset]
+PASS [zero]: data_out=0000
+PASS [one_bias80]: data_out=3300
+PASS [frac_pattern]: data_out=33c0
+PASS [bit26_identity_exp]: data_out=4000
+PASS [negative_bit26]: data_out=c000
+PASS [large_positive]: data_out=4991
+PASS [large_negative]: data_out=c111
+
+=== Summary ===
+PASS: 8 / 8
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 406 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_gemm_result_normalizer/tb_gemm_result_normalizer.sv" Line 120
+exit
+INFO: xsimkernel Simulation Memory Usage: 287332 KB (Peak: 335892 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:01 2026...
+
+=== tb_gemm_result_normalizer RESULT: PASS ===
+
+================== tb_mem_BUFFER_nested_bridge_cdc ==================
+=== tb_mem_BUFFER_nested_bridge_cdc — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_BUFFER_nested_bridge_cdc/tb_mem_BUFFER_nested_bridge_cdc.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_BUFFER_nested_bridge_cdc
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=6)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module work.mem_BUFFER_default
+Compiling module work.tb_mem_BUFFER_nested_bridge_cdc
+Compiling module work.glbl
+Built simulation snapshot tb_mem_BUFFER_nested_bridge_cdc_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:25:08 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_BUFFER_nested_bridge_cdc_sim/xsim_script.tcl
+# xsim {tb_mem_BUFFER_nested_bridge_cdc_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_BUFFER_nested_bridge_cdc start ===
+PASS [reset clears RX FIFO]
+PASS [reset clears TX FIFO]
+PASS: RX source accepted 1 beats in 1 axi cycles
+PASS: RX core produced 1 beats in 12 core cycles
+PASS: RX source accepted 16 beats in 31 axi cycles
+PASS: RX core produced 16 beats in 16 core cycles
+PASS: TX core accepted one beat in 1 core cycles
+PASS: TX sink produced one beat in 8 axi cycles
+PASS [RX no overflow]
+PASS [RX no underflow]
+PASS [TX no overflow]
+PASS [TX no underflow]
+
+=== Summary ===
+PASS: 12 / 12
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 486250 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_BUFFER_nested_bridge_cdc/tb_mem_BUFFER_nested_bridge_cdc.sv" Line 311
+exit
+INFO: xsimkernel Simulation Memory Usage: 287864 KB (Peak: 336424 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:10 2026...
+
+=== tb_mem_BUFFER_nested_bridge_cdc RESULT: PASS ===
+
+================== tb_mem_CVO_stream_bridge_result_drain ==================
+=== tb_mem_CVO_stream_bridge_result_drain — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_CVO_stream_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_CVO_stream_bridge_result_drain/tb_mem_CVO_stream_bridge_result_drain.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_CVO_stream_bridge_result_drain
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(FIFO_MEMORY_TYPE=2...
+Compiling module xpm.xpm_fifo_sync(FIFO_MEMORY_TYPE="...
+Compiling module work.mem_CVO_stream_bridge
+Compiling module work.tb_mem_CVO_stream_bridge_result_...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_CVO_stream_bridge_result_drain_sim
+--- xsim ---
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:25:16 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_CVO_stream_bridge_result_drain_sim/xsim_script.tcl
+# xsim {tb_mem_CVO_stream_bridge_result_drain_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_CVO_stream_bridge_result_drain start ===
+PASS [reset leaves bridge idle]
+PASS [uop accepted busy]
+PASS: CVO input stream fed 16 elements in 35 cycles
+PASS: result[0] accepted state=1 total=16 captured=1
+PASS [bridge keeps accepting delayed results after first result]
+PASS: result[1] accepted state=1 total=16 captured=2
+PASS: result[2] accepted state=1 total=16 captured=3
+PASS: result[3] accepted state=1 total=16 captured=4
+PASS: result[4] accepted state=1 total=16 captured=5
+PASS: result[5] accepted state=1 total=16 captured=6
+PASS: result[6] accepted state=1 total=16 captured=7
+PASS: result[7] accepted state=1 total=16 captured=8
+PASS: result[8] accepted state=1 total=16 captured=9
+PASS: result[9] accepted state=1 total=16 captured=10
+PASS: result[10] accepted state=1 total=16 captured=11
+PASS: result[11] accepted state=1 total=16 captured=12
+PASS: result[12] accepted state=1 total=16 captured=13
+PASS: result[13] accepted state=1 total=16 captured=14
+PASS: result[14] accepted state=1 total=16 captured=15
+PASS: result[15] accepted state=2 total=16 captured=16
+PASS: L2 write[0] data=0x10071006100510041003100210011000 addr=16
+PASS: L2 write[1] data=0x100f100e100d100c100b100a10091008 addr=17
+PASS [bridge done pulse]
+PASS [bridge returns idle]
+PASS [uop accepted busy]
+PASS: CVO input stream fed 5 elements in 14 cycles
+PASS: result[0] accepted state=1 total=5 captured=1
+PASS: result[1] accepted state=1 total=5 captured=2
+PASS: result[2] accepted state=1 total=5 captured=3
+PASS: result[3] accepted state=1 total=5 captured=4
+PASS: result[4] accepted state=2 total=5 captured=5
+PASS: L2 write[0] data=0x10041003100210011000000000000000 addr=20
+PASS [bridge done pulse]
+PASS [bridge returns idle]
+PASS [uop accepted busy]
+PASS: CVO input stream fed 16 elements in 35 cycles
+PASS: result[0] accepted state=1 total=1 captured=1
+PASS: L2 write[0] data=0x10000000000000000000000000000000 addr=24
+PASS [bridge done pulse]
+PASS [bridge returns idle]
+
+=== Summary ===
+PASS: 18 / 18
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 406350 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_CVO_stream_bridge_result_drain/tb_mem_CVO_stream_bridge_result_drain.sv" Line 255
+exit
+INFO: xsimkernel Simulation Memory Usage: 287592 KB (Peak: 336152 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:19 2026...
+
+=== tb_mem_CVO_stream_bridge_result_drain RESULT: PASS ===
+
+================== tb_mem_GLOBAL_cache ==================
+=== tb_mem_GLOBAL_cache — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_GLOBAL_cache/tb_mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-311] analyzing module tb_mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module work.mem_BUFFER_default
+Compiling module xpm.xpm_memory_base(MEMORY_SIZE=1468...
+Compiling module xpm.xpm_memory_tdpram(MEMORY_SIZE=14...
+Compiling module work.mem_L2_cache_fmap
+Compiling module work.mem_GLOBAL_cache_default
+Compiling module work.tb_mem_GLOBAL_cache
+Compiling module work.glbl
+Built simulation snapshot tb_mem_GLOBAL_cache_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:25:26 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_GLOBAL_cache_sim/xsim_script.tcl
+# xsim {tb_mem_GLOBAL_cache_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_mem_GLOBAL_cache.dut.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_mem_GLOBAL_cache/dut/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_258  Scope: tb_mem_GLOBAL_cache.dut.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+PASS: ACP 3-word write ACP busy asserted after 0 cycles
+PASS: ACP 3-word write ACP busy deasserted after 12 cycles
+PASS: ACP 3-word read ACP busy asserted after 0 cycles
+PASS: ACP read holds while result backpressured = 0x00000000000000000000000000000000
+PASS: ACP result data = 0x0000000000000000000000000000a001
+PASS: ACP result tlast = 0x00000000000000000000000000000000
+PASS: ACP result data = 0x0000000000000000000000000000a002
+PASS: ACP result tlast = 0x00000000000000000000000000000000
+PASS: ACP result data = 0x0000000000000000000000000000a003
+PASS: ACP result tlast = 0x00000000000000000000000000000001
+PASS: ACP 3-word read ACP busy deasserted after 0 cycles
+PASS: NPU 3-word read NPU busy asserted after 0 cycles
+PASS: NPU read busy while fmap ready low = 0x00000000000000000000000000000001
+PASS: NPU read waits for fmap ready
+PASS: NPU fmap data = 0x0000000000000000000000000000a001
+PASS: NPU fmap tlast = 0x00000000000000000000000000000000
+PASS: NPU fmap data = 0x0000000000000000000000000000a002
+PASS: NPU fmap tlast = 0x00000000000000000000000000000000
+PASS: NPU fmap data = 0x0000000000000000000000000000a003
+PASS: NPU fmap tlast = 0x00000000000000000000000000000001
+PASS: NPU 3-word read NPU busy deasserted after 0 cycles
+PASS: direct write ACP read ACP busy asserted after 0 cycles
+PASS: ACP result data = 0xfeed000000000000000000000000cafe
+PASS: ACP result tlast = 0x00000000000000000000000000000001
+PASS: direct write ACP read ACP busy deasserted after 0 cycles
+PASS: direct owner held NPU read NPU busy asserted after 0 cycles
+PASS: NPU read busy while direct owner held = 0x00000000000000000000000000000001
+PASS: direct owner stalls NPU read output
+PASS: NPU fmap data = 0x0000000000000000000000000000a001
+PASS: NPU fmap tlast = 0x00000000000000000000000000000000
+PASS: NPU fmap data = 0x0000000000000000000000000000a002
+PASS: NPU fmap tlast = 0x00000000000000000000000000000000
+PASS: NPU fmap data = 0x0000000000000000000000000000a003
+PASS: NPU fmap tlast = 0x00000000000000000000000000000001
+PASS: NPU read resumes after direct owner release NPU busy deasserted after 0 cycles
+PASS: ACP 4096B write ACP busy asserted after 0 cycles
+PASS: ACP 4096B write ACP busy deasserted after 12 cycles
+PASS: ACP 4096B read ACP busy asserted after 0 cycles
+PASS: ACP burst readback 256 beats
+PASS: ACP 4096B read ACP busy deasserted after 0 cycles
+OVERALL: PASS
+$finish called at time : 9450 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_GLOBAL_cache/tb_mem_GLOBAL_cache.sv" Line 528
+exit
+INFO: xsimkernel Simulation Memory Usage: 295172 KB (Peak: 343732 KB), Simulation CPU Usage: 970 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:29 2026...
+
+=== tb_mem_GLOBAL_cache RESULT: PASS ===
+
+================== tb_mem_GLOBAL_cache_xpm_cdc_burst ==================
+=== tb_mem_GLOBAL_cache_xpm_cdc_burst — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_GLOBAL_cache_xpm_cdc_burst/tb_mem_GLOBAL_cache_xpm_cdc_burst.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_GLOBAL_cache_xpm_cdc_burst
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_async(FIFO_MEMORY_TYPE=...
+Compiling module work.mem_BUFFER_default
+Compiling module xpm.xpm_memory_base(MEMORY_SIZE=1468...
+Compiling module xpm.xpm_memory_tdpram(MEMORY_SIZE=14...
+Compiling module work.mem_L2_cache_fmap
+Compiling module work.mem_GLOBAL_cache_default
+Compiling module work.tb_mem_GLOBAL_cache_xpm_cdc_burs...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_GLOBAL_cache_xpm_cdc_burst_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:25:36 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_GLOBAL_cache_xpm_cdc_burst_sim/xsim_script.tcl
+# xsim {tb_mem_GLOBAL_cache_xpm_cdc_burst_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_mem_GLOBAL_cache_xpm_cdc_burst.dut.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_mem_GLOBAL_cache_xpm_cdc_burst/dut/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_259  Scope: tb_mem_GLOBAL_cache_xpm_cdc_burst.dut.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+PASS: ACP 16B write busy asserted after 0 core cycles
+PASS: ACP input accepted 1 beats in 1 axi cycles
+PASS: ACP 16B write busy deasserted after 13 core cycles
+PASS: ACP 16B read busy asserted after 0 core cycles
+PASS: ACP result produced 1 beats in 14 axi cycles
+PASS: ACP 16B read busy deasserted after 0 core cycles
+PASS: ACP 4096B write busy asserted after 0 core cycles
+PASS: ACP input accepted 256 beats in 511 axi cycles
+PASS: ACP 4096B write busy deasserted after 13 core cycles
+PASS: ACP 4096B read busy asserted after 0 core cycles
+PASS: ACP result produced 256 beats in 269 axi cycles
+PASS: ACP 4096B read busy deasserted after 0 core cycles
+OVERALL: PASS
+$finish called at time : 3486 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_GLOBAL_cache_xpm_cdc_burst/tb_mem_GLOBAL_cache_xpm_cdc_burst.sv" Line 270
+exit
+INFO: xsimkernel Simulation Memory Usage: 295144 KB (Peak: 343704 KB), Simulation CPU Usage: 970 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:39 2026...
+
+=== tb_mem_GLOBAL_cache_xpm_cdc_burst RESULT: PASS ===
+
+================== tb_mem_HP_buffer_sideband_contract ==================
+=== tb_mem_HP_buffer_sideband_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_HP_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_HP_buffer_sideband_contract/tb_mem_HP_buffer_sideband_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_HP_buffer_sideband_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_cdc_gray(INIT_SYNC_FF=1,WIDT...
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=13)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_axis(CLOCKING_MODE="ind...
+Compiling module work.mem_HP_buffer_default
+Compiling module work.tb_mem_HP_buffer_sideband_contra...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_HP_buffer_sideband_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:25:46 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_HP_buffer_sideband_contract_sim/xsim_script.tcl
+# xsim {tb_mem_HP_buffer_sideband_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_HP_buffer_sideband_contract start ===
+PASS [hp0 sideband known after reset]
+PASS [hp1 sideband known after reset]
+PASS [hp2 sideband known after reset]
+PASS [hp3 sideband known after reset]
+PASS [hp0 input handshake]
+PASS [hp0 output valid]
+PASS [hp0 output data]
+PASS [hp0 output tkeep]
+PASS [hp0 output tlast]
+PASS [hp1 input handshake]
+PASS [hp1 output valid]
+PASS [hp1 output data]
+PASS [hp1 output tkeep]
+PASS [hp1 output tlast]
+PASS [hp2 input handshake]
+PASS [hp2 output valid]
+PASS [hp2 output data]
+PASS [hp2 output tkeep]
+PASS [hp2 output tlast]
+PASS [hp3 input handshake]
+PASS [hp3 output valid]
+PASS [hp3 output data]
+PASS [hp3 output tkeep]
+PASS [hp3 output tlast]
+
+PASS: 24 / 24
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 638500 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_HP_buffer_sideband_contract/tb_mem_HP_buffer_sideband_contract.sv" Line 146
+exit
+INFO: xsimkernel Simulation Memory Usage: 288804 KB (Peak: 337364 KB), Simulation CPU Usage: 960 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:48 2026...
+
+=== tb_mem_HP_buffer_sideband_contract RESULT: PASS ===
+
+================== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew ==================
+=== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_HP_buffer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_fifo_reg_vec(REG_WIDTH=13)
+Compiling module xpm.xpm_cdc_gray(DEST_SYNC_FF=2,INIT...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=2...
+Compiling module xpm.xpm_fifo_base(COMMON_CLOCK=0,FIF...
+Compiling module xpm.xpm_fifo_axis(CLOCKING_MODE="ind...
+Compiling module work.mem_HP_buffer_default
+Compiling module work.GEMM_weight_dispatcher
+Compiling module work.tb_mem_HP_buffer_to_GEMM_weight_...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew_sim
+--- xsim ---
+
+source xsim.dir/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew_sim/xsim_script.tcl
+# xsim {tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew start ===
+PASS [reset leaves pairer invalid]
+PASS [initial pairer ready]
+PASS [upper-first single hp0 input handshake]
+PASS [upper-first pending backpressures hp0 only]
+PASS [upper-first no pair before lower]
+PASS [upper-first single hp1 input handshake]
+PASS [upper-first single pair data]
+PASS [upper-first single pair valid]
+PASS [upper-first ready restored]
+PASS [upper-first no duplicate pair]
+PASS [lower-first single hp1 input handshake]
+PASS [lower-first pending backpressures hp1 only]
+PASS [lower-first no pair before upper]
+PASS [lower-first single hp0 input handshake]
+PASS [lower-first single pair data]
+PASS [lower-first single pair valid]
+PASS [lower-first ready restored]
+PASS [lower-first no duplicate pair]
+PASS [upper-burst skew hp0 input handshake]
+PASS [upper-burst skew hp0 input handshake]
+PASS [upper-burst skew hp0 input handshake]
+PASS [upper-burst leaves hp0 backpressured]
+PASS [upper-burst no pair before lower burst]
+PASS [upper-burst skew hp1 input handshake]
+PASS [upper-burst skew hp1 input handshake]
+PASS [upper-burst skew hp1 input handshake]
+PASS [upper-burst skew pair[0] data]
+PASS [upper-burst skew pair[1] data]
+PASS [upper-burst skew pair[2] data]
+PASS [upper-burst skew observed 3 ordered pairs]
+PASS [upper-burst ready restored]
+PASS [upper-burst no extra pair]
+PASS [lower-burst skew hp1 input handshake]
+PASS [lower-burst skew hp1 input handshake]
+PASS [lower-burst skew hp1 input handshake]
+PASS [lower-burst leaves hp1 backpressured]
+PASS [lower-burst no pair before upper burst]
+PASS [lower-burst skew hp0 input handshake]
+PASS [lower-burst skew hp0 input handshake]
+PASS [lower-burst skew hp0 input handshake]
+PASS [lower-burst skew pair[0] data]
+PASS [lower-burst skew pair[1] data]
+PASS [lower-burst skew pair[2] data]
+PASS [lower-burst skew observed 3 ordered pairs]
+PASS [lower-burst ready restored]
+PASS [lower-burst no extra pair]
+
+PASS: 46 / 46
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 1848500 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew/tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew.sv" Line 394
+exit
+INFO: xsimkernel Simulation Memory Usage: 288876 KB (Peak: 337436 KB), Simulation CPU Usage: 970 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:25:57 2026...
+
+=== tb_mem_HP_buffer_to_GEMM_weight_dispatcher_skew RESULT: PASS ===
+
+================== tb_mem_dispatcher_cvo_store_arbitration ==================
+=== tb_mem_dispatcher_cvo_store_arbitration — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv" into library work
+INFO: [VRFC 10-311] analyzing module shape_const_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_u_operation_queue
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_CVO_stream_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_dispatcher_cvo_store_arbitration/tb_mem_dispatcher_cvo_store_arbitration.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_mem_dispatcher_cvo_store_arbitration
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_fifo_base(FIFO_MEMORY_TYPE=2...
+Compiling module xpm.xpm_fifo_sync(FIFO_MEMORY_TYPE="...
+Compiling module work.mem_CVO_stream_bridge
+Compiling module work.mem_dispatcher_default
+Compiling module work.tb_mem_dispatcher_cvo_store_arbi...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_dispatcher_cvo_store_arbitration_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:26:06 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_dispatcher_cvo_store_arbitration_sim/xsim_script.tcl
+# xsim {tb_mem_dispatcher_cvo_store_arbitration_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_dispatcher_cvo_store_arbitration start ===
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_mem_dispatcher_cvo_store_arbitration.dut.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_mem_dispatcher_cvo_store_arbitration/dut/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_386  Scope: tb_mem_dispatcher_cvo_store_arbitration.dut.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+PASS [reset idle]
+PASS [CVO bridge starts]
+PASS: CVO bridge fed 8 elements
+PASS [store becomes active]
+PASS [GEMM store stalls while CVO owns L2]
+PASS: CVO bridge accepted 8 results
+PASS [CVO bridge completes]
+PASS: GEMM store accepted 4 words after CVO
+PASS [store done after CVO release]
+
+=== Summary ===
+PASS: 9 / 9
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 281350 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_dispatcher_cvo_store_arbitration/tb_mem_dispatcher_cvo_store_arbitration.sv" Line 323
+exit
+INFO: xsimkernel Simulation Memory Usage: 295712 KB (Peak: 344272 KB), Simulation CPU Usage: 970 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:26:09 2026...
+
+=== tb_mem_dispatcher_cvo_store_arbitration RESULT: PASS ===
+
+================== tb_mem_dispatcher_gemm_store_readback ==================
+=== tb_mem_dispatcher_gemm_store_readback — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv" into library work
+INFO: [VRFC 10-311] analyzing module shape_const_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_u_operation_queue
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_CVO_stream_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_dispatcher_gemm_store_readback/tb_mem_dispatcher_gemm_store_readback.sv" into library work
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-311] analyzing module tb_mem_dispatcher_gemm_store_readback
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.mem_BUFFER_default
+Compiling module work.xpm_memory_tdpram(MEMORY_SIZE=14...
+Compiling module work.mem_L2_cache_fmap
+Compiling module work.mem_GLOBAL_cache_default
+Compiling module work.xpm_fifo_sync(FIFO_WRITE_DEPTH=2...
+Compiling module work.mem_CVO_stream_bridge
+Compiling module work.mem_dispatcher_default
+Compiling module work.tb_mem_dispatcher_gemm_store_rea...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_dispatcher_gemm_store_readback_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:26:16 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_dispatcher_gemm_store_readback_sim/xsim_script.tcl
+# xsim {tb_mem_dispatcher_gemm_store_readback_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_dispatcher_gemm_store_readback start ===
+PASS [reset idle]
+PASS [shape memset done pulse]
+PASS [store active]
+PASS [GEMM store accepted four words]
+PASS [GEMM store done pulse]
+PASS [ACP readback four GEMM words]
+
+=== Summary ===
+PASS: 6 / 6
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 248 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_dispatcher_gemm_store_readback/tb_mem_dispatcher_gemm_store_readback.sv" Line 580
+exit
+INFO: xsimkernel Simulation Memory Usage: 291324 KB (Peak: 339884 KB), Simulation CPU Usage: 950 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:26:18 2026...
+
+=== tb_mem_dispatcher_gemm_store_readback RESULT: PASS ===
+
+================== tb_mem_dispatcher_route_contract ==================
+=== tb_mem_dispatcher_route_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv" into library work
+INFO: [VRFC 10-311] analyzing module shape_const_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_u_operation_queue
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_CVO_stream_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_mem_dispatcher_route_contract/tb_mem_dispatcher_route_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-311] analyzing module tb_mem_dispatcher_route_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_counter_updn(COUNTER_WIDTH=1...
+Compiling module xpm.xpm_memory_base(MEMORY_TYPE=1,ME...
+Compiling module xpm.xpm_fifo_base(FIFO_MEMORY_TYPE=2...
+Compiling module xpm.xpm_fifo_sync(FIFO_MEMORY_TYPE="...
+Compiling module work.mem_CVO_stream_bridge
+Compiling module work.mem_dispatcher_default
+Compiling module work.tb_mem_dispatcher_route_contract
+Compiling module work.glbl
+Built simulation snapshot tb_mem_dispatcher_route_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:26:30 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_dispatcher_route_contract_sim/xsim_script.tcl
+# xsim {tb_mem_dispatcher_route_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_mem_dispatcher_route_contract.dut.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_mem_dispatcher_route_contract/dut/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_385  Scope: tb_mem_dispatcher_route_contract.dut.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+PASS: from_host_to_L2 write_en = 1
+PASS: from_host_to_L2 base = 20
+PASS: from_host_to_L2 end = 22
+PASS: from_host_to_L2 descriptor observed
+PASS: stale host_to_L2 uop does not retrigger
+PASS: from_L2_to_host write_en = 0
+PASS: from_L2_to_host base = 31
+PASS: from_L2_to_host end = 33
+PASS: from_L2_to_host descriptor observed
+PASS: from_L2_to_L1_GEMM write_en = 0
+PASS: from_L2_to_L1_GEMM base = 44
+PASS: from_L2_to_L1_GEMM end = 46
+PASS: from_L2_to_L1_GEMM descriptor observed
+PASS: from_L2_to_L1_GEMV write_en = 0
+PASS: from_L2_to_L1_GEMV base = 55
+PASS: from_L2_to_L1_GEMV end = 57
+PASS: from_L2_to_L1_GEMV descriptor observed
+PASS: from_L2_to_CVO does not enqueue ACP/NPU load
+PASS: zero element shape does not enqueue descriptor
+PASS: stage0 host_to_L2 4096B write_en = 1
+PASS: stage0 host_to_L2 4096B base = 256
+PASS: stage0 host_to_L2 4096B end = 512
+PASS: stage0 host_to_L2 4096B descriptor observed
+PASS: stage0 host_to_L2 4096B idle after 10 cycles
+PASS: stage0 L2_to_host 4096B write_en = 0
+PASS: stage0 L2_to_host 4096B base = 256
+PASS: stage0 L2_to_host 4096B end = 512
+PASS: stage0 L2_to_host 4096B descriptor observed
+PASS: ACP burst readback 256 beats
+PASS: stage0 L2_to_host 4096B idle after 0 cycles
+OVERALL: PASS
+$finish called at time : 49530 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_mem_dispatcher_route_contract/tb_mem_dispatcher_route_contract.sv" Line 576
+exit
+INFO: xsimkernel Simulation Memory Usage: 295724 KB (Peak: 344284 KB), Simulation CPU Usage: 1020 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:26:32 2026...
+
+=== tb_mem_dispatcher_route_contract RESULT: PASS ===
+
+================== tb_npu_core_wrapper_stage0_host_to_l2 ==================
+=== tb_npu_core_wrapper_stage0_host_to_l2 — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_decoder.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_STAT_OUT.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_frontend.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/npu_controller_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/Global_Scheduler.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/fmap_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv
+    /home/hwkim/v002-rtl/hw/vivado/npu_core_wrapper.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pccx_npu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/hw/vivado/npu_core_wrapper.sv" into library work
+INFO: [VRFC 10-311] analyzing module npu_core_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_npu_core_wrapper_stage0_host_to_l2/tb_npu_core_wrapper_stage0_host_to_l2.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_npu_core_wrapper_stage0_host_to_l2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.pccx_npu_top_default
+Compiling module work.npu_core_wrapper
+Compiling module work.tb_npu_core_wrapper_stage0_host_...
+Compiling module work.glbl
+Built simulation snapshot tb_npu_core_wrapper_stage0_host_to_l2_sim
+--- xsim ---
+ACP corepost[32] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[33] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[34] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[35] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[36] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[37] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[38] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[39] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[40] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[41] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[42] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[43] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[44] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[45] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[46] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[47] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[48] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[49] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[50] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[51] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[52] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[53] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[54] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[55] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[56] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[57] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[58] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[59] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[60] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[61] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[62] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[63] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[64] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[65] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[66] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[67] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[68] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[69] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[70] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[71] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[72] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[73] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[74] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[75] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[76] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[77] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[78] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+ACP corepost[79] busy=0 acp_ptr=257 rx_empty=1 rx_dv=0 rx_wcnt=0 rx_rcnt=0 rx_rd_en=0 rx_core_load=0 rx_hold_valid=0 buffer_m_valid=0 bus_valid=0 bus_ready=0 rx_fire=0 rx_rd_busy=0 rx_dout=1ffff0123456789abcdef0011223344556677 rx_hold=0123456789abcdef0011223344556677
+after acp beat: mem_debug=0x0000 l2_debug=0x0041 acp_busy=0 acp_ptr=257 acp_end=257 acp_we=1 ext_valid=0 ext_ready=1 wrapper_valid=0 top_port_valid=0 top_bridge_valid=0 disp_port_valid=0 disp_wire_valid=0 global_port_valid=0 global_wire_valid=0 buffer_local_valid=0 buffer_local_ready=1 rx_wr_en=0 rx_wr_ack=0 rx_wcnt=0 rx_rcnt=0 rx_empty=1 rx_dv=0 buffer_m_valid=0 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=0 rx_fire=0
+ACP busy deasserted after 0 core cycles
+PASS [HOST->L2 one-word ACP write completes]
+
+=== Summary ===
+PASS: 1 / 1
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 676250 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_npu_core_wrapper_stage0_host_to_l2/tb_npu_core_wrapper_stage0_host_to_l2.sv" Line 416
+exit
+INFO: xsimkernel Simulation Memory Usage: 496916 KB (Peak: 554968 KB), Simulation CPU Usage: 1730 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:27:02 2026...
+
+=== tb_npu_core_wrapper_stage0_host_to_l2 RESULT: PASS ===
+
+================== tb_pccx_npu_top_idle_contract ==================
+=== tb_pccx_npu_top_idle_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_decoder.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_STAT_OUT.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_frontend.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/npu_controller_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/Global_Scheduler.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/fmap_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pccx_npu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_idle_contract/tb_pccx_npu_top_idle_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pccx_npu_top_idle_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMV_accumulate(param='{4,1,512,...
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.pccx_npu_top_default
+Compiling module work.tb_pccx_npu_top_idle_contract
+Compiling module work.glbl
+Built simulation snapshot tb_pccx_npu_top_idle_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:27:29 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pccx_npu_top_idle_contract_sim/xsim_script.tcl
+# xsim {tb_pccx_npu_top_idle_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_pccx_npu_top_idle_contract start ===
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_pccx_npu_top_idle_contract.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_idle_contract/dut/u_mem_dispatcher/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_401  Scope: tb_pccx_npu_top_idle_contract.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. tb_pccx_npu_top_idle_contract.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_idle_contract/dut/u_fmap_pre/u_fmap_sram/u_fmap_bram/xpm_memory_base_inst/Initial310_1045  Scope: tb_pccx_npu_top_idle_contract.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 524
+PASS [no_result_without_work]
+PASS [result_sideband_known]
+PASS [input_ready_known]
+PASS [axil_ready_known]
+PASS [clear_keeps_result_idle]
+
+=== Summary ===
+PASS: 5 / 5
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 618500 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_idle_contract/tb_pccx_npu_top_idle_contract.sv" Line 126
+exit
+INFO: xsimkernel Simulation Memory Usage: 496848 KB (Peak: 554900 KB), Simulation CPU Usage: 1690 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:27:32 2026...
+
+=== tb_pccx_npu_top_idle_contract RESULT: PASS ===
+
+================== tb_pccx_npu_top_stage0_host_to_l2 ==================
+=== tb_pccx_npu_top_stage0_host_to_l2 — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_decoder.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_STAT_OUT.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_frontend.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/npu_controller_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/Global_Scheduler.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/fmap_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pccx_npu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_stage0_host_to_l2/tb_pccx_npu_top_stage0_host_to_l2.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pccx_npu_top_stage0_host_to_l2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMV_accumulate(param='{4,1,512,...
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.pccx_npu_top_default
+Compiling module work.tb_pccx_npu_top_stage0_host_to_l...
+Compiling module work.glbl
+Built simulation snapshot tb_pccx_npu_top_stage0_host_to_l2_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:27:59 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pccx_npu_top_stage0_host_to_l2_sim/xsim_script.tcl
+# xsim {tb_pccx_npu_top_stage0_host_to_l2_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_pccx_npu_top_stage0_host_to_l2 start ===
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_pccx_npu_top_stage0_host_to_l2.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_stage0_host_to_l2/dut/u_mem_dispatcher/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_401  Scope: tb_pccx_npu_top_stage0_host_to_l2.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. tb_pccx_npu_top_stage0_host_to_l2.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_stage0_host_to_l2/dut/u_fmap_pre/u_fmap_sram/u_fmap_bram/xpm_memory_base_inst/Initial310_1045  Scope: tb_pccx_npu_top_stage0_host_to_l2.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 524
+after memset: mem_debug=0x0000 l2_debug=0x0001 acp_busy=0 acp_ptr=0 acp_end=0 acp_we=0 ext_valid=0 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=0 rx_fire=0
+ACP busy asserted after 12 core cycles
+ACP write datapath ready after 0 core cycles
+before acp beat: mem_debug=0x0100 l2_debug=0x0245 acp_busy=1 acp_ptr=256 acp_end=257 acp_we=1 ext_valid=0 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=1 rx_fire=0
+ACP source beat accepted after 0 axi cycles ext_valid=1 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1
+after acp beat: mem_debug=0x0000 l2_debug=0x0041 acp_busy=0 acp_ptr=257 acp_end=257 acp_we=1 ext_valid=0 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=0 rx_fire=0
+ACP busy deasserted after 0 core cycles
+PASS [HOST->L2 one-word ACP write completes]
+
+=== Summary ===
+PASS: 1 / 1
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 796250 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_stage0_host_to_l2/tb_pccx_npu_top_stage0_host_to_l2.sv" Line 275
+exit
+INFO: xsimkernel Simulation Memory Usage: 496868 KB (Peak: 554920 KB), Simulation CPU Usage: 1750 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:28:02 2026...
+
+=== tb_pccx_npu_top_stage0_host_to_l2 RESULT: PASS ===
+
+================== tb_pccx_npu_top_stage1_gemm_store_contract ==================
+=== tb_pccx_npu_top_stage1_gemm_store_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_decoder.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_STAT_OUT.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_frontend.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/npu_controller_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/Global_Scheduler.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/fmap_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pccx_npu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_stage1_gemm_store_contract/tb_pccx_npu_top_stage1_gemm_store_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pccx_npu_top_stage1_gemm_store_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMV_accumulate(param='{4,1,512,...
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.pccx_npu_top_default
+Compiling module work.tb_pccx_npu_top_stage1_gemm_stor...
+Compiling module work.glbl
+Built simulation snapshot tb_pccx_npu_top_stage1_gemm_store_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:28:28 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pccx_npu_top_stage1_gemm_store_contract_sim/xsim_script.tcl
+# xsim {tb_pccx_npu_top_stage1_gemm_store_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_pccx_npu_top_stage1_gemm_store_contract start ===
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_pccx_npu_top_stage1_gemm_store_contract.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_stage1_gemm_store_contract/dut/u_mem_dispatcher/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_401  Scope: tb_pccx_npu_top_stage1_gemm_store_contract.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. tb_pccx_npu_top_stage1_gemm_store_contract.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_stage1_gemm_store_contract/dut/u_fmap_pre/u_fmap_sram/u_fmap_bram/xpm_memory_base_inst/Initial310_1045  Scope: tb_pccx_npu_top_stage1_gemm_store_contract.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/Vivado/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 524
+PASS [ACP fmap payload accepted]
+PASS [HP0/HP1 prefill accepted]
+DIAG raw_or=0x000fffe07fff recovered_or=0x00000000fffe norm_or=0x7fff packed=0x00000000000000003580364236c43725
+PASS [full-top fmap broadcast observed]
+PASS [v34 debug GEMM op observed]
+PASS [v34 debug global_inst observed]
+PASS [v34 debug raw valid observed]
+PASS [v34 debug norm valid observed]
+PASS [full-top raw result nonzero]
+PASS [full-top recovered result nonzero]
+PASS [full-top normalized result nonzero]
+PASS [full-top packed result observed]
+PASS [full-top packed result nonzero]
+PASS [v34 debug packed valid observed]
+PASS [v34 debug store done observed]
+PASS [full-top store done]
+PASS [full-top GEMM result readback words]
+PASS [full-top GEMM result readback nonzero]
+PASS [ACP fmap payload accepted]
+PASS [post-GEMM ACP probe readback words]
+
+=== Summary ===
+PASS: 19 / 19
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 8156 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_stage1_gemm_store_contract/tb_pccx_npu_top_stage1_gemm_store_contract.sv" Line 424
+run: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:05 . Memory (MB): peak = 1449.656 ; gain = 8.004 ; free physical = 123246 ; free virtual = 160097
+exit
+INFO: xsimkernel Simulation Memory Usage: 496896 KB (Peak: 554948 KB), Simulation CPU Usage: 6460 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:28:36 2026...
+
+=== tb_pccx_npu_top_stage1_gemm_store_contract RESULT: PASS ===
+
+================== tb_preprocess_bf16_fixed_pipeline ==================
+=== tb_preprocess_bf16_fixed_pipeline — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module preprocess_bf16_fixed_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_preprocess_bf16_fixed_pipeline/tb_preprocess_bf16_fixed_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_preprocess_bf16_fixed_pipeline
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.preprocess_bf16_fixed_pipeline
+Compiling module work.tb_preprocess_bf16_fixed_pipelin...
+Compiling module work.glbl
+Built simulation snapshot tb_preprocess_bf16_fixed_pipeline_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:28:42 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_preprocess_bf16_fixed_pipeline_sim/xsim_script.tcl
+# xsim {tb_preprocess_bf16_fixed_pipeline_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+OVERALL: PASS
+$finish called at time : 290 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_preprocess_bf16_fixed_pipeline/tb_preprocess_bf16_fixed_pipeline.sv" Line 176
+exit
+INFO: xsimkernel Simulation Memory Usage: 287396 KB (Peak: 335956 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:28:44 2026...
+
+=== tb_preprocess_bf16_fixed_pipeline RESULT: PASS ===
+
+================== tb_preprocess_fmap_merge_gating ==================
+=== tb_preprocess_fmap_merge_gating — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv" into library work
+INFO: [VRFC 10-311] analyzing module preprocess_bf16_fixed_pipeline
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module preprocess_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_preprocess_fmap_merge_gating/tb_preprocess_fmap_merge_gating.sv" into library work
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module fmap_cache
+INFO: [VRFC 10-311] analyzing module tb_preprocess_fmap_merge_gating
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.axis_if_default
+Compiling module work.xpm_fifo_axis(FIFO_DEPTH=512,FIF...
+Compiling module work.preprocess_bf16_fixed_pipeline
+Compiling module work.fmap_cache
+Compiling module work.preprocess_fmap_default
+Compiling module work.tb_preprocess_fmap_merge_gating
+Compiling module work.glbl
+Built simulation snapshot tb_preprocess_fmap_merge_gating_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Thu Jun  4 01:28:50 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_preprocess_fmap_merge_gating_sim/xsim_script.tcl
+# xsim {tb_preprocess_fmap_merge_gating_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+OVERALL: PASS
+$finish called at time : 5776 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_preprocess_fmap_merge_gating/tb_preprocess_fmap_merge_gating.sv" Line 254
+exit
+INFO: xsimkernel Simulation Memory Usage: 278712 KB (Peak: 335984 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Thu Jun  4 01:28:53 2026...
+
+=== tb_preprocess_fmap_merge_gating RESULT: PASS ===
+
+=== ALL DONE ===
+PASS: 35
+FAIL: 0
+Results: /home/hwkim/v002-rtl/tb_unit/RESULTS.md

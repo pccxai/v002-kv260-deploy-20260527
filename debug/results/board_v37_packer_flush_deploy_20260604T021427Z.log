@@ -1,0 +1,12 @@
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+DEPLOY_TS=20260604T021427Z
+BACKUP=/home/ubuntu/pccx_npu_bd_v36_before_v37_20260604T021427Z
+operating
+pccx-npu
+7a2fff855e825f2eae8a093177f3accfcc33cece8303899412aba33280f379df  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+2f2259e2409afa4ac50a7e6a1fa71004cb8d4fd6ba5de956d541d9a37971a46c  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.dtbo
+a13dbd0a508de4656c3ba22aa9f8a41494a5082bcd585589fc366a56cc5ba1c1  /lib/firmware/xilinx/pccx_npu_bd/shell.json
+b24ec5ddbddb325d48fc7cb08d01a8f2  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+5963669e646ca78901dbdfd3b4f4bb60  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.dtbo
+83e1fe120378370e3b23212e4691c81e  /lib/firmware/xilinx/pccx_npu_bd/shell.json

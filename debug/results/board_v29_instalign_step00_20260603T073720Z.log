@@ -1,0 +1,81 @@
+[07:37:21.838 +  0.016s] =====================================================
+[07:37:21.838 +  0.016s]   dbg_step_00 — env + bit + uio + permission sanity
+[07:37:21.838 +  0.016s] =====================================================
+[07:37:21.839 +  0.016s] [BANNER] argv: ['dbg_step_00_env_check.py']
+[07:37:21.839 +  0.016s] [BANNER] cwd:  /tmp/pccx-v29-debug
+[07:37:21.839 +  0.016s] [BANNER] uid:  0
+[07:37:21.839 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[07:37:21.839 +  0.016s] ==============
+[07:37:21.839 +  0.016s]   uid + sudo
+[07:37:21.839 +  0.016s] ==============
+[07:37:21.839 +  0.016s] uid=0, euid=0
+[07:37:21.839 +  0.016s] ===================
+[07:37:21.839 +  0.016s]   uio enumeration
+[07:37:21.839 +  0.016s] ===================
+[07:37:21.840 +  0.017s]   /dev/uio0    name='axi-pmon'
+[07:37:21.840 +  0.017s]   /dev/uio1    name='axi-pmon'
+[07:37:21.840 +  0.017s]   /dev/uio2    name='axi-pmon'
+[07:37:21.840 +  0.018s]   /dev/uio3    name='axi-pmon'
+[07:37:21.841 +  0.018s]   /dev/uio4    name='pccx-npu'
+[07:37:21.841 +  0.018s] =================
+[07:37:21.841 +  0.018s]   bitstream md5
+[07:37:21.841 +  0.018s] =================
+[07:37:21.894 +  0.072s] [BIT] bitstream md5 = 06fcc0d825ee8ffdb782d098131cf6b7 (== expected v29 instalign 20260603T064753Z)
+[07:37:21.895 +  0.072s] ================
+[07:37:21.895 +  0.072s]   CMA dma_heap
+[07:37:21.895 +  0.072s] ================
+[07:37:21.895 +  0.072s] [CMA] /dev/dma_heap/reserved present
+[07:37:21.895 +  0.072s] ===========================
+[07:37:21.895 +  0.072s]   dmesg tail safety check
+[07:37:21.895 +  0.072s] ===========================
+[07:37:21.895 +  0.072s] ==========================
+[07:37:21.895 +  0.072s]   dmesg safety pre-check
+[07:37:21.895 +  0.072s] ==========================
+[07:37:21.921 +  0.098s] [dmesg] [Wed Jun  3 07:20:15 2026] loop10: detected capacity change from 0 to 1030064
+[07:37:21.921 +  0.098s] [dmesg] [Wed Jun  3 07:20:15 2026] loop11: detected capacity change from 0 to 1132440
+[07:37:21.921 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop12: detected capacity change from 0 to 187776
+[07:37:21.921 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop13: detected capacity change from 0 to 357512
+[07:37:21.921 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop14: detected capacity change from 0 to 25016
+[07:37:21.921 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop15: detected capacity change from 0 to 24032
+[07:37:21.921 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop16: detected capacity change from 0 to 72112
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop17: detected capacity change from 0 to 87312
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop18: detected capacity change from 0 to 1120
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:15 2026] loop19: detected capacity change from 0 to 832
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:16 2026] mali: module is from the staging directory, the quality is unknown, you have been warned.
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:16 2026] tpm_tis_spi spi2.0: 2.0 TPM (device-id 0x1B, rev-id 22)
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:16 2026] tpm tpm0: A TPM error (256) occurred attempting the self test
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:16 2026] tpm tpm0: starting up the TPM manually
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.816:2): apparmor="STATUS" operation="profile_load" profile="unconfined" name="lsb_release" pid=824 comm="apparmor_parser"
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.820:3): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe" pid=825 comm="apparmor_parser"
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.820:4): apparmor="STATUS" operation="profile_load" profile="unconfined" name="nvidia_modprobe//kmod" pid=825 comm="apparmor_parser"
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.852:5): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/bin/man" pid=828 comm="apparmor_parser"
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.852:6): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_filter" pid=828 comm="apparmor_parser"
+[07:37:21.922 +  0.099s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.852:7): apparmor="STATUS" operation="profile_load" profile="unconfined" name="man_groff" pid=828 comm="apparmor_parser"
+[07:37:21.922 +  0.100s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.868:8): apparmor="STATUS" operation="profile_load" profile="unconfined" name="tcpdump" pid=829 comm="apparmor_parser"
+[07:37:21.922 +  0.100s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.880:9): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-client.action" pid=826 comm="apparmor_parser"
+[07:37:21.922 +  0.100s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.880:10): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/NetworkManager/nm-dhcp-helper" pid=826 comm="apparmor_parser"
+[07:37:21.922 +  0.100s] [dmesg] [Wed Jun  3 07:20:20 2026] audit: type=1400 audit(1773420470.880:11): apparmor="STATUS" operation="profile_load" profile="unconfined" name="/usr/lib/connman/scripts/dhclient-script" pid=826 comm="apparmor_parser"
+[07:37:21.922 +  0.100s] [dmesg] [Wed Jun  3 07:20:34 2026] macb ff0e0000.ethernet eth0: PHY [ff0e0000.ethernet-ffffffff:01] driver [TI DP83867] (irq=POLL)
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:34 2026] macb ff0e0000.ethernet eth0: configuring for phy/rgmii-id link mode
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:34 2026] pps pps0: new PPS source ptp0
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:34 2026] macb ff0e0000.ethernet: gem-ptp-timer ptp clock registered.
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:35 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:39 2026] macb ff0e0000.ethernet eth0: Link is Up - 1Gbps/Full - flow control off
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:39 2026] IPv6: ADDRCONF(NETDEV_CHANGE): eth0: link becomes ready
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:39 2026] kauditd_printk_skb: 38 callbacks suppressed
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:39 2026] audit: type=1400 audit(1780470656.965:50): apparmor="DENIED" operation="capable" profile="/usr/sbin/cupsd" pid=1220 comm="cupsd" capability=12  capname="net_admin"
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:20:40 2026] audit: type=1400 audit(1780470658.761:51): apparmor="DENIED" operation="capable" profile="/usr/sbin/cups-browsed" pid=1287 comm="cups-browsed" capability=23  capname="sys_nice"
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:21:00 2026] rfkill: input handler disabled
+[07:37:21.923 +  0.100s] [dmesg] [Wed Jun  3 07:21:27 2026] loop20: detected capacity change from 0 to 8
+[07:37:21.923 +  0.101s] [dmesg] [Wed Jun  3 07:36:33 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[07:37:21.923 +  0.101s] [dmesg] [Wed Jun  3 07:36:33 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[07:37:21.923 +  0.101s] [dmesg] [Wed Jun  3 07:36:33 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[07:37:21.924 +  0.101s] [SAFETY] dmesg looks clean (no AXI bus error / SError in tail).
+[07:37:21.924 +  0.101s] ===============
+[07:37:21.924 +  0.101s]   env summary
+[07:37:21.924 +  0.101s] ===============
+[07:37:21.924 +  0.101s] BITSTREAM_PATH = /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+[07:37:21.924 +  0.101s] deployed md5   = 06fcc0d825ee8ffdb782d098131cf6b7
+[07:37:21.924 +  0.101s] uio4 name      = 'pccx-npu'
+[07:37:21.924 +  0.101s] [STEP00] PASS — environment ready for downstream dbg_step_*.py

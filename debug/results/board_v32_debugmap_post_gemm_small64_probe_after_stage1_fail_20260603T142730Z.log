@@ -1,0 +1,38 @@
+[14:27:28.656 +  0.007s] =====================================================================
+[14:27:28.656 +  0.007s]   board_post_gemm_small64_probe — no-reload Stage0 probe after GEMM
+[14:27:28.656 +  0.007s] =====================================================================
+[14:27:28.656 +  0.007s] [BANNER] argv: ['debug/board_post_gemm_small64_probe.py']
+[14:27:28.656 +  0.007s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[14:27:28.656 +  0.007s] [BANNER] uid:  0
+[14:27:28.656 +  0.007s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[14:27:28.657 +  0.008s] [CMA] CMA OK: va=0xffffbc45e000 phys=0x0375b0000 size=0x1000 fd=4
+[14:27:28.658 +  0.008s] [CMA] CMA OK: va=0xffffbc432000 phys=0x0375b1000 size=0x1000 fd=6
+[14:27:28.658 +  0.009s] [WARN] src: mmap.flush ignored: [Errno 22] Invalid argument
+[14:27:28.658 +  0.009s] [WARN] dst: mmap.flush ignored: [Errno 22] Invalid argument
+[14:27:28.658 +  0.009s] src_phys=0x0375b0000 dst_phys=0x0375b1000
+[14:27:28.660 +  0.011s] [NPU] pre-status: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[14:27:28.660 +  0.011s] [DUMP] --- cmdsts snapshot: post-gemm small64: before probe ---
+[14:27:28.661 +  0.012s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:28.661 +  0.012s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:28.661 +  0.012s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:28.661 +  0.012s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:28.661 +  0.012s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:28.661 +  0.012s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:28.661 +  0.012s] ===============================
+[14:27:28.662 +  0.012s]   shape[2] = 32 BF16 elements
+[14:27:28.662 +  0.013s] ===============================
+[14:27:28.712 +  0.063s] [NPU] after shape: 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000
+[14:27:28.712 +  0.063s] ======================
+[14:27:28.712 +  0.063s]   host -> L2 small64
+[14:27:28.712 +  0.063s] ======================
+[14:27:28.713 +  0.063s] [DM] acp_fmap issued token=0x5 length=64
+Traceback (most recent call last):
+  File "/home/ubuntu/pccx-gemma-deploy/debug/board_post_gemm_small64_probe.py", line 196, in <module>
+    sys.exit(main())
+  File "/home/ubuntu/pccx-gemma-deploy/debug/board_post_gemm_small64_probe.py", line 143, in main
+    st_h2l = issue_and_poll(
+  File "/home/ubuntu/pccx-gemma-deploy/debug/board_post_gemm_small64_probe.py", line 90, in issue_and_poll
+    status = channel.poll_status(token, timeout_sec=3.0)
+  File "/home/ubuntu/pccx-gemma-deploy/pccx_npu/npu/dma.py", line 127, in poll_status
+    raise TimeoutError(
+TimeoutError: timed out waiting 3.000s for acp_fmap status

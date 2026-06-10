@@ -1,0 +1,40 @@
+[06:25:23.315 +  0.016s] =======================================================================
+[06:25:23.315 +  0.016s]   dbg_step_02 — frontend-only NPU ISA MEMSET — silicon liveness probe
+[06:25:23.316 +  0.016s] =======================================================================
+[06:25:23.316 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_02_memset_frontend.py']
+[06:25:23.316 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[06:25:23.316 +  0.016s] [BANNER] uid:  0
+[06:25:23.316 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[06:25:23.369 +  0.070s] [BIT] bitstream md5 = e97b1bbcb6ecff4a4c4e11d4d0f2af40 (== expected v8 common_clock)
+[06:25:23.369 +  0.070s] ================================================================
+[06:25:23.369 +  0.070s]   encode MEMSET (OP_MEMSET=0x3, dest=fmap_shape[0]={4096,1,1})
+[06:25:23.369 +  0.070s] ================================================================
+[06:25:23.626 +  0.326s] AXIL_CMD_IN word = 0x3001000000100010
+[06:25:23.626 +  0.327s] opcode_e nibble  = 0x3 (expected 0x3 = OP_MEMSET)
+[06:25:23.633 +  0.333s] [UIO] opening NPU UIO at /dev/uio4
+[06:25:23.633 +  0.334s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[06:25:23.633 +  0.334s] ================================
+[06:25:23.633 +  0.334s]   pre-submit register snapshot
+[06:25:23.633 +  0.334s] ================================
+[06:25:23.634 +  0.334s] NPU AXIL_STAT_OUT pre = 0x0000000000000000  (busy=0 done=0 top=0x0000 mem=0x0000 upper=0x00000000)
+[06:25:23.634 +  0.334s]          hp0 pre: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:23.634 +  0.334s]     acp_fmap pre: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:23.634 +  0.334s] =================
+[06:25:23.634 +  0.334s]   submit MEMSET
+[06:25:23.634 +  0.334s] =================
+[06:25:23.634 +  0.334s] calling NpuMmio.submit_program([word]) — push_inst + push_kick
+[06:25:23.634 +  0.334s] ======================================================
+[06:25:23.634 +  0.335s]   poll AXIL_STAT_OUT for DONE bit (25ms x 40 = 1.0s)
+[06:25:23.634 +  0.335s] ======================================================
+[06:25:23.659 +  0.360s] [POLL]   t=   0ms  STAT=0x0000000000000003  busy=1 done=1 top=0x0000 mem=0x0000 upper=0x00000000
+[06:25:23.660 +  0.360s] =================================
+[06:25:23.660 +  0.360s]   post-submit register snapshot
+[06:25:23.660 +  0.360s] =================================
+[06:25:23.660 +  0.360s] NPU AXIL_STAT_OUT post = 0x0000000000000003  (busy=1 done=1 top=0x0000 mem=0x0000 upper=0x00000000)
+[06:25:23.660 +  0.360s]          hp0 post: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:23.660 +  0.360s]     acp_fmap post: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[06:25:23.660 +  0.360s] ===========
+[06:25:23.660 +  0.360s]   verdict
+[06:25:23.660 +  0.360s] ===========
+[06:25:23.660 +  0.360s] [STEP02] PASS — MEMSET completed at t=0ms — frontend silicon ALIVE
+[run_all] step02 rc=0

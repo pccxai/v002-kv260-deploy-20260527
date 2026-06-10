@@ -1,0 +1,8 @@
+label,script,rc
+step00,dbg_step_00_env_check.py,0
+step01,dbg_step_01_axil_window.py,0
+step02,dbg_step_02_memset_frontend.py,0
+step03,dbg_step_03_cmdsts_single_acp.py,0
+step04,dbg_step_04_cmdsts_burst9.py,0
+step05,dbg_step_05_hp_vs_acp_diff.py,0
+step06,dbg_step_06_snoop_then_single.py,0

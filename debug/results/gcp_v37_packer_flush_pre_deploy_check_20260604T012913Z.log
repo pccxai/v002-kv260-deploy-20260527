@@ -1,0 +1,37 @@
+header_len=144
+payload_len=7797692
+wrote=hw/build/pccx_v002_system_wrapper.bit.bin size=7797692
+WARN could not extract URAM percentage from hw/build/reports/utilization_post_impl_top.rpt
+WARN could not extract WHS from hw/build/reports/timing_summary_post_impl_top.rpt
+WARN knowledge base path not set; using built-in v002 pre-deploy rules only
+WARN no timing/resource metrics supplied; knowledge rules loaded but not evaluated
+-- pre_deploy_check.py --
+bit       : /home/hwkim/v002-rtl/hw/build/pccx_v002_system_wrapper.bit
+dtbo      : hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo
+bitbin    : hw/build/pccx_v002_system_wrapper.bit.bin
+shell.json: hw/build/deploy/pccx_npu_bd/shell.json
+allowed-parts: ('xck26-sfvc784-2LV-c',)
+
+PASS bitstream present: /home/hwkim/v002-rtl/hw/build/pccx_v002_system_wrapper.bit  size=7797836 B
+PASS bitstream MD5: 01fc8fcbe25a48f0107ddb0ec40adede
+PASS bitstream design = pccx_v002_system_wrapper
+PASS bitstream part   = xck26-sfvc784-2LV-c
+PASS bitstream date   = 2026/06/04 02:11:48
+PASS bitstream payload= 7797692 bytes (header consumed 144 B)
+PASS dtbo present: hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo  size=857 B  magic OK
+PASS bit.bin present: hw/build/pccx_v002_system_wrapper.bit.bin  size=7797692 B
+PASS bit.bin matches bootgen LE-swapped payload of .bit (canonical FPGA Manager format)
+PASS shell.json valid: {'shell_type': 'XRT_FLAT', 'num_slots': '1'}
+PASS env present: ['PCCX_KV260_HOST', 'PCCX_KV260_USER'] (values redacted)
+
+PASS pre-deploy check PASSED for pccx_v002_system_wrapper.bit
+81e6d5a1386e2d2321e5e726fd0fadd9ef8c154cf37c9b316253dce838b98c78  hw/build/pccx_v002_system_wrapper.bit
+7a2fff855e825f2eae8a093177f3accfcc33cece8303899412aba33280f379df  hw/build/pccx_v002_system_wrapper.bit.bin
+edccb2467f3b3b47f898f691cd3e98fcf66e8598bf6d679d1c21a9a087dbdb06  hw/build/reports/timing_summary_post_impl_top.rpt
+b8682ed3f2df655c5801ebd6f1bfb39cd28b0df6e96cd813e607474efdbefffd  hw/build/reports/drc_post_impl_top.rpt
+085a5db0f0fc2e70bacec4c24e2a79fca1c774bcba7d9d641969b3c2faa8b920  hw/build/reports/utilization_post_impl_top.rpt
+fabd93bd9690ec4f0bb0ddb55793725f839198a7d51e1442d25dea48b6698684  hw/build/reports/top_level_bitstream_status.txt
+2f2259e2409afa4ac50a7e6a1fa71004cb8d4fd6ba5de956d541d9a37971a46c  hw/build/deploy/pccx_npu_bd/pccx_npu_bd.dtbo
+a13dbd0a508de4656c3ba22aa9f8a41494a5082bcd585589fc366a56cc5ba1c1  hw/build/deploy/pccx_npu_bd/shell.json
+01fc8fcbe25a48f0107ddb0ec40adede  hw/build/pccx_v002_system_wrapper.bit
+b24ec5ddbddb325d48fc7cb08d01a8f2  hw/build/pccx_v002_system_wrapper.bit.bin

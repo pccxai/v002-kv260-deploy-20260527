@@ -1,0 +1,43 @@
+[02:36:23.564 +  0.019s] ===========================================================================
+[02:36:23.564 +  0.019s]   dbg_step_11 — High-precision multi-phase NPU stall analysis (A+B focus)
+[02:36:23.564 +  0.019s] ===========================================================================
+[02:36:23.564 +  0.019s] [BANNER] argv: ['debug/dbg_step_11_precise_stall_analysis.py']
+[02:36:23.564 +  0.019s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:36:23.564 +  0.019s] [BANNER] uid:  0
+[02:36:23.564 +  0.019s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:36:23.618 +  0.073s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:36:23.624 +  0.079s] [UIO] opening NPU UIO at /dev/uio4
+[02:36:23.625 +  0.080s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[02:36:23.625 +  0.080s] ============
+[02:36:23.625 +  0.080s]   baseline
+[02:36:23.625 +  0.080s] ============
+[02:36:23.625 +  0.080s] [BASE]   acp_fmap initial sts_lvl: 0
+[02:36:23.625 +  0.080s] ================
+[02:36:23.625 +  0.080s]   allocate CMA
+[02:36:23.625 +  0.080s] ================
+[02:36:23.626 +  0.081s] [CMA] CMA OK: va=0xffffab35a000 phys=0x0375b0000 size=0x1000 fd=6
+[02:36:23.626 +  0.081s] ==============
+[02:36:23.626 +  0.081s]   push stall
+[02:36:23.626 +  0.081s] ==============
+[02:36:23.626 +  0.081s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[02:36:23.626 +  0.081s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[02:36:23.626 +  0.081s] ===============================================
+[02:36:23.626 +  0.081s]   PHASE 1: Fresh stall (immediate after push)
+[02:36:23.626 +  0.082s] ===============================================
+[02:36:25.627 +  2.082s] ==========================================================
+[02:36:25.627 +  2.082s]   PHASE 2: Sustained stall (after stall has been active)
+[02:36:25.627 +  2.082s] ==========================================================
+[02:36:29.630 +  6.085s] ============
+[02:36:29.630 +  6.085s]   Analysis
+[02:36:29.630 +  6.085s] ============
+[02:36:29.631 +  6.086s] [ANALYSIS] FRESH STALL: 642 completed / 642 attempted
+[02:36:29.631 +  6.086s] [ANALYSIS]   Latency (ms): min=0.03  avg=0.04  max=0.41
+[02:36:29.632 +  6.087s] [ANALYSIS] SUSTAINED STALL: 803 completed / 803 attempted
+[02:36:29.633 +  6.088s] [ANALYSIS]   Latency (ms): min=0.03  avg=0.03  max=0.13
+[02:36:29.633 +  6.088s] ==================
+[02:36:29.633 +  6.088s]   Interpretation
+[02:36:29.633 +  6.088s] ==================
+[02:36:29.633 +  6.088s] [INT] If sustained phase shows significantly worse latency or more timeouts than fresh phase:
+[02:36:29.633 +  6.088s] [INT]   → The stall effect on NPU operations worsens over time (possible accumulating backpressure).
+[02:36:29.633 +  6.088s] [INT] If both phases are similarly bad:
+[02:36:29.633 +  6.088s] [INT]   → The interference is immediate and constant once the DM channel is stalled.

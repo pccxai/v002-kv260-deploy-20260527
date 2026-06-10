@@ -1,0 +1,12 @@
+616ce633f1e5df42ddad05c55d3a68c9ca228801bf8a078ebda76439a8b947a1  /tmp/pccx_v32_debugmap_20260603T142730Z/pccx_npu_bd.bit.bin
+8cf267ece71078c670743471b0617baa  /tmp/pccx_v32_debugmap_20260603T142730Z/pccx_npu_bd.bit.bin
+remove from slot 0 returns: 0 (Ok)
+616ce633f1e5df42ddad05c55d3a68c9ca228801bf8a078ebda76439a8b947a1  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+8cf267ece71078c670743471b0617baa  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+pccx_npu_bd: loaded to slot 0
+operating
+crw------- 1 root root 237, 0 Mar 13 16:47 /dev/uio0
+crw------- 1 root root 237, 1 Mar 13 16:47 /dev/uio1
+crw------- 1 root root 237, 2 Mar 13 16:47 /dev/uio2
+crw------- 1 root root 237, 3 Mar 13 16:47 /dev/uio3
+crw------- 1 root root 237, 4 Jun  3 14:25 /dev/uio4

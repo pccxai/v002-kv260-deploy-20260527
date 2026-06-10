@@ -1,0 +1,6 @@
+=== xmutil reload pccx_npu_bd (before step04) at 06:25:29Z ===
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+pccx-npu
+e97b1bbcb6ecff4a4c4e11d4d0f2af40  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+=== reload rc=0 ===

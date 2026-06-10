@@ -1,0 +1,72 @@
+[02:35:06.880 +  0.016s] =======================================================================
+[02:35:06.881 +  0.016s]   dbg_step_03 — cmdsts_acp_fmap SINGLE CMD_PUSH — canonical ACP stall
+[02:35:06.881 +  0.016s] =======================================================================
+[02:35:06.881 +  0.016s] [BANNER] argv: ['/home/ubuntu/pccx-gemma-deploy/debug/dbg_step_03_cmdsts_single_acp.py']
+[02:35:06.881 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:35:06.881 +  0.016s] [BANNER] uid:  0
+[02:35:06.881 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:35:06.934 +  0.070s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:35:06.941 +  0.077s] [UIO] opening NPU UIO at /dev/uio4
+[02:35:06.942 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[02:35:06.942 +  0.077s] ========================================
+[02:35:06.942 +  0.077s]   pre snapshot — all 6 cmdsts channels
+[02:35:06.942 +  0.077s] ========================================
+[02:35:06.942 +  0.077s] [DUMP] --- cmdsts snapshot: pre-push ---
+[02:35:06.942 +  0.078s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:06.942 +  0.078s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:06.942 +  0.078s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:06.943 +  0.078s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:06.943 +  0.078s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:06.943 +  0.078s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:06.943 +  0.078s] ===========================================
+[02:35:06.943 +  0.078s]   allocate CMA buffer for DataMover SADDR
+[02:35:06.943 +  0.078s] ===========================================
+[02:35:06.944 +  0.079s] [CMA] CMA OK: va=0xffffbe5b9000 phys=0x0375b0000 size=0x1000 fd=6
+[02:35:06.944 +  0.079s] [ADDR] DM SADDR = 0x375b0000
+[02:35:06.944 +  0.079s] ===================================
+[02:35:06.944 +  0.079s]   push 1 cmd onto cmdsts_acp_fmap
+[02:35:06.944 +  0.079s] ===================================
+[02:35:06.944 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[02:35:06.944 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[02:35:06.944 +  0.080s] ================================
+[02:35:06.944 +  0.080s]   post-push immediate snapshot
+[02:35:06.944 +  0.080s] ================================
+[02:35:06.944 +  0.080s] [POST]   immediate: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:35:06.944 +  0.080s] [POST]   → DataMover popped the cmd instantly (cmd_ready=1)
+[02:35:06.945 +  0.080s] ==========================================================
+[02:35:06.945 +  0.080s]   poll cmdsts_acp_fmap for status (every 0.25s for 3.0s)
+[02:35:06.945 +  0.080s] ==========================================================
+[02:35:06.945 +  0.080s] [POLL]   acp_fmap @0xA000_5000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:35:06.945 +  0.080s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:07.195 +  0.331s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:07.446 +  0.582s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:07.697 +  0.832s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:07.947 +  1.083s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:08.198 +  1.333s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:08.448 +  1.584s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:08.699 +  1.834s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:08.949 +  2.085s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:09.200 +  2.336s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:09.451 +  2.586s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:09.701 +  2.837s] [POLL] ^^ status FIFO non-empty (sts_lvl=3)
+[02:35:09.952 +  3.087s] =========================================
+[02:35:09.952 +  3.087s]   post snapshot — all 6 cmdsts channels
+[02:35:09.952 +  3.087s] =========================================
+[02:35:09.952 +  3.088s] [DUMP] --- cmdsts snapshot: post-poll ---
+[02:35:09.952 +  3.088s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:09.952 +  3.088s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:09.953 +  3.088s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:09.953 +  3.088s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:09.953 +  3.088s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:35:09.953 +  3.088s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:09.953 +  3.088s] ==========================
+[02:35:09.953 +  3.088s]   decode status payloads
+[02:35:09.953 +  3.089s] ==========================
+[02:35:09.953 +  3.089s] [POP] STS_POP[0] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[02:35:09.953 +  3.089s] [POP] STS_POP[1] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[02:35:09.953 +  3.089s] [POP] STS_POP[2] = 0x00000080 tag=0x0 OKAY=1 err=- bytes=0 eof=0
+[02:35:09.954 +  3.089s] ===========
+[02:35:09.954 +  3.089s]   verdict
+[02:35:09.954 +  3.089s] ===========
+[02:35:09.954 +  3.089s] [STEP03] PASS — single transfer emitted OKAY DataMover status payload
+[run_all] step03 rc=0

@@ -1,0 +1,25 @@
+# KV260 UART — mmc1 (SD card) SDHCI timeout @ ~8min uptime (2026-05-30 ~00:29)
+# 맥락: v9 ILA deploy 후 재부팅 반복 중 캡쳐. 이 signature = SD I/O 실패로 시스템 hang.
+# (advisor: 단일 SD 범인 단정 금지 — 밤새 3 signature[BPF 7.3h / multi-CPU lockup 50m / SD timeout 8m],
+#  uptime 점점 짧아짐 = boot media/전원 불안정+degrading, hard power-cycle 4+회가 악화시킨 것으로 추정)
+
+[  487.590855] mmc1: Timeout waiting for hardware cmd interrupt.
+[  487.597591] mmc1: sdhci: ============ SDHCI REGISTER DUMP ===========
+[  487.605021] mmc1: sdhci: Sys addr:  0x00000008 | Version:  0x00001002
+[  487.612460] mmc1: sdhci: Blk size:  0x00007200 | Blk cnt:  0x00000008
+[  487.619899] mmc1: sdhci: Argument:  0x00010000 | Trn mode: 0x00000033
+[  487.627329] mmc1: sdhci: Present:   0x01f70000 | Host ctl: 0x00000019
+[  487.634759] mmc1: sdhci: Power:     0x0000000f | Blk gap:  0x00000080
+[  487.642189] mmc1: sdhci: Wake-up:   0x00000000 | Clock:    0x0000fa07
+[  487.649628] mmc1: sdhci: Timeout:   0x00000004 | Int stat: 0x01018000
+[  487.657067] mmc1: sdhci: Int enab:  0x03ff008b | Sig enab: 0x03ff008b
+[  487.664497] mmc1: sdhci: ACmd stat: 0x00000002 | Slot int: 0x00000001
+[  487.671919] mmc1: sdhci: Caps:      0x35ecc881 | Caps_1:   0x00002007
+[  487.679331] mmc1: sdhci: Cmd:       0x00000d1a | Max curr: 0x00000000
+[  487.686736] mmc1: sdhci: Resp[0]:   0x00000120 | Resp[1]:  0x00000000
+[  487.694131] mmc1: sdhci: Resp[2]:   0x00000000 | Resp[3]:  0x00000120
+[  487.701517] mmc1: sdhci: Host ctl2: 0x00000000
+[  487.706900] mmc1: sdhci: ADMA Err:  0x00000000 | ADMA Ptr: 0x0000000805a70200
+[  487.714998] mmc1: sdhci: ============================================
+# 이후 UART = ^@ (null, 콘솔도 hang) + SSH No route to host = rootfs(SD) 접근 불가로 시스템 freeze.
+# 함께 본 다른 signature: debug/results/uart_lockup_*.txt (BPF/SMP), uart_crash_*.txt

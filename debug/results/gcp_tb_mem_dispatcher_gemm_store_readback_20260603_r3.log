@@ -1,0 +1,80 @@
+=== tb_mem_dispatcher_gemm_store_readback — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv" into library work
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv" into library work
+INFO: [VRFC 10-311] analyzing module shape_const_ram
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_BUFFER
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_L2_cache_fmap
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_GLOBAL_cache
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_u_operation_queue
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_CVO_stream_bridge
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module mem_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/stage1-tb-work/tb_unit/tb_mem_dispatcher_gemm_store_readback/tb_mem_dispatcher_gemm_store_readback.sv" into library work
+INFO: [VRFC 10-311] analyzing module xpm_fifo_axis
+INFO: [VRFC 10-311] analyzing module xpm_fifo_sync
+INFO: [VRFC 10-311] analyzing module xpm_fifo_async
+INFO: [VRFC 10-311] analyzing module xpm_memory_tdpram
+INFO: [VRFC 10-311] analyzing module tb_mem_dispatcher_gemm_store_readback
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.mem_BUFFER_default
+Compiling module work.xpm_memory_tdpram(MEMORY_SIZE=14...
+Compiling module work.mem_L2_cache_fmap
+Compiling module work.mem_GLOBAL_cache_default
+Compiling module work.xpm_fifo_sync(FIFO_WRITE_DEPTH=2...
+Compiling module work.mem_CVO_stream_bridge
+Compiling module work.mem_dispatcher_default
+Compiling module work.tb_mem_dispatcher_gemm_store_rea...
+Compiling module work.glbl
+Built simulation snapshot tb_mem_dispatcher_gemm_store_readback_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 12:44:20 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_mem_dispatcher_gemm_store_readback_sim/xsim_script.tcl
+# xsim {tb_mem_dispatcher_gemm_store_readback_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_mem_dispatcher_gemm_store_readback start ===
+PASS [reset idle]
+PASS [shape memset done pulse]
+PASS [store active]
+PASS [GEMM store accepted four words]
+PASS [GEMM store done pulse]
+ACP mismatch idx=1 data=0x71000000620010005300200044003000 exp=0x71000001620010015300200144003001 last=0 exp_last=0
+FAIL [ACP readback data mismatch]
+OVERALL: FAIL
+Fatal: ACP readback data mismatch
+Time: 238 ns  Iteration: 0  Process: /tb_mem_dispatcher_gemm_store_readback/fail_now  Scope: tb_mem_dispatcher_gemm_store_readback.fail_now  File: /home/hwkim/stage1-tb-work/tb_unit/tb_mem_dispatcher_gemm_store_readback/tb_mem_dispatcher_gemm_store_readback.sv Line: 400
+$finish called at time : 238 ns
+exit
+INFO: xsimkernel Simulation Memory Usage: 291324 KB (Peak: 339884 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 12:44:23 2026...
+
+=== tb_mem_dispatcher_gemm_store_readback RESULT: FAIL ===

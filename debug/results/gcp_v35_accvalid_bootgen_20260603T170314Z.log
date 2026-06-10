@@ -1,0 +1,21 @@
+
+
+****** Bootgen v2025.2
+  **** Build date : Nov 12 2025-13:58:15
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+59ff48a3cbc9f3c0cc73aea0e0d13bf3e3a920c31c04ec5104dbd9553d59ef3f  hw/build/pccx_v002_system_wrapper.bit
+17ad88c6f85bcedc1471defa554962e9347c1dc3f3d06e658efe617618298a4a  hw/build/pccx_v002_system_wrapper.bit.bin
+f0d5166914556af16a7dc62eda120d2bf44998978a5991919fd2fcc39069e105  debug/results/gcp_v35_accvalid_full_bd_bitstream_20260603T170314Z.log
+75b7e8a09bc27be8de59046b9488c021ca45c0a3ffd950f9ef8b06a9d5673965  hw/build/reports/timing_summary_post_impl_top.rpt
+313ae12013747b275a63a84c15d2b4361b03761848da43fd21de12f038f9eab8  hw/build/reports/drc_post_impl_top.rpt
+1bf2a7b72369a035a934f050aeda31a04b979d387c76fb5205b22188b1d32769  hw/build/reports/utilization_post_impl_top.rpt
+fabd93bd9690ec4f0bb0ddb55793725f839198a7d51e1442d25dea48b6698684  hw/build/reports/top_level_bitstream_status.txt
+90eba260456ec5a0d18badd1f0cbd4ce  hw/build/pccx_v002_system_wrapper.bit
+e7777bf95556a249e045b8a4ec3c4876  hw/build/pccx_v002_system_wrapper.bit.bin
+-rw-rw-r-- 1 hwkim hwkim 7797836 Jun  3 17:45 hw/build/pccx_v002_system_wrapper.bit
+-rw-rw-r-- 1 hwkim hwkim 7807932 Jun  3 17:45 hw/build/pccx_v002_system_wrapper.bit.bin

@@ -1,0 +1,6 @@
+RESULT_DIR=debug/results/board_v28_single_acp_probe_then_stage0_20260603T025834Z
+=== RELOAD ===
+=== SINGLE ACP_FMAP 16B PROBE WITHOUT NPU CONSUMER ===
+single_probe_rc=0
+=== STAGE0 AFTER SINGLE PROBE WITHOUT RELOAD ===
+stage0_after_single_probe_no_reload_rc=1

@@ -1,0 +1,28 @@
+[12:54:15.246 +  0.006s] =====================================================================
+[12:54:15.246 +  0.006s]   board_post_gemm_small64_probe — no-reload Stage0 probe after GEMM
+[12:54:15.246 +  0.006s] =====================================================================
+[12:54:15.246 +  0.006s] [BANNER] argv: ['debug/board_post_gemm_small64_probe.py']
+[12:54:15.246 +  0.006s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[12:54:15.246 +  0.006s] [BANNER] uid:  0
+[12:54:15.247 +  0.006s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[12:54:15.247 +  0.007s] [CMA] CMA OK: va=0xffff9c305000 phys=0x0375b0000 size=0x1000 fd=4
+[12:54:15.248 +  0.008s] [CMA] CMA OK: va=0xffff9c2b8000 phys=0x0375b1000 size=0x1000 fd=6
+[12:54:15.248 +  0.008s] [WARN] src: mmap.flush ignored: [Errno 22] Invalid argument
+[12:54:15.248 +  0.008s] [WARN] dst: mmap.flush ignored: [Errno 22] Invalid argument
+[12:54:15.248 +  0.008s] src_phys=0x0375b0000 dst_phys=0x0375b1000
+[12:54:15.251 +  0.010s] [NPU] pre-status: 0x0000000000008001 busy=1 done=0 top=0x2000 mem=0x0000
+[12:54:15.251 +  0.010s] [DUMP] --- cmdsts snapshot: post-gemm small64: before probe ---
+[12:54:15.251 +  0.011s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:54:15.251 +  0.011s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:54:15.251 +  0.011s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:54:15.251 +  0.011s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:54:15.251 +  0.011s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:54:15.252 +  0.011s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[12:54:15.252 +  0.011s] ===============================
+[12:54:15.252 +  0.011s]   shape[2] = 32 BF16 elements
+[12:54:15.252 +  0.011s] ===============================
+[12:54:15.302 +  0.062s] [NPU] after shape: 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000
+[12:54:15.302 +  0.062s] ======================
+[12:54:15.302 +  0.062s]   host -> L2 small64
+[12:54:15.302 +  0.062s] ======================
+[12:54:15.302 +  0.062s] [DM] acp_fmap issued token=0x5 length=64

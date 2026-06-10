@@ -1,0 +1,81 @@
+[04:50:41.767 +  0.016s] =====================================================
+[04:50:41.767 +  0.016s]   dbg_step_00 — env + bit + uio + permission sanity
+[04:50:41.767 +  0.016s] =====================================================
+[04:50:41.767 +  0.016s] [BANNER] argv: ['debug/dbg_step_00_env_check.py']
+[04:50:41.767 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[04:50:41.767 +  0.016s] [BANNER] uid:  0
+[04:50:41.767 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[04:50:41.767 +  0.016s] ==============
+[04:50:41.767 +  0.016s]   uid + sudo
+[04:50:41.767 +  0.016s] ==============
+[04:50:41.767 +  0.016s] uid=0, euid=0
+[04:50:41.767 +  0.017s] ===================
+[04:50:41.767 +  0.017s]   uio enumeration
+[04:50:41.768 +  0.017s] ===================
+[04:50:41.768 +  0.017s]   /dev/uio0    name='axi-pmon'
+[04:50:41.768 +  0.017s]   /dev/uio1    name='axi-pmon'
+[04:50:41.768 +  0.018s]   /dev/uio2    name='axi-pmon'
+[04:50:41.769 +  0.018s]   /dev/uio3    name='axi-pmon'
+[04:50:41.769 +  0.018s]   /dev/uio4    name='pccx-npu'
+[04:50:41.769 +  0.018s] =================
+[04:50:41.769 +  0.018s]   bitstream md5
+[04:50:41.769 +  0.018s] =================
+[04:50:41.823 +  0.072s] [BIT] bitstream md5 = 2abbbae6b3333739ec6ab45e06532cd6 (== expected v28 reverify 20260603T034200Z)
+[04:50:41.823 +  0.072s] ================
+[04:50:41.823 +  0.072s]   CMA dma_heap
+[04:50:41.823 +  0.072s] ================
+[04:50:41.823 +  0.072s] [CMA] /dev/dma_heap/reserved present
+[04:50:41.823 +  0.072s] ===========================
+[04:50:41.823 +  0.073s]   dmesg tail safety check
+[04:50:41.823 +  0.073s] ===========================
+[04:50:41.823 +  0.073s] ==========================
+[04:50:41.824 +  0.073s]   dmesg safety pre-check
+[04:50:41.824 +  0.073s] ==========================
+[04:50:41.872 +  0.122s] [dmesg] [Wed Jun  3 04:29:34 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:36 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:39 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:39 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:39 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:41 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:44 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:44 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:44 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.873 +  0.122s] [dmesg] [Wed Jun  3 04:29:46 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.873 +  0.123s] [dmesg] [Wed Jun  3 04:29:46 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.873 +  0.123s] [dmesg] [Wed Jun  3 04:29:46 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:49 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:49 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:49 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:51 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:51 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:51 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:54 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:54 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:54 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:56 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:56 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:56 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:59 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:59 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.874 +  0.123s] [dmesg] [Wed Jun  3 04:29:59 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.874 +  0.124s] [dmesg] [Wed Jun  3 04:30:01 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.874 +  0.124s] [dmesg] [Wed Jun  3 04:30:01 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.874 +  0.124s] [dmesg] [Wed Jun  3 04:30:01 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.875 +  0.124s] [dmesg] [Wed Jun  3 04:30:04 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.875 +  0.124s] [dmesg] [Wed Jun  3 04:30:04 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.875 +  0.124s] [dmesg] [Wed Jun  3 04:30:04 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.875 +  0.124s] [dmesg] [Wed Jun  3 04:30:06 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/firmware-name
+[04:50:41.875 +  0.124s] [dmesg] [Wed Jun  3 04:30:06 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /fpga-full/resets
+[04:50:41.875 +  0.124s] [dmesg] [Wed Jun  3 04:30:06 2026] OF: overlay: WARNING: memory leak will occur if overlay removed, property: /__symbols__/pccx_npu_uio
+[04:50:41.875 +  0.124s] [SAFETY] dmesg looks clean (no AXI bus error / SError in tail).
+[04:50:41.875 +  0.124s] ===============
+[04:50:41.875 +  0.124s]   env summary
+[04:50:41.875 +  0.125s] ===============
+[04:50:41.875 +  0.125s] BITSTREAM_PATH = /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+[04:50:41.876 +  0.125s] deployed md5   = 2abbbae6b3333739ec6ab45e06532cd6
+[04:50:41.876 +  0.125s] uio4 name      = 'pccx-npu'
+[04:50:41.876 +  0.125s] [STEP00] PASS — environment ready for downstream dbg_step_*.py

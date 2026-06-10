@@ -1,0 +1,127 @@
+--- /tmp/Global_Scheduler.sv.orig	2026-05-27 12:48:07.625787997 +0000
++++ /home/hwkim/v002-gemm-bd-resynth-20260523c/hw/rtl/NPU_Controller/Global_Scheduler.sv	2026-05-27 12:48:07.631787992 +0000
+@@ -47,6 +47,7 @@
+     output gemm_control_uop_t   OUT_GEMM_uop,
+     output GEMV_control_uop_t   OUT_GEMV_uop,
+     output memory_control_uop_t OUT_LOAD_uop,
++    output logic                OUT_LOAD_uop_valid,
+     output memory_control_uop_t OUT_STORE_uop,
+     output logic                OUT_STORE_uop_valid,
+     output memory_set_uop_t     OUT_mem_set_uop,
+@@ -97,12 +98,20 @@
+   end
+ 
+   // ===| LOAD uop — single driver (priority: GEMM > GEMV > MEMCPY > CVO) |======
++  // OUT_LOAD_uop_valid is a 1-cycle pulse asserted in lockstep with the
++  // OUT_LOAD_uop register update. Downstream (mem_dispatcher) must gate its
++  // dest-routing decode on this pulse — without it, non-LOAD opcodes
++  // (RESET_KV_CACHE / NEXT_TOKEN / etc.) propagate the stale LOAD_uop value
++  // every cycle, causing the memory dispatcher to push garbage uops into
++  // the NPU FIFO and hang `npu_is_busy` permanently.
+   always_ff @(posedge clk_core) begin
+     if (!rst_n_core) begin
+-      OUT_LOAD_uop      <= '0;
+-      OUT_sram_rd_start <= 1'b0;
++      OUT_LOAD_uop       <= '0;
++      OUT_LOAD_uop_valid <= 1'b0;
++      OUT_sram_rd_start  <= 1'b0;
+     end else begin
+-      OUT_sram_rd_start <= 1'b0;   // default: no pulse
++      OUT_LOAD_uop_valid <= 1'b0;   // default: no pulse
++      OUT_sram_rd_start  <= 1'b0;   // default: no pulse
+ 
+       if (IN_GEMM_op_x64_valid) begin
+         OUT_LOAD_uop <= '{
+@@ -112,7 +121,8 @@
+             shape_ptr_addr : GEMM_op_x64.shape_ptr_addr,
+             async          : SYNC_OP
+         };
+-        OUT_sram_rd_start <= 1'b1;
++        OUT_LOAD_uop_valid <= 1'b1;
++        OUT_sram_rd_start  <= 1'b1;
+ 
+       end else if (IN_GEMV_op_x64_valid) begin
+         OUT_LOAD_uop <= '{
+@@ -122,7 +132,8 @@
+             shape_ptr_addr : GEMV_op_x64.shape_ptr_addr,
+             async          : SYNC_OP
+         };
+-        OUT_sram_rd_start <= 1'b1;
++        OUT_LOAD_uop_valid <= 1'b1;
+---
+--- /tmp/mem_dispatcher.sv.orig	2026-05-27 12:48:07.627787995 +0000
++++ /home/hwkim/v002-gemm-bd-resynth-20260523c/hw/rtl/MEM_control/top/mem_dispatcher.sv	2026-05-27 12:48:07.632787991 +0000
+@@ -49,6 +49,7 @@
+ 
+     // ===| Engine uop inputs |===================================================
+     input  memory_control_uop_t IN_LOAD_uop,
++    input  logic                IN_LOAD_uop_valid,
+     input  memory_control_uop_t IN_STORE_uop,
+     input  logic                IN_store_uop_valid,
+     input  memory_set_uop_t     IN_mem_set_uop,
+@@ -350,44 +351,51 @@
+       load_s1_shape_y   <= fmap_read_arr_shape_Y;
+       load_s1_shape_z   <= fmap_read_arr_shape_Z;
+ 
+-      case (IN_LOAD_uop.data_dest)
+-        // Host DDR4 → L2 (feature map DMA in)
+-        from_host_to_L2: begin
+-          load_s1_valid     <= 1'b1;
+-          load_s1_to_acp    <= 1'b1;
+-          load_s1_write_en  <= `PORT_MOD_E_WRITE;
+-          load_s1_base_addr <= IN_LOAD_uop.dest_addr;
+-        end
+-
+-        // L2 → host DDR4 (result DMA out)
+-        from_L2_to_host: begin
+-          load_s1_valid     <= 1'b1;
+-          load_s1_to_acp    <= 1'b1;
+-          load_s1_write_en  <= `PORT_MOD_E_READ;
+-          load_s1_base_addr <= IN_LOAD_uop.src_addr;
+-        end
+-
+-        // L2 → GEMM fmap broadcast
+-        from_L2_to_L1_GEMM: begin
+-          load_s1_valid     <= 1'b1;
+-          load_s1_to_npu    <= 1'b1;
+-          load_s1_write_en  <= `PORT_MOD_E_READ;
+-          load_s1_base_addr <= IN_LOAD_uop.src_addr;
+-        end
+-
+-        // L2 → GEMV fmap broadcast
+-        from_L2_to_L1_GEMV: begin
+-          load_s1_valid     <= 1'b1;
+-          load_s1_to_npu    <= 1'b1;
+-          load_s1_write_en  <= `PORT_MOD_E_READ;
+-          load_s1_base_addr <= IN_LOAD_uop.src_addr;
+-        end
+-
+-        // L2 → CVO input (handled by mem_CVO_stream_bridge below)
+-        from_L2_to_CVO: ;  // bridge watches IN_CVO_uop directly
+-
+---
+--- /tmp/NPU_top.sv.orig	2026-05-27 12:48:07.629787994 +0000
++++ /home/hwkim/v002-gemm-bd-resynth-20260523c/hw/rtl/NPU_top.sv	2026-05-27 12:48:07.634787990 +0000
+@@ -1,5 +1,6 @@
+ // SPDX-License-Identifier: Apache-2.0
+ // Copyright 2026 pccxai
++
+ `include "GLOBAL_CONST.svh"
+ `timescale 1ns / 1ps
+ `include "GEMM_Array.svh"
+@@ -77,18 +78,18 @@
+   axis_if #(.DATA_WIDTH(128)) M_CORE_FMAP_FROM_L2 ();
+ 
+   // ===| Internal Wires — Instruction Path |=====================================
+-  logic                GEMV_op_x64_valid_wire;
+-  logic                GEMM_op_x64_valid_wire;
+-  logic                memcpy_op_x64_valid_wire;
+-  logic                memset_op_x64_valid_wire;
+-  logic                cvo_op_x64_valid_wire;
++  logic                       GEMV_op_x64_valid_wire;
++  logic                       GEMM_op_x64_valid_wire;
++  logic                       memcpy_op_x64_valid_wire;
++  logic                       memset_op_x64_valid_wire;
++  logic                       cvo_op_x64_valid_wire;
+ 
+-  instruction_op_x64_t instruction;

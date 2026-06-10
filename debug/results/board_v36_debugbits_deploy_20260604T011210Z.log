@@ -1,0 +1,17 @@
+== before ==
+e7777bf95556a249e045b8a4ec3c4876  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+17ad88c6f85bcedc1471defa554962e9347c1dc3f3d06e658efe617618298a4a  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+== installed files ==
+-rw-r--r-- 1 root root 7797692 Jun  4 01:12 /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+-rw-r--r-- 1 root root     857 Jun  4 01:12 /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.dtbo
+-rw-r--r-- 1 root root      55 Jun  4 01:12 /lib/firmware/xilinx/pccx_npu_bd/shell.json
+d7eebaa818287ddaddb7d6365ceff927  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+d3beef9eb0643e34940b437371bf09bf2051264196d337e1b8755a059fc29f50  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+== xmutil reload ==
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+== after ==
+fpga_state=operating
+uio4_name=pccx-npu
+d7eebaa818287ddaddb7d6365ceff927  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+d3beef9eb0643e34940b437371bf09bf2051264196d337e1b8755a059fc29f50  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin

@@ -1,0 +1,40 @@
+[02:35:56.355 +  0.016s] =====================================================================
+[02:35:56.355 +  0.016s]   dbg_step_07 — DM stall + NPU STAT_OUT joint observation (SW only)
+[02:35:56.355 +  0.016s] =====================================================================
+[02:35:56.355 +  0.016s] [BANNER] argv: ['debug/dbg_step_07_dm_stall_npu_observation.py']
+[02:35:56.355 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:35:56.355 +  0.016s] [BANNER] uid:  0
+[02:35:56.355 +  0.016s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:35:56.409 +  0.070s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:35:56.416 +  0.077s] [UIO] opening NPU UIO at /dev/uio4
+[02:35:56.417 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[02:35:56.417 +  0.078s] =============================================
+[02:35:56.417 +  0.078s]   pre snapshot — DM channels + NPU STAT_OUT
+[02:35:56.417 +  0.078s] =============================================
+[02:35:56.417 +  0.078s] [PRE]   acp_fmap: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:56.417 +  0.078s] [PRE]   hp0: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:35:56.417 +  0.078s] [PRE]   NPU STAT_OUT (0x000): 0x0000000000008000 (busy=0 done=0 upper=0x0000 mem=0x8000)
+[02:35:56.417 +  0.078s] =================================================
+[02:35:56.417 +  0.078s]   allocate CMA buffer (same pattern as step 03)
+[02:35:56.417 +  0.078s] =================================================
+[02:35:56.418 +  0.079s] [CMA] CMA OK: va=0xffffa6565000 phys=0x0375b0000 size=0x1000 fd=6
+[02:35:56.418 +  0.079s] [ADDR] DM SADDR = 0x375b0000
+[02:35:56.418 +  0.079s] ================================================
+[02:35:56.418 +  0.079s]   push 1 cmd to acp_fmap + start joint polling
+[02:35:56.418 +  0.079s] ================================================
+[02:35:56.418 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[02:35:56.418 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[02:35:56.419 +  0.080s] [JOINT] DM: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:35:56.419 +  0.080s] [JOINT] NPU STAT_OUT: 0x0000000000008000 (busy=0 done=0 upper=0x0000 mem=0x8000)
+[02:36:00.428 +  4.089s] ==================
+[02:36:00.428 +  4.089s]   final snapshot
+[02:36:00.428 +  4.089s] ==================
+[02:36:00.429 +  4.089s] [FINAL]   acp_fmap: flags=0x00000001 [cmd_empty=1 cmd_full=0 sts_empty=0 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=3
+[02:36:00.429 +  4.090s] [FINAL]   hp0: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[02:36:00.429 +  4.090s] [FINAL]   NPU STAT_OUT final: 0x0000000000008000 (busy=0 done=0 upper=0x0000 mem=0x8000)
+[02:36:00.429 +  4.090s] =========================
+[02:36:00.429 +  4.090s]   verdict / observation
+[02:36:00.429 +  4.090s] =========================
+[02:36:00.429 +  4.090s] [STEP07] NPU STAT_OUT samples with data: 1 (non-zero: 1)
+[02:36:00.429 +  4.090s] [STEP07] >>> NPU frontend produced status during DM stall window.
+[02:36:00.429 +  4.090s] [STEP07] This data is safe (no JTAG) and can be compared across multiple runs.

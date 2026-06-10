@@ -1,0 +1,48 @@
+remove from slot 0 returns: 0 (Ok)
+pccx_npu_bd: loaded to slot 0
+[14:27:43.554 +  0.006s] =====================================================================
+[14:27:43.554 +  0.006s]   board_post_gemm_small64_probe — no-reload Stage0 probe after GEMM
+[14:27:43.554 +  0.006s] =====================================================================
+[14:27:43.554 +  0.006s] [BANNER] argv: ['debug/board_post_gemm_small64_probe.py']
+[14:27:43.555 +  0.006s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[14:27:43.555 +  0.006s] [BANNER] uid:  0
+[14:27:43.555 +  0.006s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[14:27:43.555 +  0.007s] [CMA] CMA OK: va=0xffff8c968000 phys=0x0375b0000 size=0x1000 fd=4
+[14:27:43.556 +  0.008s] [CMA] CMA OK: va=0xffff8c91b000 phys=0x0375b1000 size=0x1000 fd=6
+[14:27:43.556 +  0.008s] [WARN] src: mmap.flush ignored: [Errno 22] Invalid argument
+[14:27:43.556 +  0.008s] [WARN] dst: mmap.flush ignored: [Errno 22] Invalid argument
+[14:27:43.556 +  0.008s] src_phys=0x0375b0000 dst_phys=0x0375b1000
+[14:27:43.559 +  0.010s] [NPU] pre-status: 0x0000000000008000 busy=0 done=0 top=0x2000 mem=0x0000
+[14:27:43.559 +  0.011s] [DUMP] --- cmdsts snapshot: post-gemm small64: before probe ---
+[14:27:43.559 +  0.011s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.559 +  0.011s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.559 +  0.011s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.559 +  0.011s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.559 +  0.011s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.560 +  0.011s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.560 +  0.011s] ===============================
+[14:27:43.560 +  0.012s]   shape[2] = 32 BF16 elements
+[14:27:43.560 +  0.012s] ===============================
+[14:27:43.610 +  0.062s] [NPU] after shape: 0x0000000000008002 busy=0 done=1 top=0x2000 mem=0x0000
+[14:27:43.610 +  0.062s] ======================
+[14:27:43.610 +  0.062s]   host -> L2 small64
+[14:27:43.610 +  0.062s] ======================
+[14:27:43.611 +  0.062s] [DM] acp_fmap issued token=0x5 length=64
+[14:27:43.611 +  0.062s] [acp_fmap] 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[14:27:43.611 +  0.063s] [POP] STS_POP[0] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[14:27:43.611 +  0.063s] [POP] STS_POP[1] = 0x00000085 tag=0x5 OKAY=1 err=- bytes=0 eof=0
+[14:27:43.611 +  0.063s] ======================
+[14:27:43.611 +  0.063s]   L2 -> host small64
+[14:27:43.611 +  0.063s] ======================
+[14:27:43.611 +  0.063s] [DM] acp_result issued token=0x6 length=64
+[14:27:43.611 +  0.063s] [acp_result] 0x00000086 tag=0x6 OKAY=1 err=- bytes=0 eof=0
+[14:27:43.612 +  0.063s] [RESULT] got=30373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9
+[14:27:43.612 +  0.063s] [RESULT] exp=30373e454c535a61686f767d848b9299a0a7aeb5bcc3cad1d8dfe6edf4fb020910171e252c333a41484f565d646b727980878e959ca3aab1b8bfc6cdd4dbe2e9
+[14:27:43.612 +  0.064s] [DUMP] --- cmdsts snapshot: post-gemm small64: after probe ---
+[14:27:43.612 +  0.064s] [DUMP]        hp0 @0xA000_1000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.612 +  0.064s] [DUMP]        hp1 @0xA000_2000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.612 +  0.064s] [DUMP]        hp2 @0xA000_3000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.612 +  0.064s] [DUMP]        hp3 @0xA000_4000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.612 +  0.064s] [DUMP]   acp_fmap @0xA000_5000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.613 +  0.064s] [DUMP] acp_result @0xA000_6000: flags=0x00000005 [cmd_empty=1 cmd_full=0 sts_empty=1 sts_full=0 err_sticky=0x0] cmd_lvl=0 sts_lvl=0
+[14:27:43.613 +  0.064s] [RESULT] RESULT: PASS_POST_GEMM_STAGE0_SMALL64

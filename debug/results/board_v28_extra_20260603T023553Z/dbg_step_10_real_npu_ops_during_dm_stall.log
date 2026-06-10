@@ -1,0 +1,41 @@
+[02:36:16.834 +  0.016s] ======================================================================
+[02:36:16.834 +  0.016s]   dbg_step_10 — Real NPU operations (RESET + MEMSET) during DM stall
+[02:36:16.834 +  0.016s] ======================================================================
+[02:36:16.834 +  0.016s] [BANNER] argv: ['debug/dbg_step_10_real_npu_ops_during_dm_stall.py']
+[02:36:16.834 +  0.016s] [BANNER] cwd:  /home/ubuntu/pccx-gemma-deploy
+[02:36:16.834 +  0.016s] [BANNER] uid:  0
+[02:36:16.834 +  0.017s] [BANNER] python: 3.10.12 (/usr/bin/python3)
+[02:36:16.888 +  0.070s] [BIT] bitstream md5 = 903527a5c3ad7b3de928768286c21b69 (UNEXPECTED — log it!)
+[02:36:16.894 +  0.077s] [UIO] opening NPU UIO at /dev/uio4
+[02:36:16.895 +  0.077s] [UIO] mmap OK: path=/dev/uio4 size=0x10000 fd=3
+[02:36:16.895 +  0.077s] ============
+[02:36:16.895 +  0.077s]   baseline
+[02:36:16.895 +  0.077s] ============
+[02:36:16.895 +  0.077s] [BASE]   acp_fmap sts_lvl before: 0
+[02:36:16.895 +  0.078s] ================
+[02:36:16.895 +  0.078s]   allocate CMA
+[02:36:16.895 +  0.078s] ================
+[02:36:16.896 +  0.078s] [CMA] CMA OK: va=0xffff7fc44000 phys=0x0375b0000 size=0x1000 fd=6
+[02:36:16.896 +  0.078s] ==============
+[02:36:16.896 +  0.078s]   push stall
+[02:36:16.896 +  0.078s] ==============
+[02:36:16.896 +  0.079s] [PUSH] push cmd →   acp_fmap: addr=0x375b0000 btt=256 drr=0 eof=1 tag=0 xuser=0xf xcache=0xf
+[02:36:16.896 +  0.079s] [PUSH]   CMD_LO=0x40800100 CMD_HI=0x375b0000 CMD_EXT=0xff00
+[02:36:16.896 +  0.079s] ====================================
+[02:36:16.897 +  0.079s]   real NPU command hammering phase
+[02:36:16.897 +  0.079s] ====================================
+[02:36:16.897 +  0.079s] [OBS] Running real NPU commands for 4.0s...
+[02:36:20.898 +  4.080s] ===========
+[02:36:20.898 +  4.080s]   results
+[02:36:20.898 +  4.080s] ===========
+[02:36:20.899 +  4.082s] [RES] Real NPU commands issued: 1288
+[02:36:20.899 +  4.082s] [RES] Status words observed:    2
+[02:36:20.899 +  4.082s] [RES] Sample status values observed:
+[02:36:20.899 +  4.082s] [RES]   [ 0.000s] 0x0000000000008002
+[02:36:20.900 +  4.082s] [RES]   [ 0.003s] 0x0000000000008001
+[02:36:20.900 +  4.082s] [RES] Final acp_fmap sts_lvl: 3
+[02:36:20.900 +  4.082s] ==================
+[02:36:20.900 +  4.082s]   interpretation
+[02:36:20.900 +  4.082s] ==================
+[02:36:20.900 +  4.082s] [INT] NPU successfully executed real commands (RESET/MEMSET) and produced status while DM channel was stalled.
+[02:36:20.900 +  4.082s] [INT] This is strong evidence that the NPU execution path is not blocked by the acp_fmap stall.

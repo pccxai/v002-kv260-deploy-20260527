@@ -1,0 +1,19 @@
+7dc1d6004aff1159cfd44ca987156561fbda0c850fc919575cf814a969d27db2  new-bits/pccx_npu_bd_v31_stage1_gemm_20260603T103103Z.bit.bin
+89e3c4e238c30cf02db537fd232dc5d3  new-bits/pccx_npu_bd_v31_stage1_gemm_20260603T103103Z.bit.bin
+ff45a44649569212a912cf524da26ac3390b93b7e321303a6a629ccb8ddde0d7  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+2e1f77c51882aeaddde9c6074f00f4e0  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+remove from slot 0 returns: 0 (Ok)
+7dc1d6004aff1159cfd44ca987156561fbda0c850fc919575cf814a969d27db2  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+89e3c4e238c30cf02db537fd232dc5d3  /lib/firmware/xilinx/pccx_npu_bd/pccx_npu_bd.bit.bin
+pccx_npu_bd: loaded to slot 0
+operating
+crw------- 1 root root 237, 0 Mar 13 16:47 /dev/uio0
+crw------- 1 root root 237, 1 Mar 13 16:47 /dev/uio1
+crw------- 1 root root 237, 2 Mar 13 16:47 /dev/uio2
+crw------- 1 root root 237, 3 Mar 13 16:47 /dev/uio3
+crw------- 1 root root 237, 4 Jun  3 11:19 /dev/uio4
+/sys/class/uio/uio0/name=axi-pmon
+/sys/class/uio/uio1/name=axi-pmon
+/sys/class/uio/uio2/name=axi-pmon
+/sys/class/uio/uio3/name=axi-pmon
+/sys/class/uio/uio4/name=pccx-npu

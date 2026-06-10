@@ -1,0 +1,12 @@
+
+
+****** Bootgen v2025.2
+  **** Build date : Nov 12 2025-13:58:15
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+[INFO]   : Bootimage generated successfully
+
+a3ad3a801108df952d687a7ed140f409997db8b28a7914951ff938b05ad8e9b0  hw/build/pccx_v002_system_wrapper.bit
+e598f3187ed46f4b36690ea13c2bc47999e3bc712cff486d2ed16822a6891874  hw/build/pccx_v002_system_wrapper.bit.bin

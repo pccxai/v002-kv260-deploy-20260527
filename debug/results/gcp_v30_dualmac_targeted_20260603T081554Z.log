@@ -1,0 +1,544 @@
+TS=20260603T081554Z
+
+===== tb_GEMM_dual_mac_recover =====
+=== tb_GEMM_dual_mac_recover — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dual_mac_recover/tb_GEMM_dual_mac_recover.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dual_mac_recover
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_sign_recovery(LOWER_W=21)
+Compiling module work.GEMM_dual_mac_recover(LOWER_W=21...
+Compiling module work.tb_GEMM_dual_mac_recover
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dual_mac_recover_sim
+--- xsim ---
+PASS [sweep_7_4_93]: lower_w=7 upper_w=4 act=93 sum=1023 p=00002e80028b
+PASS [sweep_7_4_110]: lower_w=7 upper_w=4 act=110 sum=1210 p=000037000302
+PASS [sweep_7_4_127]: lower_w=7 upper_w=4 act=127 sum=1397 p=00003f800379
+PASS [sweep_7_5_-128]: lower_w=7 upper_w=5 act=-128 sum=-1536 p=ffffaffffc80
+PASS [sweep_7_5_-111]: lower_w=7 upper_w=5 act=-111 sum=-1332 p=ffffba9ffcf7
+PASS [sweep_7_5_-94]: lower_w=7 upper_w=5 act=-94 sum=-1128 p=ffffc53ffd6e
+PASS [sweep_7_5_-77]: lower_w=7 upper_w=5 act=-77 sum=-924 p=ffffcfdffde5
+PASS [sweep_7_5_-60]: lower_w=7 upper_w=5 act=-60 sum=-720 p=ffffda7ffe5c
+PASS [sweep_7_5_-43]: lower_w=7 upper_w=5 act=-43 sum=-516 p=ffffe51ffed3
+PASS [sweep_7_5_-26]: lower_w=7 upper_w=5 act=-26 sum=-312 p=ffffefbfff4a
+PASS [sweep_7_5_-9]: lower_w=7 upper_w=5 act=-9 sum=-108 p=fffffa5fffc1
+PASS [sweep_7_5_8]: lower_w=7 upper_w=5 act=8 sum=96 p=000005000038
+PASS [sweep_7_5_25]: lower_w=7 upper_w=5 act=25 sum=300 p=00000fa000af
+PASS [sweep_7_5_42]: lower_w=7 upper_w=5 act=42 sum=504 p=00001a400126
+PASS [sweep_7_5_59]: lower_w=7 upper_w=5 act=59 sum=708 p=000024e0019d
+PASS [sweep_7_5_76]: lower_w=7 upper_w=5 act=76 sum=912 p=00002f800214
+PASS [sweep_7_5_93]: lower_w=7 upper_w=5 act=93 sum=1116 p=00003a20028b
+PASS [sweep_7_5_110]: lower_w=7 upper_w=5 act=110 sum=1320 p=000044c00302
+PASS [sweep_7_5_127]: lower_w=7 upper_w=5 act=127 sum=1524 p=00004f600379
+PASS [sweep_7_6_-128]: lower_w=7 upper_w=6 act=-128 sum=-1664 p=ffff9ffffc80
+PASS [sweep_7_6_-111]: lower_w=7 upper_w=6 act=-111 sum=-1443 p=ffffacbffcf7
+PASS [sweep_7_6_-94]: lower_w=7 upper_w=6 act=-94 sum=-1222 p=ffffb97ffd6e
+PASS [sweep_7_6_-77]: lower_w=7 upper_w=6 act=-77 sum=-1001 p=ffffc63ffde5
+PASS [sweep_7_6_-60]: lower_w=7 upper_w=6 act=-60 sum=-780 p=ffffd2fffe5c
+PASS [sweep_7_6_-43]: lower_w=7 upper_w=6 act=-43 sum=-559 p=ffffdfbffed3
+PASS [sweep_7_6_-26]: lower_w=7 upper_w=6 act=-26 sum=-338 p=ffffec7fff4a
+PASS [sweep_7_6_-9]: lower_w=7 upper_w=6 act=-9 sum=-117 p=fffff93fffc1
+PASS [sweep_7_6_8]: lower_w=7 upper_w=6 act=8 sum=104 p=000006000038
+PASS [sweep_7_6_25]: lower_w=7 upper_w=6 act=25 sum=325 p=000012c000af
+PASS [sweep_7_6_42]: lower_w=7 upper_w=6 act=42 sum=546 p=00001f800126
+PASS [sweep_7_6_59]: lower_w=7 upper_w=6 act=59 sum=767 p=00002c40019d
+PASS [sweep_7_6_76]: lower_w=7 upper_w=6 act=76 sum=988 p=000039000214
+PASS [sweep_7_6_93]: lower_w=7 upper_w=6 act=93 sum=1209 p=000045c0028b
+PASS [sweep_7_6_110]: lower_w=7 upper_w=6 act=110 sum=1430 p=000052800302
+PASS [sweep_7_6_127]: lower_w=7 upper_w=6 act=127 sum=1651 p=00005f400379
+PASS [sweep_7_7_-128]: lower_w=7 upper_w=7 act=-128 sum=-1792 p=ffff8ffffc80
+PASS [sweep_7_7_-111]: lower_w=7 upper_w=7 act=-111 sum=-1554 p=ffff9edffcf7
+PASS [sweep_7_7_-94]: lower_w=7 upper_w=7 act=-94 sum=-1316 p=ffffadbffd6e
+PASS [sweep_7_7_-77]: lower_w=7 upper_w=7 act=-77 sum=-1078 p=ffffbc9ffde5
+PASS [sweep_7_7_-60]: lower_w=7 upper_w=7 act=-60 sum=-840 p=ffffcb7ffe5c
+PASS [sweep_7_7_-43]: lower_w=7 upper_w=7 act=-43 sum=-602 p=ffffda5ffed3
+PASS [sweep_7_7_-26]: lower_w=7 upper_w=7 act=-26 sum=-364 p=ffffe93fff4a
+PASS [sweep_7_7_-9]: lower_w=7 upper_w=7 act=-9 sum=-126 p=fffff81fffc1
+PASS [sweep_7_7_8]: lower_w=7 upper_w=7 act=8 sum=112 p=000007000038
+PASS [sweep_7_7_25]: lower_w=7 upper_w=7 act=25 sum=350 p=000015e000af
+PASS [sweep_7_7_42]: lower_w=7 upper_w=7 act=42 sum=588 p=000024c00126
+PASS [sweep_7_7_59]: lower_w=7 upper_w=7 act=59 sum=826 p=000033a0019d
+PASS [sweep_7_7_76]: lower_w=7 upper_w=7 act=76 sum=1064 p=000042800214
+PASS [sweep_7_7_93]: lower_w=7 upper_w=7 act=93 sum=1302 p=00005160028b
+PASS [sweep_7_7_110]: lower_w=7 upper_w=7 act=110 sum=1540 p=000060400302
+PASS [sweep_7_7_127]: lower_w=7 upper_w=7 act=127 sum=1778 p=00006f200379
+
+=== Summary ===
+PASS: 4107 / 4107
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 4107 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dual_mac_recover/tb_GEMM_dual_mac_recover.sv" Line 105
+exit
+INFO: xsimkernel Simulation Memory Usage: 291160 KB (Peak: 335880 KB), Simulation CPU Usage: 1000 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 08:16:05 2026...
+
+=== tb_GEMM_dual_mac_recover RESULT: PASS ===
+TB_RC_tb_GEMM_dual_mac_recover=0
+
+===== tb_GEMM_sign_recovery =====
+=== tb_GEMM_sign_recovery — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_sign_recovery/tb_GEMM_sign_recovery.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_sign_recovery
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_sign_recovery(LOWER_W=21)
+Compiling module work.tb_GEMM_sign_recovery
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_sign_recovery_sim
+--- xsim ---
+PASS [rand_49]: P=000002d92f85 → lower=-446587 upper=23
+PASS [rand_50]: P=00002dda595b → lower=-370341 upper=367
+PASS [rand_51]: P=00001ff2ae3f → lower=-872897 upper=256
+PASS [rand_52]: P=00002c156358 → lower=-695464 upper=353
+PASS [rand_53]: P=0000071a0c8e → lower=-390002 upper=57
+PASS [rand_54]: P=00003d3599fa → lower=-681478 upper=490
+PASS [rand_55]: P=000039961773 → lower=-649357 upper=461
+PASS [rand_56]: P=00001799a82f → lower=-415697 upper=189
+PASS [rand_57]: P=00002fd8565f → lower=-502177 upper=383
+PASS [rand_58]: P=00003bf8fdf7 → lower=-459273 upper=480
+PASS [rand_59]: P=000033091ae6 → lower=596710 upper=408
+PASS [rand_60]: P=000014cfc129 → lower=1032489 upper=166
+PASS [rand_61]: P=00002d536cda → lower=-824102 upper=363
+PASS [rand_62]: P=00001a8ae2b5 → lower=713397 upper=212
+PASS [rand_63]: P=00003cf11979 → lower=-976519 upper=488
+PASS [rand_64]: P=000028740cd0 → lower=-783152 upper=324
+PASS [rand_65]: P=000015f6adab → lower=-610901 upper=176
+PASS [rand_66]: P=00002e5daddc → lower=-152100 upper=371
+PASS [rand_67]: P=00003edf72fd → lower=-36099 upper=503
+PASS [rand_68]: P=00002b0eed56 → lower=978262 upper=344
+PASS [rand_69]: P=000033d97667 → lower=-428441 upper=415
+PASS [rand_70]: P=00001b6fb9b6 → lower=1030582 upper=219
+PASS [rand_71]: P=00003cd18779 → lower=-948359 upper=487
+PASS [rand_72]: P=00000a74bf94 → lower=-737388 upper=84
+PASS [rand_73]: P=0000023f2c04 → lower=-54268 upper=18
+PASS [rand_74]: P=00002dcb69db → lower=747995 upper=366
+PASS [rand_75]: P=00002cb0b7d9 → lower=-1001511 upper=358
+PASS [rand_76]: P=00003b45e276 → lower=385654 upper=474
+PASS [rand_77]: P=00001b172db6 → lower=-578122 upper=217
+PASS [rand_78]: P=000023071a46 → lower=465478 upper=280
+PASS [rand_79]: P=00003bd261f7 → lower=-892425 upper=479
+PASS [rand_80]: P=00001a6ebab4 → lower=965300 upper=211
+PASS [rand_81]: P=0000147cd928 → lower=-206552 upper=164
+PASS [rand_82]: P=000023c530c7 → lower=340167 upper=286
+PASS [rand_83]: P=00000477e408 → lower=-531448 upper=36
+PASS [rand_84]: P=00003ea7a6fd → lower=501501 upper=501
+PASS [rand_85]: P=00000e37901c → lower=-552932 upper=114
+PASS [rand_86]: P=00002d3408da → lower=-784166 upper=362
+PASS [rand_87]: P=0000334ea766 → lower=960358 upper=410
+PASS [rand_88]: P=000039f50473 → lower=-719757 upper=464
+PASS [rand_89]: P=00002f3ab35e → lower=-347298 upper=378
+PASS [rand_90]: P=00002a8e05d5 → lower=918997 upper=340
+PASS [rand_91]: P=00001cf000b9 → lower=-1048391 upper=232
+PASS [rand_92]: P=00000b273796 → lower=472982 upper=89
+PASS [rand_93]: P=000013259f26 → lower=368422 upper=153
+PASS [rand_94]: P=00003e99837d → lower=-425091 upper=501
+PASS [rand_95]: P=000003615786 → lower=87942 upper=27
+PASS [rand_96]: P=00003f5a9b7e → lower=-353410 upper=507
+PASS [rand_97]: P=000027c3b6cf → lower=243407 upper=318
+PASS [rand_98]: P=00003d28e4fa → lower=582906 upper=489
+PASS [rand_99]: P=00000b940917 → lower=-784105 upper=93
+
+=== Summary ===
+PASS: 109 / 109
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 110 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_sign_recovery/tb_GEMM_sign_recovery.sv" Line 163
+exit
+INFO: xsimkernel Simulation Memory Usage: 291156 KB (Peak: 335876 KB), Simulation CPU Usage: 940 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 08:16:13 2026...
+
+=== tb_GEMM_sign_recovery RESULT: PASS ===
+TB_RC_tb_GEMM_sign_recovery=0
+
+===== tb_GEMM_dsp_packer =====
+=== tb_GEMM_dsp_packer — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_packer/tb_GEMM_dsp_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_GEMM_dsp_packer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module work.GEMM_dsp_packer
+Compiling module work.tb_GEMM_dsp_packer
+Compiling module work.glbl
+Built simulation snapshot tb_GEMM_dsp_packer_sim
+--- xsim ---
+PASS [exh_7_4_80]: w_l=7 w_u=4 a=80 → lower=560 upper=320 (a_packed=00800007 b_ext=00050 p=000028000230)
+PASS [exh_7_4_96]: w_l=7 w_u=4 a=96 → lower=672 upper=384 (a_packed=00800007 b_ext=00060 p=0000300002a0)
+PASS [exh_7_4_112]: w_l=7 w_u=4 a=112 → lower=784 upper=448 (a_packed=00800007 b_ext=00070 p=000038000310)
+PASS [exh_7_5_-128]: w_l=7 w_u=5 a=-128 → lower=-896 upper=-640 (a_packed=00a00007 b_ext=3ff80 p=ffffaffffc80)
+PASS [exh_7_5_-112]: w_l=7 w_u=5 a=-112 → lower=-784 upper=-560 (a_packed=00a00007 b_ext=3ff90 p=ffffb9fffcf0)
+PASS [exh_7_5_-96]: w_l=7 w_u=5 a=-96 → lower=-672 upper=-480 (a_packed=00a00007 b_ext=3ffa0 p=ffffc3fffd60)
+PASS [exh_7_5_-80]: w_l=7 w_u=5 a=-80 → lower=-560 upper=-400 (a_packed=00a00007 b_ext=3ffb0 p=ffffcdfffdd0)
+PASS [exh_7_5_-64]: w_l=7 w_u=5 a=-64 → lower=-448 upper=-320 (a_packed=00a00007 b_ext=3ffc0 p=ffffd7fffe40)
+PASS [exh_7_5_-48]: w_l=7 w_u=5 a=-48 → lower=-336 upper=-240 (a_packed=00a00007 b_ext=3ffd0 p=ffffe1fffeb0)
+PASS [exh_7_5_-32]: w_l=7 w_u=5 a=-32 → lower=-224 upper=-160 (a_packed=00a00007 b_ext=3ffe0 p=ffffebffff20)
+PASS [exh_7_5_-16]: w_l=7 w_u=5 a=-16 → lower=-112 upper=-80 (a_packed=00a00007 b_ext=3fff0 p=fffff5ffff90)
+PASS [exh_7_5_0]: w_l=7 w_u=5 a=0 → lower=0 upper=0 (a_packed=00a00007 b_ext=00000 p=000000000000)
+PASS [exh_7_5_16]: w_l=7 w_u=5 a=16 → lower=112 upper=80 (a_packed=00a00007 b_ext=00010 p=00000a000070)
+PASS [exh_7_5_32]: w_l=7 w_u=5 a=32 → lower=224 upper=160 (a_packed=00a00007 b_ext=00020 p=0000140000e0)
+PASS [exh_7_5_48]: w_l=7 w_u=5 a=48 → lower=336 upper=240 (a_packed=00a00007 b_ext=00030 p=00001e000150)
+PASS [exh_7_5_64]: w_l=7 w_u=5 a=64 → lower=448 upper=320 (a_packed=00a00007 b_ext=00040 p=0000280001c0)
+PASS [exh_7_5_80]: w_l=7 w_u=5 a=80 → lower=560 upper=400 (a_packed=00a00007 b_ext=00050 p=000032000230)
+PASS [exh_7_5_96]: w_l=7 w_u=5 a=96 → lower=672 upper=480 (a_packed=00a00007 b_ext=00060 p=00003c0002a0)
+PASS [exh_7_5_112]: w_l=7 w_u=5 a=112 → lower=784 upper=560 (a_packed=00a00007 b_ext=00070 p=000046000310)
+PASS [exh_7_6_-128]: w_l=7 w_u=6 a=-128 → lower=-896 upper=-768 (a_packed=00c00007 b_ext=3ff80 p=ffff9ffffc80)
+PASS [exh_7_6_-112]: w_l=7 w_u=6 a=-112 → lower=-784 upper=-672 (a_packed=00c00007 b_ext=3ff90 p=ffffabfffcf0)
+PASS [exh_7_6_-96]: w_l=7 w_u=6 a=-96 → lower=-672 upper=-576 (a_packed=00c00007 b_ext=3ffa0 p=ffffb7fffd60)
+PASS [exh_7_6_-80]: w_l=7 w_u=6 a=-80 → lower=-560 upper=-480 (a_packed=00c00007 b_ext=3ffb0 p=ffffc3fffdd0)
+PASS [exh_7_6_-64]: w_l=7 w_u=6 a=-64 → lower=-448 upper=-384 (a_packed=00c00007 b_ext=3ffc0 p=ffffcffffe40)
+PASS [exh_7_6_-48]: w_l=7 w_u=6 a=-48 → lower=-336 upper=-288 (a_packed=00c00007 b_ext=3ffd0 p=ffffdbfffeb0)
+PASS [exh_7_6_-32]: w_l=7 w_u=6 a=-32 → lower=-224 upper=-192 (a_packed=00c00007 b_ext=3ffe0 p=ffffe7ffff20)
+PASS [exh_7_6_-16]: w_l=7 w_u=6 a=-16 → lower=-112 upper=-96 (a_packed=00c00007 b_ext=3fff0 p=fffff3ffff90)
+PASS [exh_7_6_0]: w_l=7 w_u=6 a=0 → lower=0 upper=0 (a_packed=00c00007 b_ext=00000 p=000000000000)
+PASS [exh_7_6_16]: w_l=7 w_u=6 a=16 → lower=112 upper=96 (a_packed=00c00007 b_ext=00010 p=00000c000070)
+PASS [exh_7_6_32]: w_l=7 w_u=6 a=32 → lower=224 upper=192 (a_packed=00c00007 b_ext=00020 p=0000180000e0)
+PASS [exh_7_6_48]: w_l=7 w_u=6 a=48 → lower=336 upper=288 (a_packed=00c00007 b_ext=00030 p=000024000150)
+PASS [exh_7_6_64]: w_l=7 w_u=6 a=64 → lower=448 upper=384 (a_packed=00c00007 b_ext=00040 p=0000300001c0)
+PASS [exh_7_6_80]: w_l=7 w_u=6 a=80 → lower=560 upper=480 (a_packed=00c00007 b_ext=00050 p=00003c000230)
+PASS [exh_7_6_96]: w_l=7 w_u=6 a=96 → lower=672 upper=576 (a_packed=00c00007 b_ext=00060 p=0000480002a0)
+PASS [exh_7_6_112]: w_l=7 w_u=6 a=112 → lower=784 upper=672 (a_packed=00c00007 b_ext=00070 p=000054000310)
+PASS [exh_7_7_-128]: w_l=7 w_u=7 a=-128 → lower=-896 upper=-896 (a_packed=00e00007 b_ext=3ff80 p=ffff8ffffc80)
+PASS [exh_7_7_-112]: w_l=7 w_u=7 a=-112 → lower=-784 upper=-784 (a_packed=00e00007 b_ext=3ff90 p=ffff9dfffcf0)
+PASS [exh_7_7_-96]: w_l=7 w_u=7 a=-96 → lower=-672 upper=-672 (a_packed=00e00007 b_ext=3ffa0 p=ffffabfffd60)
+PASS [exh_7_7_-80]: w_l=7 w_u=7 a=-80 → lower=-560 upper=-560 (a_packed=00e00007 b_ext=3ffb0 p=ffffb9fffdd0)
+PASS [exh_7_7_-64]: w_l=7 w_u=7 a=-64 → lower=-448 upper=-448 (a_packed=00e00007 b_ext=3ffc0 p=ffffc7fffe40)
+PASS [exh_7_7_-48]: w_l=7 w_u=7 a=-48 → lower=-336 upper=-336 (a_packed=00e00007 b_ext=3ffd0 p=ffffd5fffeb0)
+PASS [exh_7_7_-32]: w_l=7 w_u=7 a=-32 → lower=-224 upper=-224 (a_packed=00e00007 b_ext=3ffe0 p=ffffe3ffff20)
+PASS [exh_7_7_-16]: w_l=7 w_u=7 a=-16 → lower=-112 upper=-112 (a_packed=00e00007 b_ext=3fff0 p=fffff1ffff90)
+PASS [exh_7_7_0]: w_l=7 w_u=7 a=0 → lower=0 upper=0 (a_packed=00e00007 b_ext=00000 p=000000000000)
+PASS [exh_7_7_16]: w_l=7 w_u=7 a=16 → lower=112 upper=112 (a_packed=00e00007 b_ext=00010 p=00000e000070)
+PASS [exh_7_7_32]: w_l=7 w_u=7 a=32 → lower=224 upper=224 (a_packed=00e00007 b_ext=00020 p=00001c0000e0)
+PASS [exh_7_7_48]: w_l=7 w_u=7 a=48 → lower=336 upper=336 (a_packed=00e00007 b_ext=00030 p=00002a000150)
+PASS [exh_7_7_64]: w_l=7 w_u=7 a=64 → lower=448 upper=448 (a_packed=00e00007 b_ext=00040 p=0000380001c0)
+PASS [exh_7_7_80]: w_l=7 w_u=7 a=80 → lower=560 upper=560 (a_packed=00e00007 b_ext=00050 p=000046000230)
+PASS [exh_7_7_96]: w_l=7 w_u=7 a=96 → lower=672 upper=672 (a_packed=00e00007 b_ext=00060 p=0000540002a0)
+PASS [exh_7_7_112]: w_l=7 w_u=7 a=112 → lower=784 upper=784 (a_packed=00e00007 b_ext=00070 p=000062000310)
+
+=== Summary ===
+PASS: 4108 / 4108
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 4108 ns : File "/home/hwkim/v002-rtl/tb_unit/tb_GEMM_dsp_packer/tb_GEMM_dsp_packer.sv" Line 133
+exit
+INFO: xsimkernel Simulation Memory Usage: 291164 KB (Peak: 335884 KB), Simulation CPU Usage: 1000 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 08:16:21 2026...
+
+=== tb_GEMM_dsp_packer RESULT: PASS ===
+TB_RC_tb_GEMM_dsp_packer=0
+
+===== tb_pccx_npu_top_idle_contract =====
+=== tb_pccx_npu_top_idle_contract — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_decoder.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_STAT_OUT.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_frontend.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/npu_controller_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/Global_Scheduler.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/fmap_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pccx_npu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_idle_contract/tb_pccx_npu_top_idle_contract.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pccx_npu_top_idle_contract
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMV_accumulate(param='{4,1,512,...
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.pccx_npu_top_default
+Compiling module work.tb_pccx_npu_top_idle_contract
+Compiling module work.glbl
+Built simulation snapshot tb_pccx_npu_top_idle_contract_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 08:16:47 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pccx_npu_top_idle_contract_sim/xsim_script.tcl
+# xsim {tb_pccx_npu_top_idle_contract_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_pccx_npu_top_idle_contract start ===
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_pccx_npu_top_idle_contract.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_idle_contract/dut/u_mem_dispatcher/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_401  Scope: tb_pccx_npu_top_idle_contract.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. tb_pccx_npu_top_idle_contract.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_idle_contract/dut/u_fmap_pre/u_fmap_sram/u_fmap_bram/xpm_memory_base_inst/Initial310_1045  Scope: tb_pccx_npu_top_idle_contract.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 524
+PASS [no_result_without_work]
+PASS [result_sideband_known]
+PASS [input_ready_known]
+PASS [axil_ready_known]
+PASS [clear_keeps_result_idle]
+
+=== Summary ===
+PASS: 5 / 5
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 618500 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_idle_contract/tb_pccx_npu_top_idle_contract.sv" Line 126
+exit
+INFO: xsimkernel Simulation Memory Usage: 496816 KB (Peak: 554868 KB), Simulation CPU Usage: 1690 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 08:16:50 2026...
+
+=== tb_pccx_npu_top_idle_contract RESULT: PASS ===
+TB_RC_tb_pccx_npu_top_idle_contract=0
+
+===== tb_pccx_npu_top_stage0_host_to_l2 =====
+=== tb_pccx_npu_top_stage0_host_to_l2 — xsim build + run ===
+  RTL_ROOT: /home/hwkim/v002-rtl
+  RTL_MAT:  /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat
+--- xvlog ---
+  sources:
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/dtype_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/device_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/mem_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/perf_counter_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/vec_core_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/BF16_math.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/packages/Algorithms.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/interfaces/IF_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/common/rtl/wrappers/QUEUE.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/packages/isa/isa_pkg.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_decoder.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_CMD_IN.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/AXIL_STAT_OUT.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/ctrl_npu_frontend.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/npu_controller_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/controller/Global_Scheduler.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/Constant_Memory/shape_const_ram.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_BUFFER.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_L2_cache_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_GLOBAL_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_u_operation_queue.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_CVO_stream_bridge.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/memory/mem_HP_buffer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_bf16_fixed_pipeline.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/fmap_cache.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/preprocess/preprocess_fmap.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_sign_recovery.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dual_mac_recover.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_accumulator.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_dsp_unit_last_ROW.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_fmap_staggered_delay.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_inst_fmap_aligner.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv
+    /home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_weight_dispatcher.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_weight_dispatcher
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/mat_result_normalizer.sv" into library work
+INFO: [VRFC 10-311] analyzing module gemm_result_normalizer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/FROM_mat_result_packer.sv" into library work
+INFO: [VRFC 10-311] analyzing module FROM_gemm_result_packer
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_array.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_array
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/mat/GEMM_systolic_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMM_systolic_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_generate_lut.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_generate_lut
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction_branch.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction_branch
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_reduction.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_reduction
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_accumulate.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_accumulate
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/vec/GEMV_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module GEMV_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_sfu_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_sfu_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_cordic_unit.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_cordic_unit
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/core/cvo/CVO_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module CVO_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/third_party/pccx-v002/LLM/rtl/top/pccx_npu_top.sv" into library work
+INFO: [VRFC 10-311] analyzing module pccx_npu_top
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_stage0_host_to_l2/tb_pccx_npu_top_stage0_host_to_l2.sv" into library work
+INFO: [VRFC 10-311] analyzing module tb_pccx_npu_top_stage0_host_to_l2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/tools/Xilinx/2025.2/data/verilog/src/glbl.v" into library work
+INFO: [VRFC 10-311] analyzing module glbl
+--- xelab ---
+Compiling module work.GEMV_accumulate(param='{4,1,512,...
+Compiling module work.GEMV_reduction_branch(param='{4,...
+Compiling module work.GEMV_top(param='{4,1,512,512,27,...
+Compiling module work.CVO_sfu_unit
+Compiling module work.CVO_cordic_unit
+Compiling module work.CVO_top_default
+Compiling module work.pccx_npu_top_default
+Compiling module work.tb_pccx_npu_top_stage0_host_to_l...
+Compiling module work.glbl
+Built simulation snapshot tb_pccx_npu_top_stage0_host_to_l2_sim
+--- xsim ---
+
+****** xsim v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Wed Jun  3 08:17:17 2026
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source xsim.dir/tb_pccx_npu_top_stage0_host_to_l2_sim/xsim_script.tcl
+# xsim {tb_pccx_npu_top_stage0_host_to_l2_sim} -autoloadwcfg -runall
+Time resolution is 1 ps
+run -all
+=== tb_pccx_npu_top_stage0_host_to_l2 start ===
+Info: [XPM_MEMORY 20-3] XPM_MEMORY behaviorally models the port operation ordering of true dual port UltraRAM configurations by slightly delaying the common clock for port B operations only. Refer to UltraRAM documentation for details. tb_pccx_npu_top_stage0_host_to_l2.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_stage0_host_to_l2/dut/u_mem_dispatcher/u_l2_cache/u_l2_uram/u_l2_uram/xpm_memory_base_inst/Initial310_401  Scope: tb_pccx_npu_top_stage0_host_to_l2.dut.u_mem_dispatcher.u_l2_cache.u_l2_uram.u_l2_uram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 526
+Info: [XPM_MEMORY 20-2] MEMORY_INIT_FILE (none), MEMORY_INIT_PARAM together specify no memory initialization. Initial memory contents will be all 0's. tb_pccx_npu_top_stage0_host_to_l2.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc 48
+Time: 1 ps  Iteration: 0  Process: /tb_pccx_npu_top_stage0_host_to_l2/dut/u_fmap_pre/u_fmap_sram/u_fmap_bram/xpm_memory_base_inst/Initial310_1045  Scope: tb_pccx_npu_top_stage0_host_to_l2.dut.u_fmap_pre.u_fmap_sram.u_fmap_bram.xpm_memory_base_inst.config_drc  File: /tools/Xilinx/2025.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv Line: 524
+after memset: mem_debug=0x0000 l2_debug=0x0001 acp_busy=0 acp_ptr=0 acp_end=0 acp_we=0 ext_valid=0 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=0 rx_fire=0
+ACP busy asserted after 12 core cycles
+ACP write datapath ready after 0 core cycles
+before acp beat: mem_debug=0x0100 l2_debug=0x0245 acp_busy=1 acp_ptr=256 acp_end=257 acp_we=1 ext_valid=0 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=1 rx_fire=0
+ACP source beat accepted after 0 axi cycles ext_valid=1 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1
+after acp beat: mem_debug=0x0000 l2_debug=0x0041 acp_busy=0 acp_ptr=257 acp_end=257 acp_we=1 ext_valid=0 dut_port_valid=0 ext_ready=1 bridge_valid=0 bridge_ready=1 cdc_s_valid=0 cdc_s_ready=1 rx_tvalid=0 rx_tready=0 rx_fire=0
+ACP busy deasserted after 0 core cycles
+PASS [HOST->L2 one-word ACP write completes]
+
+=== Summary ===
+PASS: 1 / 1
+FAIL: 0
+OVERALL: PASS
+$finish called at time : 796250 ps : File "/home/hwkim/v002-rtl/tb_unit/tb_pccx_npu_top_stage0_host_to_l2/tb_pccx_npu_top_stage0_host_to_l2.sv" Line 275
+exit
+INFO: xsimkernel Simulation Memory Usage: 496840 KB (Peak: 554892 KB), Simulation CPU Usage: 1740 ms
+INFO: [Common 17-206] Exiting xsim at Wed Jun  3 08:17:20 2026...
+
+=== tb_pccx_npu_top_stage0_host_to_l2 RESULT: PASS ===
+TB_RC_tb_pccx_npu_top_stage0_host_to_l2=0

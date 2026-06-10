@@ -1,0 +1,27 @@
+# KV260 UART — kick_all_cpus_sync SMP lockup @ ~12.7min uptime (2026-05-30 ~01:50)
+# 맥락: rootfs fsck 복구(orphan inode FIXED, clean) 후 SD 재장착 부팅. fs는 정상(12min까지 진행)인데 또 hang.
+#
+# ★ 핵심 패턴: 이번(module load)도, 이전(BPF JIT, uart_lockup_*.txt)도 모두 kick_all_cpus_sync에서 멈춤:
+#   - BPF:    bpf_int_jit_compile → flush_icache_range → kick_all_cpus_sync
+#   - module: load_module → flush_module_icache → kick_all_cpus_sync   (이번)
+#   공통 = 한 CPU가 IPI(코어간 동기화)에 응답 못 함 = SMP/전원 하드웨어 문제 (fs/SD 아님).
+#   유력: 12V 전원 marginal(undervoltage → CPU 코어 불안정 → IPI 실패 + mmc1 SD timeout 동시 설명).
+# 모듈 심볼 조각(레지스터): "ctl_init"/"ctl_exit"/"s_dev_io" — 부팅 시 어떤 드라이버 모듈 로드 중.
+
+Hardware name: ZynqMP KV260 revB (DT)
+pc : smp_call_function_many_cond+0x180/0x37c
+lr : smp_call_function_many_cond+0x190/0x37c
+Call trace:
+ smp_call_function_many_cond+0x180/0x37c
+ kick_all_cpus_sync+0x38/0x44
+ flush_module_icache+0x60/0xb0
+ load_module+0x6b4/0xb40
+ __do_sys_finit_module+0xa8/0x114
+ __arm64_sys_finit_module+0x28/0x3c
+ invoke_syscall+0x78/0x100
+ el0_svc_common.constprop.0+0x54/0x184
+ do_el0_svc+0x30/0xac
+ el0_svc+0x28/0xb0
+ el0t_64_sync_handler+0xa4/0x12c
+ el0t_64_sync+0x1a4/0x1a8
+# 이후 ping 100% loss = 완전 freeze.

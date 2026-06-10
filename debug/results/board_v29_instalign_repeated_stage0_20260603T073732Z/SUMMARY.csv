@@ -1,0 +1,4 @@
+label,rc,log
+phase_a_fresh_reload_stage0,0,/tmp/pccx-v29-debug/results/board_v28_repeated_stage0_20260603T073732Z/phase_a_fresh_reload_stage0.log
+phase_b_no_reload_stage0,0,/tmp/pccx-v29-debug/results/board_v28_repeated_stage0_20260603T073732Z/phase_b_no_reload_stage0.log
+phase_c_fresh_reload_stage0,0,/tmp/pccx-v29-debug/results/board_v28_repeated_stage0_20260603T073732Z/phase_c_fresh_reload_stage0.log
